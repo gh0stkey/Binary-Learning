@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/* secondary color; used for links, svg-icons … */
+/* --- COMMON ------------------------------------------------------------------------------------------------------- */
+body {
+  color: #262626;
+}
+
+a {
+  color: #205081;
+}
+
+a, span, li, nav, ul {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* --- HEADER ------------------------------------------------------------------------------------------------------- */
+#ht-headerbar {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#ht-headerbar a {
+  color: #205081;
+  transition: color 0.25s ease-in-out;
+}
+#ht-headerbar a:hover {
+  color: #1b436d;
+}
+@media screen and (max-width: 1024px) {
+  #ht-headerbar {
+    border-bottom: 1px solid #CCCCCC;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+#ht-headerbar .ht-headerbar-right .ht-header-icon svg path {
+  fill: #205081;
+}
+#ht-headerbar .ht-headerbar-right .ht-header-icon:hover svg path, #ht-headerbar .ht-headerbar-right .ht-header-icon.active svg path {
+  fill: #205081;
+}
+
+#ht-headerbar #ht-search .ht-search-input a.ht-search-clear {
+  color: #CCCCCC;
+  transition: color 0.25s ease-in-out;
+}
+#ht-headerbar #ht-search .ht-search-input a.ht-search-clear:hover {
+  color: #bfbfbf;
+}
+
+/* --- SIDEBAR ------------------------------------------------------------------------------------------------------ */
+#ht-sidebar {
+  background-color: #F5F5F5;
+}
+#ht-sidebar .ht-sidebar-header a {
+  color: #205081;
+}
+#ht-sidebar .ht-sidebar-header h2 a {
+  color: #205081;
+}
+#ht-sidebar .ht-scroll-versions-widget {
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select label {
+  color: #262626;
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button {
+  color: #262626;
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button .ht-select-button-icon {
+  fill: #262626;
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button:hover {
+  background-color: #205081;
+  color: white;
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button:hover label {
+  color: white;
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button:hover .ht-select-button-icon {
+  fill: white;
+}
+@media screen and (max-width: 1024px) {
+  #ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button:hover {
+    color: white;
+  }
+  #ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button:hover label {
+    color: white;
+  }
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button.active {
+  background-color: #205081;
+  color: white;
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button.active label, #ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button.active span {
+  color: white;
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button.active .ht-select-button-icon {
+  fill: white;
+}
+@media screen and (max-width: 1024px) {
+  #ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button.active {
+    color: white;
+  }
+  #ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select a.ht-select-button.active label {
+    color: white;
+  }
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select span.versions-select-item-restriction {
+  color: #5E6C84;
+}
+#ht-sidebar .ht-scroll-versions-widget .ht-scroll-versions-select span.versions-select-item-restriction.hover {
+  background-color: #205081;
+  color: white;
+}
+#ht-sidebar .ht-pages-nav ul li .sp-aui-icon-small {
+  color: #707070;
+}
+#ht-sidebar .ht-pages-nav ul li .sp-aui-icon-small:hover {
+  color: #205081;
+}
+@media screen and (max-width: 1024px) {
+  #ht-sidebar .ht-pages-nav ul li .ht-pages-nav-toggle {
+    border: 1px solid #205081;
+  }
+  #ht-sidebar .ht-pages-nav ul li .ht-pages-nav-toggle svg g {
+    fill: #205081;
+  }
+}
+#ht-sidebar .ht-pages-nav ul a {
+  color: #205081;
+}
+#ht-sidebar .ht-pages-nav ul a.current {
+  color: #262626;
+}
+
+#ht-sidebar .ht-dropdown, #ht-headerbar .ht-dropdown {
+  background-color: white;
+  border: 1px solid #CCCCCC;
+}
+@media screen and (max-width: 640px) {
+  #ht-sidebar .ht-dropdown, #ht-headerbar .ht-dropdown {
+    border-bottom: 1px solid #CCCCCC;
+  }
+}
+#ht-sidebar .ht-dropdown li a, #ht-headerbar .ht-dropdown li a {
+  background-color: white;
+}
+#ht-sidebar .ht-dropdown li a.hover, #ht-headerbar .ht-dropdown li a.hover {
+  color: white;
+  background-color: #205081;
+}
+#ht-sidebar .ht-dropdown li a.hover span.versions-select-item-restriction, #ht-headerbar .ht-dropdown li a.hover span.versions-select-item-restriction {
+  color: white;
+  background-color: #205081;
+}
+
+#ht-headerbar .ht-dropdown li.search-key:nth-child(n+2) {
+  border-top: 1px solid #CCCCCC;
+}
+
+#ht-headerbar #ht-search.open .ht-search-input {
+  background-color: white;
+}
+
+/* --- WRAP-CONTAINER ----------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  #ht-wrap-container {
+    background-color: white;
+  }
+}
+#ht-wrap-container #ht-sidebar-dragbar .ht-sidebar-drag-handle span {
+  background-color: #CCCCCC;
+}
+#ht-wrap-container #ht-sidebar-dragbar:hover .ht-sidebar-drag-handle span {
+  background-color: #205081;
+}
+#ht-wrap-container #ht-post-nav svg path {
+  fill: #205081;
+}
+#ht-wrap-container #ht-footer small {
+  color: #CCCCCC;
+}
+#ht-wrap-container #ht-footer small a {
+  color: #CCCCCC;
+}
+
+.ht-error-page-scream {
+  color: #205081;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #205081;
+}
+
+::selection {
+  color: white;
+  background: #205081;
+}

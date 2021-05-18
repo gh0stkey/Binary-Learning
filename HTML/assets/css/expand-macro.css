@@ -1,0 +1,35 @@
+.scroll-expand-control {
+    color: #0052CC;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+}
+
+.scroll-expand-control-text {
+    vertical-align:top;
+    margin-left: -7px;
+    font-size: 14px;
+}
+
+.scroll-expand-content {
+    margin: 0 0 10px 20px;
+}
+
+.collapsed .scroll-expand-content {
+    display: none;
+    overflow: hidden;
+}
+
+.scroll-expand-control-icon:before {
+    content: "\F15B";
+    color: black;
+    font-family: "SP Atlassian Icons";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.collapsed .scroll-expand-control-icon:before {
+    content: '\F11C';
+}
