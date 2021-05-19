@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/*
+*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal;
+  line-height: 1;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  outline: 0;
+  border: 0;
+}
+
+/* This file contains a subset of the AUI iconfont (atlassian-aui-adg-dist-f26920e2e1da) scoped to class 'sp' */
+@font-face {
+  font-family: "SP Atlassian Icons";
+  src: url(../fonts/atlassian-icons.eot);
+  src: url(../fonts/atlassian-icons.eot?#iefix) format("embedded-opentype"), url(../fonts/atlassian-icons.woff) format("woff"), url(../fonts/atlassian-icons.ttf) format("truetype"), url(../fonts/atlassian-icons.svg#atlassian-icons) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.sp-aui-icon-small {
+  height: 16px;
+  width: 16px;
+}
+
+.sp-aui-icon-small, .sp-aui-icon-large {
+  line-height: 0;
+  position: relative;
+  vertical-align: text-top;
+}
+
+.sp-aui-iconfont-close-dialog:before {
+  content: "";
+}
+
+.sp-aui-icon-small:before {
+  font-size: 16px;
+  margin-top: -8px;
+}
+
+.sp-aui-icon-small:before, .sp-aui-icon-large:before {
+  color: inherit;
+  font-family: "SP Atlassian Icons";
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  text-indent: 0;
+  speak: none;
+  top: 50%;
+}
+
+.sp-aui-icon-small, .sp-aui-icon-large {
+  line-height: 0;
+  position: relative;
+  vertical-align: text-top;
+}
+
+.sp-aui-iconfont-arrows-up:before {
+  content: "";
+}
+
+.sp-aui-icon-small, .sp-aui-icon-large {
+  line-height: 0;
+  position: relative;
+  vertical-align: text-top;
+}
+
+.sp-aui-iconfont-delete:before {
+  content: "";
+}
+
+.sp-aui-iconfont-confluence:before {
+  content: "";
+  font-size: 18px;
+}
+
+.sp-aui-iconfont-approve:before {
+  content: "";
+}
+
+.sp-aui-iconfont-remove:before {
+  content: "";
+}
+
+.sp-aui-iconfont-appswitcher:before {
+  content: "";
+}
+
+.sp-aui-iconfont-group:before {
+  content: "";
+}
+
+.sp-aui-iconfont-editor-mention:before {
+  content: "";
+}
+
+.sp-aui-iconfont-user:before {
+  content: "";
+}
+
+.sp-aui-iconfont-flag:before {
+  content: "";
+}
+
+/* secondary color; used for links, svg-icons … */
+body {
+  margin: 0px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.ht-pages-nav {
+  font-size: 0.875em;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.ht-pages-nav ul {
+  padding-left: 14px;
+}
+.ht-pages-nav ul .ht-pages-nav-sub {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+.ht-pages-nav ul .ht-pages-nav-toggle svg {
+  display: none;
+}
+.ht-pages-nav ul .ht-pages-nav-toggle:before {
+  line-height: 22px;
+  content: "";
+}
+.ht-pages-nav ul .open > ul {
+  max-height: 9000px;
+}
+.ht-pages-nav ul .open > .ht-pages-nav-toggle:before {
+  line-height: 18px;
+  content: "";
+}
+.ht-pages-nav ul li {
+  line-height: 1.25rem;
+  position: relative;
+  width: 100%;
+}
+.ht-pages-nav ul li .sp-aui-icon-small {
+  position: absolute;
+  cursor: pointer;
+  left: -14px;
+  top: 3px;
+  height: 22px;
+  line-height: 24px;
+}
+.ht-pages-nav ul li .sp-aui-icon-small:hover {
+  text-decoration: none;
+}
+.ht-pages-nav ul li .sp-aui-icon-small .sp-aui-icon-small {
+  color: #707070;
+}
+.ht-pages-nav ul li .sp-aui-icon-small .sp-aui-icon-small:hover {
+  color: #205081;
+}
+.ht-pages-nav ul a {
+  display: block;
+  padding: 5px 32px 5px 4px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #205081;
+}
+.ht-pages-nav ul a.current {
+  font-weight: bold;
+  color: #262626;
+}
+.ht-pages-nav ul a.current:hover {
+  text-decoration: none;
+}
+
+.ht-pages-nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}

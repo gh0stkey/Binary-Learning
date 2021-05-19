@@ -1,0 +1,629 @@
+/* Misc ******************************************************************************************/
+
+.wiki-content .error {
+    background-color: #FFCCCC;
+}
+
+.jira-macro-table .icon {
+    max-width: none !important;
+}
+
+
+/* Paragraphs ************************************************************************************/
+
+.wiki-content p {
+    margin: 10px 0 0 0;
+}
+
+.wiki-content p:first-child {
+    margin: 0;
+}
+
+
+/* Images ****************************************************************************************/
+
+.wiki-content img {
+    max-width: 100%;
+}
+
+.wiki-content img.confluence-content-image-border {
+    border: 1px solid black;
+}
+
+
+/* Heading Styling *******************************************************************************/
+
+.wiki-content h1 {
+    color: #333333;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.25;
+    margin: 30px 0 0 0;
+}
+
+.wiki-content h2 {
+    color: #333333;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 30px 0 0 0;
+}
+
+.wiki-content h3 {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 30px 0 0 0;
+}
+
+.wiki-content h4 {
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.42857142857143;
+    margin: 20px 0 0 0;
+}
+
+.wiki-content h5 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.66666666666667;
+    margin: 20px 0 0 0;
+}
+
+.wiki-content h6 {
+    color: #707070;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.66666666666667;
+    margin: 20px 0 0 0;
+}
+
+/* Headings in tables (no sections) */
+.wiki-content table h1:first-child,
+.wiki-content table h2:first-child,
+.wiki-content table h3:first-child,
+.wiki-content table h4:first-child,
+.wiki-content table h5:first-child,
+.wiki-content table h6:first-child {
+    margin-top: 0;
+}
+
+
+/* Tables ****************************************************************************************/
+
+.wiki-content div.tablewrap {
+    margin: 10px 0 0 0;
+}
+
+.wiki-content table {
+	border-collapse: collapse;
+	border: 1px solid red;
+	margin-bottom: 1em;
+    width: auto;
+}
+
+.wiki-content table th,
+.wiki-content table td {
+    padding: 7px 10px;
+    border: 1px solid #DDDDDD;
+    min-width: 0.6em;
+    vertical-align: top;
+}
+
+.wiki-content table thead tr td {
+    background-color: #F0F0F0;
+    text-align: left;
+    font-weight: bold;
+    color: #003366;
+}
+
+.wiki-content tbody tr:nth-child(2n) td,
+.wiki-content tbody tr.even td {
+	background-color: transparent;
+}
+
+.wiki-content th.confluenceTh,
+.wiki-content th.confluenceTh > p,
+.wiki-content tbody tr td.confluenceTh,
+.wiki-content tbody tr td.confluenceTh > p {
+    font-weight: bold;
+}
+
+.wiki-content th.confluenceTh,
+.wiki-content th.confluenceTh > p,
+.wiki-content td.highlight,
+.wiki-content td.highlight > p,
+.wiki-content td.highlight-grey,
+.wiki-content td.highlight-grey > p,
+.wiki-content tbody tr td.confluenceTh,
+.wiki-content tbody tr td.confluenceTh > p,
+.wiki-content tbody tr td.highlight,
+.wiki-content tbody tr td.highlight > p,
+.wiki-content tbody tr td.highlight-grey,
+.wiki-content tbody tr td.highlight-grey > p {
+    background-color: #F0F0F0;
+}
+
+.wiki-content th.note,
+.wiki-content th.note > p,
+.wiki-content td.highlight.note,
+.wiki-content td.highlight.note > p,
+.wiki-content td.highlight-yellow,
+.wiki-content td.highlight-yellow > p,
+.wiki-content tbody tr td.highlight.note,
+.wiki-content tbody tr td.highlight.note > p,
+.wiki-content tbody tr td.highlight-yellow,
+.wiki-content tbody tr td.highlight-yellow > p {
+    background-color: #FFFFDD;
+}
+
+.wiki-content th.info,
+.wiki-content th.info > p,
+.wiki-content td.highlight.info,
+.wiki-content td.highlight.info > p,
+.wiki-content td.highlight-blue,
+.wiki-content td.highlight-blue > p,
+.wiki-content tbody tr td.highlight.info,
+.wiki-content tbody tr td.highlight.info > p,
+.wiki-content tbody tr td.highlight-blue,
+.wiki-content tbody tr td.highlight-blue > p {
+    background-color: #E0F0FF;
+}
+
+.wiki-content th.success,
+.wiki-content th.success > p,
+.wiki-content td.highlight.success,
+.wiki-content td.highlight.success > p,
+.wiki-content td.highlight-green,
+.wiki-content td.highlight-green > p,
+.wiki-content tbody tr td.highlight.success,
+.wiki-content tbody tr td.highlight.success > p,
+.wiki-content tbody tr td.highlight-green,
+.wiki-content tbody tr td.highlight-green > p {
+    background-color: #DDFADE;
+}
+
+.wiki-content th.warning,
+.wiki-content th.warning > p,
+.wiki-content td.highlight.warning,
+.wiki-content td.highlight.warning > p,
+.wiki-content td.highlight-red,
+.wiki-content td.highlight-red > p,
+.wiki-content tbody tr td.highlight.warning,
+.wiki-content tbody tr td.highlight.warning > p,
+.wiki-content tbody tr td.highlight-red,
+.wiki-content tbody tr td.highlight-red > p {
+    background-color: #FFE7E7;
+}
+
+
+/* Section / Column Tables ***********************************************************************/
+
+.wiki-content table.sectionMacro .confluenceTd,
+.wiki-content table.sectionMacro .confluenceTh {
+    border: 1px solid #DDDDDD;
+}
+
+.wiki-content table.sectionMacro,
+.wiki-content table.sectionMacroWithBorder {
+    margin-bottom: 1em;
+    width: 100%;
+}
+.wiki-content table.sectionMacro {
+    border: none;
+}
+.wiki-content table.sectionMacroWithBorder {
+    border: 1px solid #DDDDDD;
+}
+
+
+.wiki-content table.sectionMacro td,
+.wiki-content table.sectionMacroWithBorder td {
+    vertical-align: top;
+}
+.wiki-content table.sectionMacro td {
+    border: none;
+}
+.wiki-content table.sectionMacroWithBorder td {
+    border: 1px solid #DDDDDD;
+}
+
+
+/* Blockquote ************************************************************************************/
+
+.wiki-content blockquote {
+    border-left: 1px solid #3C78B5;
+    color: #222222;
+    font-style: italic;
+    margin: 1.5em 1em;
+    padding-left: 1em;
+}
+
+
+/* Captions **************************************************************************************/
+
+.wiki-content .caption {
+	font-weight: bold;
+	padding-top: 0.5em;
+}
+
+cite:before {
+    content: "\2014 \2009";
+}
+
+
+/* Lists *****************************************************************************************/
+
+.wiki-content ol, ul {
+    padding-left: 3em;
+}
+
+.wiki-content ol,
+.wiki-content ol ol ol ol,
+.wiki-content ol ol ol ol ol ol ol,
+.wiki-content ol ol ol ol ol ol ol ol ol ol {
+    list-style-type: decimal;
+}
+
+.wiki-content ol ol,
+.wiki-content ol ol ol ol ol,
+.wiki-content ol ol ol ol ol ol ol ol,
+.wiki-content ol ol ol ol ol ol ol ol ol ol ol {
+    list-style-type: lower-alpha;
+}
+
+.wiki-content ol ol ol,
+.wiki-content ol ol ol ol ol ol,
+.wiki-content ol ol ol ol ol ol ol ol ol,
+.wiki-content ol ol ol ol ol ol ol ol ol ol ol ol {
+    list-style-type: lower-roman;
+}
+
+.wiki-content .inline-task-list li {
+    list-style: none;
+    padding-left: 22px;
+    margin-left: -22px;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: 0 3px;
+    background-image: url('../images/checkbox-unchecked.png');
+}
+
+.wiki-content .inline-task-list li.checked {
+    background-image: url('../images/checkbox-checked.png');
+}
+
+
+/* Status Macro **********************************************************************************/
+
+.wiki-content span.status {
+    display: inline-block;
+    min-width: 7.5em;
+    margin: 1px 0px;
+    padding: 2px 5px 2px 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    line-height: 1.1em;
+    font-weight: bold;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.wiki-content span.status.grey {
+    color: #333333;
+    background-color: #cccccc;
+    border: 1px solid #cccccc;
+}
+
+.wiki-content span.status.grey.subtle {
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.wiki-content span.status.red {
+    color: #ffffff;
+    background-color: #d04437;
+    border: 1px solid #d04437;
+}
+
+.wiki-content span.status.red.subtle {
+    color: #d04437;
+    background-color: #ffffff;
+    border: 1px solid #f8d3d1;
+}
+
+.wiki-content span.status.green {
+    color: #ffffff;
+    background-color: #14892c;
+    border: 1px solid #14892c;
+}
+
+.wiki-content span.status.green.subtle {
+    color: #14892c;
+    background-color: #ffffff;
+    border: 1px solid #b2d8b9;
+}
+
+.wiki-content span.status.yellow {
+    color: #594300;
+    background-color: #ffd351;
+    border: 1px solid #ffd351;
+}
+
+.wiki-content span.status.yellow.subtle {
+    color: #594300;
+    background-color: #ffffff;
+    border: 1px solid #ffe28c;
+}
+
+.wiki-content span.status.blue {
+    color: #ffffff;
+    background-color: #4a6785;
+    border: 1px solid #4a6785;
+}
+
+.wiki-content span.status.blue.subtle {
+    color: #4a6785;
+    background-color: #ffffff;
+    border: 1px solid #e4e8ed;
+}
+
+
+/* Panels, Admonitions ***************************************************************************/
+
+.wiki-content div.confbox {
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+}
+
+.wiki-content div.panel {
+    overflow: hidden;
+}
+
+.wiki-content div.confbox .title {
+    font-weight: bold;
+}
+
+.wiki-content div.panel div.title.panel-header {
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #BBBBBB;
+    background-color: #F5F5F5;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.wiki-content div.panel div.panel-content {
+    padding: 1em;
+}
+
+.wiki-content div.admonition {
+    padding: 10px 10px 10px 36px;
+    background-repeat: no-repeat;
+    background-position: 0.75em 1em;
+    position: relative;
+}
+
+.wiki-content div.admonition.has-no-icon {
+    padding-left: 10px;
+}
+
+.wiki-content div.admonition p.title {
+    margin: 0;
+}
+
+.wiki-content div.admonition span.admonition-icon {
+    display: block;
+    left: 10px;
+    line-height: 20px;
+    position: absolute;
+    top: 12px;
+    vertical-align: text-bottom;
+    height: 16px;
+    width: 16px;
+}
+
+.wiki-content div.admonition span.admonition-icon:before {
+    margin-top: -8px;
+    font-size: 16px;
+    color: inherit;
+    font-family: "SP Atlassian Icons";
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    text-indent: 0;
+    top: 50%;
+}
+
+.wiki-content div.admonition-info {
+    background-color: #FCFCFC;
+    border-color: #AAB8C6;
+}
+
+.wiki-content div.admonition-info span.admonition-icon:before {
+    color: #4A6785;
+    content: "\f16f";
+}
+
+.wiki-content div.admonition-note {
+    background: #FFFDF6;
+    border-color: #FFEAAE;
+}
+
+.wiki-content div.admonition-note span.admonition-icon:before {
+    color: #594300;
+    content: "\f1b3";
+}
+
+.wiki-content div.admonition-tip {
+    background-color: #F3F9F4;
+    border-color: #91C89C;
+}
+
+.wiki-content div.admonition-tip span.admonition-icon:before {
+    color: #14892C;
+    content: "\f104";
+}
+
+.wiki-content div.admonition-warning {
+    background: #FFF8F7;
+    border-color: #D04437;
+}
+
+.wiki-content div.admonition-warning span.admonition-icon:before {
+    color: #CF4336;
+    content: "\f15a";
+}
+
+
+/* Program Listings ******************************************************************************/
+
+.wiki-content div.programlisting {
+    counter-reset: scroll-code-numbering 1;
+    padding: 0;
+    border-style: solid;
+    background-color: transparent;
+    font-style: normal;
+}
+
+.wiki-content div.programlisting div.title {
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #BBBBBB;
+    background-color: #F5F5F5;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.wiki-content .syntaxhighlighter {font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;}
+
+.wiki-content .syntaxhighlighter div.line {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.wiki-content .syntaxhighlighter div.line code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    tab-size: 4;
+}
+
+.wiki-content .syntaxhighlighter[data-linenumbers="true"] div.line:nth-child(n+2) {
+    counter-increment: scroll-code-numbering;
+}
+
+.syntaxhighlighter[data-linenumbers="true"] div.line {
+    position: relative;
+    padding-left: calc(5em + 10px + 10px + 0.1em) !important; /* ::before width + padding + margin + border */
+}
+
+.wiki-content .syntaxhighlighter[data-linenumbers="true"] div.line::before {
+    content: counter(scroll-code-numbering);
+    padding-right:10px;
+    margin-right: 10px;
+    width: 5em;
+    text-align: right;
+    border-right: 0.1em solid #BBBBBB;
+    border-top: none;
+    border-bottom: none;
+    background-color: #F5F5F5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.wiki-content .syntaxhighlighter[data-linenumbers="true"] div.line:first-child,
+.wiki-content .syntaxhighlighter[data-linenumbers="true"] div.line:first-child::before {padding-top:1em;}
+.wiki-content .syntaxhighlighter[data-linenumbers="true"] div.line:last-child,
+.wiki-content .syntaxhighlighter[data-linenumbers="true"] div.line:last-child::before {padding-bottom:1em;}
+.wiki-content div.programlisting > div.syntaxhighlighter[data-linenumbers="false"] {padding: 1em;}
+.wiki-content div.programlisting > div.syntaxhighlighter[data-linenumbers="true"] {padding: 0 1em 0 0;}
+
+/* Default Syntax Highlighting Theme *************************************************************/
+
+.wiki-content .syntaxhighlighter {
+    background-color: #fff;
+}
+
+.wiki-content .syntaxhighlighter .plain,
+.wiki-content .syntaxhighlighter .plain a {
+    color: #000;
+}
+
+.wiki-content .syntaxhighlighter .comments,
+.wiki-content .syntaxhighlighter .comments a {
+    color: #008200;
+}
+
+.wiki-content .syntaxhighlighter .string,
+.wiki-content .syntaxhighlighter .string a {
+    color: #036;
+}
+
+.wiki-content .syntaxhighlighter .keyword {
+    color: #369;
+    font-weight: bold;
+}
+
+.wiki-content .syntaxhighlighter .preprocessor {
+    color: gray;
+}
+
+.wiki-content .syntaxhighlighter .variable {
+    color: #a70;
+}
+
+.wiki-content .syntaxhighlighter .value {
+    color: #090;
+}
+
+.wiki-content .syntaxhighlighter .functions {
+    color: #ff1493;
+}
+
+.wiki-content .syntaxhighlighter .constants {
+    color: #0066CC;
+}
+
+.wiki-content .syntaxhighlighter .script {
+    background-color: yellow;
+}
+
+.wiki-content .syntaxhighlighter .color1,
+.wiki-content .syntaxhighlighter .color1 a {
+    color: #808080;
+}
+
+.wiki-content .syntaxhighlighter .color2,
+.wiki-content .syntaxhighlighter .color2 a {
+    color: #ff1493;
+}
+
+.wiki-content .syntaxhighlighter .color3,
+.wiki-content .syntaxhighlighter .color3 a {
+    color: red;
+}
+
+/* Drawio macro ************************/
+
+img.drawio-image-border {
+    border: 1px solid rgb(208, 208, 208);
+}
+
+/* Latex Math Block macro **************/
+
+.wiki-content table.latexmath-mathblock td {
+    background-color: transparent;
+    border-color: transparent;
+}
