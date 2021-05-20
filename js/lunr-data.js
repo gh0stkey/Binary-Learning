@@ -1,0 +1,1 @@
+var lunrData = [{"id":8684307,"title":"初级篇","link":"初级篇.html"},{"id":12714021,"title":"C语言","link":"C语言.html"},{"id":8684311,"title":"汇编语言","link":"汇编语言.html"},{"id":12714553,"title":"C++语言","link":"C++语言.html"},{"id":8684305,"title":"Binary-Learning","link":"Binary-Learning.html"}];
