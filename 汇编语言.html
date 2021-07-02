@@ -771,7 +771,7 @@
 <p   
 >在这里，我们可以借助UltraEdit软件打开一个EXE文件：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-25_22-24-48.png" alt="images/download/attachments/8684311/image2021-1-25_22-24-48.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-25_22-24-48.png" alt="images/download/attachments/8684311/image2021-1-25_22-24-48.png" width="500"  />
     </p>
 <p   
 >打开一看，为什么这里没有显示二进制0和1呢？是因为二进制使用、阅读都比较麻烦，所以如上图所示，展示出来的是十六进制，这里我们也可以称之为<strong class=" ">二进制的简写方式</strong>。</p>
@@ -1100,7 +1100,7 @@
 <p   
 ><strong class=" ">左移</strong>：各二进制位全部左移若干位，高位丢弃，低位补0</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_12-6-23.png" alt="images/download/attachments/8684311/image2021-1-26_12-6-23.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_12-6-23.png" alt="images/download/attachments/8684311/image2021-1-26_12-6-23.png" width="500"  />
     </p>
 <p   
 ><strong class=" ">右移</strong>：各二进制位全部左移若干位，低位丢弃，高位补0（shr）或补符号位（sar）</p>
@@ -1137,7 +1137,8 @@
 <p   
 >逆向工具：DTDebug、Ollydebug</p>
 <p   
-><a  class="confluence-embedded-file" href="attachments_8684357_1_DTDebug.rar">DTDebug.rar</a></p>
+><img    src="images/inline/e97523e93662ff51b4a4d3365cbaf0a81846f5bc.png" alt="images/inline/e97523e93662ff51b4a4d3365cbaf0a81846f5bc.png"  height="150" />
+    </p>
 <p   
 ><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_21-28-25.png" alt="images/download/attachments/8684311/image2021-1-26_21-28-25.png"  height="400" />
     </p>
@@ -1315,14 +1316,14 @@
 <p   
 ><u class=" "><strong class=" ">MOV AX, 0x1111</strong></u>：AX占2个字节（4个16进制），AX表示EAX中的2个低位字节（<strong class=" ">或者可以理解</strong>：表示EAX从右到左的2个字节）。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_14-49-24.png" alt="images/download/attachments/8684311/image2021-1-26_14-49-24.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_14-49-24.png" alt="images/download/attachments/8684311/image2021-1-26_14-49-24.png" width="800"  />
     </p>
 <p   
 ><u class=" "><strong class=" ">MOV AL, 0x22</strong></u>：AL占1个字节（2个16进制），AL表示AX中的一个低位字节。</p>
 <p   
 ><u class=" "><strong class=" ">MOV AH, 0x33</strong></u>：AH占1个字节（2个16进制），AH表示AX中的一个高位字节。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_15-15-52.png" alt="images/download/attachments/8684311/image2021-1-26_15-15-52.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_15-15-52.png" alt="images/download/attachments/8684311/image2021-1-26_15-15-52.png" width="800"  />
     </p>
 <p   
 >了解了EAX、AX、AL、AH，其他的寄存器以此类推即可。</p>
@@ -1345,7 +1346,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_17-31-56.png" alt="images/download/attachments/8684311/image2021-1-26_17-31-56.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_17-31-56.png" alt="images/download/attachments/8684311/image2021-1-26_17-31-56.png" width="800"  />
     </p>
 <p   
 >需要注意的是如上所述指令中DOWRD为数据宽度，存储的数据需要与DOWRD数据宽度一致，当然这里也可以为BYTE、WORD，例如：</p>
@@ -1445,7 +1446,7 @@
 <p   
 >如下图中所示，内存地址从小到大；我们知道每一个内存地址可以存储8位，也就是一个字节，当我们使用MOV指令写入数据到内存中时指定宽度为BYTE存储数据会存储在一个内存地址中，而当我们指定数据宽度为WORD、DWORD呢？</p>
 <p   
-><img    src="images/download/attachments/8684311/image2021-1-26_17-48-18.png" alt="images/download/attachments/8684311/image2021-1-26_17-48-18.png"   />
+><img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/8684311/image2021-1-26_17-48-18.png" alt="images/download/thumbnails/8684311/image2021-1-26_17-48-18.png"  height="250" />
     </p>
 <p   
 >汇编指令：</p>
@@ -1466,7 +1467,7 @@
 <p   
 >在DTDebug中我们可以在内存窗口使用<u class=" "><strong class=" ">db/dw/dd 内存地址</strong></u>的格式（byte、word、dword）来查看内存，在这使用<u class=" "><strong class=" ">db 0012ffc4</strong></u>才可以清晰的看出数据存储位置<strong class=" ">：</strong></p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_19-3-44.png" alt="images/download/attachments/8684311/image2021-1-26_19-3-44.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_19-3-44.png" alt="images/download/attachments/8684311/image2021-1-26_19-3-44.png" width="600"  />
     </p>
 <p   
 >在这里我们可以看见2B存储在了内存地址<strong class=" ">0012ffc4</strong>，1A存储在了内存地址<strong class=" ">0012ffc5</strong>。（在这里内存地址是依次是从左到右的）</p>
@@ -1674,7 +1675,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_20-29-18.png" alt="images/download/attachments/8684311/image2021-1-26_20-29-18.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_20-29-18.png" alt="images/download/attachments/8684311/image2021-1-26_20-29-18.png" width="800"  />
     </p>
 <p   
 >3. 使用简写方式指令：MOVSD，将ESI指定的内存地址的值（4字节数据）存入EDI指定的内存地址中</p>
@@ -1684,7 +1685,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_20-32-34.png" alt="images/download/attachments/8684311/image2021-1-26_20-32-34.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_20-32-34.png" alt="images/download/attachments/8684311/image2021-1-26_20-32-34.png" width="800"  />
     </p>
 <p   
 >4. 结论：可以看到当MOVS指令执行结束后，ESI、EDI的值自增了4，「自增多少取决于传送数据的数据宽度」，所以这里是DOWRD表示4字节，也就自增了4。</p>
@@ -1855,7 +1856,7 @@
 <p   
 >一般我们在函数指令集合的最后写入RET指令，以此来实现函数执行完后返回<strong class=" ">原来要执行的地址继续执行</strong>。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_23-51-51.png" alt="images/download/attachments/8684311/image2021-1-26_23-51-51.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_23-51-51.png" alt="images/download/attachments/8684311/image2021-1-26_23-51-51.png" width="800"  />
     </p>
 <p   
 >那假设我们需要做一个任意两个数的加法函数该怎么办？这时候就需要想办法将我们的任意两个数传入函数中，这也就是<strong class=" ">参数</strong>；加法函数计算结果就称之为<strong class=" ">返回值</strong>。</p>
@@ -1897,7 +1898,7 @@
 <p   
 >第一种情况导致堆栈不平衡（函数内压栈）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_0-30-28.png" alt="images/download/attachments/8684311/image2021-1-27_0-30-28.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_0-30-28.png" alt="images/download/attachments/8684311/image2021-1-27_0-30-28.png" width="800"  />
     </p>
 <p   
 >函数内压栈会导致执行RET指令后，ESP-4，程序会到00000002这个执行地址继续执行，而不再是CALL指令下一行地址继续执行。</p>
@@ -1949,7 +1950,7 @@
 <p   
 >那么EBP寻址的思路是什么呢？先把EBP的值保存起来 然后然后EBP指向ESP的位置，然后在原来的堆栈基础上ESP上移，重新变成一块新的堆栈；之后新的程序再使用堆栈的时候，只影响ESP但不会影响EBP，那我们寻址的时候使用EBP去寻址，EBP的位置相对固定，程序不管如何操作ESP都会不停浮动，但是EBP相对稳定。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_1-3-32.png" alt="images/download/attachments/8684311/image2021-1-27_1-3-32.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_1-3-32.png" alt="images/download/attachments/8684311/image2021-1-27_1-3-32.png" width="800"  />
     </p>
     </div>
     <div class="section section-1" id="src-8684311_safe-id-aWQt5rGH57yW6K-t6KiALeagh-W_l-WvhOWtmOWZqA">
@@ -2002,12 +2003,12 @@
 <p   
 >如下汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_16-10-47.png" alt="images/download/attachments/8684311/image2021-1-27_16-10-47.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_16-10-47.png" alt="images/download/attachments/8684311/image2021-1-27_16-10-47.png" width="400"  />
     </p>
 <p   
 >我们往下走两步完成赋值</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_15-59-35.png" alt="images/download/attachments/8684311/image2021-1-27_15-59-35.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_15-59-35.png" alt="images/download/attachments/8684311/image2021-1-27_15-59-35.png" width="800"  />
     </p>
 <p   
 >现在去跑ADD指令：</p>
@@ -2036,17 +2037,17 @@
 <p   
 >我们来做一个实验，首先将EAX置为0，然后CF、PF位为1，这时候我们调用LAHF将标志寄存器送入AH会得到怎样的数据呢？</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_16-5-4.png" alt="images/download/attachments/8684311/image2021-1-27_16-5-4.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_16-5-4.png" alt="images/download/attachments/8684311/image2021-1-27_16-5-4.png" width="800"  />
     </p>
 <p   
 >这时候我们F8运行这一条指令，我们就会发现AH=0x700，这里我们来算一下</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_16-5-45.png" alt="images/download/attachments/8684311/image2021-1-27_16-5-45.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_16-5-45.png" alt="images/download/attachments/8684311/image2021-1-27_16-5-45.png" width="800"  />
     </p>
 <p   
 >那么转换过来就是011100000000 &rarr; 0x700，CF和PF位之间的下标为1的空，默认为1。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_16-6-28.png" alt="images/download/attachments/8684311/image2021-1-27_16-6-28.png"   />
+><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_16-6-28.png" alt="images/download/attachments/8684311/image2021-1-27_16-6-28.png" width="600"  />
     </p>
     </div>
     </div>
@@ -2055,8 +2056,8 @@
 <p   
 >JCC指令与标志寄存器是挂钩的，有太多了，不需要去背诵，如下表格可以了解每个指令。</p>
 <p   
-><a  class="confluence-embedded-file" href="attachments_8684404_1_009_JCC.xls"><img    src="images/rest/documentConversion/latest/conversion/thumbnail/8684404/1.jpg" alt="images/rest/documentConversion/latest/conversion/thumbnail/8684404/1.jpg"  height="150" />
-</a></p>
+><img    src="images/inline/f20d93524278d32bc999c6110aa9bd92311f0bb6.png" alt="images/inline/f20d93524278d32bc999c6110aa9bd92311f0bb6.png"  height="150" />
+    </p>
 <p   
 ></p>
 <p   
