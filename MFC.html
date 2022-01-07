@@ -167,35 +167,35 @@
 <p   
 >新建项目，选择MFC AppWizard：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-9-18.png" alt="images/download/attachments/17301744/image2021-6-8_17-9-18.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-9-18.png" alt="images/download/attachments/17301744/image2021-6-8_17-9-18.png"   />
     </p>
 <p   
 >点击OK选择Dialog Based：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-9-50.png" alt="images/download/attachments/17301744/image2021-6-8_17-9-50.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-9-50.png" alt="images/download/attachments/17301744/image2021-6-8_17-9-50.png"   />
     </p>
 <p   
 >点击Finish然后点击OK：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-10-9.png" alt="images/download/attachments/17301744/image2021-6-8_17-10-9.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-10-9.png" alt="images/download/attachments/17301744/image2021-6-8_17-10-9.png"   />
     </p>
 <p   
 >成功创建MFC项目（MFC画窗口是可视化拖动控件，直接点击右边的Controls然后在窗口中创建对应的控件即可）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-10-23.png" alt="images/download/attachments/17301744/image2021-6-8_17-10-23.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-10-23.png" alt="images/download/attachments/17301744/image2021-6-8_17-10-23.png"   />
     </p>
 <p   
 >看似这是一个窗口实际上，在其背后已经替我们写了很多的代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-12-21.png" alt="images/download/attachments/17301744/image2021-6-8_17-12-21.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-12-21.png" alt="images/download/attachments/17301744/image2021-6-8_17-12-21.png"   />
     </p>
 <p   
 >我们可以双击某个控件然后创建控件事件函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-13-39.png" alt="images/download/attachments/17301744/image2021-6-8_17-13-39.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-13-39.png" alt="images/download/attachments/17301744/image2021-6-8_17-13-39.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-14-1.png" alt="images/download/attachments/17301744/image2021-6-8_17-14-1.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-8_17-14-1.png" alt="images/download/attachments/17301744/image2021-6-8_17-14-1.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-17301744_safe-id-TUZDLU1GQ-S4jldJTjMy">
@@ -234,7 +234,7 @@
 <p   
 >在MSDN Library中搜索hierarchy chart即可获得MFC的层次结构图：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-15_17-35-28.png" alt="images/download/attachments/17301744/image2021-6-15_17-35-28.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-15_17-35-28.png" alt="images/download/attachments/17301744/image2021-6-15_17-35-28.png"   />
     </p>
 <p   
 >本章我们只需要了解CWinApp、CFramWnd</p>
@@ -244,7 +244,7 @@
 <p   
 >CWinApp类是Windows应用程序对象基类（父类）的派生类（子类），应用程序对象提供了用于初始化应用程序和运行应用程序的成员函数；使用MFC的每个应用程序<strong class=" ">只能（也必须）包含一个</strong><strong class=" ">CWinApp类的派生类（子类）</strong>的对象；当你从<strong class=" ">CWinApp</strong>派生应用程序类时，需要覆盖<strong class=" ">InitInstance</strong>成员函数以创建应用程序的主窗口对象；它还有一个成员变量<strong class=" ">m_pMainWnd</strong>用来记录创建的主窗口的对象。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-15_17-36-55.png" alt="images/download/attachments/17301744/image2021-6-15_17-36-55.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-15_17-36-55.png" alt="images/download/attachments/17301744/image2021-6-15_17-36-55.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-17301744_MFC-CFrameWnd">
@@ -352,7 +352,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-21_15-15-26.png" alt="images/download/attachments/17301744/image2021-6-21_15-15-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-21_15-15-26.png" alt="images/download/attachments/17301744/image2021-6-21_15-15-26.png"   />
     </p>
 <p   
 ><strong class=" ">为什么代码里没有WinMain？MFC没有WinMain函数吗？</strong>其实MFC是在内部接管了WinMain，我们可以认为CWinApp就是WinMain，只不过我们没法很直观的看见WinMain函数。</p>
@@ -406,36 +406,36 @@
 <p   
 >我们继承两个类CWinApp、CFrameWnd，这两个类的层次结构如下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-26-50.png" alt="images/download/attachments/17301744/image2021-6-22_19-26-50.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-26-50.png" alt="images/download/attachments/17301744/image2021-6-22_19-26-50.png"   />
     </p>
 <p   
 >所以在这里我们需要重写<strong class=" ">CObject、CCmdTarget、CWinThread、CWnd、CWinApp、CFrameWnd</strong>这几个类...</p>
 <p   
 >仅仅是模拟代码，不用写实际功能，写上构造、析构函数即可，这里使用VC6的类视图来创建，教程如下所示：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-30-12.png" alt="images/download/attachments/17301744/image2021-6-22_19-30-12.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-30-12.png" alt="images/download/attachments/17301744/image2021-6-22_19-30-12.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-31-41.png" alt="images/download/attachments/17301744/image2021-6-22_19-31-41.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-31-41.png" alt="images/download/attachments/17301744/image2021-6-22_19-31-41.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-32-53.png" alt="images/download/attachments/17301744/image2021-6-22_19-32-53.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-32-53.png" alt="images/download/attachments/17301744/image2021-6-22_19-32-53.png"   />
     </p>
 <p   
 >按照这样的层级结构我们创建了这些类，并使用上一章的代码去继承模拟实现一个MFC程序：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-58-55.png" alt="images/download/attachments/17301744/image2021-6-22_19-58-55.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-58-55.png" alt="images/download/attachments/17301744/image2021-6-22_19-58-55.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-59-21.png" alt="images/download/attachments/17301744/image2021-6-22_19-59-21.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-59-21.png" alt="images/download/attachments/17301744/image2021-6-22_19-59-21.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-59-42.png" alt="images/download/attachments/17301744/image2021-6-22_19-59-42.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_19-59-42.png" alt="images/download/attachments/17301744/image2021-6-22_19-59-42.png"   />
     </p>
 <p   
 >最后执行，我们就可以很清晰的看见执行流程了：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_20-0-53.png" alt="images/download/attachments/17301744/image2021-6-22_20-0-53.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_20-0-53.png" alt="images/download/attachments/17301744/image2021-6-22_20-0-53.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-17301744_safe-id-TUZDLeaAu-e7ky4x">
@@ -466,40 +466,40 @@
 <p   
 >在上一章节中我们是将<strong class=" ">InitInstance这个虚函数删除的</strong>，在本章中我们可以基于上一章节的代码重新定义一下该虚函数，在原MFC中（这里我们是模拟）这个虚函数在三个类中都存在：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_10-9-24.png" alt="images/download/attachments/17301744/image2021-6-24_10-9-24.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_10-9-24.png" alt="images/download/attachments/17301744/image2021-6-24_10-9-24.png"   />
     </p>
 <p   
 >我们已经了解层次结构所以直接在最高一层去定义，也就是<strong class=" ">CWinThread这个类</strong>中去定义即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-40-46.png" alt="images/download/attachments/17301744/image2021-6-22_21-40-46.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-40-46.png" alt="images/download/attachments/17301744/image2021-6-22_21-40-46.png"   />
     </p>
 <p   
 >在这我们在当前类中不想具体实现，所以使用纯虚函数去表示，而后在CMyWinApp类中去实现：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-42-48.png" alt="images/download/attachments/17301744/image2021-6-22_21-42-48.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-42-48.png" alt="images/download/attachments/17301744/image2021-6-22_21-42-48.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-44-18.png" alt="images/download/attachments/17301744/image2021-6-22_21-44-18.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-44-18.png" alt="images/download/attachments/17301744/image2021-6-22_21-44-18.png"   />
     </p>
 <p   
 >除此之外我们还有一个<strong class=" ">成员变量m_pMainWnd</strong>，这个也是在CWinThread类中定义：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-46-7.png" alt="images/download/attachments/17301744/image2021-6-22_21-46-7.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-46-7.png" alt="images/download/attachments/17301744/image2021-6-22_21-46-7.png"   />
     </p>
 <p   
 >同样我们需要在<strong class=" ">CMainWindow类中定义Create函数</strong>，然后做一个简单的输出即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-51-26.png" alt="images/download/attachments/17301744/image2021-6-22_21-51-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_21-51-26.png" alt="images/download/attachments/17301744/image2021-6-22_21-51-26.png"   />
     </p>
 <p   
 >因为需要完美的模拟，<strong class=" ">所以Create函数需要在构造函数中调用，InitInstance函数需要在main函数中调用</strong>（实际上是通过指针去调用的）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_22-0-27.png" alt="images/download/attachments/17301744/image2021-6-22_22-0-27.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_22-0-27.png" alt="images/download/attachments/17301744/image2021-6-22_22-0-27.png"   />
     </p>
 <p   
 >在这里我们一个简化的模拟代码就完成了，执行顺序如下图：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_22-3-32.png" alt="images/download/attachments/17301744/image2021-6-22_22-3-32.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-22_22-3-32.png" alt="images/download/attachments/17301744/image2021-6-22_22-3-32.png"   />
     </p>
 <p   
 >简单理解：CWinApp的Run函数就是用于消息循环的。</p>
@@ -542,14 +542,14 @@
 <p   
 >在编译器（VC6）中有自带的RTTI，我们可以在Project-Setting中选择C/C++标签按如下图选择即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-2-44.png" alt="images/download/attachments/17301744/image2021-6-23_15-2-44.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-2-44.png" alt="images/download/attachments/17301744/image2021-6-23_15-2-44.png"   />
     </p>
 <p   
 >在源代码中我们还需要引入一个头文件typeinfo.h，而后就可以使用typeid这个函数来进行动态识别，该函数只有一个传参，改参数可以为类名或已经创建的对象名。</p>
 <p   
 >如下图所示简单用一下typeid，我们定一个了一个类CAnimal并创建了一个对象pAnimal，使用typeid进行比较发现两者都属于同一个类：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-11-28.png" alt="images/download/attachments/17301744/image2021-6-23_15-11-28.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-11-28.png" alt="images/download/attachments/17301744/image2021-6-23_15-11-28.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-17301744_safe-id-TUZDLXN0YXRpY-WFs-mUruivjeeahOS9nOeUqA">
@@ -557,7 +557,7 @@
 <p   
 >static关键词之前课程中也有了解到，这里我们重新温故一下，当用这个关键词定义一个变量，该变量则存储在全局数据区而不是局部的，如果static关键词的变量为某类的成员，则该成员与类进行关联，但并不会与类创建的对象进行关联，也就表示我们不需要创建对象就可以使用这个成员，所以我们想要使用的话就要通过<strong class=" ">类名::成员名</strong>的方式去使用，并且我们不可以在类的内部去赋值初始化，只可以在外部。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-19-46.png" alt="images/download/attachments/17301744/image2021-6-23_15-19-46.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-19-46.png" alt="images/download/attachments/17301744/image2021-6-23_15-19-46.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-17301744_safe-id-TUZDLWNvbnN05YWz6ZSu6K-N55qE5L2c55So">
@@ -565,19 +565,19 @@
 <p   
 >使用const关键词定义的成员，同样没办法直接初始化，需要在初始化列表中进行初始化：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-38-48.png" alt="images/download/attachments/17301744/image2021-6-23_15-38-48.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-38-48.png" alt="images/download/attachments/17301744/image2021-6-23_15-38-48.png"   />
     </p>
 <p   
 >跟static不同的是，我们想要使用const关键词的成员时应创建对象后<strong class=" ">根据对象名来使用</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-40-29.png" alt="images/download/attachments/17301744/image2021-6-23_15-40-29.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-40-29.png" alt="images/download/attachments/17301744/image2021-6-23_15-40-29.png"   />
     </p>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLXN0YXRpY-OAgWNvbnN05Y-M5YWz6ZSu6K-N">
         <h3 class="heading "><span>static&#12289;const&#21452;&#20851;&#38190;&#35789;</span></h3>
 <p   
 >如果一个成员使用了static const双关键词，我们还是按照static关键词的方法去使用，但是在初始化的时候需要加上const关键词：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-44-16.png" alt="images/download/attachments/17301744/image2021-6-23_15-44-16.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_15-44-16.png" alt="images/download/attachments/17301744/image2021-6-23_15-44-16.png"   />
     </p>
     </div>
     </div>
@@ -593,22 +593,22 @@
 <p   
 >首先在CWinApp类派生的CMyWinApp类中使用DECLARE_DYNAMIC这个宏（<strong class=" ">个人理解</strong>：声明这个类可以使用RTTI），其用法跟函数是一样的，传参为当前类名：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_22-58-35.png" alt="images/download/attachments/17301744/image2021-6-23_22-58-35.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_22-58-35.png" alt="images/download/attachments/17301744/image2021-6-23_22-58-35.png"   />
     </p>
 <p   
 >其次在WinMain函数之前使用IMPLEMENT_DYNAMIC宏（<strong class=" ">个人理解</strong>：要在当前使用RTTI，又像建立一个父类和子类的关联），其用法跟函数是一样的，传参为类名、父类名：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_22-59-38.png" alt="images/download/attachments/17301744/image2021-6-23_22-59-38.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_22-59-38.png" alt="images/download/attachments/17301744/image2021-6-23_22-59-38.png"   />
     </p>
 <p   
 >最后使用IsKindOf函数去判断当前是否继承某个类，其语法格式如下所示：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-2-56.png" alt="images/download/attachments/17301744/image2021-6-23_23-2-56.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-2-56.png" alt="images/download/attachments/17301744/image2021-6-23_23-2-56.png"   />
     </p>
 <p   
 >传递的参数使用结构体指针，我们可以通过RUNTIME_CLASS这个宏来返回该格式：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-6-20.png" alt="images/download/attachments/17301744/image2021-6-23_23-6-20.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-6-20.png" alt="images/download/attachments/17301744/image2021-6-23_23-6-20.png"   />
     </p>
 <p   
 >如上图所示我们通过判断当前类是否是基于CWinApp类派生的，不是则返回FALSE。</p>
@@ -617,7 +617,7 @@
 <p   
 >RUNTIME_CLASS这个宏就是返回处理传入的类名，返回一个CRuntimeClass的指针，其本质我们在VC6中鼠标点击按F12即可看见：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-13-32.png" alt="images/download/attachments/17301744/image2021-6-23_23-13-32.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-13-32.png" alt="images/download/attachments/17301744/image2021-6-23_23-13-32.png"   />
     </p>
 <p   
 >就是 &rarr; <strong class=" ">((CRuntimeClass*)(&amp;class_name::class##class_name))</strong>，其中两个#号则代表拼接符（一个#号则表示转为字符串），也就是说这一段代码可以转换为：</p>
@@ -629,7 +629,7 @@
 <p   
 >所以我们可以在判断中去替换一下使用：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-17-2.png" alt="images/download/attachments/17301744/image2021-6-23_23-17-2.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-17-2.png" alt="images/download/attachments/17301744/image2021-6-23_23-17-2.png"   />
     </p>
 <p   
 >那这个也就很好理解了：这一段就表示返回的是<strong class=" ">CWinApp类中的classCWinApp的地址然后强转为了CRuntimeClass指针</strong>。</p>
@@ -642,7 +642,7 @@
 <p   
 >CRuntimeClass结构体，中文名称叫类型记录链表结构，我们可以使用F12跟进看一下定义：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-20-16.png" alt="images/download/attachments/17301744/image2021-6-23_23-20-16.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-20-16.png" alt="images/download/attachments/17301744/image2021-6-23_23-20-16.png"   />
     </p>
 <p   
 >由于这里结构体的内容比较多，我们可以简化一下，整理出本章需要学到的东西：</p>
@@ -718,12 +718,12 @@
 <p   
 >整个代码转换下来，流程也清楚了，最后就是IsKindOf函数的原理了，我们可以下断点跟进：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-55-51.png" alt="images/download/attachments/17301744/image2021-6-23_23-55-51.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-55-51.png" alt="images/download/attachments/17301744/image2021-6-23_23-55-51.png"   />
     </p>
 <p   
 >首先是获取类的<strong class=" ">CRuntimeClass结构体指针</strong>，然后根据这个指针调用<strong class=" ">IsDerivedFrom方法</strong>，传递的参数也是一个结构体指针，继续跟进该函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-57-14.png" alt="images/download/attachments/17301744/image2021-6-23_23-57-14.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-23_23-57-14.png" alt="images/download/attachments/17301744/image2021-6-23_23-57-14.png"   />
     </p>
 <p   
 >前面的可以不用管，都是一些容错代码，进到这个while循环，我们可以很清晰的看见其会判断当前类和传递进来的类是否一样，如果一样则返回TRUE。</p>
@@ -733,7 +733,7 @@
 <p   
 >通过拆分宏，让CMainWindow类也支持RTTI：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_0-11-11.png" alt="images/download/attachments/17301744/image2021-6-24_0-11-11.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_0-11-11.png" alt="images/download/attachments/17301744/image2021-6-24_0-11-11.png"   />
     </p>
 <p   
 >分别自写函数打印出它父类的CRuntimeClass结构体信息：</p>
@@ -766,7 +766,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_0-28-45.png" alt="images/download/attachments/17301744/image2021-6-24_0-28-45.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_0-28-45.png" alt="images/download/attachments/17301744/image2021-6-24_0-28-45.png"   />
     </p>
     </div>
     </div>
@@ -829,14 +829,14 @@
 <p   
 >我们可以跟进CFramWnd类、CWinApp类来看一下谁支持动态创建，也就是<strong class=" ">谁使用了相关的宏</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_10-32-2.png" alt="images/download/attachments/17301744/image2021-6-24_10-32-2.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_10-32-2.png" alt="images/download/attachments/17301744/image2021-6-24_10-32-2.png"   />
     </p>
 <p   
 >如上图所示我们可以很清晰的看见<strong class=" ">CFrameWnd类使用了DECLARE_DYNCREATE宏</strong>，也就表示其支持动态创建。</p>
 <p   
 >所以我们可以在其派生的CMainWindow类也使用动态创建，这里宏的使用和RTTI宏的使用是一样的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_10-57-1.png" alt="images/download/attachments/17301744/image2021-6-24_10-57-1.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_10-57-1.png" alt="images/download/attachments/17301744/image2021-6-24_10-57-1.png"   />
     </p>
 <p   
 >在InitInstance函数中<strong class=" ">将new运算符替代为动态创建函数CreateObject</strong>即可。</p>
@@ -905,14 +905,14 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_11-18-21.png" alt="images/download/attachments/17301744/image2021-6-24_11-18-21.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_11-18-21.png" alt="images/download/attachments/17301744/image2021-6-24_11-18-21.png"   />
     </p>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLea1geeoi-i3n-i_mw">
         <h3 class="heading "><span>&#27969;&#31243;&#36319;&#36827;</span></h3>
 <p   
 >转换完宏之后在调用CreateObject函数时下断点跟进：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_11-23-38.png" alt="images/download/attachments/17301744/image2021-6-24_11-23-38.png" width="800"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_11-23-38.png" alt="images/download/attachments/17301744/image2021-6-24_11-23-38.png"   />
     </p>
 <p   
 >这个就很好理解了就是调用CreateObject函数会判断<strong class=" ">m_pfnCreateObject</strong>（这是一个函数指针存放当前的CreateObject函数的地址），如果不为空则调用这个函数将其返回值给到pObject，最后再返回pObject也就是new CMainWindow。</p>
@@ -923,7 +923,7 @@
 <p   
 >在CMainWindow类里面定义一个函数：<strong class=" ">CreateObjectByName(char* className);</strong>，这个函数就表示通过参数去动态创建对象。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_12-34-23.png" alt="images/download/attachments/17301744/image2021-6-24_12-34-23.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_12-34-23.png" alt="images/download/attachments/17301744/image2021-6-24_12-34-23.png"   />
     </p>
     </div>
     </div>
@@ -960,27 +960,27 @@
 <p   
 >之前的学习中我们学了几个<strong class=" ">带有DECLARE_前缀的宏</strong>，就是声明的意思，将它放在类内部即可，所以宏<strong class=" ">DECLARE_MESSAGE_MAP</strong>直接写在类里头（声明里）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-12-56.png" alt="images/download/attachments/17301744/image2021-6-24_14-12-56.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-12-56.png" alt="images/download/attachments/17301744/image2021-6-24_14-12-56.png"   />
     </p>
 <p   
 >另外两个宏就是实现，<strong class=" ">BEGIN_MESSAGE_MAP有两个参数分别是当前类、当前类的基类（父类</strong>），应该<strong class=" ">成对出现在类实现外</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-14-4.png" alt="images/download/attachments/17301744/image2021-6-24_14-14-4.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-14-4.png" alt="images/download/attachments/17301744/image2021-6-24_14-14-4.png"   />
     </p>
 <p   
 >假设我们要添加一个鼠标左键按下的消息就需要在这里面去填写：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-16-19.png" alt="images/download/attachments/17301744/image2021-6-24_14-16-19.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-16-19.png" alt="images/download/attachments/17301744/image2021-6-24_14-16-19.png"   />
     </p>
 <p   
 >但是这样我们还需要一个消息处理的函数，这个函数要写在<strong class=" ">CMainWindow</strong>类声明中：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-24-19.png" alt="images/download/attachments/17301744/image2021-6-24_14-24-19.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-24-19.png" alt="images/download/attachments/17301744/image2021-6-24_14-24-19.png"   />
     </p>
 <p   
 ><strong class=" ">AfxMessageBox函数就是一个弹框，弹框内容为Test</strong>，在这里我们允许程序左键按下就会出现弹框：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-25-8.png" alt="images/download/attachments/17301744/image2021-6-24_14-25-8.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-25-8.png" alt="images/download/attachments/17301744/image2021-6-24_14-25-8.png"   />
     </p>
 <p   
 >按照这样的格式我们想添加什么消息处理都可以，但是因为是宏，使用简单，但不利于我们去了解基本原理，<strong class=" ">例如这个左键按下的消息处理函数OnLButtonDown，这个函数名为什么要这样写？不这么写可不可以？</strong>所以我们还需要通过转换宏去了解本质。</p>
@@ -1072,12 +1072,12 @@
 <p   
 >根据注释可以非常清晰的看见每个参数的意义，主要说下后两个参数，<strong class=" ">AFX_PMSG pfn为响应消息时执行的函数，这里也就是OnLButtonDown函数的地址，UINT nSig为消息的动作标识 enum AfxSig 里面的成员，在当前值为AfxSig_vwp</strong>，这是一个宏，我们可以跟进查看一下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-56-2.png" alt="images/download/attachments/17301744/image2021-6-24_14-56-2.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-56-2.png" alt="images/download/attachments/17301744/image2021-6-24_14-56-2.png"   />
     </p>
 <p   
 >它表示着<strong class=" ">AFX_PMSG pfn（响应消息时执行的函数）</strong>的<strong class=" ">返回值和参数的格式</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-56-54.png" alt="images/download/attachments/17301744/image2021-6-24_14-56-54.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_14-56-54.png" alt="images/download/attachments/17301744/image2021-6-24_14-56-54.png"   />
     </p>
 <p   
 >所以在内部就可以通过<strong class=" ">UINT nSig来进行函数的调用</strong>。</p>
@@ -1125,27 +1125,27 @@
 <p   
 >之前我们了解过<strong class=" ">Create函数</strong>，其第一个参数（类名）为NULL，则以MFC内建的窗口类产生一个标准的外框窗口，既然它有窗口类那肯定就有窗口过程处理函数，我们需要从这个函数入手下断点去跟进。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_17-11-41.png" alt="images/download/attachments/17301744/image2021-6-24_17-11-41.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_17-11-41.png" alt="images/download/attachments/17301744/image2021-6-24_17-11-41.png"   />
     </p>
 <p   
 >首先会判断一个菜单名称：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_17-13-5.png" alt="images/download/attachments/17301744/image2021-6-24_17-13-5.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_17-13-5.png" alt="images/download/attachments/17301744/image2021-6-24_17-13-5.png"   />
     </p>
 <p   
 >这里我们没有，所以继续向下我们会发现其调用了一个<strong class=" ">CreateEx</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_17-13-56.png" alt="images/download/attachments/17301744/image2021-6-24_17-13-56.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_17-13-56.png" alt="images/download/attachments/17301744/image2021-6-24_17-13-56.png"   />
     </p>
 <p   
 >跟进<strong class=" ">CreateEx</strong>函数，其一开始对一些信息进行了填充，这个信息传递给了<strong class=" ">PreCreateWindow</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_23-40-53.png" alt="images/download/attachments/17301744/image2021-6-24_23-40-53.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_23-40-53.png" alt="images/download/attachments/17301744/image2021-6-24_23-40-53.png"   />
     </p>
 <p   
 >这边就涉及到一个新的结构体<strong class=" ">CREATESTRUCT</strong>，我们跟进看一下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_23-44-57.png" alt="images/download/attachments/17301744/image2021-6-24_23-44-57.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_23-44-57.png" alt="images/download/attachments/17301744/image2021-6-24_23-44-57.png"   />
     </p>
     <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
                 <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
@@ -1168,22 +1168,22 @@
 <p   
 >我们继续跟进<strong class=" ">PreCreateWindow</strong>函数，我们可以看见如果窗口名称为空则帮我去注册一个默认的窗口类：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_23-42-31.png" alt="images/download/attachments/17301744/image2021-6-24_23-42-31.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-24_23-42-31.png" alt="images/download/attachments/17301744/image2021-6-24_23-42-31.png"   />
     </p>
 <p   
 >其使用的是<strong class=" ">AfxDeferRegisterClass</strong>，这是一个宏，其背后就是<strong class=" ">AfxEndDeferRegisterClass</strong>这个函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_0-35-47.png" alt="images/download/attachments/17301744/image2021-6-25_0-35-47.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_0-35-47.png" alt="images/download/attachments/17301744/image2021-6-25_0-35-47.png"   />
     </p>
 <p   
 >通过阅读代码我们发现这个函数不是我们想要知道其是如何处理消息的函数，继续跟进，跟到<strong class=" ">CreateEx</strong>函数里面会有一个<strong class=" ">AfxHookWindowCreate</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_0-37-44.png" alt="images/download/attachments/17301744/image2021-6-25_0-37-44.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_0-37-44.png" alt="images/download/attachments/17301744/image2021-6-25_0-37-44.png"   />
     </p>
 <p   
 >通过这个名字我们就知道什么意思了，其就表示在窗口创建之前挂了一个钩子（HOOK），跟进这个函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_0-38-49.png" alt="images/download/attachments/17301744/image2021-6-25_0-38-49.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_0-38-49.png" alt="images/download/attachments/17301744/image2021-6-25_0-38-49.png"   />
     </p>
 <p   
 >如上图所示我么久可以看到其挂钩子的函数是<strong class=" ">SetWindowsHookEx</strong>（其第一个参数是<strong class=" ">WH_CBT</strong>，这是一个宏，其就是一个钩子，其表示可以监听窗口激活、产生、释放（关闭）、最小化、最大化或改变；那么在这些事件之前使用的函数就是<strong class=" ">_AfxCbtFilterHook</strong>，也就是第二个参数），相当于<strong class=" ">安装了一个WH_CBT类型的钩子函数_AfxCbtFilterHook</strong>，通过它将默认的窗口过程处理函数替换成了<strong class=" ">afxWndProc</strong>，<strong class=" ">这一段通过调试是没办法看见的，</strong>我们需要去寻找<strong class=" ">_AfxCbtFilterHook</strong>函数的定义，代码很长我们简化一下：</p>
@@ -1204,19 +1204,19 @@
 <p   
 >我们可以通过命名发现其将老的窗口过程处理函数替换为了<strong class=" ">afxWndProc</strong>，也就是函数<strong class=" ">AfxGetAfxWndProc</strong>，我们继续跟进这段代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_0-57-42.png" alt="images/download/attachments/17301744/image2021-6-25_0-57-42.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_0-57-42.png" alt="images/download/attachments/17301744/image2021-6-25_0-57-42.png"   />
     </p>
 <p   
 >发现其会判断是否定义了<strong class=" ">_AFXDLL宏</strong>，经查阅发现这是判断是否使用了动态链接库，而我们现在使用的是静态链接库，在这自然不存在所以返回的就是<strong class=" ">AfxWndProc</strong>这个函数的地址。</p>
 <p   
 >如果你想通过调试去看见这个过程的话，我们就需要借助消息处理函数，例如之前学习的<strong class=" ">OnLButtonDown</strong>函数，在这下断点进行跟进即可（别忘记要左键按下触发事件才能跟进）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-7-12.png" alt="images/download/attachments/17301744/image2021-6-25_1-7-12.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-7-12.png" alt="images/download/attachments/17301744/image2021-6-25_1-7-12.png"   />
     </p>
 <p   
 >跟着跟着你就发现跟到了<strong class=" ">AfxWndProc</strong>这个函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-11-9.png" alt="images/download/attachments/17301744/image2021-6-25_1-11-9.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-11-9.png" alt="images/download/attachments/17301744/image2021-6-25_1-11-9.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-17301744_safe-id-TUZDLea2iOaBr-WkhOeQhua1geeoiw">
@@ -1224,72 +1224,72 @@
 <p   
 >在<strong class=" ">OnLButtonDown</strong>函数这下断点进行来看一下消息处理的流程。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-7-12.png" alt="images/download/attachments/17301744/image2021-6-25_1-7-12.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-7-12.png" alt="images/download/attachments/17301744/image2021-6-25_1-7-12.png"   />
     </p>
 <p   
 >跟到函数<strong class=" ">AfxCallWndProc</strong>，在如下图所示的位置下断点：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-24-15.png" alt="images/download/attachments/17301744/image2021-6-25_1-24-15.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-24-15.png" alt="images/download/attachments/17301744/image2021-6-25_1-24-15.png"   />
     </p>
 <p   
 >下一个条件断点，当<strong class=" ">nMsg == 0x0201（#define WM_LBUTTONDOWN 0x0201）</strong>，也就是当消息类型是左键按下时断点：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-29-1.png" alt="images/download/attachments/17301744/image2021-6-25_1-29-1.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-29-1.png" alt="images/download/attachments/17301744/image2021-6-25_1-29-1.png"   />
     </p>
 <p   
 >下完条件断点之后我们可以重新运行程序：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-29-53.png" alt="images/download/attachments/17301744/image2021-6-25_1-29-53.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-29-53.png" alt="images/download/attachments/17301744/image2021-6-25_1-29-53.png"   />
     </p>
 <p   
 >这时候就会有提示，那就说明断点下成功了，继续跟进代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-31-26.png" alt="images/download/attachments/17301744/image2021-6-25_1-31-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-31-26.png" alt="images/download/attachments/17301744/image2021-6-25_1-31-26.png"   />
     </p>
 <p   
 >我们可以看见消息是通过<strong class=" ">WindowProc</strong>函数的，这个函数是一个虚函数，也就表示我们可以在类中改写这个函数，但是这里我们没有改写其调用的就是<strong class=" ">CWnd::WindowProc</strong>。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-33-26.png" alt="images/download/attachments/17301744/image2021-6-25_1-33-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-33-26.png" alt="images/download/attachments/17301744/image2021-6-25_1-33-26.png"   />
     </p>
 <p   
 >而这里面的<strong class=" ">OnWndMsg</strong>同样也是一个虚函数，我们是可以改写的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-34-12.png" alt="images/download/attachments/17301744/image2021-6-25_1-34-12.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-34-12.png" alt="images/download/attachments/17301744/image2021-6-25_1-34-12.png"   />
     </p>
 <p   
 >在这里我也没改写，所以进入的就是<strong class=" ">CWnd::OnWndMsg</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-36-4.png" alt="images/download/attachments/17301744/image2021-6-25_1-36-4.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-36-4.png" alt="images/download/attachments/17301744/image2021-6-25_1-36-4.png"   />
     </p>
 <p   
 >开头几个判断就是判读你的消息类型，当都没有的情况下则表示这是一个<strong class=" ">标准消息</strong>。</p>
 <p   
 >其会有一个<strong class=" ">pMessageMap</strong>结构体，这个结构体存储的就是一个消息映射表，我们跟进之后会发现其会不停的基于<strong class=" ">pBaseMap</strong>成员去重新赋值直到没有为止：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-44-0.png" alt="images/download/attachments/17301744/image2021-6-25_1-44-0.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-44-0.png" alt="images/download/attachments/17301744/image2021-6-25_1-44-0.png"   />
     </p>
 <p   
 >继续根据会发现其会通过<strong class=" ">AfxFindMessageEntry</strong>函数在消息映射表中去寻找第一个参数的<strong class=" ">nMessage</strong>与第二个参数<strong class=" ">message</strong>是否一致：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-46-11.png" alt="images/download/attachments/17301744/image2021-6-25_1-46-11.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-46-11.png" alt="images/download/attachments/17301744/image2021-6-25_1-46-11.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-48-46.png" alt="images/download/attachments/17301744/image2021-6-25_1-48-46.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-48-46.png" alt="images/download/attachments/17301744/image2021-6-25_1-48-46.png"   />
     </p>
 <p   
 >继续跟进代码你会发现<strong class=" ">MessageMapFunctions</strong>结构体，这个表就是告诉我们当前函数（左键按下）是什么返回值、什么参数，然后将pfn（当前函数地址）保存到其成员<strong class=" ">pfn</strong>里：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-49-49.png" alt="images/download/attachments/17301744/image2021-6-25_1-49-49.png"  height="142" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-49-49.png" alt="images/download/attachments/17301744/image2021-6-25_1-49-49.png"   />
     </p>
 <p   
 >然后通过<strong class=" ">nSig（消息的动作标识 enum AfxSig 里面的成员）</strong>去转换参数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-54-15.png" alt="images/download/attachments/17301744/image2021-6-25_1-54-15.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-54-15.png" alt="images/download/attachments/17301744/image2021-6-25_1-54-15.png"   />
     </p>
 <p   
 >...</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-55-39.png" alt="images/download/attachments/17301744/image2021-6-25_1-55-39.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_1-55-39.png" alt="images/download/attachments/17301744/image2021-6-25_1-55-39.png"   />
     </p>
 <p   
 >然后通过这样的方式将对应的参数传递给我们的消息处理函数，执行该函数。</p>
@@ -1331,52 +1331,52 @@
 <p   
 >我们F12跟进AfxWinMain函数然后下个断点来跟一下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_22-50-27.png" alt="images/download/attachments/17301744/image2021-6-25_22-50-27.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-25_22-50-27.png" alt="images/download/attachments/17301744/image2021-6-25_22-50-27.png"   />
     </p>
 <p   
 >然后我们重新运行代码跟到断点的地方继续跟进会发现<strong class=" ">pThread、pApp</strong>确实如我们所说是等价的，都是获取的我们实例化的对象：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-40-44.png" alt="images/download/attachments/17301744/image2021-6-26_18-40-44.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-40-44.png" alt="images/download/attachments/17301744/image2021-6-26_18-40-44.png"   />
     </p>
 <p   
 >然后我们进入<strong class=" ">AfxWinInit</strong>函数，跟进发现在该函数内部会在获取一次我们实例化的对象，然后判断是否存在，存在则把入口点的四个参数保存在我们实例化对象的成员里：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-42-40.png" alt="images/download/attachments/17301744/image2021-6-26_18-42-40.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-42-40.png" alt="images/download/attachments/17301744/image2021-6-26_18-42-40.png"   />
     </p>
 <p   
 >所以我们在重写<strong class=" ">InitInstance函数直接使用m_nCmdShow变量</strong>实际上使用的就是自己的成员：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-44-51.png" alt="images/download/attachments/17301744/image2021-6-26_18-44-51.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-44-51.png" alt="images/download/attachments/17301744/image2021-6-26_18-44-51.png"   />
     </p>
 <p   
 >而后继续跟进代码是<strong class=" ">AfxInitThread</strong>函数，该函数就是增加消息队列，初始化线程特别数据（<strong class=" ">为主线程作了一些初始化工作</strong>）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-47-48.png" alt="images/download/attachments/17301744/image2021-6-26_18-47-48.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-47-48.png" alt="images/download/attachments/17301744/image2021-6-26_18-47-48.png"   />
     </p>
 <p   
 >再回到<strong class=" ">AfxWinMain</strong>函数，接下来就是一个<strong class=" ">InitApplication</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-50-2.png" alt="images/download/attachments/17301744/image2021-6-26_18-50-2.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-50-2.png" alt="images/download/attachments/17301744/image2021-6-26_18-50-2.png"   />
     </p>
 <p   
 >我们之前提到这是MFC原来使用的初始化函数，在现在已经过时了，所以不推荐使用，我们可以忽略，继续跟进：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-51-31.png" alt="images/download/attachments/17301744/image2021-6-26_18-51-31.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-51-31.png" alt="images/download/attachments/17301744/image2021-6-26_18-51-31.png"   />
     </p>
 <p   
 ><strong class=" ">InitInstance函数</strong>就是我们的核心，在该函数内创建窗口，它是一个虚函数，因为我们在<strong class=" ">CMyWinApp类</strong>继承并重写了该函数，现在我们进入的就是我们重写的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-53-40.png" alt="images/download/attachments/17301744/image2021-6-26_18-53-40.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-53-40.png" alt="images/download/attachments/17301744/image2021-6-26_18-53-40.png"   />
     </p>
 <p   
 >这段代码写了很多遍了，首先我们创建了一个对象，并在<strong class=" ">CMainWindow</strong>类的构造函数中使用<strong class=" ">Create</strong>函数创建了窗口，而后就是一些流程化的东西，<strong class=" ">最后一个返回为TRUE</strong>，这个相信很多人会疑惑，其实在代码中写的就很明确了，<strong class=" ">如果你不为TRUE，则会异常打印、销毁窗口（如果没有创建窗口则退出实例）</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-51-31.png" alt="images/download/attachments/17301744/image2021-6-26_18-51-31.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_18-51-31.png" alt="images/download/attachments/17301744/image2021-6-26_18-51-31.png"   />
     </p>
 <p   
 >接下来继续跟进就是<strong class=" ">Run</strong>函数，该函数实现的就是我们Win32里面的消息循环：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-1-10.png" alt="images/download/attachments/17301744/image2021-6-26_19-1-10.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-1-10.png" alt="images/download/attachments/17301744/image2021-6-26_19-1-10.png"   />
     </p>
 <p   
 >这里又调用了<strong class=" ">CWinThread::Run()</strong>，我们继续跟进，在很多书中将该函数称为MFC的控制中心，因为在MFC中所有消息队列、消息分派都在<strong class=" ">CWinThread::Run()</strong>中去完成，它与<strong class=" ">AfxWinMain</strong>一样是对普通程序员来说是不可见的。</p>
@@ -1389,32 +1389,32 @@
 <p   
 >而后如果是空闲状态则调用<strong class=" ">OnIdle</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-2-26.png" alt="images/download/attachments/17301744/image2021-6-26_19-2-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-2-26.png" alt="images/download/attachments/17301744/image2021-6-26_19-2-26.png"   />
     </p>
 <p   
 ><strong class=" ">OnIdle</strong>函数是一个虚函数，是<strong class=" ">CWinApp</strong>的成员方法，所以我们可以重写该函数以便让我们的程序在空闲状态下做一些操作：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-8-4.png" alt="images/download/attachments/17301744/image2021-6-26_19-8-4.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-8-4.png" alt="images/download/attachments/17301744/image2021-6-26_19-8-4.png"   />
     </p>
 <p   
 >继续跟进发现是一个<strong class=" ">PumpMessage</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-32-48.png" alt="images/download/attachments/17301744/image2021-6-26_19-32-48.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-32-48.png" alt="images/download/attachments/17301744/image2021-6-26_19-32-48.png"   />
     </p>
 <p   
 >在这个函数内就会去使用<strong class=" ">GetMessage</strong>函数去判断有没有消息，由于我们之前是已经判断过了才进的这个函数，所以这里会立即返回：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-33-25.png" alt="images/download/attachments/17301744/image2021-6-26_19-33-25.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-33-25.png" alt="images/download/attachments/17301744/image2021-6-26_19-33-25.png"   />
     </p>
 <p   
 >继续跟进就会发现我们熟悉的消息转换、分发：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-35-23.png" alt="images/download/attachments/17301744/image2021-6-26_19-35-23.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-35-23.png" alt="images/download/attachments/17301744/image2021-6-26_19-35-23.png"   />
     </p>
 <p   
 >再回到<strong class=" ">Run</strong>函数接下里调用的就是<strong class=" ">IsIdleMessage</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-36-36.png" alt="images/download/attachments/17301744/image2021-6-26_19-36-36.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-36-36.png" alt="images/download/attachments/17301744/image2021-6-26_19-36-36.png"   />
     </p>
 <p   
 >至此，我们就分析完Run函数了，其与Win32的消息循环本质没有区别，唯一的区别就是其多了一个空闲状态。</p>
@@ -1426,12 +1426,12 @@
 <p   
 >当窗口关闭的时候程序都会调用一个虚函数CMainWodw:PostNcDestroy，这个函数是CFrameWnd的，其默认就是一个<strong class=" ">delete this</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-52-8.png" alt="images/download/attachments/17301744/image2021-6-26_19-52-8.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-52-8.png" alt="images/download/attachments/17301744/image2021-6-26_19-52-8.png"   />
     </p>
 <p   
 >我们可以在自己的类中去重写一下，在delete之前做一些别的操作：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-53-0.png" alt="images/download/attachments/17301744/image2021-6-26_19-53-0.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_19-53-0.png" alt="images/download/attachments/17301744/image2021-6-26_19-53-0.png"   />
     </p>
 <p   
 ><strong class=" ">但需要注意的是</strong>如果你继承的不是CFrameWnd而是CWnd，其是没有<strong class=" ">delete this</strong>这样一个操作的，你就需要自己写。</p>
@@ -1476,14 +1476,14 @@
 <p   
 >Win32 API和MFC的<strong class=" ">CPaintDC</strong>类对比，很明显我们可以看出代码量变得非常少：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_20-53-30.png" alt="images/download/attachments/17301744/image2021-6-26_20-53-30.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_20-53-30.png" alt="images/download/attachments/17301744/image2021-6-26_20-53-30.png"   />
     </p>
 <p   
 >如上代码中Win32 API的代码我们使用了双冒号这是因为使用<u class=" "><strong class=" ">::双冒号</strong></u>指的是从全局调用，如果在Win32这种工程中加与不加影响倒是不大，但在MFC的工程中，默认MFC中的窗口类<strong class=" ">CWnd其成员函数</strong>有很多都是跟Win32 API重名，比如：<strong class=" ">ShowWindow、GetMessage、GetWindowText等等</strong>，所以这时候如果你在CWnd或其派生类中调用了<strong class=" ">ShowWindow</strong>之后，<strong class=" ">默认调用的就是CWnd的成员函数ShowWindow</strong>，如果你想要调用全局的，<strong class=" ">那么就必须使用双冒号前缀</strong>。</p>
 <p   
 >我们使用<strong class=" ">CPaintDC</strong>类需要注意：1. 在声明类的时候创建对应的函数 2. 在消息映射区（BEGIN_MESSAGE_MAP宏和END_MESSAGE_MAP宏之前）声明，例如如上的OnPaint函数我就就需要声明ON_WM_PAINT 3. 重写函数</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_21-3-2.png" alt="images/download/attachments/17301744/image2021-6-26_21-3-2.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_21-3-2.png" alt="images/download/attachments/17301744/image2021-6-26_21-3-2.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLURD6K6-5aSH5o-P6L-w6KGo55qE5LiA5Lqb5bGe5oCn">
@@ -1491,12 +1491,12 @@
 <p   
 >如下图所示为DC设备描述表的一些属性：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_20-57-52.png" alt="images/download/attachments/17301744/image2021-6-26_20-57-52.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_20-57-52.png" alt="images/download/attachments/17301744/image2021-6-26_20-57-52.png"   />
     </p>
 <p   
 >你可以通过设置方法来设置属性，通过获取方法来获取属性：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_21-10-2.png" alt="images/download/attachments/17301744/image2021-6-26_21-10-2.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_21-10-2.png" alt="images/download/attachments/17301744/image2021-6-26_21-10-2.png"   />
     </p>
     </div>
     </div>
@@ -1525,7 +1525,7 @@
 <p   
 >调用成员函数<strong class=" ">CDC::SetMapMod</strong>来修改映射模式，我们正常的映射模式是一个像素点，也就是MM_TEXT，其x轴向右，y轴向下，如下图表有很多种映射模式：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_22-2-29.png" alt="images/download/attachments/17301744/image2021-6-26_22-2-29.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_22-2-29.png" alt="images/download/attachments/17301744/image2021-6-26_22-2-29.png"   />
     </p>
     <div  class="tablewrap">
         <table class="wrapped confluenceTable">
@@ -1680,7 +1680,7 @@
 </li></ol><p   
 >如下图所示，通过将页面空间的原点映射到设备空间的原点，再将设备空间的原点映射到物理设备上，通过一层层的转换才可以通过物理设备看最终显示的结果：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_22-23-51.png" alt="images/download/attachments/17301744/image2021-6-26_22-23-51.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_22-23-51.png" alt="images/download/attachments/17301744/image2021-6-26_22-23-51.png"   />
     </p>
 <p   
 >将页面空间转到设备空间，就是通过映射模式，在设备空间里的单位是像素，而在逻辑坐标内则是我们自定义，这取决于映射模式。</p>
@@ -1689,12 +1689,12 @@
 <p   
 >我们来尝试一下修改映射模式，然后画一个圆，首先我们看下正常的映射模式：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-6-59.png" alt="images/download/attachments/17301744/image2021-6-26_23-6-59.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-6-59.png" alt="images/download/attachments/17301744/image2021-6-26_23-6-59.png"   />
     </p>
 <p   
 >选择<strong class=" ">MM_LOMETRIC</strong>，一个逻辑单位是0.1毫米，x向右则加，y向下则减，所以参数最后要改成-300：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-5-1.png" alt="images/download/attachments/17301744/image2021-6-26_23-5-1.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-5-1.png" alt="images/download/attachments/17301744/image2021-6-26_23-5-1.png"   />
     </p>
 <p   
 >因为不同的设备有不同的屏幕，也就造成了像素点不一样的情况，通过指定逻辑单位，我们只需要操作逻辑坐标而不需要去管设备，更换不同的设备依然可以精准的显示我们指定的长度。</p>
@@ -1724,12 +1724,12 @@
 <p   
 >无论我的窗口有多大都是同等比例去缩放的，并且都是一个正圆形：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-24-16.png" alt="images/download/attachments/17301744/image2021-6-26_23-24-16.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-24-16.png" alt="images/download/attachments/17301744/image2021-6-26_23-24-16.png"   />
     </p>
 <p   
 ><strong class=" ">MM_ANISOTROPIC</strong>这个映射模式其x、y独立缩放，在这个模式下画的圆就会填满整个窗口，x、y也都各自按照各自的来缩放：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-27-20.png" alt="images/download/attachments/17301744/image2021-6-26_23-27-20.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-27-20.png" alt="images/download/attachments/17301744/image2021-6-26_23-27-20.png"   />
     </p>
 <p   
 >GDI的文本和图形输出函数使用逻辑坐标，而在客户区移动或按下鼠标的鼠标位置是采用设备坐标；在我们没有修改映射模式的时候则逻辑坐标与设备坐标等同。</p>
@@ -1739,12 +1739,12 @@
 <p   
 >我们在<strong class=" ">OnLButtonDown</strong>函数中写一个当鼠标左键按下则画一个圆形的功能：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-50-14.png" alt="images/download/attachments/17301744/image2021-6-26_23-50-14.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-50-14.png" alt="images/download/attachments/17301744/image2021-6-26_23-50-14.png"   />
     </p>
 <p   
 >这里的<strong class=" ">point</strong>实际上就是设备坐标，当我们修改了映射模式为<strong class=" ">MM_LOMETRIC</strong>则就没有办法看见圆形了，我们就需要使用函数<strong class=" ">DPtoLP</strong>来转换：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-54-13.png" alt="images/download/attachments/17301744/image2021-6-26_23-54-13.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-26_23-54-13.png" alt="images/download/attachments/17301744/image2021-6-26_23-54-13.png"   />
     </p>
 <p   
 >但是这个这个实际上与我们的功能差了一些，因为模式为<strong class=" ">MM_LOMETRIC</strong>，其x向右则加，y向下则减，所以在代码中的<strong class=" ">point.y+100</strong>需要改成<strong class=" ">point.y-100</strong>。</p>
@@ -1757,17 +1757,17 @@
 <p   
 >我们可以通过<strong class=" ">SetWindowOrg</strong>函数来更改窗口的原点，所以呈现给我们的100,100那一部分实际上就是一个缺失的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-5-42.png" alt="images/download/attachments/17301744/image2021-6-27_0-5-42.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-5-42.png" alt="images/download/attachments/17301744/image2021-6-27_0-5-42.png"   />
     </p>
 <p   
 >我们想要画一个正常的原就需要在画圆的时候指定坐标：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-16-50.png" alt="images/download/attachments/17301744/image2021-6-27_0-16-50.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-16-50.png" alt="images/download/attachments/17301744/image2021-6-27_0-16-50.png"   />
     </p>
 <p   
 >同样我们可以更改设备空间的原点，使用函数<strong class=" ">SetViewportOrg</strong>：</p>
 <p   
-><strong class=" "><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-19-29.png" alt="images/download/attachments/17301744/image2021-6-27_0-19-29.png" width="600"  />
+><strong class=" "><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-19-29.png" alt="images/download/attachments/17301744/image2021-6-27_0-19-29.png"   />
 </strong></p>
 <p   
 >在这里就是将页面空间的0,0映射到设备空间的100,100，也就表示我们后续画圆从100,100开始也就是从设备空间的200开始。</p>
@@ -1777,7 +1777,7 @@
 <p   
 >设备空间下的坐标系分为三类：1. 客户区坐标 2. 屏幕坐标 3. 全窗口坐标，如下图所示：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-27-19.png" alt="images/download/attachments/17301744/image2021-6-27_0-27-19.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-27-19.png" alt="images/download/attachments/17301744/image2021-6-27_0-27-19.png"   />
     </p>
     </div>
     </div>
@@ -1905,7 +1905,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-20-50.png" alt="images/download/attachments/17301744/image2021-6-27_23-20-50.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-20-50.png" alt="images/download/attachments/17301744/image2021-6-27_23-20-50.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLVBvbHlsaW5l5Ye95pWw57q_5q616L-e5o6l">
@@ -1924,12 +1924,12 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-40-39.png" alt="images/download/attachments/17301744/image2021-6-27_23-40-39.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-40-39.png" alt="images/download/attachments/17301744/image2021-6-27_23-40-39.png"   />
     </p>
 <p   
 >有很多人可能会好奇为什么连接4个点需要5组x, y坐标，如下图就是其绘制正方形的流程：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-40-10.png" alt="images/download/attachments/17301744/image2021-6-27_23-40-10.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-40-10.png" alt="images/download/attachments/17301744/image2021-6-27_23-40-10.png"   />
     </p>
 <p   
 >如果你不想这么复杂，我们可以使用<strong class=" ">PolylineTo</strong>函数。</p>
@@ -1949,7 +1949,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-45-3.png" alt="images/download/attachments/17301744/image2021-6-27_23-45-3.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-45-3.png" alt="images/download/attachments/17301744/image2021-6-27_23-45-3.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLUVsbGlwc2Xlh73mlbDnlLvlnIY">
@@ -1957,12 +1957,12 @@
 <p   
 ><strong class=" ">Ellipse</strong>函数用来画圆，之前也使用到过但是没有仔细讲解其细节，首先我们看下它可以接受的传参：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-50-6.png" alt="images/download/attachments/17301744/image2021-6-27_23-50-6.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_23-50-6.png" alt="images/download/attachments/17301744/image2021-6-27_23-50-6.png"   />
     </p>
 <p   
 >4个int类型的参数，或者一个<strong class=" ">LPCRECT</strong>类型的参数（这个可以通过<strong class=" ">CRect</strong>来创建，原因如下图所示，<strong class=" ">LPCRECT</strong>本质上就是一个宏，其用于表示<strong class=" ">RECT指针</strong>，而<strong class=" ">RECT</strong>则是<strong class=" ">tagRECT</strong>实例化的对象，<strong class=" ">CRect</strong>又继承于<strong class=" ">tagRECT</strong>，所以我们可以直接使用<strong class=" ">CRect</strong>来创建），而如果你使用<strong class=" ">CRect</strong>创建对象传入的还是四个int类型的参数，其实本质上和直接传入4个int类型的参数没有区别：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-49-56.png" alt="images/download/attachments/17301744/image2021-6-28_0-49-56.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-49-56.png" alt="images/download/attachments/17301744/image2021-6-28_0-49-56.png"   />
     </p>
 <p   
 >四个参数依次都分别表示左、上、右、下，实际上也可以理解为前2个参数为左上角的x, y坐标，后2个参数为右下角的x, y坐标。</p>
@@ -1977,12 +1977,12 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-7-34.png" alt="images/download/attachments/17301744/image2021-6-28_0-7-34.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-7-34.png" alt="images/download/attachments/17301744/image2021-6-28_0-7-34.png"   />
     </p>
 <p   
 >其原理如下图所示（<strong class=" ">个人见解</strong>），从10, 10到20, 20画一条直线，而后取中心点，在中心点开始画圆（类似圆规）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-2-48.png" alt="images/download/attachments/17301744/image2021-6-28_0-2-48.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-2-48.png" alt="images/download/attachments/17301744/image2021-6-28_0-2-48.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLVJlY3RhbmdsZeWHveaVsOeUu-ebtOinkuefqeW9og">
@@ -1990,7 +1990,7 @@
 <p   
 ><strong class=" ">Rectangle</strong>函数画直角矩形，其参数与<strong class=" ">Ellipse</strong>函数是一样的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-11-37.png" alt="images/download/attachments/17301744/image2021-6-28_0-11-37.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-11-37.png" alt="images/download/attachments/17301744/image2021-6-28_0-11-37.png"   />
     </p>
 <p   
 >所以使用方法也是一样的，如下代码：</p>
@@ -2004,12 +2004,12 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-12-29.png" alt="images/download/attachments/17301744/image2021-6-28_0-12-29.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-12-29.png" alt="images/download/attachments/17301744/image2021-6-28_0-12-29.png"   />
     </p>
 <p   
 >其原理如下图所示（<strong class=" ">个人见解</strong>），<strong class=" ">10, 10和20, 20就是为了确定位置，另外两个点就是10, 20和20, 10了</strong>，这个就可以通过给的对角线的两个点来确定：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-17-18.png" alt="images/download/attachments/17301744/image2021-6-28_0-17-18.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-17-18.png" alt="images/download/attachments/17301744/image2021-6-28_0-17-18.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLUZpbGxSZWN05Ye95pWw5oyH5a6a55S75Yi35aGr5YWF55-p5b2i">
@@ -2041,7 +2041,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-44-44.png" alt="images/download/attachments/17301744/image2021-6-28_0-44-44.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-44-44.png" alt="images/download/attachments/17301744/image2021-6-28_0-44-44.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLURyYXczZFJlY3Tlh73mlbDlrp7njrAzROeri-S9k-aEnw">
@@ -2049,7 +2049,7 @@
 <p   
 >为了让程序看起来更加丰满，我们可以使用Draw3dRect函数实现3D立体感，其第一个参数与<strong class=" ">Ellipse</strong>函数、<strong class=" ">Rectangle</strong>函数一样，可以为四个int类型的参数，也可以是一个<strong class=" ">LPCRECT</strong>，另外两个参数就是3D实体图形左边与上边的颜色和右边和下边的颜色。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-45-58.png" alt="images/download/attachments/17301744/image2021-6-28_0-45-58.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_0-45-58.png" alt="images/download/attachments/17301744/image2021-6-28_0-45-58.png"   />
     </p>
 <p   
 >如下代码，我们创建一个200x200的矩形，其左边与上边的颜色为绿色，右边和下边的颜色为红色：</p>
@@ -2068,7 +2068,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_1-6-48.png" alt="images/download/attachments/17301744/image2021-6-28_1-6-48.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_1-6-48.png" alt="images/download/attachments/17301744/image2021-6-28_1-6-48.png"   />
     </p>
 <p   
 ><strong class=" ">注意：</strong>这里的rect对象名，如果我们直接写对象名称不要那个取地址符也是可以的，因为这样实际上就是拷贝一份过去，而如果传入指针实际上就是将当前对象的地址传过去，两者唯一区别就是前者拷贝过去的对象被修改了不会影响本身，但后者则会影响本身，前者需要重新开辟一块空间，其实也是一种资源浪费，我们这些代码理论上也不会修改我们的坐标点，所以我们还是直接使用取地址符传指针进去较好。</p>
@@ -2115,7 +2115,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_1-26-1.png" alt="images/download/attachments/17301744/image2021-6-28_1-26-1.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_1-26-1.png" alt="images/download/attachments/17301744/image2021-6-28_1-26-1.png"   />
     </p>
     </div>
     </div>
@@ -2146,7 +2146,7 @@
 <p   
 >创建画笔并不代表画笔被我们所使用了，要使用的话则需要<strong class=" ">SelectObject</strong>来使用：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_1-43-9.png" alt="images/download/attachments/17301744/image2021-6-28_1-43-9.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_1-43-9.png" alt="images/download/attachments/17301744/image2021-6-28_1-43-9.png"   />
     </p>
 <p   
 >当我们使用该函数来设置了画笔，我们还需要保存一个原来的画笔，在使用完之后恢复原画笔（<strong class=" ">只要你使用了SelectObject方法就一定要保存原内容最后还原</strong>），这是因为：</p>
@@ -2184,7 +2184,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_2-1-42.png" alt="images/download/attachments/17301744/image2021-6-28_2-1-42.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_2-1-42.png" alt="images/download/attachments/17301744/image2021-6-28_2-1-42.png"   />
     </p>
 <p   
 ><strong class=" ">个人见解</strong>：说实话，这样的效果有些差强人意，还需要我们手动去调整，才能在矩形中对齐，所以如果你想在矩形中居中对齐建议使用<strong class=" ">DrawText</strong>函数。</p>
@@ -2204,7 +2204,7 @@
 <p   
 >其参数分别为字体大小、字体名称。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_2-16-29.png" alt="images/download/attachments/17301744/image2021-6-28_2-16-29.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-28_2-16-29.png" alt="images/download/attachments/17301744/image2021-6-28_2-16-29.png"   />
     </p>
 <p   
 >如果你想字体样式更花哨一点，例如支持斜体之类的，我们可以使用成员方法<strong class=" ">CreatePointFontIndirect</strong>，其参数是一个LOGFONT结构体：</p>
@@ -2295,7 +2295,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_13-17-28.png" alt="images/download/attachments/17301744/image2021-6-29_13-17-28.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_13-17-28.png" alt="images/download/attachments/17301744/image2021-6-29_13-17-28.png"   />
     </p>
     </div>
     </div>
@@ -2427,7 +2427,7 @@
 <p   
 >如下图中有其对应解释和相关的宏：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_13-52-5.png" alt="images/download/attachments/17301744/image2021-6-29_13-52-5.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_13-52-5.png" alt="images/download/attachments/17301744/image2021-6-29_13-52-5.png"   />
     </p>
 <p   
 >假设现在我们想要在鼠标左键按下的消息处理函数中判断当shift键按下则触发弹框，可以这样写：</p>
@@ -2446,33 +2446,33 @@
 <p   
 >我们了解了客户区消息之后，就需要了解一下非客户区，非客户区就是如下图所示红框之外的区域就是非客户区，我们这章所使用的实际上是基于窗口的非客户区，也就是紫框和红框中间那一部分：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-27-19.png" alt="images/download/attachments/17301744/image2021-6-27_0-27-19.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-27_0-27-19.png" alt="images/download/attachments/17301744/image2021-6-27_0-27-19.png"   />
     </p>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLemdnuWuouaIt-WMuum8oOagh-a2iOaBr-WkhOeQhg">
         <h3 class="heading "><span>&#38750;&#23458;&#25143;&#21306;&#40736;&#26631;&#28040;&#24687;&#22788;&#29702;</span></h3>
 <p   
 >非客户区鼠标消息处理其实跟我们之前使用的鼠标消息处理没有本质区别，唯一的就是名字里头多了NC这两个字母（<strong class=" ">个人理解</strong>为非客户区英文<strong class=" ">Not Client Area</strong>的首字母缩写），例如非客户区的鼠标左键相关的宏和函数：</p>
 <p   
-><img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/17301744/image2021-6-29_14-18-24.png" alt="images/download/thumbnails/17301744/image2021-6-29_14-18-24.png" width="200"  />
- <img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/17301744/image2021-6-29_14-18-38.png" alt="images/download/thumbnails/17301744/image2021-6-29_14-18-38.png" width="150"  />
+><img    src="images/download/attachments/17301744/image2021-6-29_14-18-24.png" alt="images/download/attachments/17301744/image2021-6-29_14-18-24.png"   />
+ <img    src="images/download/attachments/17301744/image2021-6-29_14-18-38.png" alt="images/download/attachments/17301744/image2021-6-29_14-18-38.png"   />
 </p>
 <p   
 >实际使用也没有本质差别：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_14-23-28.png" alt="images/download/attachments/17301744/image2021-6-29_14-23-28.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_14-23-28.png" alt="images/download/attachments/17301744/image2021-6-29_14-23-28.png"   />
     </p>
 <p   
 >但需要注意的是，这里我们需要加入一个父类的<strong class=" ">CFrameWnd::OnNcLButtonDown</strong>，这是因为如果不加入的话，当前消息处理函数就没法处理放大、缩小、关闭这些按钮，而会一直触发弹框：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_14-28-38.png" alt="images/download/attachments/17301744/image2021-6-29_14-28-38.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_14-28-38.png" alt="images/download/attachments/17301744/image2021-6-29_14-28-38.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_15-38-17.png" alt="images/download/attachments/17301744/image2021-6-29_15-38-17.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_15-38-17.png" alt="images/download/attachments/17301744/image2021-6-29_15-38-17.png"   />
     </p>
 <p   
 >非客户去鼠标消息处理函数的第一个参数可以判断很多东西，例如窗口缩小、放大、关闭按钮之类的都是可以的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_15-48-19.png" alt="images/download/attachments/17301744/image2021-6-29_15-48-19.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_15-48-19.png" alt="images/download/attachments/17301744/image2021-6-29_15-48-19.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLVdNX05DSElUVEVTVOa2iOaBrw">
@@ -2484,7 +2484,7 @@
 <p   
 >我们可以来实际使用一下这个消息，首先在消息映射表中加入该消息的映射，其次在类中声明对应消息处理函数，而后实现该函数即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_17-7-3.png" alt="images/download/attachments/17301744/image2021-6-29_17-7-3.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-29_17-7-3.png" alt="images/download/attachments/17301744/image2021-6-29_17-7-3.png"   />
     </p>
 <p   
 >我们可以将客户区和非客户区做一个转换以此实现在客户区也可以拖动窗口：</p>
@@ -2528,7 +2528,7 @@
 <p   
 >正常画是没有问题的，但是我们鼠标按下之后在非客户区抬起，这样就不会有一条直线出现：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_15-1-20.png" alt="images/download/attachments/17301744/image2021-6-30_15-1-20.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_15-1-20.png" alt="images/download/attachments/17301744/image2021-6-30_15-1-20.png"   />
     </p>
 <p   
 >因为我们光标已经离开客户区域了，所以说它接收不到鼠标左键抬起的信息，我们可以借助函数<strong class=" ">SetCapture</strong>，该函数的意思就是在属于当前线程的指定窗口里设置鼠标捕获，一旦窗口捕获了鼠标，所有鼠标输入都针对该窗口，无论光标是否在客户区内；同样，对应的一个函数就是<strong class=" ">ReleaseCapture</strong>函数，当你不在需要继续获得鼠标消息就要应该调用它来释放，但在这里你要通过<strong class=" ">GetCapture</strong>来获取当前捕获鼠标信息的窗口的句柄来判断是否是当前窗口的句柄，如果是则释放。</p>
@@ -2554,7 +2554,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_15-11-9.png" alt="images/download/attachments/17301744/image2021-6-30_15-11-9.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_15-11-9.png" alt="images/download/attachments/17301744/image2021-6-30_15-11-9.png"   />
     </p>
     </div>
     </div>
@@ -2651,17 +2651,17 @@
 <p   
 >前两个参数比较好理解，我们可以写代码来看一下第三个参数，这里我们用到的是<strong class=" ">WM_KEYDOWN</strong>消息：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-44-13.png" alt="images/download/attachments/17301744/image2021-6-30_16-44-13.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-44-13.png" alt="images/download/attachments/17301744/image2021-6-30_16-44-13.png"   />
     </p>
 <p   
 >首先判断按下的键是否是CTRL键，其次左移14位来获取这个值，我们知道第14位获得的是先前状态，先前键被按下为1，抬起为0，我们按一下CTRL键然后抬起看看结果：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-46-37.png" alt="images/download/attachments/17301744/image2021-6-30_16-46-37.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-46-37.png" alt="images/download/attachments/17301744/image2021-6-30_16-46-37.png"   />
     </p>
 <p   
 >结果为0，那我们一直按着CTRL键不抬起在看一下，结果就为1了：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-47-23.png" alt="images/download/attachments/17301744/image2021-6-30_16-47-23.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-47-23.png" alt="images/download/attachments/17301744/image2021-6-30_16-47-23.png"   />
     </p>
 <p   
 >所以我们可以根据这个来判断该键有没有松开。</p>
@@ -2671,15 +2671,15 @@
 <p   
 >之前我们可以了解了键盘消息处理函数的几个参数，第一个参数可以用来获取键盘按下的键，并且使用<strong class=" ">WM_KEYDOWN</strong>消息来使用了，但是这有一个问题，就是通过<strong class=" ">WM_KEYDOWN</strong>消息对应处理函数获取的键只是针对字符键的永远都是大写的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-54-5.png" alt="images/download/attachments/17301744/image2021-6-30_16-54-5.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-54-5.png" alt="images/download/attachments/17301744/image2021-6-30_16-54-5.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-53-52.png" alt="images/download/attachments/17301744/image2021-6-30_16-53-52.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-53-52.png" alt="images/download/attachments/17301744/image2021-6-30_16-53-52.png"   />
     </p>
 <p   
 >所以如果对大小写很严谨的话可以使用<strong class=" ">WM_CHAR</strong>消息以及其对应消息处理函数来获取，换而言之，<strong class=" ">WM_CHAR</strong>消息就是专门来处理这种字符键的。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-59-41.png" alt="images/download/attachments/17301744/image2021-6-30_16-59-41.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_16-59-41.png" alt="images/download/attachments/17301744/image2021-6-30_16-59-41.png"   />
     </p>
     </div>
     </div>
@@ -2699,15 +2699,15 @@
 <p   
 >按如下图所示创建对话框工程即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_17-56-43.png" alt="images/download/attachments/17301744/image2021-6-30_17-56-43.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_17-56-43.png" alt="images/download/attachments/17301744/image2021-6-30_17-56-43.png"   />
     </p>
 <p   
 >需要注意的是我们生成了工程，其有一个头文件<strong class=" ">stdafx.h</strong>，该文件一定要放在第一行去使用，因为在使用该文件之前的，VC6编译器是不会将其去参与编译的，而是选择忽视掉：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_18-2-55.png" alt="images/download/attachments/17301744/image2021-6-30_18-2-55.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_18-2-55.png" alt="images/download/attachments/17301744/image2021-6-30_18-2-55.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_18-4-26.png" alt="images/download/attachments/17301744/image2021-6-30_18-4-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-6-30_18-4-26.png" alt="images/download/attachments/17301744/image2021-6-30_18-4-26.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-17301744_safe-id-TUZDLee7k-aehOWIhuaekA">
@@ -2717,12 +2717,12 @@
 <p   
 >首先我们来看下<strong class=" ">HelloDialog.cpp</strong>文件，在这个文件中我们可以看见<strong class=" ">theApp</strong>这么一个熟悉的名字，通过该名字我们就可以知道这个文件实际上就是用来实例化的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-20-9.png" alt="images/download/attachments/17301744/image2021-7-1_18-20-9.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-20-9.png" alt="images/download/attachments/17301744/image2021-7-1_18-20-9.png"   />
     </p>
 <p   
 >该代码和以前我们写的工程是没有区别的，它的<strong class=" ">CHelloDialogApp::InitInstance</strong>函数就是初始化一个对话框，同样我们可以根据MFC层次结构图看见其与<strong class=" ">CFrameWnd</strong>通用继承于CWnd，换而言之其实两者没有什么区别，无非就是表现出来的形式不一样罢了。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-25-45.png" alt="images/download/attachments/17301744/image2021-7-1_18-25-45.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-25-45.png" alt="images/download/attachments/17301744/image2021-7-1_18-25-45.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLeS4u-eql-WPow">
@@ -2730,12 +2730,12 @@
 <p   
 >主窗口文件是<strong class=" ">HelloDialogDlg.cpp</strong>，在里面我们可以看见熟悉的消息映射以及相关的消息处理函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-29-5.png" alt="images/download/attachments/17301744/image2021-7-1_18-29-5.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-29-5.png" alt="images/download/attachments/17301744/image2021-7-1_18-29-5.png"   />
     </p>
 <p   
 >接着向下看就会发现一个注释写着在这里添加额外的初始化代码，也就是<strong class=" ">CHelloDialogDlg::OnInitDialog</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-30-24.png" alt="images/download/attachments/17301744/image2021-7-1_18-30-24.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-30-24.png" alt="images/download/attachments/17301744/image2021-7-1_18-30-24.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLei1hOa6kOiEmuacrA">
@@ -2743,17 +2743,17 @@
 <p   
 >其实在创建完项目的时候就应该感觉到有一个文件非常的显眼，那就是<strong class=" ">HelloDialog.rc</strong>，这个文件从没见过，其表示的是资源脚本文件，有了这个文件我们就可以添加图标、版本信息等等。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-32-48.png" alt="images/download/attachments/17301744/image2021-7-1_18-32-48.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-32-48.png" alt="images/download/attachments/17301744/image2021-7-1_18-32-48.png"   />
     </p>
 <p   
 >在VC6中没法直接打开这个RC文件，但是我们可以在外部使用记事本去打开：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-36-45.png" alt="images/download/attachments/17301744/image2021-7-1_18-36-45.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-36-45.png" alt="images/download/attachments/17301744/image2021-7-1_18-36-45.png"   />
     </p>
 <p   
 >在这里我们就可以很清晰的看见使用的字体，窗口名字之类的信息，当然这些信息我们也可以通过VC6直接去看：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-38-25.png" alt="images/download/attachments/17301744/image2021-7-1_18-38-25.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-38-25.png" alt="images/download/attachments/17301744/image2021-7-1_18-38-25.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLURvRGF0YUV4Y2hhbmdl5Ye95pWw">
@@ -2763,46 +2763,46 @@
 <p   
 >首先在VC6中去绘画两个控件：编辑框和按钮（从旁边的Controls拖过去就行），然后我需要单击按钮就可以改变编辑框的内容：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-45-5.png" alt="images/download/attachments/17301744/image2021-7-1_18-45-5.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-45-5.png" alt="images/download/attachments/17301744/image2021-7-1_18-45-5.png"   />
     </p>
 <p   
 >双击新建的这个按钮，随便取你想要的按钮事件处理函数名称然后写对应的代码，如下代码中使用了<strong class=" ">GetDlgItem</strong>函数，该函数是根据控件ID来获取控件的句柄，而后再用其内部方法<strong class=" ">SetWindowText</strong>来改写编辑框的内容，控件ID我们可以点<strong class=" ">右键选择控件&rarr;Properties</strong>来获取：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-49-54.png" alt="images/download/attachments/17301744/image2021-7-1_18-49-54.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-49-54.png" alt="images/download/attachments/17301744/image2021-7-1_18-49-54.png"   />
     </p>
 <p   
 >除此之外我们设置编辑框的内容，我们还可以用别的方法也就是动态绑定的思路来修改。</p>
 <p   
 >首先点<strong class=" ">右键选择控件&rarr;ClassWizard</strong>，按下图操作即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-2-36.png" alt="images/download/attachments/17301744/image2021-7-1_19-2-36.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-2-36.png" alt="images/download/attachments/17301744/image2021-7-1_19-2-36.png"   />
     </p>
 <p   
 >而后就可以直接在代码中使用该变量即可用<strong class=" ">SetWindowText</strong>函数来修改编辑框内容：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-3-30.png" alt="images/download/attachments/17301744/image2021-7-1_19-3-30.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-3-30.png" alt="images/download/attachments/17301744/image2021-7-1_19-3-30.png"   />
     </p>
 <p   
 >然后我们回到<strong class=" ">DoDataExchange</strong>函数，代码中多了一个<strong class=" ">DDX_Control</strong>函数，这是这是因为我们刚刚定义的时候<strong class=" ">Category</strong>选择的就是<strong class=" ">Control</strong>类型，其作用就是将我们的<strong class=" ">IDC_EDIT1</strong>控件和<strong class=" ">m_edit1</strong>变量关联起来，这时候我们操作<strong class=" ">m_edit1</strong>就会改变<strong class=" ">IDC_EDIT1</strong>这个控件。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-4-43.png" alt="images/download/attachments/17301744/image2021-7-1_19-4-43.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-4-43.png" alt="images/download/attachments/17301744/image2021-7-1_19-4-43.png"   />
     </p>
 <p   
 >除了可以在定义的时候<strong class=" ">Category</strong>选择为<strong class=" ">Control</strong>类型，我们还可以直接让其成为一个字符串<strong class=" ">CString</strong>类型：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-9-59.png" alt="images/download/attachments/17301744/image2021-7-1_19-9-59.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-9-59.png" alt="images/download/attachments/17301744/image2021-7-1_19-9-59.png"   />
     </p>
 <p   
 >这样我们在代码中就可以直接去赋值修改编辑框内容，但需注意我们在代码之后要加上<strong class=" ">UpdateData</strong>函数才可以生效：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-11-12.png" alt="images/download/attachments/17301744/image2021-7-1_19-11-12.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_19-11-12.png" alt="images/download/attachments/17301744/image2021-7-1_19-11-12.png"   />
     </p>
 <p   
 ><strong class=" ">UpdateData</strong>函数的参数值为布尔类型，也就是非<strong class=" ">TRUE</strong>即<strong class=" ">FALSE</strong>，为什么这里是<strong class=" ">FALSE</strong>呢，这是因为这个值为<strong class=" ">FALSE</strong>则表示修改编辑框的内容，而值为<strong class=" ">TRUE</strong>则表示将编辑框的内容给到变量。</p>
 <p   
 >可以通过通过代码来证明这一点，这个值都是由我们之前创建的<strong class=" ">m_edit1</strong>变量来传递的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_20-37-16.png" alt="images/download/attachments/17301744/image2021-7-1_20-37-16.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_20-37-16.png" alt="images/download/attachments/17301744/image2021-7-1_20-37-16.png"   />
     </p>
     </div>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLURvTW9kYWzlh73mlbA">
@@ -2810,7 +2810,7 @@
 <p   
 >回到实例化对象的相关CPP文件，来看一下<strong class=" ">DoModal</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-20-9.png" alt="images/download/attachments/17301744/image2021-7-1_18-20-9.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_18-20-9.png" alt="images/download/attachments/17301744/image2021-7-1_18-20-9.png"   />
     </p>
 <p   
 >该函数就是一个模态对话框，该函数就实现了一个对话框的初始化、呼出对话框以及一个消息循环。</p>
@@ -2821,7 +2821,7 @@
 <p   
 >模态对话框有一个特点，当我们调用了一个新的对话框之后，我们是没法再去点击第一个对话框的，只能等新的对话框结束才可以。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_21-4-7.png" alt="images/download/attachments/17301744/image2021-7-1_21-4-7.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_21-4-7.png" alt="images/download/attachments/17301744/image2021-7-1_21-4-7.png"   />
     </p>
 <p   
 >如果你想创建一个非模态对话框可以使用我们之前写的CFrameWnd的方式，先执行Create函数然后ShowWindow，但是这样是不行的，因为我们这样创建的是一个局部变量，虽然会创建这个窗口但是函数执行完，<strong class=" ">栈</strong>中就没有这个了：</p>
@@ -2989,22 +2989,22 @@
 <p   
 >手动新建一个按钮控件，基于Create函数即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-34-23.png" alt="images/download/attachments/17301744/image2021-7-1_22-34-23.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-34-23.png" alt="images/download/attachments/17301744/image2021-7-1_22-34-23.png"   />
     </p>
 <p   
 >我们也可以手动给创建的这个按钮添加一个处理函数（还是那一套流程）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-43-22.png" alt="images/download/attachments/17301744/image2021-7-1_22-43-22.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-43-22.png" alt="images/download/attachments/17301744/image2021-7-1_22-43-22.png"   />
     </p>
 <p   
 >我们再来看看修改按钮的名称，跟编辑框是一样的使用SetWindowText函数就可以，但是这里我们的<strong class=" ">m_btn1</strong>没法直接用因为它是创建在局部变量里的，我们可以把它放到类的声明里面。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-51-21.png" alt="images/download/attachments/17301744/image2021-7-1_22-51-21.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-51-21.png" alt="images/download/attachments/17301744/image2021-7-1_22-51-21.png"   />
     </p>
 <p   
 >然后就可以直接使用它了：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-52-5.png" alt="images/download/attachments/17301744/image2021-7-1_22-52-5.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-52-5.png" alt="images/download/attachments/17301744/image2021-7-1_22-52-5.png"   />
     </p>
 <p   
 >如果你不想使用这种方式也可以通过<strong class=" ">GetDlgItem</strong>函数来调用。</p>
@@ -3016,7 +3016,7 @@
 <p   
 >按钮控件还有很多方法，比如说你可以通过<strong class=" ">EnableWindow</strong>方法让一个按钮变灰（<strong class=" ">TRUE</strong>就是启用按钮，<strong class=" ">FALSE</strong>就是不启用）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-54-8.png" alt="images/download/attachments/17301744/image2021-7-1_22-54-8.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_22-54-8.png" alt="images/download/attachments/17301744/image2021-7-1_22-54-8.png"   />
     </p>
 <p   
 >除了一些方法还可以设置样式，例如你可以设置按钮控件为一个单选框、复选框，这都可以在<strong class=" ">Create</strong>函数中去设置。</p>
@@ -3026,14 +3026,14 @@
 <p   
 >CStatic控件是一个静态文本，其是MFC中最简单的控件，创建方式跟按钮控件是一样的，所以我们这里为了方便直接使用MFC控件栏区创建即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_23-17-22.png" alt="images/download/attachments/17301744/image2021-7-1_23-17-22.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_23-17-22.png" alt="images/download/attachments/17301744/image2021-7-1_23-17-22.png"   />
     </p>
 <p   
 >我们可以通过<strong class=" ">Properties</strong>去修改文本内容、样式...</p>
 <p   
 >默认情况下静态文本控件是没有处理函数的，但是我们可以自己添加：1.取个新ID 2.在样式里选中Notify 3.双击静态文本创建函数</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_23-31-41.png" alt="images/download/attachments/17301744/image2021-7-1_23-31-41.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-1_23-31-41.png" alt="images/download/attachments/17301744/image2021-7-1_23-31-41.png"   />
     </p>
     <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
                 <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
@@ -3050,22 +3050,22 @@
 <p   
 >Edit控件就是一个编辑框，与其他控件一样你可以通过<strong class=" ">Properties</strong>去修改样式：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-6-6.png" alt="images/download/attachments/17301744/image2021-7-2_0-6-6.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-6-6.png" alt="images/download/attachments/17301744/image2021-7-2_0-6-6.png"   />
     </p>
 <p   
 >我们可以选中Multiline然后选中Horizontal Scroll、Vertical Scroll，这样就可以让这个编辑框支持多行并且有自动的上下、左右的滚动条：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-10-18.png" alt="images/download/attachments/17301744/image2021-7-2_0-10-18.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-10-18.png" alt="images/download/attachments/17301744/image2021-7-2_0-10-18.png"   />
     </p>
 <p   
 >其他的方法都很常见，但是对编辑框来说，还有当编辑框内容发生改变的处理函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-13-55.png" alt="images/download/attachments/17301744/image2021-7-2_0-13-55.png"  height="250" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-13-55.png" alt="images/download/attachments/17301744/image2021-7-2_0-13-55.png"   />
     </p>
 <p   
 >当内容发生变化就会触发：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-14-42.png" alt="images/download/attachments/17301744/image2021-7-2_0-14-42.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-14-42.png" alt="images/download/attachments/17301744/image2021-7-2_0-14-42.png"   />
     </p>
     </div>
     </div>
@@ -3086,12 +3086,12 @@
 <p   
 >ComboBox控件也就是组合框，跟其他控件没什么区别，唯一的区别在于它的设置中多了一个Data的标签栏，如下图是使用方法：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-47-51.png" alt="images/download/attachments/17301744/image2021-7-2_0-47-51.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_0-47-51.png" alt="images/download/attachments/17301744/image2021-7-2_0-47-51.png"   />
     </p>
 <p   
 >其他的属性可以自行去研究，都非常简单。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_1-1-18.png" alt="images/download/attachments/17301744/image2021-7-2_1-1-18.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_1-1-18.png" alt="images/download/attachments/17301744/image2021-7-2_1-1-18.png"   />
     </p>
     </div>
     </div>
@@ -3286,10 +3286,10 @@
 </tbody>        </table>
             </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_1-22-29.png" alt="images/download/attachments/17301744/image2021-7-2_1-22-29.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_1-22-29.png" alt="images/download/attachments/17301744/image2021-7-2_1-22-29.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_1-27-12.png" alt="images/download/attachments/17301744/image2021-7-2_1-27-12.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_1-27-12.png" alt="images/download/attachments/17301744/image2021-7-2_1-27-12.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-17301744_safe-id-TUZDLeS9v-eUqExpc3RDdHJs">
@@ -3297,7 +3297,7 @@
 <p   
 >首先我们创建一个关联：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_1-33-9.png" alt="images/download/attachments/17301744/image2021-7-2_1-33-9.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_1-33-9.png" alt="images/download/attachments/17301744/image2021-7-2_1-33-9.png"   />
     </p>
 <p   
 >在我们正式使用之前，我们要知道一些扩展样式：</p>
@@ -3319,24 +3319,24 @@
 <p   
 >我们可以使用这个风格，在<strong class=" ">OnInitDialog</strong>函数中去设置：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-17-14.png" alt="images/download/attachments/17301744/image2021-7-2_15-17-14.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-17-14.png" alt="images/download/attachments/17301744/image2021-7-2_15-17-14.png"   />
     </p>
 <p   
 >因为这是一个<strong class=" ">Report</strong>风格的<strong class=" ">ListCtrl</strong>控件，该风格是有一个表头的，所以我们需要使用<strong class=" ">InsertColumn</strong>函数去添加一个表头（<strong class=" ">靠左对齐，宽度为60</strong>）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-21-19.png" alt="images/download/attachments/17301744/image2021-7-2_15-21-19.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-21-19.png" alt="images/download/attachments/17301744/image2021-7-2_15-21-19.png"   />
     </p>
 <p   
 >我们可以通过<strong class=" ">InsertItem</strong>函数去添加表格的数据：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-23-26.png" alt="images/download/attachments/17301744/image2021-7-2_15-23-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-23-26.png" alt="images/download/attachments/17301744/image2021-7-2_15-23-26.png"   />
     </p>
 <p   
 >在数据开头有这个复选框是因为我们的扩展样式设置了<strong class=" ">CheckBox</strong>。</p>
 <p   
 ><strong class=" ">InsertItem</strong>函数最终返回的结果是一个int类型，其表示当前数据的序号，我们可以根据这个返回值使用<strong class=" ">SetItemText</strong>函数去修改对应的数据：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-26-37.png" alt="images/download/attachments/17301744/image2021-7-2_15-26-37.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-26-37.png" alt="images/download/attachments/17301744/image2021-7-2_15-26-37.png"   />
     </p>
 <p   
 >如上图我们可以得知，<strong class=" ">InsertItem</strong>函数实际上插入的数据就是一行，而其第一个参数0则表示在第1行的第1列添加一个数据，所以我们使用<strong class=" ">SetItemText</strong>函数根据对应返回值去添加数据则可以选择添加其他列的数据。</p>
@@ -3345,31 +3345,31 @@
 <p   
 >同样，我们也可以通过<strong class=" ">GetItemText</strong>函数去获取数据，如下图所示就是获取第2行的第2列的数据：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-32-2.png" alt="images/download/attachments/17301744/image2021-7-2_15-32-2.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-32-2.png" alt="images/download/attachments/17301744/image2021-7-2_15-32-2.png"   />
     </p>
 <p   
 >那么在这里我们使用了CheckBox的扩展样式，我们要获取这复选框有没有被选中怎么办？这时候就可以通过函数<strong class=" ">GetCheck</strong>来获取：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-34-55.png" alt="images/download/attachments/17301744/image2021-7-2_15-34-55.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-34-55.png" alt="images/download/attachments/17301744/image2021-7-2_15-34-55.png"   />
     </p>
 <p   
 >该函数返回值就是选中为1，没选中则为0，参数也就表示获取第几个复选框的选中状态。</p>
 <p   
 >我们可以在<strong class=" ">Resource</strong>里添加一个图标，然后在数据开头添加这个图标上去：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-40-59.png" alt="images/download/attachments/17301744/image2021-7-2_15-40-59.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-40-59.png" alt="images/download/attachments/17301744/image2021-7-2_15-40-59.png"   />
     </p>
     <div class="section section-3" id="src-17301744_safe-id-TUZDLea3u-WKoOWPs-mUruiPnOWNlQ">
         <h3 class="heading "><span>&#28155;&#21152;&#21491;&#38190;&#33756;&#21333;</span></h3>
 <p   
 >我们可以基于表格添加一个右键菜单，首先是创建控件、添加选项：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-48-26.png" alt="images/download/attachments/17301744/image2021-7-2_15-48-26.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-48-26.png" alt="images/download/attachments/17301744/image2021-7-2_15-48-26.png"   />
     </p>
 <p   
 >其次可以添加右击事件显示菜单：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-54-9.png" alt="images/download/attachments/17301744/image2021-7-2_15-54-9.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_15-54-9.png" alt="images/download/attachments/17301744/image2021-7-2_15-54-9.png"   />
     </p>
     </div>
     </div>
@@ -3384,7 +3384,7 @@
     <div class="section section-2" id="src-17301744_safe-id-TUZDLUNUcmVlTGlzdOW4uOeUqOmjjuagvA">
         <h2 class="heading "><span>CTreeList&#24120;&#29992;&#39118;&#26684;</span></h2>
     <div  class="tablewrap">
-        <table class="confluenceTable">
+        <table class="wrapped confluenceTable">
                     <colgroup>
                                     <col />
                                     <col />
@@ -3470,54 +3470,54 @@
 <p   
 >老规矩，我们还是添加一个关联参数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-13-9.png" alt="images/download/attachments/17301744/image2021-7-2_16-13-9.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-13-9.png" alt="images/download/attachments/17301744/image2021-7-2_16-13-9.png"   />
     </p>
 <p   
 >然后新建一个按钮来其来使用一些常见的函数；通过<strong class=" ">InsertItem</strong>函数我们可以添加节点（该方法重载的有很多种，查询MSDN Library即可）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-17-11.png" alt="images/download/attachments/17301744/image2021-7-2_16-17-11.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-17-11.png" alt="images/download/attachments/17301744/image2021-7-2_16-17-11.png"   />
     </p>
 <p   
 >我们先用<strong class=" ">InsertItem</strong>函数添加一个父节点，然后根据这个函数返回的句柄去创建子节点：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-20-4.png" alt="images/download/attachments/17301744/image2021-7-2_16-20-4.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-20-4.png" alt="images/download/attachments/17301744/image2021-7-2_16-20-4.png"   />
     </p>
 <p   
 >如果你想支持节点自动排序的话可以使用样式<strong class=" ">TVI_SORT</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-20-50.png" alt="images/download/attachments/17301744/image2021-7-2_16-20-50.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-20-50.png" alt="images/download/attachments/17301744/image2021-7-2_16-20-50.png"   />
     </p>
 <p   
 >同理，如果你想在子节点下面再创建子节点，你就可将当前子节点作为父节点去创建子节点：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-23-0.png" alt="images/download/attachments/17301744/image2021-7-2_16-23-0.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-23-0.png" alt="images/download/attachments/17301744/image2021-7-2_16-23-0.png"   />
     </p>
 <p   
 >既然可以创建节点，我们还可以去获取节点，例如我可以去获取一个父节点，也就是最顶层的那个节点。</p>
 <p   
 >我们需要使用的是<strong class=" ">GetRootItem</strong>函数，其返回值为一个句柄，我们可以通过该句柄去获取对应节点的信息，例如节点名字：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-27-14.png" alt="images/download/attachments/17301744/image2021-7-2_16-27-14.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-27-14.png" alt="images/download/attachments/17301744/image2021-7-2_16-27-14.png"   />
     </p>
 <p   
 >在有多个父节点的情况下，默认是获取第一个，也就是最上面那个：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-28-24.png" alt="images/download/attachments/17301744/image2021-7-2_16-28-24.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-28-24.png" alt="images/download/attachments/17301744/image2021-7-2_16-28-24.png"   />
     </p>
 <p   
 >如果你想获取其他的父节点，可以在此基础上使用函数<strong class=" ">GetNextSiblingItem</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-30-48.png" alt="images/download/attachments/17301744/image2021-7-2_16-30-48.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-30-48.png" alt="images/download/attachments/17301744/image2021-7-2_16-30-48.png"   />
     </p>
 <p   
 >同理，你想获取父节点的子节点就可以使用<strong class=" ">GetChildItem</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-35-14.png" alt="images/download/attachments/17301744/image2021-7-2_16-35-14.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-35-14.png" alt="images/download/attachments/17301744/image2021-7-2_16-35-14.png"   />
     </p>
 <p   
 >但是这样就会存在缺点，所以我们可以写个循环去遍历获取，这里完全可以根据<strong class=" ">GetNextSiblingItem</strong>函数、<strong class=" ">GetChildItem</strong>函数两者的返回值去循环判断遍历：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-41-48.png" alt="images/download/attachments/17301744/image2021-7-2_16-41-48.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_16-41-48.png" alt="images/download/attachments/17301744/image2021-7-2_16-41-48.png"   />
     </p>
     </div>
     </div>
@@ -3546,29 +3546,29 @@
 <p   
 >在当前工程目录下创建一个1.txt文件，然后在代码中写：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-6-34.png" alt="images/download/attachments/17301744/image2021-7-2_17-6-34.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-6-34.png" alt="images/download/attachments/17301744/image2021-7-2_17-6-34.png"   />
     </p>
 <p   
 >如果你想去打开一个文件，其存在就正常打开，不存在就创建的时候可以按如下图去写：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-40-26.png" alt="images/download/attachments/17301744/image2021-7-2_17-40-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-40-26.png" alt="images/download/attachments/17301744/image2021-7-2_17-40-26.png"   />
     </p>
 <p   
 >当然，你创建一个新的文件肯定不能就结束了，是要写东西进去的，可以使用<strong class=" ">Write</strong>函数去写入：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-41-28.png" alt="images/download/attachments/17301744/image2021-7-2_17-41-28.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-41-28.png" alt="images/download/attachments/17301744/image2021-7-2_17-41-28.png"   />
     </p>
 <p   
 >如果你想在这个写入之后跟着去填写的话直接使用<strong class=" ">Write</strong>函数是会被覆盖的，我们需要使用<strong class=" ">SeekToEnd</strong>函数将写入位置指向文件末尾然后再使用<strong class=" ">Write</strong>函数，最后记得要关闭这个文件：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-44-26.png" alt="images/download/attachments/17301744/image2021-7-2_17-44-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-44-26.png" alt="images/download/attachments/17301744/image2021-7-2_17-44-26.png"   />
     </p>
 <p   
 >当然了，在这里我们的是局部变量，你可以不使用<strong class=" ">Close</strong>函数去释放这个，这是因为在当前函数执行完之后析构函数会帮我们释放，而如果你是在堆中去创建的话就一定要手动的去写。</p>
 <p   
 >CFile还有很多属性，就不一一去举例了，可以参考如下表格去使用：</p>
     <div  class="tablewrap">
-        <table class="confluenceTable">
+        <table class="wrapped confluenceTable">
                     <colgroup>
                                     <col />
                                     <col />
@@ -3724,7 +3724,7 @@
 <p   
 >首先我们可以基于VC6添加一个TXT文件到资源列表中，按如下图操作：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-54-17.png" alt="images/download/attachments/17301744/image2021-7-2_17-54-17.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_17-54-17.png" alt="images/download/attachments/17301744/image2021-7-2_17-54-17.png"   />
     </p>
 <p   
 >接下来我们就可以查找资源、获取资源、加载资源、读取数据：</p>
@@ -3752,7 +3752,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_18-10-57.png" alt="images/download/attachments/17301744/image2021-7-2_18-10-57.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_18-10-57.png" alt="images/download/attachments/17301744/image2021-7-2_18-10-57.png"   />
     </p>
 <p   
 >同理，我们也可以加载EXE文件，然后去读取释放。</p>
@@ -3770,70 +3770,70 @@
 <p   
 >还是老样子直接在VC6中拖拽创建控件：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-54-21.png" alt="images/download/attachments/17301744/image2021-7-2_19-54-21.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-54-21.png" alt="images/download/attachments/17301744/image2021-7-2_19-54-21.png"   />
     </p>
 <p   
 >可以去选择设置自己想要的风格样式，这里也不多说了；我们继续创建一个关联变量：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-56-55.png" alt="images/download/attachments/17301744/image2021-7-2_19-56-55.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-56-55.png" alt="images/download/attachments/17301744/image2021-7-2_19-56-55.png"   />
     </p>
 <p   
 >我们可以通过<strong class=" ">InsertItem</strong>函数去添加标签：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-57-37.png" alt="images/download/attachments/17301744/image2021-7-2_19-57-37.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-57-37.png" alt="images/download/attachments/17301744/image2021-7-2_19-57-37.png"   />
     </p>
 <p   
 >这里我们可以在初始化函数里去创建：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-58-44.png" alt="images/download/attachments/17301744/image2021-7-2_19-58-44.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-58-44.png" alt="images/download/attachments/17301744/image2021-7-2_19-58-44.png"   />
     </p>
 <p   
 >如下图所示是我们的运行结果，这也就说明了我们MFC多页面的设计也是基于这个标签页：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-59-29.png" alt="images/download/attachments/17301744/image2021-7-2_19-59-29.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_19-59-29.png" alt="images/download/attachments/17301744/image2021-7-2_19-59-29.png"   />
     </p>
 <p   
 >但是现在我们这是创建好了标签页，实际上里面还没有任何东西，我们可以现在资源中区创建几个对话框，并且为其创建窗口类：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-1-45.png" alt="images/download/attachments/17301744/image2021-7-2_20-1-45.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-1-45.png" alt="images/download/attachments/17301744/image2021-7-2_20-1-45.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-2-50.png" alt="images/download/attachments/17301744/image2021-7-2_20-2-50.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-2-50.png" alt="images/download/attachments/17301744/image2021-7-2_20-2-50.png"   />
     </p>
 <p   
 >然后在类中去声明我们的三个Page成员：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-4-30.png" alt="images/download/attachments/17301744/image2021-7-2_20-4-30.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-4-30.png" alt="images/download/attachments/17301744/image2021-7-2_20-4-30.png"   />
     </p>
 <p   
 >接下来我们就可以去使用<strong class=" ">Create、ShowWindow</strong>函数创建窗口了，但是仅仅这样是不够的，我们还需要设置一个当前页面的父类（我们要显示在标签页里所以这里就写标签页），使用<strong class=" ">SetParent</strong>函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-7-25.png" alt="images/download/attachments/17301744/image2021-7-2_20-7-25.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-7-25.png" alt="images/download/attachments/17301744/image2021-7-2_20-7-25.png"   />
     </p>
 <p   
 >我们可以看下结果：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-21-0.png" alt="images/download/attachments/17301744/image2021-7-2_20-21-0.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-21-0.png" alt="images/download/attachments/17301744/image2021-7-2_20-21-0.png"   />
     </p>
 <p   
 >这个子页面是可以随意移动并且没有填满我们的标签页，所以我们可以先根据<strong class=" ">GetClientRect</strong>函数获取当前客户区的坐标然后将该页面移动过去：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-24-43.png" alt="images/download/attachments/17301744/image2021-7-2_20-24-43.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-24-43.png" alt="images/download/attachments/17301744/image2021-7-2_20-24-43.png"   />
     </p>
 <p   
 >但是这样显然还不行，因为我们的标签页被遮住了，所以我们需要手动的去调整一下坐标让看起来更好一些：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-28-2.png" alt="images/download/attachments/17301744/image2021-7-2_20-28-2.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-28-2.png" alt="images/download/attachments/17301744/image2021-7-2_20-28-2.png"   />
     </p>
 <p   
 >但是我们点击其他的标签页的时候还是会看见这个子窗口，那么我们应该用其他事件去解决这个问题，先写好其他页面的填充，然后通过类向导去创建<strong class=" ">TCN_SELECTCHANGE</strong>消息相关的处理函数，这个消息表示当选择被修改时应如何去处理。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-45-27.png" alt="images/download/attachments/17301744/image2021-7-2_20-45-27.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-45-27.png" alt="images/download/attachments/17301744/image2021-7-2_20-45-27.png"   />
     </p>
 <p   
 >这样我们解决了页面显示的问题，但是当前这个子窗口是可以拖拽的并且还有边框，一般来说应用程序不会这么去设计，所以我们需要修改对话框的样式：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-48-13.png" alt="images/download/attachments/17301744/image2021-7-2_20-48-13.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/17301744/image2021-7-2_20-48-13.png" alt="images/download/attachments/17301744/image2021-7-2_20-48-13.png"   />
     </p>
 <p   
 ></p>

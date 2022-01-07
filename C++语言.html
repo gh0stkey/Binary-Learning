@@ -185,7 +185,7 @@
 <p   
 >上面这段代码是定义一个结构体，然后将该结构体传入Plus函数（将结构体成员相加返回），那么问题来了，结构体它是否跟数组一样，传递的是指针呢？来看一下反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-9-23.png" alt="images/download/attachments/12714553/image2021-3-28_0-9-23.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-9-23.png" alt="images/download/attachments/12714553/image2021-3-28_0-9-23.png"   />
     </p>
 <p   
 >可以很清晰的看见，结构体作为参数传递时栈顶（ESP）提升了0x10（16个字节，也就是结构体的四个成员【int】的宽度），而后将ESP的值给了EAX，再通过EAX（ESP）将结构体的成员传入函数，结构体成员从左到右依次从栈顶向下复制进入堆栈。</p>
@@ -216,7 +216,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-24-53.png" alt="images/download/attachments/12714553/image2021-3-28_0-24-53.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-24-53.png" alt="images/download/attachments/12714553/image2021-3-28_0-24-53.png"   />
     </p>
 <p   
 >这样我们就可以使用指针的方式来避免内存的重复使用，效率更高。</p>
@@ -249,7 +249,7 @@
 <p   
 >将函数放在结构体内，就不需要我们再去写传参、再去使用指针的调用方式了，因为这些工作编译器帮我们完成了，而本质上这与指针调用没有区别：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-37-54.png" alt="images/download/attachments/12714553/image2021-3-28_0-37-54.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-37-54.png" alt="images/download/attachments/12714553/image2021-3-28_0-37-54.png"   />
     </p>
 <p   
 >而这种写法就是C++的概念：封装；也就是说将函数写在结构体内的形式就称之为封装，其带来的好处就是我们可以更加方便的使用结构体的成员。</p>
@@ -291,7 +291,7 @@
 <p   
 >其对应的反汇编代码如下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-37-54.png" alt="images/download/attachments/12714553/image2021-3-28_0-37-54.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-37-54.png" alt="images/download/attachments/12714553/image2021-3-28_0-37-54.png"   />
     </p>
 <p   
 >可以看见我们使用s.Plus()的时候，传递的参数是一个指针，这个指针就是当前结构体的地址，<strong class=" ">这个指针就是this指针</strong>。（通常情况下编译器会使用<strong class=" ">ecx来传递</strong>当前结构体的指针）</p>
@@ -320,7 +320,7 @@
 <p   
 >我们看下反汇编代码，发现指针依然会传递过来：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-51-7.png" alt="images/download/attachments/12714553/image2021-3-28_0-51-7.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_0-51-7.png" alt="images/download/attachments/12714553/image2021-3-28_0-51-7.png"   />
     </p>
 <p   
 >那也就是说<strong class=" ">this指针是编译器默认传入的，通常会通过ecx进行参数的传递，不管你用还是不用，它都存在着</strong>。</p>
@@ -367,7 +367,7 @@
 <p   
 >这段代码我们要实现的就是，使用成员函数初始化成员的值，但是实际运行却不符合我们的预期：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_1-29-45.png" alt="images/download/attachments/12714553/image2021-3-28_1-29-45.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_1-29-45.png" alt="images/download/attachments/12714553/image2021-3-28_1-29-45.png"   />
     </p>
 <p   
 >跟进反汇编代码发现，这里就是将传入的参数赋值给了参数本身，并没有改变成员的值，这是因为编译器根本不知道你这里的a到底是谁，所以我们就需要借助this指针来实现：</p>
@@ -401,7 +401,7 @@
 <p   
 >为了方便，添加一个成员函数，用于打印输出成员的值：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_1-37-52.png" alt="images/download/attachments/12714553/image2021-3-28_1-37-52.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-28_1-37-52.png" alt="images/download/attachments/12714553/image2021-3-28_1-37-52.png"   />
     </p>
 <p   
 >可以看见，这里成功进行初始化了。</p>
@@ -443,14 +443,14 @@
 <p   
 >我们先不使用之前学习的方法去调用，直接创建一个对象，这时候会发现该函数就直接执行了：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-31_17-4-32.png" alt="images/download/attachments/12714553/image2021-3-31_17-4-32.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-31_17-4-32.png" alt="images/download/attachments/12714553/image2021-3-31_17-4-32.png"   />
     </p>
 <p   
 >这个函数，我们就称之为构造函数。</p>
 <p   
 >它的汇编代码如下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-31_17-30-51.png" alt="images/download/attachments/12714553/image2021-3-31_17-30-51.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-3-31_17-30-51.png" alt="images/download/attachments/12714553/image2021-3-31_17-30-51.png"   />
     </p>
 <p   
 >如果我们想要在创建对象的时候，自定义初始化成员的值，就可以在析构函数上加上参数：</p>
@@ -509,7 +509,7 @@
 <p   
 >编译直接出错：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-1_15-42-56.png" alt="images/download/attachments/12714553/image2021-4-1_15-42-56.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-1_15-42-56.png" alt="images/download/attachments/12714553/image2021-4-1_15-42-56.png"   />
     </p>
 <p   
 >这是因为编译器发现你没有传入参数，就会去寻找没有参数的构造函数，但是在这段代码中没有声明，所以需要声明一下：</p>
@@ -599,7 +599,7 @@
 <p   
 ><strong class=" ">析构函数函数是在对象销毁前执行</strong>，那么对象会在什么时候销毁呢？可以看下反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-1_16-9-20.png" alt="images/download/attachments/12714553/image2021-4-1_16-9-20.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-1_16-9-20.png" alt="images/download/attachments/12714553/image2021-4-1_16-9-20.png"   />
     </p>
 <p   
 >会发现在程序执行结束，<strong class=" ">也就是main函数的return之后会执行析构函数函数</strong>，但这句话实际上是不严谨的，因为我们的main函数是没有返回值的，也就是return不会有对应的汇编代码，当我们设置返回值再来看下反汇编代码：</p>
@@ -638,7 +638,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-1_16-12-49.png" alt="images/download/attachments/12714553/image2021-4-1_16-12-49.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-1_16-12-49.png" alt="images/download/attachments/12714553/image2021-4-1_16-12-49.png"   />
     </p>
 <p   
 >可以很清晰的看见，析构函数是在return返回之前执行的。</p>
@@ -688,7 +688,7 @@
 <p   
 >创建对象的对应反汇编代码如下，可以清晰的看见与我们正常的内存布局是一样的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_1-44-16.png" alt="images/download/attachments/12714553/image2021-4-4_1-44-16.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_1-44-16.png" alt="images/download/attachments/12714553/image2021-4-4_1-44-16.png"   />
     </p>
 <p   
 >那么继承是什么？<strong class=" ">这就很好理解了，继承的本质就是数据复制，子类（派生类）继承（复制）父类（基类）的数据，在这里Person父类（基类），Teacher为子类（派生类）；继承可以减少重复代码的编写。</strong></p>
@@ -726,12 +726,12 @@
 <p   
 >首先看下数据宽度，我们会发现是16，那也就是说这里不管如何你只要继承了，在编译器中两个成员还是会直接添加过来，Teacher的成员依然是4个「4成员*4数据宽度（int类型） = 16」</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_1-40-55.png" alt="images/download/attachments/12714553/image2021-4-4_1-40-55.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_1-40-55.png" alt="images/download/attachments/12714553/image2021-4-4_1-40-55.png"   />
     </p>
 <p   
 >再来看下反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_1-41-29.png" alt="images/download/attachments/12714553/image2021-4-4_1-41-29.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_1-41-29.png" alt="images/download/attachments/12714553/image2021-4-4_1-41-29.png"   />
     </p>
 <p   
 >之前我们已经看过了正常的内存布局了，在这里，很明显，少了一个0x10位置的成员，那么按照内存布局应该是这样的：</p>
@@ -783,12 +783,12 @@
 <p   
 >我们可以来打印一下C的数据宽度：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_1-57-33.png" alt="images/download/attachments/12714553/image2021-4-4_1-57-33.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_1-57-33.png" alt="images/download/attachments/12714553/image2021-4-4_1-57-33.png"   />
     </p>
 <p   
 >结果是24，那么就说明C不仅仅继承了B，还继承了A；再换个说法就是，继承的本质是数据的复制，那也就是说当复制完（继承）后才是其本身，B的本身就是4个成员x、y、v、n。</p>
 <p   
-><img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/12714553/image2021-4-4_2-11-14.png" alt="images/download/thumbnails/12714553/image2021-4-4_2-11-14.png" width="250"  />
+><img    src="images/download/attachments/12714553/image2021-4-4_2-11-14.png" alt="images/download/attachments/12714553/image2021-4-4_2-11-14.png"   />
     </p>
 <p   
 >除了这种方式以外，我们想实现同样的效果可以使用多重继承（<strong class=" ">当前类:继承的类A, 继承的类B</strong>）：</p>
@@ -813,7 +813,7 @@
 <p   
 >但这种方式在很多面向对象语言中是不允许时间的，在C++中是可以使用的，其内存分布也与第一种方式不一样：</p>
 <p   
-><img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/12714553/image2021-4-4_2-10-10.png" alt="images/download/thumbnails/12714553/image2021-4-4_2-10-10.png" width="250"  />
+><img    src="images/download/attachments/12714553/image2021-4-4_2-10-10.png" alt="images/download/attachments/12714553/image2021-4-4_2-10-10.png"   />
     </p>
 <p   
 >最后：继承的类A和继承的类B的顺序，谁在前，谁就在内存分布中的前面；不推荐使用多重继承，这会增加程序的复杂度<strong class=" ">。</strong></p>
@@ -862,7 +862,7 @@
 <p   
 >当我们调用Print1的时候就会发现无法编译：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_20-38-26.png" alt="images/download/attachments/12714553/image2021-4-4_20-38-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_20-38-26.png" alt="images/download/attachments/12714553/image2021-4-4_20-38-26.png"   />
     </p>
 <p   
 >private（私有）、public（公有）的使用总结：</p>
@@ -877,14 +877,14 @@
 </li></ol><p   
 >那么问题来了，private修饰的函数或者变量真的不能访问吗？并不是，只是我们没有办法通过正常的方式去使用，但是我们可以使用指针的方式去调用：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-10-51.png" alt="images/download/attachments/12714553/image2021-4-4_21-10-51.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-10-51.png" alt="images/download/attachments/12714553/image2021-4-4_21-10-51.png"   />
     </p>
 <p   
 >那就说明private修饰的成员与普通成员没有区别，只有编译器会检测。</p>
 <p   
 >从这节课开始我们不再使用struct作为类的创建，而是直接使用class关键词，其使用没有什么区别，唯一的区别在于成员默认访问属性不一样，在struct中所有成员默认的属性是public，而在class中则相反：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-17-6.png" alt="images/download/attachments/12714553/image2021-4-4_21-17-6.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-17-6.png" alt="images/download/attachments/12714553/image2021-4-4_21-17-6.png"   />
     </p>
 <p   
 >除此之外还有一个就是在继承时的区别，我们可以将一个正常的struct继承修改成class：</p>
@@ -906,7 +906,7 @@
 <p   
 >当我们创建对象调用的时候却无法编译：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-24-56.png" alt="images/download/attachments/12714553/image2021-4-4_21-24-56.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-24-56.png" alt="images/download/attachments/12714553/image2021-4-4_21-24-56.png"   />
     </p>
 <p   
 >这是因为在继承的时候默认将继承过来的A的所有成员设置为private，也就是如下代码：</p>
@@ -953,12 +953,12 @@
 <p   
 >1.查看数据宽度，显示为16</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-37-36.png" alt="images/download/attachments/12714553/image2021-4-4_21-37-36.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-37-36.png" alt="images/download/attachments/12714553/image2021-4-4_21-37-36.png"   />
     </p>
 <p   
 >2.指针方式调用，可以成功调用获取到值</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-56-15.png" alt="images/download/attachments/12714553/image2021-4-4_21-56-15.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_21-56-15.png" alt="images/download/attachments/12714553/image2021-4-4_21-56-15.png"   />
     </p>
 <p   
 >所以我们得出最终结论：父类的私有成员是可以被继承的，但是也不能直接访问。</p>
@@ -990,17 +990,17 @@
 <p   
 >首先我们使用new关键词的时候会发现，其除了在堆中创建了对象还会调用构造函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_22-10-14.png" alt="images/download/attachments/12714553/image2021-4-4_22-10-14.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_22-10-14.png" alt="images/download/attachments/12714553/image2021-4-4_22-10-14.png"   />
     </p>
 <p   
 >再跟进看看使用delete，它会释放空间并调用析构函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_22-11-41.png" alt="images/download/attachments/12714553/image2021-4-4_22-11-41.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_22-11-41.png" alt="images/download/attachments/12714553/image2021-4-4_22-11-41.png"   />
     </p>
 <p   
 >我们想要了解其本质，还是要去跟一下汇编代码，这里跟一下new关键词的执行流程看看其分别调用的函数（<strong class=" ">跟进call operator new (004012e0)</strong>）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_22-17-13.png" alt="images/download/attachments/12714553/image2021-4-4_22-17-13.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_22-17-13.png" alt="images/download/attachments/12714553/image2021-4-4_22-17-13.png"   />
     </p>
 <p   
 >而后调用了构造函数：call @ILT+0(Person::Person) (00401005)</p>
@@ -1013,7 +1013,7 @@
 <p   
 >跟进delete关键词，会发现其会先调用析构函数函数然后再去调用operator delete然后就是_free_dbg：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_22-30-48.png" alt="images/download/attachments/12714553/image2021-4-4_22-30-48.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_22-30-48.png" alt="images/download/attachments/12714553/image2021-4-4_22-30-48.png"   />
     </p>
 <p   
 >所以delete的本质就是析构函数+free。</p>
@@ -1075,19 +1075,19 @@
 <p   
 >如上是引用类型作用在各个类型下的例子，那么引用类型是如何实现的呢？其本质是什么？我们可以看下反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-6-8.png" alt="images/download/attachments/12714553/image2021-4-4_23-6-8.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-6-8.png" alt="images/download/attachments/12714553/image2021-4-4_23-6-8.png"   />
     </p>
 <p   
 >会发现这段反汇编和指针的反汇编一模一样的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-7-49.png" alt="images/download/attachments/12714553/image2021-4-4_23-7-49.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-7-49.png" alt="images/download/attachments/12714553/image2021-4-4_23-7-49.png"   />
     </p>
 <p   
 >这时候我们暂时的出结论：引用类型就是指针。</p>
 <p   
 >但如果引用类型就是指针，为什么C++需要新创建一个引用类型的概念呢？它们之间必然存在着一些区别，我们可以从初始化、运算、赋值来看反汇编代码的区别：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-17-23.png" alt="images/download/attachments/12714553/image2021-4-4_23-17-23.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-17-23.png" alt="images/download/attachments/12714553/image2021-4-4_23-17-23.png"   />
     </p>
 <p   
 >我们可以很清晰的看见区别从运算到赋值都不一样，指针运算到赋值改变的是指针本身，而不是指针指向的那个地址，而引用则不一样其从运算到赋值改变的是所引用的变量，我们得出这几个结论：</p>
@@ -1100,7 +1100,7 @@
 </li><li class=" "><p   
 >引用类型就是一个<strong class=" ">弱化了的指针</strong>；个人理解：<strong class=" ">引用类型就是一个*p</strong>。</p>
 </li></ol><p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-25-6.png" alt="images/download/attachments/12714553/image2021-4-4_23-25-6.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-25-6.png" alt="images/download/attachments/12714553/image2021-4-4_23-25-6.png"   />
     </p>
 <p   
 >C++设计引用类型是因为指针类型很难驾驭，一旦用不好就回出问题，所以取长补短设计了引用类型。</p>
@@ -1126,7 +1126,7 @@
 <p   
 >如上代码中Plus函数的参数是一个引用类型，当我们把变量i传递进去，i就会自增1，而实际上也就修改变量i本身的值；换一种说法就是，我们之前函数参数传递的是值，而这里传递的是变量的地址。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-34-17.png" alt="images/download/attachments/12714553/image2021-4-4_23-34-17.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-34-17.png" alt="images/download/attachments/12714553/image2021-4-4_23-34-17.png"   />
     </p>
 <p   
 >那么在构造类型中又是怎么样的呢？</p>
@@ -1161,7 +1161,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-46-5.png" alt="images/download/attachments/12714553/image2021-4-4_23-46-5.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-46-5.png" alt="images/download/attachments/12714553/image2021-4-4_23-46-5.png"   />
     </p>
 <p   
 >我们可以看见除了读取的表现形式不一样，实际上汇编代码是一模一样的；但是指针类型是可以重新赋值并运算的，而引用类型不可以。</p>
@@ -1178,7 +1178,7 @@
 <p   
 >大家都知道，我们使用指针的时候是可以修改指针本身的，这会存在一定的风险，而C++中提供了引用类型，不可以修改引用本身，我们可以修改被引用的值，当我们不想其他人修改引用类型对应引用的值，可以使用const这个关键词，这种方式我们称之为常引用：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-56-58.png" alt="images/download/attachments/12714553/image2021-4-4_23-56-58.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-4_23-56-58.png" alt="images/download/attachments/12714553/image2021-4-4_23-56-58.png"   />
     </p>
     </div>
     <div class="section section-1" id="src-12714553_safe-id-QyAg6K-t6KiALemdouWQkeWvueixoeeoi-W6j-iuvuiuoeS5i-e7p-aJv-S4juWwgeijhQ">
@@ -1355,7 +1355,7 @@
 <p   
 >这只有利用反汇编代码来解释了：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-10_0-20-53.png" alt="images/download/attachments/12714553/image2021-4-10_0-20-53.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-10_0-20-53.png" alt="images/download/attachments/12714553/image2021-4-10_0-20-53.png"   />
     </p>
 <p   
 >如上反汇编代码，可以很清楚的看见当我们不使用那种方法还是会调用一遍父类无参的构造函数，接着手动添加的构造函数，编译器会把堆栈中临时分的对象赋值，但是当我们这段构造函数执行完成之后就没了，所以没有任何意义。</p>
@@ -1424,12 +1424,12 @@
 <p   
 >如下图我们可以很清晰的看见内存的结构，当我们形容子类B内存结构的时候，一定是有三个成员的，而不是一个成员z，当我们创建A*指针的时候指向的是子类对象的首地址，通过这个指针可以访问x、y，刚好子类对象B的开始位置是父类类型对象的第一个成员，所以我们可以使用父类类型的指针指向子类类型对象；但是反之（<strong class=" ">子类类型的指针指向父类类型的对象</strong>）我们却不可以，这是因为使用父类类型的指针指向子类类型对象有一个弊端，那就是没法访问子类类型的z，反过来的话，父类类型对象的成员只有x、y没有z，所以我们通过子类类型指针访问的时候是可以访问到三个成员的：x、y、z，但实际上父类对象是没有z的，那么在访问的过程中就会存在问题。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-11_23-53-55.png" alt="images/download/attachments/12714553/image2021-4-11_23-53-55.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-11_23-53-55.png" alt="images/download/attachments/12714553/image2021-4-11_23-53-55.png"   />
     </p>
 <p   
 >所以我们可以只保留PrintPerson函数，而不再去重复造轮子：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-12_0-23-19.png" alt="images/download/attachments/12714553/image2021-4-12_0-23-19.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-12_0-23-19.png" alt="images/download/attachments/12714553/image2021-4-12_0-23-19.png"   />
     </p>
 <p   
 >如上代码仅仅是为了解决这种问题而举例的，所以代码严谨性可以忽略。</p>
@@ -1458,19 +1458,19 @@
 <p   
 >Person::Print();是先调用父类的函数，但是在这里就可以打印了吗？实则不然：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-12_0-22-38.png" alt="images/download/attachments/12714553/image2021-4-12_0-22-38.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-12_0-22-38.png" alt="images/download/attachments/12714553/image2021-4-12_0-22-38.png"   />
     </p>
 <p   
 >我们可以看下反汇编代码，查看函数PrintPerson：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-12_0-14-35.png" alt="images/download/attachments/12714553/image2021-4-12_0-14-35.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-12_0-14-35.png" alt="images/download/attachments/12714553/image2021-4-12_0-14-35.png"   />
     </p>
 <p   
 >首先这里传递的是父类的引用类型，而后去调用的Print函数也是Person父类的，所以这样还是没法满足我们的需求。</p>
 <p   
 >我们可以使用一个关键词去解决这个问题，那就是在父类的Print函数类型前面加上virtual，则表示这是一个虚函数（其作用：当你PrintPerson函数传入的对象是子类就调用子类的，是父类就调用父类的）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-12_0-24-8.png" alt="images/download/attachments/12714553/image2021-4-12_0-24-8.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-12_0-24-8.png" alt="images/download/attachments/12714553/image2021-4-12_0-24-8.png"   />
     </p>
 <p   
 >这时候我们就可以引出多态的概念：<strong class=" ">多态就是可以让父类的指针有多种形态，C++中是通过虚函数实现的多态性</strong>。</p>
@@ -1501,12 +1501,12 @@
 <p   
 >了解本质，那就通过反汇编代码去看就行了，首先我们看下非多态的情况下的反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-15_23-14-19.png" alt="images/download/attachments/12714553/image2021-4-15_23-14-19.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-15_23-14-19.png" alt="images/download/attachments/12714553/image2021-4-15_23-14-19.png"   />
     </p>
 <p   
 >然后再来看下多态情况下的反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-15_23-18-22.png" alt="images/download/attachments/12714553/image2021-4-15_23-18-22.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-15_23-18-22.png" alt="images/download/attachments/12714553/image2021-4-15_23-18-22.png"   />
     </p>
 <p   
 >很明显这里多态的情况下会根据edx间接调用，而非多态则会直接调用。</p>
@@ -1525,25 +1525,25 @@
 <p   
 >只要有虚函数，不论多少个，<strong class=" ">对象的数据宽度就会比其原来多出4个字节</strong>，这四个字节我们称之为虚表。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-15_23-54-33.png" alt="images/download/attachments/12714553/image2021-4-15_23-54-33.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-15_23-54-33.png" alt="images/download/attachments/12714553/image2021-4-15_23-54-33.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-15_23-54-26.png" alt="images/download/attachments/12714553/image2021-4-15_23-54-26.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-15_23-54-26.png" alt="images/download/attachments/12714553/image2021-4-15_23-54-26.png"   />
     </p>
 <p   
 >那么虚表在哪呢？可以通过VC6来寻找虚标，先创建对象然后下断点运行查看，如下图中，可以很清晰的看见对象t除了继承Person父类的Age、Sex以及本身的Level成员外，还有一个__vfptr，上面有一个地址就是0x00422024，那这个地址就是虚表，这个表里面存储的就是函数的地址：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-1-56.png" alt="images/download/attachments/12714553/image2021-4-16_0-1-56.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-1-56.png" alt="images/download/attachments/12714553/image2021-4-16_0-1-56.png"   />
     </p>
 <p   
 >我们可以调出内存窗口查看一下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-6-6.png" alt="images/download/attachments/12714553/image2021-4-16_0-6-6.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-6-6.png" alt="images/download/attachments/12714553/image2021-4-16_0-6-6.png"   />
     </p>
 <p   
 >这个存储的地址就是0x00401037，这时候切到反汇编代码就然后Ctrl+G输入跟进这个地址：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-8-14.png" alt="images/download/attachments/12714553/image2021-4-16_0-8-14.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-8-14.png" alt="images/download/attachments/12714553/image2021-4-16_0-8-14.png"   />
     </p>
 <p   
 >那这个地址就是Teacher的成员函数Print的地址。</p>
@@ -1583,17 +1583,17 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-29-19.png" alt="images/download/attachments/12714553/image2021-4-16_0-29-19.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-29-19.png" alt="images/download/attachments/12714553/image2021-4-16_0-29-19.png"   />
     </p>
 <p   
 >但是在这里，我们只是比较一下大小，确实用int类型，这有点浪费了，在C++中有一个类型叫bool类型，其返回就是真（1）、假（0），所以我们可以使用这个数据类型。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-32-33.png" alt="images/download/attachments/12714553/image2021-4-16_0-32-33.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-32-33.png" alt="images/download/attachments/12714553/image2021-4-16_0-32-33.png"   />
     </p>
 <p   
 >bool类型仅占用一个字节：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-33-28.png" alt="images/download/attachments/12714553/image2021-4-16_0-33-28.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-33-28.png" alt="images/download/attachments/12714553/image2021-4-16_0-33-28.png"   />
     </p>
 <p   
 >这样比较大小，多少还是有点麻烦，如果我们想实现跟其他的数一样直接比较大小该怎么办？直接使用a &gt; b明显是不行的，因为编译器根本不知道你在比较什么。</p>
@@ -1628,7 +1628,7 @@
 <p   
 >只需要在自定义类里面按照格式重载运算符即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-39-16.png" alt="images/download/attachments/12714553/image2021-4-16_0-39-16.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-16_0-39-16.png" alt="images/download/attachments/12714553/image2021-4-16_0-39-16.png"   />
     </p>
 <p   
 >也就是说运算符重载，其本质意义就是给重新定义运算符，或者说取一个别名；其在底层上和我们之前的代码是没有任何区别的，其价值就是为了便于写代码。</p>
@@ -1676,7 +1676,7 @@
 <p   
 >但是这个冒泡排序的函数只能对int类型，如果我们想要使用char类型的时候就要重新写一个函数，这就违背了C++的初衷，重复造轮子了：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_11-17-32.png" alt="images/download/attachments/12714553/image2021-4-17_11-17-32.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_11-17-32.png" alt="images/download/attachments/12714553/image2021-4-17_11-17-32.png"   />
     </p>
 <p   
 >那么如何避免重复造轮子呢？C++中使用模板来解决这个问题。</p>
@@ -1718,12 +1718,12 @@
 <p   
 >那么模版其原理是什么，编译器做了什么工作呢？我们可以看一下如下代码的反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_11-34-34.png" alt="images/download/attachments/12714553/image2021-4-17_11-34-34.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_11-34-34.png" alt="images/download/attachments/12714553/image2021-4-17_11-34-34.png"   />
     </p>
 <p   
 >使用不同类型的数组传入冒泡排序函数，观察一下执行地址：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_11-33-30.png" alt="images/download/attachments/12714553/image2021-4-17_11-33-30.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_11-33-30.png" alt="images/download/attachments/12714553/image2021-4-17_11-33-30.png"   />
     </p>
 <p   
 >可以看见，两个函数的地址完全不一样，这就说明模板的本质就是<strong class=" ">编译器会在看见不同的传入类型时创建不同的函数</strong>。</p>
@@ -1806,7 +1806,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_15-11-54.png" alt="images/download/attachments/12714553/image2021-4-17_15-11-54.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_15-11-54.png" alt="images/download/attachments/12714553/image2021-4-17_15-11-54.png"   />
     </p>
     </div>
     <div class="section section-1" id="src-12714553_safe-id-QyAg6K-t6KiALee6r-iZmuWHveaVsA">
@@ -1844,7 +1844,7 @@
 <p   
 ><strong class=" ">比如</strong>：淘宝，有很多店铺，虽然每个店铺卖的东西都不一样，但是他们同样都可以下单、评论、购物车，也就是说他们都遵守了这种标准规则；也就是说你可以把淘宝当作一个抽象类，其有很多成员：购物车、评论、商品展示区...但是他都没有定义，而是交给开淘宝店的人（子类）去根据标准规则定义。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_16-20-55.png" alt="images/download/attachments/12714553/image2021-4-17_16-20-55.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_16-20-55.png" alt="images/download/attachments/12714553/image2021-4-17_16-20-55.png"   />
     </p>
 <p   
 >而如果不按照这种标准呢来，那么假如要统计所有的数据就会非常麻烦，不便于管理。</p>
@@ -1854,21 +1854,21 @@
 <p   
 >我们通常存储对象，都用数组、列表之类的来存储，那如下所示我们使用数组来存储对象，但是在工作中发现这个数组不够用了，就需要一个更大的数据，但我们重新创建一个数组还需要把原来的数据复制过来；在C语言中可以使用函数来进行拷贝，直接拷贝内存，在C++中实际上跟C语言要做的事情是一样的，在C++中就称之为<strong class=" ">对象拷贝</strong>。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_18-50-20.png" alt="images/download/attachments/12714553/image2021-4-17_18-50-20.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_18-50-20.png" alt="images/download/attachments/12714553/image2021-4-17_18-50-20.png"   />
     </p>
     <div class="section section-2" id="src-12714553_safe-id-QyAg6K-t6KiALeaLt-i0neaehOmAoOWHveaVsA">
         <h2 class="heading "><span>&#25335;&#36125;&#26500;&#36896;&#20989;&#25968;</span></h2>
 <p   
 >如何在C++中拷贝构造函数，来看一下如下代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_19-1-10.png" alt="images/download/attachments/12714553/image2021-4-17_19-1-10.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_19-1-10.png" alt="images/download/attachments/12714553/image2021-4-17_19-1-10.png"   />
     </p>
 <p   
 >可以看见我们定义了一个类，然后创建了两个对象obj、objNew，但是第二个对象的语法很奇怪，传入的参数是第一对象，其实这就是默认拷贝析构函数。</p>
 <p   
 >其本质就是很简单的内存复制：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_20-4-58.png" alt="images/download/attachments/12714553/image2021-4-17_20-4-58.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_20-4-58.png" alt="images/download/attachments/12714553/image2021-4-17_20-4-58.png"   />
     </p>
 <p   
 >上面的内存复制是在栈中，而我们想在堆中去拷贝可以这样写：</p>
@@ -1880,7 +1880,7 @@
 <p   
 >如上所示，我们是通过拷贝析构函数在内存中创建了一个新的对象，而如果该类本身有一个父类，父类会被拷贝吗？我们写一段代码来论证一下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_22-28-37.png" alt="images/download/attachments/12714553/image2021-4-17_22-28-37.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_22-28-37.png" alt="images/download/attachments/12714553/image2021-4-17_22-28-37.png"   />
     </p>
 <p   
 >那么这段代码，拷贝构造函数不仅可以将当前对象的内容复制，还可以将父类的内容复制过来。</p>
@@ -1901,7 +1901,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_23-48-7.png" alt="images/download/attachments/12714553/image2021-4-17_23-48-7.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-17_23-48-7.png" alt="images/download/attachments/12714553/image2021-4-17_23-48-7.png"   />
     </p>
 <p   
 >需要注意的是这个格式是固定的，不要自己「自由发挥」。</p>
@@ -1925,12 +1925,12 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_16-26-21.png" alt="images/download/attachments/12714553/image2021-4-18_16-26-21.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_16-26-21.png" alt="images/download/attachments/12714553/image2021-4-18_16-26-21.png"   />
     </p>
 <p   
 >那么赋值运算符实现的对象复制是否会当前复制对象继承的父类进行复制呢？</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_16-36-55.png" alt="images/download/attachments/12714553/image2021-4-18_16-36-55.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_16-36-55.png" alt="images/download/attachments/12714553/image2021-4-18_16-36-55.png"   />
     </p>
 <p   
 >如上图所示，赋值运算符是可以复制父类的。</p>
@@ -1939,7 +1939,7 @@
 <p   
 >我们想要解决这个问题就需要重写一个赋值运算符，自己来实现<strong class=" ">深拷贝</strong>。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_21-45-51.png" alt="images/download/attachments/12714553/image2021-4-18_21-45-51.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_21-45-51.png" alt="images/download/attachments/12714553/image2021-4-18_21-45-51.png"   />
     </p>
     </div>
     </div>
@@ -1952,12 +1952,12 @@
 <p   
 >大家都知道在C++中对象的私有成员，外部是无法访问的，这在面向对象中是很正常的，如果你想访问按照正常的逻辑你应该在类中声明成员函数去增删改查这个私有成员。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_21-54-57.png" alt="images/download/attachments/12714553/image2021-4-18_21-54-57.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_21-54-57.png" alt="images/download/attachments/12714553/image2021-4-18_21-54-57.png"   />
     </p>
 <p   
 >友元的诞生就是破坏了这个封装性，让你可以在外部去使用这个私有成员。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_21-56-54.png" alt="images/download/attachments/12714553/image2021-4-18_21-56-54.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_21-56-54.png" alt="images/download/attachments/12714553/image2021-4-18_21-56-54.png"   />
     </p>
 <p   
 >友元的语法就是：friend 返回类型 函数名(参数列表)</p>
@@ -1998,12 +1998,12 @@
 <ul class=" "><li class=" "><p   
 >大小：当前类和其内部类不存在包含关系，不会影响当前类的大小；</p>
 </li></ul><p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_22-12-59.png" alt="images/download/attachments/12714553/image2021-4-18_22-12-59.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_22-12-59.png" alt="images/download/attachments/12714553/image2021-4-18_22-12-59.png"   />
     </p>
 <ul class=" "><li class=" "><p   
 >关系：两者之间不存在什么特殊关系，也无法访问对方的私有成员；</p>
 </li></ul><p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_22-14-8.png" alt="images/download/attachments/12714553/image2021-4-18_22-14-8.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_22-14-8.png" alt="images/download/attachments/12714553/image2021-4-18_22-14-8.png"   />
     </p>
 <ul class=" "><li class=" "><p   
 >声明：声明创建内部类需要使用格式 &rarr; <strong class=" ">类::内部类 名称;</strong>；</p>
@@ -2034,7 +2034,7 @@
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_22-29-34.png" alt="images/download/attachments/12714553/image2021-4-18_22-29-34.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_22-29-34.png" alt="images/download/attachments/12714553/image2021-4-18_22-29-34.png"   />
     </p>
 <p   
 >调用也很简单，使用格式：<strong class=" ">命名空间名称::函数\变量\类</strong></p>
@@ -2070,19 +2070,19 @@
 <p   
 >用static声明的全局变量，只有当前函数能访问；我们可以看下反汇编代码来论证这是一个全局变量：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_23-7-0.png" alt="images/download/attachments/12714553/image2021-4-18_23-7-0.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_23-7-0.png" alt="images/download/attachments/12714553/image2021-4-18_23-7-0.png"   />
     </p>
 <p   
 >如上图所示的这个内存地址，很明显就是一个全局区的地址（<strong class=" ">这也就表示相同变量只能申请一次，不再接受第二次申请，也就表示全局变量应用场景，你可以用这个关键词来实现</strong>）。</p>
 <p   
 >面向对象设计中的static之静态数据成员：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_23-12-45.png" alt="images/download/attachments/12714553/image2021-4-18_23-12-45.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_23-12-45.png" alt="images/download/attachments/12714553/image2021-4-18_23-12-45.png"   />
     </p>
 <p   
 >面向对象设计中的static之静态成员函数：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_23-23-52.png" alt="images/download/attachments/12714553/image2021-4-18_23-23-52.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_23-23-52.png" alt="images/download/attachments/12714553/image2021-4-18_23-23-52.png"   />
     </p>
 <p   
 >static的经典应用：单子模式；有些时候我们希望定义的类只能有一个对象存在，这时候你该如何限制呢？实现思路有两个：</p>
@@ -2091,24 +2091,8 @@
 </li><li class=" "><p   
 >保证对象只有一个存在</p>
 </li></ol><p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_23-30-12.png" alt="images/download/attachments/12714553/image2021-4-18_23-30-12.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714553/image2021-4-18_23-30-12.png" alt="images/download/attachments/12714553/image2021-4-18_23-30-12.png"   />
     </p>
-<p   
-></p>
-<p   
-></p>
-<p   
-></p>
-<p   
-></p>
-<p   
-></p>
-<p   
-></p>
-<p   
-></p>
-<p   
-></p>
     </div>
         </div>
 

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QT&#22522;&#30784; - &#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</title>
+
+    
+    <link rel="stylesheet" href="assets/css/expand-macro.css">
+
+            <meta name="scroll-content-language-key" content="">
+    
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/translate.js"></script>
+
+
+<script type="text/javascript" src="assets/js/scroll-tree.js"></script>
+
+<script type="text/javascript" src="assets/js/theme.main.js"></script>
+
+    <script type="text/javascript" src="assets/js/iframeResizer.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/content-style.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+
+<link rel="stylesheet" href="assets/css/theme.main.css">
+<link rel="stylesheet" href="assets/css/theme.colors.css">
+
+            <!-- ES5 support for older browsers, needed by lunr -->
+        <script src="js/augment.js"></script>
+        <script id="worker" type="javascript/worker">
+
+        startIndex = function() {
+            idx = lunr.Index.load(lunrIndex);
+            idx.pipeline.remove(lunr.stopWordFilter);
+            postMessage({type: "setup-complete"});
+        }
+
+        onmessage = function (event) {
+            var message = event.data;
+
+            if ((message.type === 'setup') && message.baseUrl) {
+                var url = message.baseUrl;
+                importScripts(url + 'js/lunr.js');
+                importScripts(url + 'js/lunr-extras.js');
+                importScripts(url + 'js/lunr-index.js');
+                importScripts(url + 'js/lunr-data.js');
+                startIndex();
+            }
+
+            if (idx && (message.type === 'search-request') && message.query) {
+                var searchWord = message.query;
+                var results = idx.search(searchWord).map(function (result) {
+                    return lunrData.filter(function (d) {
+                        return d.id === parseInt(result.ref, 10)
+                    })[0]
+                });
+                postMessage({type: 'search-results', results: results, query: searchWord, queryId: message.queryId});
+            }
+        }
+
+    </script>
+    </head>
+
+<body pageid="8684305">
+
+<div id="ht-loader">
+    <noscript>
+        <p style="width: 100%; text-align:center; position: absolute; margin-top: 200px;">This content cannot be displayed without JavaScript.<br>Please enable JavaScript and reload the page.</p>
+    </noscript>
+</div>
+
+<div>
+   	<header id="ht-headerbar">
+    <div class="ht-headerbar-left">
+        <a href="" id="ht-menu-toggle" class="sp-aui-icon-small sp-aui-iconfont-appswitcher"></a>
+    </div>
+    <div class="ht-headerbar-right">
+            <div class="sp-aui-icon-small ht-search-index-loader ht-header-icon"></div>
+
+        <div id="ht-search">
+            <div class="ht-search-input" style="display: none;">
+              	<a href="#" class="sp-aui-icon-small sp-aui-iconfont-remove ht-search-clear"></a>
+
+                <form action="#" method="GET" id="search">
+                    <input class="search-input" type="text" placeholder="Search" tabindex="-1" autocomplete="off" name="q" value="">
+                    <input type="hidden" name="max" value="15" />
+                    <input type="submit" style="display:none" tabindex="-4"/>
+                </form>
+
+                <a href="#" id="ht-search-button" class="ht-header-icon ht-header-icon-svg">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path d="M29.572,28.802 L28.801,29.571 C28.515,29.857 28.187,30 27.816,30 C27.445,30 27.116,29.857 26.831,29.571 L21.392,24.134 C20.193,24.762 18.908,25.076 17.538,25.076 C15.396,25.076 13.605,24.348 12.163,22.892 C10.721,21.436 10,19.651 10,17.538 C10,15.397 10.721,13.605 12.163,12.163 C13.605,10.721 15.396,10 17.538,10 C19.651,10 21.434,10.721 22.89,12.163 C24.347,13.605 25.075,15.397 25.075,17.538 C25.075,18.937 24.761,20.222 24.132,21.393 L29.572,26.832 C29.857,27.118 30,27.446 30,27.817 C30,28.188 29.857,28.517 29.572,28.802 L29.572,28.802 Z M13.662,21.414 C14.732,22.485 16.024,23.02 17.538,23.02 C19.051,23.02 20.343,22.485 21.413,21.414 C22.484,20.344 23.019,19.052 23.019,17.538 C23.019,16.025 22.484,14.733 21.413,13.662 C20.343,12.592 19.051,12.056 17.538,12.056 C16.024,12.056 14.732,12.592 13.662,13.662 C12.591,14.733 12.056,16.025 12.056,17.538 C12.056,19.052 12.591,20.344 13.662,21.414 L13.662,21.414 Z"></path>
+                        </g>
+                    </svg>
+              	</a>
+
+                <div class="ht-search-dropdown ht-dropdown">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>   	<aside id="ht-sidebar">
+    <div class="ht-sidebar-content">
+        <div class="ht-sidebar-content-scroll-container">
+            <header class="ht-sidebar-header">
+                <h1 class="ht-logo">
+                    <span class="ht-logo-label">BinaryLearning</span>
+                    <img class="space-logo" src="global.logo" />
+                </h1>
+                <a href="Binary-Learning.html" class="ht-space-link">
+                    <h2>&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</h2>
+                </a>
+                <p><br>ᴀᴜᴛʜᴏʀ: ᴋᴇʏ<br><br>不积跬步，无以至千里；<br>不积小流，无以成江海。</p>
+            </header>
+                            <iframe id="ht-nav" src="toc.html?pageId=21791279"></iframe>
+                <script>
+                    $('iframe#ht-nav').iFrameResize(
+                            { 'log': true, 'autoResize': true, 'heightCalculationMethod': 'lowestElement', 'checkOrigin': false });
+                </script>
+                    </div>
+    </div>
+
+</aside></div>
+
+<div id="ht-wrap-container">
+
+            
+    <div id="ht-sidebar-dragbar">
+    <div class="ht-sidebar-drag-handle">
+        <span class="drag-handle-1"></span>
+        <span class="drag-handle-2"></span>
+        <span class="drag-handle-3"></span>
+    </div>
+</div>
+    <article id="ht-content" class="ht-content">
+        <header class="ht-content-header">
+            <div id="ht-breadcrumb">
+    <ul>
+        <li><a href="Binary-Learning.html">&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</a></li>
+                                                                                     <li><a href="%E5%88%9D%E7%BA%A7%E7%AF%87.html">&#21021;&#32423;&#31687;</a></li>
+                                                            </ul>
+</div>            <h1 id="src-21791279"> <span>QT&#22522;&#30784;</span></h1>
+        </header>
+
+        <div id="main-content" class="wiki-content sp-grid-section" data-index-for-search="true">
+
+    <div class="section section-1" id="src-21791279_safe-id-UVTln7rnoYAtUXTmpoLov7A">
+        <h1 class="heading "><span>Qt&#27010;&#36848;</span></h1>
+<p   
+>Qt是用C++实现的一套库，也就表示其就是一堆代码，它不是IDE；Qt与MFC一样，它们都是C++语言实现的库，在库里提供了很多接口，使得开发的时候可以更加方便；Qt与MFC的实现原理不一样；Qt可以跨平台，但效率较低。</p>
+<p   
+>了解了Qt，就不得不了解一下Qt Creator，这是一个IDE，类似于VC6.0、VS等等。</p>
+    <div class="section section-2" id="src-21791279_safe-id-UVTln7rnoYAtUXTlvIDlj5Hnjq_looPnmoTphY3nva4">
+        <h2 class="heading "><span>Qt&#24320;&#21457;&#29615;&#22659;&#30340;&#37197;&#32622;</span></h2>
+<p   
+>接下来我们要进行Qt开发环境的配置，我们需要下载与安装三个东西：</p>
+<ol class=" "><li class=" "><p   
+>MinGW，这是一个编译器，下载地址：<a  class="external-link" href="https://download.qt.io/development_releases/prebuilt/mingw_32/i686-4.8.2-release-posix-dwarf-rt_v3-rev3.7z">https://download.qt.io/development_releases/prebuilt/mingw_32/i686-4.8.2-release-posix-dwarf-rt_v3-rev3.7z</a></p>
+</li><li class=" "><p   
+>QtOpenSource，Qt的源代码，下载地址：<a  class="external-link" href="https://download.qt.io/archive/qt/4.8/4.8.6/qt-opensource-windows-x86-mingw482-4.8.6-1.exe">https://download.qt.io/archive/qt/4.8/4.8.6/qt-opensource-windows-x86-mingw482-4.8.6-1.exe</a></p>
+</li><li class=" "><p   
+>QtCreator，IDE，要安装其需要去这个网址：<a  class="external-link" href="https://login.qt.io/register">https://login.qt.io/register</a>注册账号，下载地址：<a  class="external-link" href="https://download.qt.io/development_releases/qtcreator/3.6/3.6.0-rc1/qt-creator-opensource-windows-x86-3.6.0-rc1.exe">https://download.qt.io/development_releases/qtcreator/3.6/3.6.0-rc1/qt-creator-opensource-windows-x86-3.6.0-rc1.exe</a></p>
+</li></ol><p   
+>依次按照步骤配置安装即可，建议将这三个东西放在同一个目录下：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-14_20-18-1.png" alt="images/download/attachments/21791279/image2021-10-14_20-18-1.png"   />
+    </p>
+<p   
+>最后打开Qt Creator，需要如下图一样进行配置（工具-选项）：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-14_20-39-11.png" alt="images/download/attachments/21791279/image2021-10-14_20-39-11.png"   />
+    </p>
+    </div>
+    <div class="section section-2" id="src-21791279_safe-id-UVTln7rnoYAt56ys5LiA5LiqUXTlupTnlKg">
+        <h2 class="heading "><span>&#31532;&#19968;&#20010;Qt&#24212;&#29992;</span></h2>
+<p   
+>当你配置好之后，可以创建你的第一个Qt应用并直接启动它：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-14_20-52-16.png" alt="images/download/attachments/21791279/image2021-10-14_20-52-16.png"   />
+    </p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791279_safe-id-UVTln7rnoYAt5bel56iL55qE5Yib5bu65Y-K56ys5LiA5Liq56iL5bqP">
+        <h1 class="heading "><span>&#24037;&#31243;&#30340;&#21019;&#24314;&#21450;&#31532;&#19968;&#20010;&#31243;&#24207;</span></h1>
+    <div class="section section-2" id="src-21791279_safe-id-UVTln7rnoYAt5Yib5bu65bel56iL">
+        <h2 class="heading "><span>&#21019;&#24314;&#24037;&#31243;</span></h2>
+<p   
+>之前我们已经创建了自己的第一个Qt应用，但如果学过MFC，理应知道，通过这种可视化去创建一个应用，会加入很多其他代码，不够纯粹，也不便于学习。</p>
+<p   
+>因此，我们需要如下图所示，创建一个空项目，然后添加C++源文件：</p>
+<p   
+></p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-16_14-58-51.png" alt="images/download/attachments/21791279/image2021-10-16_14-58-51.png"   />
+    </p>
+    </div>
+    <div class="section section-2" id="src-21791279_safe-id-UVTln7rnoYAt56ys5LiA5Liq56iL5bqP">
+        <h2 class="heading "><span>&#31532;&#19968;&#20010;&#31243;&#24207;</span></h2>
+<p   
+>接下来我们就需要在C++源文件中使用纯代码的方式创建Qt应用：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-16_15-19-3.png" alt="images/download/attachments/21791279/image2021-10-16_15-19-3.png"   />
+    </p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;QApplication&gt; </code><code class="comments">// 代表应用程序本身，等价于MFC中的CWinApp、CMyWinApp</code></div>
+<div class="line"><code class="plain">#include &lt;QWidget&gt; </code><code class="comments">// 表示窗口，等价于MFC中的CWnd</code></div>
+<div class="line"> </div>
+<div class="line"><code class="keyword">int</code><code class="plain"> main(</code><code class="keyword">int</code><code class="plain"> argc, </code><code class="keyword">char</code><code class="plain">* argv[]) {</code></div>
+<div class="line"><code class="plain">    QApplication app(argc, argv); </code><code class="comments">// 初始化程序</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    QWidget* pWidget = </code><code class="keyword">new</code><code class="plain"> QWidget(); </code><code class="comments">// 创建窗口 </code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    pWidget-&gt;setWindowTitle(QString(</code><code class="string">"Hello, World!"</code><code class="plain">)); </code><code class="comments">// 设置窗口标题，使用Qt中的字符串QString</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    pWidget-&gt;show(); </code><code class="comments">// 展示窗口 </code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> app.exec(); </code><code class="comments">// 运行程序</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>我们从MFC的角度来看Qt，你会发现，其实两者并没有什么不同，但从代码量以及整体结构的上来看，Qt显得更加简洁。</p>
+<p   
+>在Qt Creator中，你可以无需切换其他软件，直接查看相关的帮助信息（选中按F1）：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-16_15-24-49.png" alt="images/download/attachments/21791279/image2021-10-16_15-24-49.png"   />
+    </p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791279_safe-id-UVTln7rnoYAt5L-h5Y-35ZKM5qe9">
+        <h1 class="heading "><span>&#20449;&#21495;&#21644;&#27133;</span></h1>
+    <div class="section section-2" id="src-21791279_safe-id-UVTln7rnoYAt5Y6f55CG">
+        <h2 class="heading "><span>&#21407;&#29702;</span></h2>
+<p   
+>在了解Qt的信号和槽之前，我们来回顾一下MFC的消息映射机制，其就是将自定义消息和对应的处理函数添加到消息映射表中，这样的方法很简单，并且可以很直观的便于寻找。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_17-8-30.png" alt="images/download/attachments/21791279/image2021-10-17_17-8-30.png"   />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_17-8-57.png" alt="images/download/attachments/21791279/image2021-10-17_17-8-57.png"   />
+    </p>
+<p   
+>如上两张图所示，我们可以知道MFC的消息映射是静态的，这样做其实相对来说较为死板，无法动态的往消息映射表中添加和卸载，Qt的信号和槽正是为了解决这种问题而诞生的，如下图所示消息变成了信号，消息事件函数变成了槽。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_17-11-22.png" alt="images/download/attachments/21791279/image2021-10-17_17-11-22.png"   />
+    </p>
+<p   
+>如下图所示， 我们知道在MFC中要使用消息映射机制，首先要在类中声明<strong class=" ">DECLARE_MESSAGE_MAP</strong>宏，通用在Qt中你要使用信号与槽，需要声明<strong class=" ">Q_OBJECT</strong>宏：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_17-53-8.png" alt="images/download/attachments/21791279/image2021-10-17_17-53-8.png"   />
+    </p>
+<p   
+>在Qt中信号和槽是这样的运作流程：</p>
+<ol class=" "><li class=" "><p   
+>首先需要知道哪个控件发出了信号；</p>
+</li><li class=" "><p   
+>其次需要知道发出了什么信号；</p>
+</li><li class=" "><p   
+>接着需要知道哪个控件接收这个信号；</p>
+</li><li class=" "><p   
+>最后需要知道这个信号应该调用什么功能函数（<strong class=" ">槽函数</strong>，与信号接收的控件绑定）。</p>
+</li></ol><p   
+>这一套运作流程是通过<strong class=" ">QObject::connect方法</strong>进行动态链接的，同样你也可以通过<strong class=" ">QObject::disconnect方法</strong>进行动态卸载。</p>
+<p   
+>所以从本质上来看MFC和Qt都是对Win32中的消息及其处理函数进行了封装，但是Qt信号和槽相比较MFC的消息机制，使用起来更方便。</p>
+    </div>
+    <div class="section section-2" id="src-21791279_safe-id-UVTln7rnoYAt5a6e5pON">
+        <h2 class="heading "><span>&#23454;&#25805;</span></h2>
+<p   
+>在实操之前，我们先了解一下<strong class=" ">QObject::connect方法</strong>的语法：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">bool QObject::connect (</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">const</code><code class="plain"> QObject * sender, </code><code class="comments">// 信号发送者</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">const</code><code class="plain"> </code><code class="keyword">char</code><code class="plain"> * signal, </code><code class="comments">// 信号：SIGNAL(pressed())，用SIGNAL宏加信号的事件方法</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">const</code><code class="plain"> QObject * receiver, </code><code class="comments">// 信号接受者</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">const</code><code class="plain"> </code><code class="keyword">char</code><code class="plain"> * method, </code><code class="comments">// 糙：SLOT(close())，用SLOT宏加处理对应信号的槽函数</code></div>
+<div class="line"><code class="plain">    Qt::ConnectionType type = Qt::AutoConnection </code><code class="comments">// 默认有初始值，可不写</code></div>
+<div class="line"><code class="plain">)</code></div>
+</div>
+    </div>
+<p   
+>每个控件都有自己独有的信号和槽：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_17-40-37.png" alt="images/download/attachments/21791279/image2021-10-17_17-40-37.png"   />
+    </p>
+<p   
+>如下代码是创建两个按钮，pressed信号（按钮按下）链接了pWidget控件的close方法和showFullScreen方法：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;QApplication&gt;</code></div>
+<div class="line"><code class="plain">#include &lt;QWidget&gt;</code></div>
+<div class="line"><code class="plain">#include &lt;QPushButton&gt;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="keyword">int</code><code class="plain"> main(</code><code class="keyword">int</code><code class="plain"> argc, </code><code class="keyword">char</code><code class="plain">* argv[]) {</code></div>
+<div class="line"><code class="plain">    QApplication app(argc, argv);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    QWidget* pWidget = </code><code class="keyword">new</code><code class="plain"> QWidget();</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    QPushButton* pCloseBtn = </code><code class="keyword">new</code><code class="plain"> QPushButton(pWidget); </code><code class="comments">// 创建按钮，基于pWidget</code></div>
+<div class="line"><code class="plain">    QPushButton* pFullScrenBtn = </code><code class="keyword">new</code><code class="plain"> QPushButton(pWidget); </code><code class="comments">// 创建按钮，基于pWidget</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    pWidget-&gt;setWindowTitle(QString(</code><code class="string">"Hello, World!"</code><code class="plain">));</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    pCloseBtn-&gt;setGeometry(QRect(</code><code class="value">0</code><code class="plain">,</code><code class="value">0</code><code class="plain">,</code><code class="value">50</code><code class="plain">,</code><code class="value">30</code><code class="plain">)); </code><code class="comments">// 设置按钮坐标和大小</code></div>
+<div class="line"><code class="plain">    pCloseBtn-&gt;setText(QString(</code><code class="string">"Close"</code><code class="plain">));  </code><code class="comments">// 设置按钮名字</code></div>
+<div class="line"><code class="plain">    pFullScrenBtn-&gt;setGeometry(QRect(</code><code class="value">100</code><code class="plain">,</code><code class="value">0</code><code class="plain">,</code><code class="value">80</code><code class="plain">,</code><code class="value">30</code><code class="plain">));</code></div>
+<div class="line"><code class="plain">    pFullScrenBtn-&gt;setText(QString(</code><code class="string">"FullScreen"</code><code class="plain">));</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    pWidget-&gt;show();</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    pWidget-&gt;connect(pCloseBtn, SIGNAL(pressed()), pWidget, SLOT(close())); </code><code class="comments">// connect方法</code></div>
+<div class="line"><code class="plain">    pWidget-&gt;connect(pFullScrenBtn, SIGNAL(pressed()), pWidget, SLOT(showFullScreen()));</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> app.exec();</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>关于其他的信号和槽可以查看Qt Creator的手册（选中按下快捷键F1）。</p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791279_safe-id-UVTln7rnoYAt55SoUXREZXNpZ25lcuadpeiuvuiuoeeVjOmdog">
+        <h1 class="heading "><span>&#29992;QtDesigner&#26469;&#35774;&#35745;&#30028;&#38754;</span></h1>
+<p   
+>接下来我们可以使用Qt Creator的QtDesigner来设计界面，这个跟MFC操作是差不多的，控件直接拖拽。</p>
+<p   
+>首先我们需要创建一个项目，按如下图所示创建：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_18-10-11.png" alt="images/download/attachments/21791279/image2021-10-17_18-10-11.png"   />
+    </p>
+<p   
+>接下来我们依次来看一下项目创建的几个文件：</p>
+<ol class=" "><li class=" "><p   
+>Demo.pro &rarr; 编译程序所需的文件，其中包含了项目名称项目类型以及相关的源文件头文件和界面文件；</p>
+</li><li class=" "><p   
+>mywidget.h &rarr; 头文件，包含了派生类MyWidget的声明；</p>
+</li><li class=" "><p   
+>main.cpp &rarr; Qt应用的入口文件；</p>
+</li><li class=" "><p   
+>mywidget.cpp &rarr; 派生类MyWidget的方法的实现文件。</p>
+</li><li class=" "><p   
+>mywidget.ui &rarr; 界面文件。</p>
+</li></ol><p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_18-11-15.png" alt="images/download/attachments/21791279/image2021-10-17_18-11-15.png"   />
+    </p>
+<p   
+>头文件可以关注一下有几个有意思的东西，首先是在派生类中需要声明<strong class=" ">Q_OBJECT</strong>宏，其次需要添加一个界面集成管理的成员<strong class=" ">用于所有子控件的集中管理</strong>：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_18-19-13.png" alt="images/download/attachments/21791279/image2021-10-17_18-19-13.png"   />
+    </p>
+    <div class="section section-2" id="src-21791279_safe-id-UVTln7rnoYAtVUnorr7orqE">
+        <h2 class="heading "><span>UI&#35774;&#35745;</span></h2>
+<p   
+>我们可以通过双击界面文件或选择左边菜单栏的设计进行界面的设计：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_18-22-16.png" alt="images/download/attachments/21791279/image2021-10-17_18-22-16.png"   />
+    </p>
+<p   
+>我们可以从左边拖拽控件到界面上，对名字和显示文本进行修改：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_18-24-56.png" alt="images/download/attachments/21791279/image2021-10-17_18-24-56.png"   />
+    </p>
+    </div>
+    <div class="section section-2" id="src-21791279_safe-id-UVTln7rnoYAt5re75Yqg5L-h5Y-35ZKM5qe9">
+        <h2 class="heading "><span>&#28155;&#21152;&#20449;&#21495;&#21644;&#27133;</span></h2>
+<p   
+>添加信号和槽有两种方式 一种是使用可视化的方法，一种是使用代码去编写。</p>
+    <div class="section section-3" id="src-21791279_safe-id-UVTln7rnoYAt5Y-v6KeG5YyW5pON5L2c">
+        <h3 class="heading "><span>&#21487;&#35270;&#21270;&#25805;&#20316;</span></h3>
+<p   
+>如下图所示我们可以直接在界面中去操作添加：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_18-28-20.png" alt="images/download/attachments/21791279/image2021-10-17_18-28-20.png"   />
+    </p>
+    </div>
+    <div class="section section-3" id="src-21791279_safe-id-UVTln7rnoYAt5Luj56CB5pON5L2c">
+        <h3 class="heading "><span>&#20195;&#30721;&#25805;&#20316;</span></h3>
+<p   
+>我们想要当Submit按钮被按下从而改变TextLable的内容为输入框的内容，这时候需要编写代码，首先由于这个动作是我们自定义的，所以在头文件中需要声明一个私有的槽方法：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">private</code><code class="plain"> slots:</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">void</code><code class="plain"> ChangeText();</code></div>
+</div>
+    </div>
+<p   
+>其次我们需要在实现文件中实现这个方法：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">void</code><code class="plain"> MyWidget::ChangeText()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ui-&gt;showLabel-&gt;setText(ui-&gt;inputEdit-&gt;text());</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>接着在构造函数中使用connect连接信号和槽：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">MyWidget::MyWidget(QWidget *parent) :</code></div>
+<div class="line"><code class="plain">    QWidget(parent),</code></div>
+<div class="line"><code class="plain">    ui(</code><code class="keyword">new</code><code class="plain"> Ui::MyWidget)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ui-&gt;setupUi(</code><code class="keyword">this</code><code class="plain">);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    connect(ui-&gt;submitButton, SIGNAL(pressed()), </code><code class="keyword">this</code><code class="plain">, SLOT(ChangeText()));</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>这样我们就可以完成整个需求了：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791279/image2021-10-17_18-36-42.png" alt="images/download/attachments/21791279/image2021-10-17_18-36-42.png"   />
+    </p>
+    </div>
+    </div>
+    </div>
+        </div>
+
+    </article>
+
+
+            <nav id="ht-post-nav">
+                <a href="COM%E7%BB%84%E4%BB%B6.html" class="ht-post-nav-prev">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-prev" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-45.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>COM&#32452;&#20214;</span>
+        </a>
+                <a href="%E7%A1%AC%E7%BC%96%E7%A0%81.html" class="ht-post-nav-next">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-next" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-225.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>&#30828;&#32534;&#30721;</span>
+        </a>
+    </nav>    
+            
+    <footer id="ht-footer">
+    <a href="#" id="ht-jump-top" class="sp-aui-icon-small sp-aui-iconfont-arrows-up"></a>
+</footer></div>
+
+<div>
+    <div id="ht-mq-detect"></div>
+</div>
+
+    <script src="js/lunr.js"></script>
+    <script src="js/lunr-extras.js"></script>
+    <script src="assets/js/scroll-search.js"></script>
+
+    <script src="assets/js/expand-macro.js"></script>
+</body>
+</html>

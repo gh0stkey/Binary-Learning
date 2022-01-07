@@ -169,27 +169,27 @@
 <p   
 >1.创建项目（选择Win32 Console Application）</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-5_18-34-38.png" alt="images/download/attachments/12714021/image2021-2-5_18-34-38.png" width="511"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-5_18-34-38.png" alt="images/download/attachments/12714021/image2021-2-5_18-34-38.png"   />
     </p>
 <p   
 >2.创建文件（Source File）</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-3_19-20-31.png" alt="images/download/attachments/12714021/image2021-2-3_19-20-31.png"  height="400" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-3_19-20-31.png" alt="images/download/attachments/12714021/image2021-2-3_19-20-31.png"   />
     </p>
 <p   
 >3.编写入口程序</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-3_19-39-45.png" alt="images/download/attachments/12714021/image2021-2-3_19-39-45.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-3_19-39-45.png" alt="images/download/attachments/12714021/image2021-2-3_19-39-45.png"   />
     </p>
 <p   
 >34.构建（F7）</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-3_19-40-15.png" alt="images/download/attachments/12714021/image2021-2-3_19-40-15.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-3_19-40-15.png" alt="images/download/attachments/12714021/image2021-2-3_19-40-15.png"   />
     </p>
 <p   
 >5.运行（F5）</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-3_19-40-40.png" alt="images/download/attachments/12714021/image2021-2-3_19-40-40.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-3_19-40-40.png" alt="images/download/attachments/12714021/image2021-2-3_19-40-40.png"   />
     </p>
 <p   
 >如下代码就是入口函数：</p>
@@ -248,17 +248,17 @@
 <p   
 >单击<strong class=" ">plus(1,2);</strong>那一行，按一下F9，下一个断点，然后F7构建，F5运行。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-10_21-36-33.png" alt="images/download/attachments/12714021/image2021-2-10_21-36-33.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-10_21-36-33.png" alt="images/download/attachments/12714021/image2021-2-10_21-36-33.png"   />
     </p>
 <p   
 >再右击这行代码，选择如下图所示的按钮，来查看反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/12714021/image2021-2-10_21-37-26.png" alt="images/download/thumbnails/12714021/image2021-2-10_21-37-26.png"  height="250" />
+><img    src="images/download/attachments/12714021/image2021-2-10_21-37-26.png" alt="images/download/attachments/12714021/image2021-2-10_21-37-26.png"   />
     </p>
 <p   
 >通过查看反汇编代码我们发现C语言<strong class=" ">调用函数</strong>实际上跟我们之前所学的汇编是一样的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-10_21-41-15.png" alt="images/download/attachments/12714021/image2021-2-10_21-41-15.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-10_21-41-15.png" alt="images/download/attachments/12714021/image2021-2-10_21-41-15.png"   />
     </p>
 <p   
 >但需要注意的是，这里我们看见的反汇编代码是Debug版本，也就是方便我们调试的，而实际上程序编译应该是以Release版本，两个版本对应的汇编代码也是不一样的，另外VC6在展示反汇编代码的时，适当的做了一些优化，也就是便于阅读理解，例如上图所示的函数调用的汇编call指令，实际上就是<u class=" "><strong class=" ">call 0040100a</strong></u>。</p>
@@ -352,36 +352,36 @@
 <p   
 >老规矩我们基于VC6的环境下，在调用plus函数那一行下断点（F9），然后（F7）构建，（F5）运行，右键进入汇编界面。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-12_23-47-35.png" alt="images/download/attachments/12714021/image2021-2-12_23-47-35.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-12_23-47-35.png" alt="images/download/attachments/12714021/image2021-2-12_23-47-35.png"   />
     </p>
 <p   
 >在这里，我们需要<strong class=" ">观察堆栈</strong>来观察程序的本质，这里可以借助<strong class=" ">Excel工具</strong>画<strong class=" ">堆栈图</strong>便于理解，我们可以选中一列然后将其边框都填上：</p>
 <p   
-><img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/12714021/image2021-2-12_23-51-12.png" alt="images/download/thumbnails/12714021/image2021-2-12_23-51-12.png"  height="250" />
+><img    src="images/download/attachments/12714021/image2021-2-12_23-51-12.png" alt="images/download/attachments/12714021/image2021-2-12_23-51-12.png"   />
     </p>
 <p   
 >记住堆栈在执行前后的变化，画堆栈图要记住两个寄存器，一个是栈顶（ESP），一个是栈底（EBP）。</p>
 <p   
 >在我们代码（调用plus）函数还没开始执行时候要先记住这两个寄存器的值：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-12_23-54-14.png" alt="images/download/attachments/12714021/image2021-2-12_23-54-14.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-12_23-54-14.png" alt="images/download/attachments/12714021/image2021-2-12_23-54-14.png"   />
     </p>
 <p   
 >将两个值填入我们的Excel表格中，再将其用颜色标记一下即可：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-12_23-55-52.png" alt="images/download/attachments/12714021/image2021-2-12_23-55-52.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-12_23-55-52.png" alt="images/download/attachments/12714021/image2021-2-12_23-55-52.png"   />
     </p>
 <p   
 >接下来我们就可以按照程序执行顺序来进行跟进了，我们来看一下汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-1-8.png" alt="images/download/attachments/12714021/image2021-2-13_0-1-8.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-1-8.png" alt="images/download/attachments/12714021/image2021-2-13_0-1-8.png"   />
     </p>
 <p   
 >可以看见<strong class=" ">从右到左</strong>，依次压入我们调用函数传入的参数，然后再使用call指令去调用函数，<strong class=" ">在这里我们可以使用F10跟进执行</strong>。</p>
 <p   
 >连续压入堆栈2个数据，堆栈也会根据数据宽度提升，此时我们要在堆栈图中根据变化进行修改：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-3-46.png" alt="images/download/attachments/12714021/image2021-2-13_0-3-46.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-3-46.png" alt="images/download/attachments/12714021/image2021-2-13_0-3-46.png"   />
     </p>
 <p   
 >而我们想要跟进call指令需要使用F11跟进，就如同学习汇编时「<strong class=" ">使用DTDebug</strong>    <span style="color: #333333;">
@@ -391,17 +391,17 @@
 >而跟进call指令之后，我们的堆栈也会发生变化，call指令下一行执行的地址会压入堆栈，栈顶也随之提升，需要注意的是在VC6中F11跟进会先过渡到一个jmp指令，然后再通过其跳到真正的函数执行地址。</p>
 <p   
 >    <span style="color: #333333;">
-<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-28-42.png" alt="images/download/attachments/12714021/image2021-2-13_0-28-42.png" width="600"  />
+<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-28-42.png" alt="images/download/attachments/12714021/image2021-2-13_0-28-42.png"   />
     </span>
 </p>
 <p   
 >    <span style="color: #333333;">
-<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-48-50.png" alt="images/download/attachments/12714021/image2021-2-13_0-48-50.png" width="400"  />
+<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-48-50.png" alt="images/download/attachments/12714021/image2021-2-13_0-48-50.png"   />
     </span>
 </p>
 <p   
 >    <span style="color: #333333;">
-<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-50-49.png" alt="images/download/attachments/12714021/image2021-2-13_0-50-49.png" width="600"  />
+<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-50-49.png" alt="images/download/attachments/12714021/image2021-2-13_0-50-49.png"   />
     </span>
 </p>
 <p   
@@ -410,7 +410,7 @@
 </p>
 <p   
 >    <span style="color: #333333;">
-<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-52-39.png" alt="images/download/attachments/12714021/image2021-2-13_0-52-39.png" width="400"  />
+<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_0-52-39.png" alt="images/download/attachments/12714021/image2021-2-13_0-52-39.png"   />
     </span>
 </p>
 <p   
@@ -426,7 +426,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >    <span style="color: #333333;">
     <span style="color: #172b4d;">
-<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_1-23-20.png" alt="images/download/attachments/12714021/image2021-2-13_1-23-20.png" width="400"  />
+<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_1-23-20.png" alt="images/download/attachments/12714021/image2021-2-13_1-23-20.png"   />
     </span>
     </span>
 </p>
@@ -446,7 +446,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </p>
 <p   
 >    <span style="color: #333333;">
-<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_1-37-20.png" alt="images/download/attachments/12714021/image2021-2-13_1-37-20.png" width="400"  />
+<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_1-37-20.png" alt="images/download/attachments/12714021/image2021-2-13_1-37-20.png"   />
     </span>
 </p>
 <p   
@@ -455,7 +455,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </p>
 <p   
 >    <span style="color: #333333;">
-<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_1-38-42.png" alt="images/download/attachments/12714021/image2021-2-13_1-38-42.png" width="400"  />
+<img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_1-38-42.png" alt="images/download/attachments/12714021/image2021-2-13_1-38-42.png"   />
     </span>
 </p>
 <p   
@@ -525,12 +525,12 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >我们跟进看一下反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_2-5-44.png" alt="images/download/attachments/12714021/image2021-2-13_2-5-44.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_2-5-44.png" alt="images/download/attachments/12714021/image2021-2-13_2-5-44.png"   />
     </p>
 <p   
 >全局变量a实际上就是一个内存地址，接着来看其存储的内容（<strong class=" ">0x7B转为十进制就是123</strong>）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_2-6-51.png" alt="images/download/attachments/12714021/image2021-2-13_2-6-51.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_2-6-51.png" alt="images/download/attachments/12714021/image2021-2-13_2-6-51.png"   />
     </p>
 <p   
 ><strong class=" ">局部变量</strong>：</p>
@@ -581,7 +581,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >在这里，我们还是下断点一步一步跟进，然后画堆栈图分析即可，如下是堆栈图及其对应汇编代码（<strong class=" ">这不是整个函数执行完后的堆栈图</strong>）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_14-50-22.png" alt="images/download/attachments/12714021/image2021-2-13_14-50-22.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_14-50-22.png" alt="images/download/attachments/12714021/image2021-2-13_14-50-22.png"   />
     </p>
 <p   
 >如上图所示，我们可以清晰的看见<strong class=" ">参数在内存中的位置</strong>就是ebp+8、ebp+c...以此类推；<strong class=" ">局部变量则位于我们之前所说的缓冲区</strong>，也就是ebp-4、ebp-8...以此类推，这也就是为什么局部变量使用前需赋初值，不然里面是垃圾数据（CC）。</p>
@@ -604,7 +604,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >我们来看下汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_15-0-24.png" alt="images/download/attachments/12714021/image2021-2-13_15-0-24.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_15-0-24.png" alt="images/download/attachments/12714021/image2021-2-13_15-0-24.png"   />
     </p>
 <p   
 >可以看见这里会将eax放入到当前函数的缓冲区（main函数，ebp-4），也就是<strong class=" ">将返回值存到当前函数的缓冲区内</strong>。</p>
@@ -636,7 +636,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >老规矩我们还是在plus函数那下断点跟踪画堆栈图，如下是堆栈图：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_15-24-35.png" alt="images/download/attachments/12714021/image2021-2-13_15-24-35.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-13_15-24-35.png" alt="images/download/attachments/12714021/image2021-2-13_15-24-35.png"   />
     </p>
 <p   
 >在调用完plus1函数后，plus函数会有这样一个汇编代码：</p>
@@ -761,14 +761,14 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >这种情况下，数据是如何存储的呢？我们还可以来看一下汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-17_23-13-28.png" alt="images/download/attachments/12714021/image2021-2-17_23-13-28.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-17_23-13-28.png" alt="images/download/attachments/12714021/image2021-2-17_23-13-28.png"   />
     </p>
 <p   
 >可以看见这里在汇编中直接存储的是0（<strong class=" ">十六进制</strong>），因为这里的数据宽度是1个字节，也就是8位二进制，其二进制则为0000 0000，100我们可以转为二进制：0001 0000 0000</p>
 <p   
 >由此得出一个结论：<strong class=" ">当数据存储超出其数据宽度造成数据溢出时，存储数据舍弃高位，存储低位</strong>。以上例子可能不明显，可以看如下例子：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-17_23-18-7.png" alt="images/download/attachments/12714021/image2021-2-17_23-18-7.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-17_23-18-7.png" alt="images/download/attachments/12714021/image2021-2-17_23-18-7.png"   />
     </p>
 <p   
 ></p>
@@ -802,7 +802,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </li></ol><p   
 >如上代码，我们可以看下反汇编：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-18_0-15-53.png" alt="images/download/attachments/12714021/image2021-2-18_0-15-53.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-18_0-15-53.png" alt="images/download/attachments/12714021/image2021-2-18_0-15-53.png"   />
     </p>
 <p   
 >这时候，可能会有人疑惑，为什么定义了变量a为无符号数，存储-1的内容还是0xFF呢？这是因为<strong class=" ">在编译器中，不管你是如何定义这个数的，只要看见-1，那么一定会以其补码形式存储</strong>。</p>
@@ -917,14 +917,14 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >float和double在存储的方式上都遵从IEEE编码规范：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-18_16-12-42.png" alt="images/download/attachments/12714021/image2021-2-18_16-12-42.png"  height="250" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-18_16-12-42.png" alt="images/download/attachments/12714021/image2021-2-18_16-12-42.png"   />
     </p>
 <p   
 >我们主要了解一下float类型的存储格式即可，其他类型举一反三都可以进行推演。</p>
 <p   
 >这里我们举例说明8.25转成浮点存储，整数部分8不断的除以2，直到结果为0，整除不包含小数点，所以最后的1/2结果为0，有余数则为1。</p>
 <p   
-><img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/12714021/image2021-2-18_16-16-28.png" alt="images/download/thumbnails/12714021/image2021-2-18_16-16-28.png" width="300"  />
+><img    src="images/download/attachments/12714021/image2021-2-18_16-16-28.png" alt="images/download/attachments/12714021/image2021-2-18_16-16-28.png"   />
     </p>
 <p   
 >从下往上读，由此可以得出8的二进制为1000，我们还可以来算一下9的二进制：</p>
@@ -946,12 +946,12 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >8.25转成浮点存储，小数部分这样计算：</p>
 <p   
-><img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/12714021/image2021-2-18_16-22-43.png" alt="images/download/thumbnails/12714021/image2021-2-18_16-22-43.png" width="300"  />
+><img    src="images/download/attachments/12714021/image2021-2-18_16-22-43.png" alt="images/download/attachments/12714021/image2021-2-18_16-22-43.png"   />
     </p>
 <p   
 >小数部分0.25不断的乘以2，直到结果小数点为0，例如：1.0，而如果大于1.0则二进制位也为1，其余都是0，这里我们以0.4为例子：</p>
 <p   
-><img  class="confluence-embedded-image confluence-thumbnail"  src="images/download/thumbnails/12714021/image2021-2-18_16-23-3.png" alt="images/download/thumbnails/12714021/image2021-2-18_16-23-3.png" width="300"  />
+><img    src="images/download/attachments/12714021/image2021-2-18_16-23-3.png" alt="images/download/attachments/12714021/image2021-2-18_16-23-3.png"   />
     </p>
 <p   
 >0.8*2=1.6，1.6的1拿走则表示二进制位为1，然后再乘以2，以此类推...但是这里我们发现这里就进入了循环状态，一直都是0110，永远无法得到结果小数点为0的情况。</p>
@@ -1043,14 +1043,14 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >我们在代码中写了变量c，但是它最终存储进去的是啥呢？我们看下反汇编：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_0-51-43.png" alt="images/download/attachments/12714021/image2021-2-19_0-51-43.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_0-51-43.png" alt="images/download/attachments/12714021/image2021-2-19_0-51-43.png"   />
     </p>
 <p   
 >在这里'A'存储的时候变成了0x41，这是为什么？因为它是一个字符，这里需要注意在变量定义赋值时，赋值字符需要加上单引号。</p>
 <p   
 >在内存中所有东西最终都会变成0和1，A对应0x41，那么可以大胆猜测一下B就是对应0x42，当我们使用字符存储到内存时，字符自然是没办法存储到内存中的，这时候就有了一个字符对应的表：ASCII表（美国标准信息交换代码）</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_0-56-21.png" alt="images/download/attachments/12714021/image2021-2-19_0-56-21.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_0-56-21.png" alt="images/download/attachments/12714021/image2021-2-19_0-56-21.png"   />
     </p>
 <p   
 >这张表有128个符号，都是比较常用的，那也就是说在我们赋值A给变量时，编译器会去这张表中寻找大写的A，如上图所示A对应10进制为65，转为16进制就是0x41。</p>
@@ -1108,7 +1108,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >看过示例代码之后，我们就知道了<strong class=" ">字符串本质上就是一堆字符连续串在一块</strong>，观察一下反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_1-19-37.png" alt="images/download/attachments/12714021/image2021-2-19_1-19-37.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_1-19-37.png" alt="images/download/attachments/12714021/image2021-2-19_1-19-37.png"   />
     </p>
 <p   
 >这时候就存在一个问题，printf为什么会知道打印完最后一个感叹号之后就不打印了呢？这是因为在这一串字符串后存在着一个00，当printf看见之后就会停止打印了，也就是说字符串的结束标志在内存中是00。</p>
@@ -1128,7 +1128,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >在之前了解到ASCII码表中，我们并没有发现存在中文，那么如何在计算机中存储中文？这时候我们需要了解一个新的表：拓展ASCII码表 (EASCII)</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_1-27-21.png" alt="images/download/attachments/12714021/image2021-2-19_1-27-21.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_1-27-21.png" alt="images/download/attachments/12714021/image2021-2-19_1-27-21.png"   />
     </p>
 <p   
 >该表十进制值从128到255，但是这些也没办法满足我们中文的需求，所以天朝专家把那些127号后的奇异符号们 (即EASCII)取消掉，规定：一个小于127的字符意义与原来相同，但是两个大于127的字符连在一起时，就表示一个汉字，这样我们就可以组合出大约7000多个简体汉字了。</p>
@@ -1147,7 +1147,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_1-33-38.png" alt="images/download/attachments/12714021/image2021-2-19_1-33-38.png"  height="150" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-19_1-33-38.png" alt="images/download/attachments/12714021/image2021-2-19_1-33-38.png"   />
     </p>
     </div>
     <div class="section section-1" id="src-12714021_safe-id-Q-ivreiogC3ov5DnrpfnrKbkuI7ooajovr7lvI8">
@@ -1283,7 +1283,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >如上就是自加、自减的用法，注意<strong class=" ">自加、自减的</strong>都是1，但其符号为什么可以在变量前或变量后？既然可以这样，其二者区别是什么？我们可以来看一下反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-21_23-29-48.png" alt="images/download/attachments/12714021/image2021-2-21_23-29-48.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-21_23-29-48.png" alt="images/download/attachments/12714021/image2021-2-21_23-29-48.png"   />
     </p>
 <p   
 >通过反汇编代码我们看不出来其存在什么差别，我们可以借助printf函数来查看区别：</p>
@@ -1298,12 +1298,12 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >运行一下来看看效果：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-21_23-35-37.png" alt="images/download/attachments/12714021/image2021-2-21_23-35-37.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-21_23-35-37.png" alt="images/download/attachments/12714021/image2021-2-21_23-35-37.png"   />
     </p>
 <p   
 >可以看见第一个输出了1，第二个输出了3，那么我们可以暂时认为：<strong class=" ">自加、自减符号在前则自加、自减完返回，符号在前则先返回当前值，然后再自加、自减</strong>；具体的，我们来看一下反汇编代码便可得知：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-21_23-38-19.png" alt="images/download/attachments/12714021/image2021-2-21_23-38-19.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-21_23-38-19.png" alt="images/download/attachments/12714021/image2021-2-21_23-38-19.png"   />
     </p>
 <p   
 >如上图反汇编代码便可说明我们的猜测是正确的。</p>
@@ -1576,7 +1576,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >我们看下反汇编，变量a最终的值是什么：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-4-33.png" alt="images/download/attachments/12714021/image2021-2-22_0-4-33.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-4-33.png" alt="images/download/attachments/12714021/image2021-2-22_0-4-33.png"   />
     </p>
 <p   
 >最终值为0，那么可以得出这样一个结论：<strong class=" ">1&gt;2为表达式，表达式成立则执行问号后面的内容，不成立则执行冒号后面的内容</strong>。</p>
@@ -1604,7 +1604,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >这段代码的意思就是进入if语句，如果a小于b则打印一个1，如果a大于b则打印一个2，如果前两2个表达式都不成立则打印一个3；在这里我们简单来看一下反汇编代码，看看它如何实现的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-13-27.png" alt="images/download/attachments/12714021/image2021-2-22_0-13-27.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-13-27.png" alt="images/download/attachments/12714021/image2021-2-22_0-13-27.png"   />
     </p>
 <p   
 >如上反汇编代码可以看的出来，虽然我们C语言写的是x&gt;y，但是jle这个指令实际意义是当小于等于则跳转到0040d73d这个执行地址，我们没有必要去记住C语言对应的反汇编代码的结构，也不需要去记住，因为实际环境很有可能不是这样实现的，只要了解一个大概即可。</p>
@@ -1683,12 +1683,12 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >其反汇编代码为：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-40-17.png" alt="images/download/attachments/12714021/image2021-2-22_0-40-17.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-40-17.png" alt="images/download/attachments/12714021/image2021-2-22_0-40-17.png"   />
     </p>
 <p   
 >如上反汇编代码我们可以看出switch在一开始就直接将变量x与3进行比较，ja指令则表示大于则跳转，但这变量x明显等于3，所以将值赋予edx，最后jmp跳到堆栈地址2*4+40d896（40d896+8），也就是0x40D89E对应的值：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-51-14.png" alt="images/download/attachments/12714021/image2021-2-22_0-51-14.png"  height="250" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-51-14.png" alt="images/download/attachments/12714021/image2021-2-22_0-51-14.png"   />
     </p>
 <p   
 >最终跳转到0x0040d80c，打印出了C。</p>
@@ -1714,21 +1714,21 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >其反汇编代码为：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-43-25.png" alt="images/download/attachments/12714021/image2021-2-22_0-43-25.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-43-25.png" alt="images/download/attachments/12714021/image2021-2-22_0-43-25.png"   />
     </p>
 <p   
 >可以看见其会一行一行的执行，而不像switch语句一样，直接可以跳转到对应的地址。</p>
 <p   
 >通过观察堆栈，我们可以发现switch的高明之处：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-53-37.png" alt="images/download/attachments/12714021/image2021-2-22_0-53-37.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_0-53-37.png" alt="images/download/attachments/12714021/image2021-2-22_0-53-37.png"   />
     </p>
 <p   
 >其将case分支的执行地址都存入到了堆栈中，而后使用算法去寻找到对应要执行的地址（堆栈存储的地址），这套算法我们可以这样理解：</p>
 <p   
 >1.堆栈中会存在一个执行地址的内存表，其顺序是按照case后的常量大小排序的，最大的常量所在的分支执行地址最先压入表中；如下图所示我将代码顺序打乱后还是如此：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_1-14-30.png" alt="images/download/attachments/12714021/image2021-2-22_1-14-30.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-22_1-14-30.png" alt="images/download/attachments/12714021/image2021-2-22_1-14-30.png"   />
     </p>
 <p   
 >2.根据内存表存储顺序，直接将传入的值减去1，然后*4（这里也是数据宽度4字节）+最后压入的堆栈地址。</p>
@@ -1830,7 +1830,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >值得注意的是：这里的表达式最终结果只要是非0，都会进入循环，而<strong class=" ">表达式也不具备强制性，可以是任何形式，但需要一个最终结果给到循环语句即可</strong>：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_19-57-39.png" alt="images/download/attachments/12714021/image2021-2-28_19-57-39.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_19-57-39.png" alt="images/download/attachments/12714021/image2021-2-28_19-57-39.png"   />
     </p>
 <p   
 >while语句就是当表达式为非0时执行循环体内的语句，使用不当则会造成死循环，例如：</p>
@@ -1853,7 +1853,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >如上代码，我们的需求是输出0-10的数字，但由于这里<strong class=" ">变量i</strong>没有变化，导致表达式结果是永真，固会进入死循环，一直输出0：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_19-38-52.png" alt="images/download/attachments/12714021/image2021-2-28_19-38-52.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_19-38-52.png" alt="images/download/attachments/12714021/image2021-2-28_19-38-52.png"   />
     </p>
 <p   
 >这里的根本原因就是<strong class=" ">变量i</strong>没有随着单次循环结束而去自增，我们可以在循环体内使用自增<strong class=" ">i++</strong>解决这一问题。</p>
@@ -1904,7 +1904,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >当i&lt;=a进入第一层while循环，j&lt;=i进入第二层while循环，在这里进入第二层循环时实际上如果没有break，则会输出1遍0-10的数字，但实际上因为我们添加了break所以到最后只会输出0-9的数字：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-11-33.png" alt="images/download/attachments/12714021/image2021-2-28_20-11-33.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-11-33.png" alt="images/download/attachments/12714021/image2021-2-28_20-11-33.png"   />
     </p>
 <p   
 >所以除了在switch中可以使用到break，可以在循环语句中使用到break，简单来说它在这里就是<strong class=" ">跳出一层循环</strong>。</p>
@@ -1925,7 +1925,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-19-1.png" alt="images/download/attachments/12714021/image2021-2-28_20-19-1.png"  height="250" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-19-1.png" alt="images/download/attachments/12714021/image2021-2-28_20-19-1.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-12714021_safe-id-Q-ivreiogC1kby4uLndoaWxl5b6q546v">
@@ -1953,7 +1953,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-23-3.png" alt="images/download/attachments/12714021/image2021-2-28_20-23-3.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-23-3.png" alt="images/download/attachments/12714021/image2021-2-28_20-23-3.png"   />
     </p>
     </div>
     <div class="section section-2" id="src-12714021_safe-id-Q-ivreiogC1mb3Llvqrnjq8">
@@ -2006,7 +2006,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-28-48.png" alt="images/download/attachments/12714021/image2021-2-28_20-28-48.png" width="700"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-28-48.png" alt="images/download/attachments/12714021/image2021-2-28_20-28-48.png"   />
     </p>
 <p   
 >另外值得注意的是，for语句中的表达式是可以省略的：</p>
@@ -2045,7 +2045,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >如下图是各个循环语句的反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-35-21.png" alt="images/download/attachments/12714021/image2021-2-28_20-35-21.png" width="800"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-28_20-35-21.png" alt="images/download/attachments/12714021/image2021-2-28_20-35-21.png"   />
     </p>
 <p   
 >但从汇编来看我们可以看得出do...while循环语句效率是最高的，但是在日常使用来说大部分会选择使用for与while，do...while出现的较少，还是跟之前我们说的一样，这一点空间可以忽视不管，for语句是最方便书写的，也就是我们可以用空间换编写效率。</p>
@@ -2085,14 +2085,14 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >我们可以简单看下反汇编，观察数组在汇编中是如何体现的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-6_14-43-17.png" alt="images/download/attachments/12714021/image2021-3-6_14-43-17.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-6_14-43-17.png" alt="images/download/attachments/12714021/image2021-3-6_14-43-17.png"   />
     </p>
 <p   
 >通过反汇编，我们可以看到数组就是整体连续存储进入堆栈中，从左到右依次进入。</p>
 <p   
 >那么数组在内存中是如何分配的呢？在之前我们学习过很多数据类型，在这里我们以char类型举例：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-17_23-18-7.png" alt="images/download/attachments/12714021/image2021-2-17_23-18-7.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-2-17_23-18-7.png" alt="images/download/attachments/12714021/image2021-2-17_23-18-7.png"   />
     </p>
 <p   
 >可以看见char类型在分配内存空间时，都是以4字节空间分配的，这是因为在32位操作系统中，char类型分配的空间与int类型是一样的。</p>
@@ -2134,7 +2134,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >如上代码我们来运行则会出现这种错误：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-8_9-19-29.png" alt="images/download/attachments/12714021/image2021-3-8_9-19-29.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-8_9-19-29.png" alt="images/download/attachments/12714021/image2021-3-8_9-19-29.png"   />
     </p>
 <p   
 >也就是说当我们使用越界读取时会去读取一个不存在的未知地址。</p>
@@ -2166,12 +2166,12 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >如上代码中Fun函数为什么会被调用？我们可以通过反汇编代码+堆栈图来理解：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-8_9-33-45.png" alt="images/download/attachments/12714021/image2021-3-8_9-33-45.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-8_9-33-45.png" alt="images/download/attachments/12714021/image2021-3-8_9-33-45.png"   />
     </p>
 <p   
 >堆栈图如下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-8_9-31-56.png" alt="images/download/attachments/12714021/image2021-3-8_9-31-56.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-8_9-31-56.png" alt="images/download/attachments/12714021/image2021-3-8_9-31-56.png"   />
     </p>
 <p   
 >经过观察我们发现，这里的数组越界访问，造成了堆栈中返回地址被篡改为Fun函数的地址，一旦执行到ret指令后，程序将会跳转到Fun函数然后往下执行，也就进入了死循环输出。</p>
@@ -2204,7 +2204,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >那么以上所示的多维数组在内存中的分布是怎么样的呢？我们可以通过反汇编来看一下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-10_22-47-54.png" alt="images/download/attachments/12714021/image2021-3-10_22-47-54.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-10_22-47-54.png" alt="images/download/attachments/12714021/image2021-3-10_22-47-54.png"   />
     </p>
 <p   
 >如上图所示我们可以清晰的看见多维数组在内存中的分布是怎么样的，跟一维数组存储一点区别都没有。</p>
@@ -2346,7 +2346,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >简单看下反汇编，我们发现是可以的，因为这里结构体类型都是一样的，类型一样，自然可以赋值：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_9-7-32.png" alt="images/download/attachments/12714021/image2021-3-11_9-7-32.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_9-7-32.png" alt="images/download/attachments/12714021/image2021-3-11_9-7-32.png"   />
     </p>
     </div>
     <div class="section section-1" id="src-12714021_safe-id-Q-ivreiogC3lrZfoioLlr7npvZA">
@@ -2371,7 +2371,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >如上x、y两个全局变量，char类型数据宽度是一个字节，所以假设其内存地址是0x0，那么全局变量y的内存地址是0x1，这是我们的猜想，但实际并不是这样，通过反汇编来看一下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_16-34-48.png" alt="images/download/attachments/12714021/image2021-3-11_16-34-48.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_16-34-48.png" alt="images/download/attachments/12714021/image2021-3-11_16-34-48.png"   />
     </p>
 <p   
 >可以清晰的看见，这里的地址并不是连续的，35、36、37这三个字节是被浪费掉了，这是为什么呢？这就是我们所谓的字节对齐；细心的人会发现这里的地址实际上就是数据宽度的整数倍，例如0x38是十进制4的整数倍。</p>
@@ -2392,12 +2392,12 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >当我们想要打印一个变量、结构体等等的数据宽度该怎么办？这里我们需要使用到一个关键词sizeof，其使用方法如下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_16-50-43.png" alt="images/download/attachments/12714021/image2021-3-11_16-50-43.png"  height="250" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_16-50-43.png" alt="images/download/attachments/12714021/image2021-3-11_16-50-43.png"   />
     </p>
 <p   
 >我们可以以上面所示的结构体代码举例，来打印一下看看：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_16-54-20.png" alt="images/download/attachments/12714021/image2021-3-11_16-54-20.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_16-54-20.png" alt="images/download/attachments/12714021/image2021-3-11_16-54-20.png"   />
     </p>
 <p   
 >结构是8，所以也印证了，我们说的结构体也是需要字节对齐的。</p>
@@ -2433,7 +2433,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >它的内存分配是这样的：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_17-10-13.png" alt="images/download/attachments/12714021/image2021-3-11_17-10-13.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_17-10-13.png" alt="images/download/attachments/12714021/image2021-3-11_17-10-13.png"   />
     </p>
 <p   
 >因为我们强制要求了以2字节的方式进行对齐，所以char类型虽然只占了一个字节，却需要分配2个地址，而<strong class=" ">结构体的宽度等于<u class=" ">    <span style="color: #003366;">
@@ -2520,7 +2520,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_17-34-10.png" alt="images/download/attachments/12714021/image2021-3-11_17-34-10.png" width="800"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_17-34-10.png" alt="images/download/attachments/12714021/image2021-3-11_17-34-10.png"   />
     </p>
 <p   
 >结构体 stStudent 的宽度为 8 + 32 = 40；我们观察到结构体数组在内存中是<strong class=" ">连续存储</strong>的。</p>
@@ -2545,7 +2545,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >指针变量的赋值格式如下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_17-46-21.png" alt="images/download/attachments/12714021/image2021-3-11_17-46-21.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_17-46-21.png" alt="images/download/attachments/12714021/image2021-3-11_17-46-21.png"   />
     </p>
 <p   
 >指针类型的变量宽度永远是4字节，无论类型是什么，无论有几个星号。</p>
@@ -2577,7 +2577,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >第一次自增，a+4 = 5，b+4 = 6，因为减去一个星号还是指针，指针的宽度永远是4：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_18-6-47.png" alt="images/download/attachments/12714021/image2021-3-11_18-6-47.png"  height="250" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_18-6-47.png" alt="images/download/attachments/12714021/image2021-3-11_18-6-47.png"   />
     </p>
 <p   
 >自减同理可得，那么我们知道了自增、自减就可以知道指针类型的加减运算规律：</p>
@@ -2592,7 +2592,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 ><strong class=" ">最后</strong>：指针类型是可以做比较的。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_18-19-53.png" alt="images/download/attachments/12714021/image2021-3-11_18-19-53.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_18-19-53.png" alt="images/download/attachments/12714021/image2021-3-11_18-19-53.png"   />
     </p>
     </div>
     <div class="section section-1" id="src-12714021_safe-id-Q-ivreiogC0m55qE5L2_55So">
@@ -2623,12 +2623,12 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-20-12.png" alt="images/download/attachments/12714021/image2021-3-11_20-20-12.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-20-12.png" alt="images/download/attachments/12714021/image2021-3-11_20-20-12.png"   />
     </p>
 <p   
 >在这里使用取地址符可以直接获取每个变量、结构体的地址，但是这种格式可能跟我们之前看到的8位不一样，前面少了2个0，这时候可以将%x占位符替换为%p来打印显示。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-28-26.png" alt="images/download/attachments/12714021/image2021-3-11_20-28-26.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-28-26.png" alt="images/download/attachments/12714021/image2021-3-11_20-28-26.png"   />
     </p>
 <p   
 >那么取地址符（&amp;变量）的类型是什么呢？我们可以来探测下：</p>
@@ -2646,7 +2646,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >以上代码我们在编译的时候是没法成功的，它的报错内容是：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-32-32.png" alt="images/download/attachments/12714021/image2021-3-11_20-32-32.png" width="1000"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-32-32.png" alt="images/download/attachments/12714021/image2021-3-11_20-32-32.png"   />
     </p>
 <p   
 >通过报错内容我们可以看出类型不同无法转换，但是我仔细观察报错内容：char*无法转换成int，short**无法转换成int...那么就说明了一点，在我们使用取地址符时，<strong class=" ">变量会在其原本的数据类型后加一个星号</strong>。</p>
@@ -2690,10 +2690,10 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >这段代码可以编译，但是是无法运行的，我们可以运行一下然后来看看反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-54-42.png" alt="images/download/attachments/12714021/image2021-3-11_20-54-42.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-54-42.png" alt="images/download/attachments/12714021/image2021-3-11_20-54-42.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-55-56.png" alt="images/download/attachments/12714021/image2021-3-11_20-55-56.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_20-55-56.png" alt="images/download/attachments/12714021/image2021-3-11_20-55-56.png"   />
     </p>
 <p   
 >如上反汇编代码，我们可以清楚的看见首先0x1给了局部变量（ebp-4），之后这个局部变量（ebp-4）给了eax，而后eax又作为了内存地址去寻找对应存储的值，但是这里eax为0x1，所以在内存中根本就不存在这个地址，也就没办法找到对应的值，自然就无法运行。</p>
@@ -2715,7 +2715,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >以上代码我们在编译的时候是没法成功的，它的报错内容是：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-11-11.png" alt="images/download/attachments/12714021/image2021-3-11_21-11-11.png" width="1000"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-11-11.png" alt="images/download/attachments/12714021/image2021-3-11_21-11-11.png"   />
     </p>
 <p   
 >通过报错内容我们可以看出类型不同无法转换，但是我仔细观察报错内容：int**无法转换成int，int***无法转换成int...那么就说明了一点，在我们使用取值运算符时，<strong class=" ">变量会在其原本的数据类型后减去一个星号</strong>。</p>
@@ -2756,7 +2756,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >如上代码变量x最终值是多少？相信很多人都知道答案了，是1，原封不动。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-26-28.png" alt="images/download/attachments/12714021/image2021-3-11_21-26-28.png"  height="250" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-26-28.png" alt="images/download/attachments/12714021/image2021-3-11_21-26-28.png"   />
     </p>
 <p   
 >为什么是1？这是因为在变量x作为参数传入plus函数，是传入值而不是这个变量本身，所以并不会改变变量本身。</p>
@@ -2783,12 +2783,12 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >我们想打印数组不仅要知道数组是什么，也要获取数组的长度，所以需要两个参数（实际上我们也有其他方法获取长度，这里先不多说）。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-34-18.png" alt="images/download/attachments/12714021/image2021-3-11_21-34-18.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-34-18.png" alt="images/download/attachments/12714021/image2021-3-11_21-34-18.png"   />
     </p>
 <p   
 >我们来看下反汇编代码，看看数组是否和基本类型一样传入的是值：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-36-47.png" alt="images/download/attachments/12714021/image2021-3-11_21-36-47.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-36-47.png" alt="images/download/attachments/12714021/image2021-3-11_21-36-47.png"   />
     </p>
 <p   
 >通过如上代码所示，我们可以很清晰的看见，ebp-14也就是数组的第一个值的地址给了eax，最后eax压入堆栈，也就是传递给了函数。</p>
@@ -2797,7 +2797,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >我们再换个思路，在数组作为参数传递的时候，可以换一种形式，直接传入地址也是可以打印的，也就是使用指针来操作数组：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-42-23.png" alt="images/download/attachments/12714021/image2021-3-11_21-42-23.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-42-23.png" alt="images/download/attachments/12714021/image2021-3-11_21-42-23.png"   />
     </p>
 <p   
 >事实证明这是可行的，我们在传入参数的时候使用数组第一个值的地址即可。</p>
@@ -2837,7 +2837,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >如下图所示的则是一级指针（一个星号）和多级指针（多个星号）：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-53-1.png" alt="images/download/attachments/12714021/image2021-3-11_21-53-1.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-53-1.png" alt="images/download/attachments/12714021/image2021-3-11_21-53-1.png"   />
     </p>
 <p   
 >这段代码看着很复杂，但我们有基础后再看它轻而易举，脑子里浮现的就是汇编代码。</p>
@@ -2859,7 +2859,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >我们可以使用取值运算符，也可以使用数组的方式，因为其本质都是一样的，我们来看下反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-58-55.png" alt="images/download/attachments/12714021/image2021-3-11_21-58-55.png"  height="250" />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_21-58-55.png" alt="images/download/attachments/12714021/image2021-3-11_21-58-55.png"   />
     </p>
 <p   
 >也就说明：*()与[]的互换，如下是互换的一些例子：</p>
@@ -2971,7 +2971,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 </div>
     </div>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_22-17-45.png" alt="images/download/attachments/12714021/image2021-3-11_22-17-45.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_22-17-45.png" alt="images/download/attachments/12714021/image2021-3-11_22-17-45.png"   />
     </p>
     </div>
     <div class="section section-1" id="src-12714021_safe-id-Q-ivreiogC3mjIfpkojmlbDnu4TkuI7mlbDnu4TmjIfpkog">
@@ -3011,7 +3011,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >结构体指针也有数组，我们可以看下其定义和对应宽度：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_22-26-54.png" alt="images/download/attachments/12714021/image2021-3-11_22-26-54.png" width="400"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_22-26-54.png" alt="images/download/attachments/12714021/image2021-3-11_22-26-54.png"   />
     </p>
 <p   
 >接下来我们要学习的是数组指针，数组指针在实际应用很少用到，数组指针是最难学的。</p>
@@ -3040,7 +3040,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >思考：int *p[5] 与 int(*p)[5]有什么区别？我们可以来看看宽度：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_22-42-13.png" alt="images/download/attachments/12714021/image2021-3-11_22-42-13.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_22-42-13.png" alt="images/download/attachments/12714021/image2021-3-11_22-42-13.png"   />
     </p>
 <p   
 >可以看见一个是20，一个是4；一个是指针变量的数组，一个是数组指针，本质是不一样的。</p>
@@ -3127,7 +3127,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >是可以的，因为*px实际上就是int[2][2]，我们之前学过多维数组，int[2][2]也就等于int[4]，所以{1,2,3,4}就给了int[2][2]，也就是{{1,2}, {3,4}}，所以(*px)[1][1]为4。</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_22-56-38.png" alt="images/download/attachments/12714021/image2021-3-11_22-56-38.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_22-56-38.png" alt="images/download/attachments/12714021/image2021-3-11_22-56-38.png"   />
     </p>
     </div>
     <div class="section section-1" id="src-12714021_safe-id-Q-ivreiogC3osIPnlKjnuqblrpo">
@@ -3241,7 +3241,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >我们来看下函数指针的反汇编代码：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-5-37.png" alt="images/download/attachments/12714021/image2021-3-11_23-5-37.png" width="500"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-5-37.png" alt="images/download/attachments/12714021/image2021-3-11_23-5-37.png"   />
     </p>
 <p   
 >可以很清晰的看见函数指针生成来一堆汇编代码，传参、调用、以及如何平衡堆栈；而如上这段代码最终会调用地址0xA，但它本身不存在，所以无法运行。</p>
@@ -3252,15 +3252,15 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >首先，我们先写一段正常的MessageBox程序，然后使用DTDebug来下断点：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-29-48.png" alt="images/download/attachments/12714021/image2021-3-11_23-29-48.png" width="700"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-29-48.png" alt="images/download/attachments/12714021/image2021-3-11_23-29-48.png"   />
     </p>
 <p   
 >可以看见，我们下断点成功断下来了，断点本质上就是在MOV EDI, EDI所在那行的地址下断点，那么我们可以直接跳过这行调用调用下一行，实际上这段汇编的核心在于我标记的部分，准确一点的说就是CALL指令哪一行，我们可以右键Follo跟进：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-49-11.png" alt="images/download/attachments/12714021/image2021-3-11_23-49-11.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-49-11.png" alt="images/download/attachments/12714021/image2021-3-11_23-49-11.png"   />
     </p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-50-10.png" alt="images/download/attachments/12714021/image2021-3-11_23-50-10.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-50-10.png" alt="images/download/attachments/12714021/image2021-3-11_23-50-10.png"   />
     </p>
 <p   
 >我们可以从0x77D5057D开始执行，通过汇编代码可以知道这个函数需要5个参数，并且最后的RETN则表示内平栈则使用__stdcall，所以我们函数指针（操作系统API返回通常是4字节）可以这样写：</p>
@@ -3284,7 +3284,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >这样就可以绕过断点了：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-52-19.png" alt="images/download/attachments/12714021/image2021-3-11_23-52-19.png" width="800"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-11_23-52-19.png" alt="images/download/attachments/12714021/image2021-3-11_23-52-19.png"   />
     </p>
 <p   
 ></p>
@@ -3433,7 +3433,7 @@ DF位为0，所以edi的值也就随循环每次递增4（dword为4字节所以�
 <p   
 >可以通过反汇编代码来看一下：</p>
 <p   
-><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-12_0-2-7.png" alt="images/download/attachments/12714021/image2021-3-12_0-2-7.png" width="600"  />
+><img  class="confluence-embedded-image"  src="images/download/attachments/12714021/image2021-3-12_0-2-7.png" alt="images/download/attachments/12714021/image2021-3-12_0-2-7.png"   />
     </p>
 <p   
 >可以看见printf根本没有进行编译。</p>

@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COM&#32452;&#20214; - &#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</title>
+
+    
+    <link rel="stylesheet" href="assets/css/expand-macro.css">
+
+            <meta name="scroll-content-language-key" content="">
+    
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/translate.js"></script>
+
+
+<script type="text/javascript" src="assets/js/scroll-tree.js"></script>
+
+<script type="text/javascript" src="assets/js/theme.main.js"></script>
+
+    <script type="text/javascript" src="assets/js/iframeResizer.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/content-style.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+
+<link rel="stylesheet" href="assets/css/theme.main.css">
+<link rel="stylesheet" href="assets/css/theme.colors.css">
+
+            <!-- ES5 support for older browsers, needed by lunr -->
+        <script src="js/augment.js"></script>
+        <script id="worker" type="javascript/worker">
+
+        startIndex = function() {
+            idx = lunr.Index.load(lunrIndex);
+            idx.pipeline.remove(lunr.stopWordFilter);
+            postMessage({type: "setup-complete"});
+        }
+
+        onmessage = function (event) {
+            var message = event.data;
+
+            if ((message.type === 'setup') && message.baseUrl) {
+                var url = message.baseUrl;
+                importScripts(url + 'js/lunr.js');
+                importScripts(url + 'js/lunr-extras.js');
+                importScripts(url + 'js/lunr-index.js');
+                importScripts(url + 'js/lunr-data.js');
+                startIndex();
+            }
+
+            if (idx && (message.type === 'search-request') && message.query) {
+                var searchWord = message.query;
+                var results = idx.search(searchWord).map(function (result) {
+                    return lunrData.filter(function (d) {
+                        return d.id === parseInt(result.ref, 10)
+                    })[0]
+                });
+                postMessage({type: 'search-results', results: results, query: searchWord, queryId: message.queryId});
+            }
+        }
+
+    </script>
+    </head>
+
+<body pageid="8684305">
+
+<div id="ht-loader">
+    <noscript>
+        <p style="width: 100%; text-align:center; position: absolute; margin-top: 200px;">This content cannot be displayed without JavaScript.<br>Please enable JavaScript and reload the page.</p>
+    </noscript>
+</div>
+
+<div>
+   	<header id="ht-headerbar">
+    <div class="ht-headerbar-left">
+        <a href="" id="ht-menu-toggle" class="sp-aui-icon-small sp-aui-iconfont-appswitcher"></a>
+    </div>
+    <div class="ht-headerbar-right">
+            <div class="sp-aui-icon-small ht-search-index-loader ht-header-icon"></div>
+
+        <div id="ht-search">
+            <div class="ht-search-input" style="display: none;">
+              	<a href="#" class="sp-aui-icon-small sp-aui-iconfont-remove ht-search-clear"></a>
+
+                <form action="#" method="GET" id="search">
+                    <input class="search-input" type="text" placeholder="Search" tabindex="-1" autocomplete="off" name="q" value="">
+                    <input type="hidden" name="max" value="15" />
+                    <input type="submit" style="display:none" tabindex="-4"/>
+                </form>
+
+                <a href="#" id="ht-search-button" class="ht-header-icon ht-header-icon-svg">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path d="M29.572,28.802 L28.801,29.571 C28.515,29.857 28.187,30 27.816,30 C27.445,30 27.116,29.857 26.831,29.571 L21.392,24.134 C20.193,24.762 18.908,25.076 17.538,25.076 C15.396,25.076 13.605,24.348 12.163,22.892 C10.721,21.436 10,19.651 10,17.538 C10,15.397 10.721,13.605 12.163,12.163 C13.605,10.721 15.396,10 17.538,10 C19.651,10 21.434,10.721 22.89,12.163 C24.347,13.605 25.075,15.397 25.075,17.538 C25.075,18.937 24.761,20.222 24.132,21.393 L29.572,26.832 C29.857,27.118 30,27.446 30,27.817 C30,28.188 29.857,28.517 29.572,28.802 L29.572,28.802 Z M13.662,21.414 C14.732,22.485 16.024,23.02 17.538,23.02 C19.051,23.02 20.343,22.485 21.413,21.414 C22.484,20.344 23.019,19.052 23.019,17.538 C23.019,16.025 22.484,14.733 21.413,13.662 C20.343,12.592 19.051,12.056 17.538,12.056 C16.024,12.056 14.732,12.592 13.662,13.662 C12.591,14.733 12.056,16.025 12.056,17.538 C12.056,19.052 12.591,20.344 13.662,21.414 L13.662,21.414 Z"></path>
+                        </g>
+                    </svg>
+              	</a>
+
+                <div class="ht-search-dropdown ht-dropdown">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>   	<aside id="ht-sidebar">
+    <div class="ht-sidebar-content">
+        <div class="ht-sidebar-content-scroll-container">
+            <header class="ht-sidebar-header">
+                <h1 class="ht-logo">
+                    <span class="ht-logo-label">BinaryLearning</span>
+                    <img class="space-logo" src="global.logo" />
+                </h1>
+                <a href="Binary-Learning.html" class="ht-space-link">
+                    <h2>&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</h2>
+                </a>
+                <p><br>ᴀᴜᴛʜᴏʀ: ᴋᴇʏ<br><br>不积跬步，无以至千里；<br>不积小流，无以成江海。</p>
+            </header>
+                            <iframe id="ht-nav" src="toc.html?pageId=21791277"></iframe>
+                <script>
+                    $('iframe#ht-nav').iFrameResize(
+                            { 'log': true, 'autoResize': true, 'heightCalculationMethod': 'lowestElement', 'checkOrigin': false });
+                </script>
+                    </div>
+    </div>
+
+</aside></div>
+
+<div id="ht-wrap-container">
+
+            
+    <div id="ht-sidebar-dragbar">
+    <div class="ht-sidebar-drag-handle">
+        <span class="drag-handle-1"></span>
+        <span class="drag-handle-2"></span>
+        <span class="drag-handle-3"></span>
+    </div>
+</div>
+    <article id="ht-content" class="ht-content">
+        <header class="ht-content-header">
+            <div id="ht-breadcrumb">
+    <ul>
+        <li><a href="Binary-Learning.html">&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</a></li>
+                                                                                     <li><a href="%E5%88%9D%E7%BA%A7%E7%AF%87.html">&#21021;&#32423;&#31687;</a></li>
+                                                            </ul>
+</div>            <h1 id="src-21791277"> <span>COM&#32452;&#20214;</span></h1>
+        </header>
+
+        <div id="main-content" class="wiki-content sp-grid-section" data-index-for-search="true">
+
+    <div class="section section-1" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTee7hOS7tuamgui_sA">
+        <h1 class="heading "><span>COM&#32452;&#20214;&#27010;&#36848;</span></h1>
+<p   
+><strong class=" ">COM与组件分开理解</strong>，COM是开发软件组件的一种方法，组件实际上是一些小的二进制可执行程序，它们可以给应用程序，操作系统以及其他组件提供服务。</p>
+<p   
+>COM最早的设计意图是，跨语言实现程序组件的重用，比如说VC++开发一个控件，在VB中调用，或者在VB中开发一个组件库，给VC++调用。</p>
+<p   
+>COM最广泛的应用是ActiveX控件，时至今日，能在很多网站上看到它，比如淘宝安全登录控件，网银控件，甚至大名鼎鼎的Flash Player控件等，整个Visual Basic都基于COM以及ActiveX控件。</p>
+    </div>
+    <div class="section section-1" id="src-21791277_safe-id-Q09N57uE5Lu2LeS7jkMgIOWIsENPTQ">
+        <h1 class="heading "><span>&#20174;C++&#21040;COM</span></h1>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUMgIOWuouaIt-mHjeeUqEMgIOWvueixoQ">
+        <h2 class="heading "><span>C++&#23458;&#25143;&#37325;&#29992;C++&#23545;&#35937;</span></h2>
+<p   
+>C++客户重用C++对象，这个方法很简单就是将C++类的接口文件(.h)和实现文件(.cpp)提供给客户即可。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-6_14-52-54.png" alt="images/download/attachments/21791277/image2021-10-6_14-52-54.png"   />
+    </p>
+<p   
+>如上所示是一个简单的C++类， 如果客户要使用的话，我们需要将这个文件提供给他：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-6_14-57-39.png" alt="images/download/attachments/21791277/image2021-10-6_14-57-39.png"   />
+    </p>
+<p   
+>那么这样就会存在一个缺点，<strong class=" ">就是你的代码都会被客户看见</strong>，为了解决这个问题我们可以将C++对象打包到DLL中。</p>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeWwhkMgIOWvueixoeaJk-WMheWIsERMTOS4rQ">
+        <h2 class="heading "><span>&#23558;C++&#23545;&#35937;&#25171;&#21253;&#21040;DLL&#20013;</span></h2>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeS7o-eggeaUuemAoA">
+        <h3 class="heading "><span>&#20195;&#30721;&#25913;&#36896;</span></h3>
+<p   
+>将C++对象打包到DLL中，使用的还是之前的代码，不过我们需要改造一下，如下图所示（<strong class=" ">创建Win32项目的时候选择DLL项目</strong>）：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-6_20-4-22.png" alt="images/download/attachments/21791277/image2021-10-6_20-4-22.png"   />
+    </p>
+<p   
+>虽然这样我们就完成了改造，但是为了便于客户侧使用，不让客户去操心内存的管理，我们需要在代码中写好申请、释放，这就需要实现一个类工厂来进行内存的管理。</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 声明类工厂 </code></div>
+<div class="line"><code class="keyword">class</code><code class="plain"> CDBSrvFactory {</code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    HRESULT DEF_DLL_PORT CreateDB(CDB** ppObject); </code><code class="comments">// 申请CDB对象</code></div>
+<div class="line"><code class="plain">    ULONG DEF_DLL_PORT Release(); </code><code class="comments">// 释放类工厂对象</code></div>
+<div class="line"><code class="plain">};</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 声明返回类工厂对象的引出函数</code></div>
+<div class="line"><code class="plain">HRESULT DEF_DLL_PORT DllGetClassFactoryObject(CDBSrvFactory** ppObject);</code></div>
+</div>
+    </div>
+<p  class="auto-cursor-target" 
+>代码实现如下：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">HRESULT CDBSrvFactory::CreateDB(CDB** ppObject) {</code></div>
+<div class="line"><code class="plain">    *ppObject = </code><code class="keyword">new</code><code class="plain"> CDB();</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NO_ERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">ULONG CDBSrvFactory::Release() {</code></div>
+<div class="line"><code class="plain">    delete </code><code class="keyword">this</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HRESULT DllGetClassFactoryObject(CDBSrvFactory** ppObject) {</code></div>
+<div class="line"><code class="plain">    *ppObject = </code><code class="keyword">new</code><code class="plain"> CDBSrvFactory();</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NO_ERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>完成了这些之后别忘记还有一个CDB对象本身也需要释放，所以需要增加一个方法：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">class</code><code class="plain"> CDB {</code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    HRESULT DEF_DLL_PORT Open();</code></div>
+<div class="line"><code class="plain">    HRESULT DEF_DLL_PORT ExecSQL();</code></div>
+<div class="line"><code class="plain">    HRESULT DEF_DLL_PORT Close();</code></div>
+<div class="line"><code class="plain">    HRESULT DEF_DLL_PORT Release();</code></div>
+<div class="line"><code class="keyword">private</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">int</code><code class="plain"> m_nState;</code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    CDB(</code><code class="keyword">void</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    ~CDB(</code><code class="keyword">void</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">};</code></div>
+</div>
+    </div>
+<p   
+>Release方法实现如下所示：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">HRESULT CDB::Release(){</code></div>
+<div class="line"><code class="plain">    delete </code><code class="keyword">this</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NO_ERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>最后我们编译一下即可生成：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-6_22-12-12.png" alt="images/download/attachments/21791277/image2021-10-6_22-12-12.png"   />
+    </p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2Leiwg-eUqOaWh-S7tg">
+        <h3 class="heading "><span>&#35843;&#29992;&#25991;&#20214;</span></h3>
+<p   
+>在客户侧去使用，需要注意的是你要给到头文件、lib文件和dll文件：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include </code><code class="string">"DB.h"</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-6_23-2-7.png" alt="images/download/attachments/21791277/image2021-10-6_23-2-7.png"   />
+    </p>
+<p   
+>同样这里的缺点就很容易暴露出来了，我们的对象的所有私有成员会被客户看得一清二楚，即便客户不能访问它们，如果改变了数据成员的大小，所有客户程序必须重新编译，同样为了避免这种情况，我们可以使用抽象基类。</p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUMgIOWvueixoeS9v-eUqOaKveixoeWfuuexuw">
+        <h2 class="heading "><span>C++&#23545;&#35937;&#20351;&#29992;&#25277;&#35937;&#22522;&#31867;</span></h2>
+<p   
+>利用C++的抽象基类建立一个只包含所有导出成员函数的地址指针表，客户调用函数时只需简单的查找这个表获取函数地址即可调用。</p>
+<p   
+>抽象基类很好理解，就是将成员方法变成纯虚函数即可，然后子类继承这个抽象类，如下图所示：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-7_0-9-12.png" alt="images/download/attachments/21791277/image2021-10-7_0-9-12.png"   />
+    </p>
+<p   
+>简单改造一番之后将lib、dll文件和抽象基类头文件打包给客户，这样客户就只能看见抽象基类定义的内容，而无法看见子类的私有成员了。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-7_0-27-42.png" alt="images/download/attachments/21791277/image2021-10-7_0-27-42.png"   />
+    </p>
+<p   
+>同样这个也有缺点：</p>
+<ol class=" "><li class=" "><p   
+>客户与所有的组件交互方式不统一（如果组件进行了更新，就需要改代码）；</p>
+</li><li class=" "><p   
+>会重复编写大量客户与组件通信的基础性代码（比如我们写了一个类<strong class=" ">就写了一个类工厂和DllGetClassFactoryObject函数</strong>）。</p>
+</li></ol><p   
+>而解决这一缺陷的手段就是将C++对象改为COM对象。</p>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeWwhkMgIOWvueixoeWPmOaIkENPTeWvueixoQ">
+        <h2 class="heading "><span>&#23558;C++&#23545;&#35937;&#21464;&#25104;COM&#23545;&#35937;</span></h2>
+<p   
+>将C++对象改为COM对象，需要调用COM库创建对象，实现接口的引用计数，类工厂需要使用标准的<strong class=" ">IClassFactory接口</strong>来实现DLL的动态卸载和对象自注册。</p>
+<p   
+>需要注意的是在改造过程中所有成员函数都需要添加_stdcall调用约定，因为COM对象在Win32下采用标准调用约定。</p>
+<p   
+><strong class=" ">注：</strong>在这里会引出到很多不了解的概念和意义，不用深究，后续章节会去详细讲解。</p>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeS_ruaUueaOpeWPo-aWh-S7tg">
+        <h3 class="heading "><span>&#20462;&#25913;&#25509;&#21475;&#25991;&#20214;</span></h3>
+<p   
+>1.将IDB类改为由IUnknown类派生，删除Release成员函数声明（包括CDB类）。</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">class</code><code class="plain"> IDB : </code><code class="keyword">public</code><code class="plain"> IUnknown {</code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    virtual HRESULT _stdcall Open() = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    virtual HRESULT _stdcall ExecSQL() = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    virtual HRESULT _stdcall Close() = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">};</code></div>
+</div>
+    </div>
+<p   
+>2.删除类工厂IDBSrvFactory声明，因为我们现在要使用标准类工厂接口IClassFactory。</p>
+<p   
+>3.删除DllGetClassFactoryObject函数的声明和定义。</p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeS_ruaUueWvueixoeeoi-W6jw">
+        <h3 class="heading "><span>&#20462;&#25913;&#23545;&#35937;&#31243;&#24207;</span></h3>
+<p   
+>1.将CDBSrvFactory类由IDBSrvFactory类派生改为由IClassFactory类派生，将CreateDB成员函数改为CreateInstance，同时删除该成员函数的定义，并添加一个成员函数LockServer；为CDB类和CDBSrvFactory类都添加一个引用计数变量m_dwRefCount；为CDB类和CDBSrvFactory类加上QueryInterface、AddRef和Release三个成员函数。</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">class</code><code class="plain"> CDB : </code><code class="keyword">public</code><code class="plain"> IDB {</code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    HRESULT _stdcall Open();</code></div>
+<div class="line"><code class="plain">    HRESULT _stdcall ExecSQL();</code></div>
+<div class="line"><code class="plain">    HRESULT _stdcall Close();</code></div>
+<div class="line"><code class="plain">    HRESULT _stdcall QueryInterface(REFIID riid, </code><code class="keyword">void</code><code class="plain">** ppObject);</code></div>
+<div class="line"><code class="plain">    ULONG _stdcall AddRef();</code></div>
+<div class="line"><code class="plain">    ULONG _stdcall Release();</code></div>
+<div class="line"><code class="keyword">private</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    ULONG m_dwRefCount;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">int</code><code class="plain"> m_nState;</code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    CDB(</code><code class="keyword">void</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    ~CDB(</code><code class="keyword">void</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">};</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 声明类工厂 </code></div>
+<div class="line"><code class="keyword">class</code><code class="plain"> CDBSrvFactory : </code><code class="keyword">public</code><code class="plain"> IClassFactory {</code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    HRESULT _stdcall CreateInstance(IUnknown *pUnkOuter, REFIID riid, </code><code class="keyword">void</code><code class="plain">** ppObject);</code></div>
+<div class="line"><code class="plain">    HRESULT _stdcall LockServer(BOOL fLock);</code></div>
+<div class="line"><code class="plain">    HRESULT _stdcall QueryInterface(REFIID riid, </code><code class="keyword">void</code><code class="plain">** ppObject);</code></div>
+<div class="line"><code class="plain">    ULONG _stdcall AddRef();</code></div>
+<div class="line"><code class="plain">    ULONG _stdcall Release();</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    CDBSrvFactory(</code><code class="keyword">void</code><code class="plain">);</code></div>
+<div class="line"><code class="keyword">private</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">    ULONG m_dwRefCount;</code></div>
+<div class="line"><code class="plain">};</code></div>
+</div>
+    </div>
+<p   
+>在实现中声明一个外部变量g_dwRefCount：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">extern ULONG g_dwRefCount;</code></div>
+</div>
+    </div>
+<p   
+>2.在CDB构造函数中将m_dwRefCount初始化为0，实现CDB类的QueryInterface，AddRef，Release三个成员函数。</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">CDB::CDB(</code><code class="keyword">void</code><code class="plain">){</code></div>
+<div class="line"><code class="plain">    m_nState = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    m_dwRefCount = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">...</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HRESULT CDB::QueryInterface(REFIID riid, </code><code class="keyword">void</code><code class="plain">** ppObject)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (riid == IID_IUnknown || riid == IID_IDB)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        *ppObject = (IDB*) </code><code class="keyword">this</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_NOINTERFACE;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    AddRef();</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NO_ERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">ULONG CDB::AddRef()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    g_dwRefCount++;</code></div>
+<div class="line"><code class="plain">    m_dwRefCount++;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> m_dwRefCount;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">ULONG CDB::Release()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    g_dwRefCount--;</code></div>
+<div class="line"><code class="plain">    m_dwRefCount--;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (m_dwRefCount == </code><code class="value">0</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        delete </code><code class="keyword">this</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> m_dwRefCount;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>需要注意的是在QueryInterface成员函数中有一个<strong class=" ">IID_IDB</strong>变量，这个是我们自定义的内容，其表示当前COM接口的ID，这个需要我们自己去自定义：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// {30DF3432-0266-11cf-BAA6-00AA003E0EED}</code></div>
+<div class="line"><code class="keyword">static</code><code class="plain"> </code><code class="keyword">const</code><code class="plain"> GUID IID_IDB =</code></div>
+<div class="line"><code class="plain">{ </code><code class="value">0x30df3432</code><code class="plain">, </code><code class="value">0x266</code><code class="plain">, </code><code class="value">0x11cf</code><code class="plain">, { </code><code class="value">0xba</code><code class="plain">, </code><code class="value">0xa6</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0xaa</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0x3e</code><code class="plain">, </code><code class="value">0xe</code><code class="plain">, </code><code class="value">0xed</code><code class="plain"> } };</code></div>
+</div>
+    </div>
+<p   
+>需要注意的是，这个变量实际上是一个<strong class=" ">结构体GUID</strong>，注释就是它更加直观的表现形式。</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">typedef struct _GUID {</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">long</code><code class="plain">  Data1;</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">short</code><code class="plain"> Data2;</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">short</code><code class="plain"> Data3;</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">char</code><code class="plain">  Data4[ </code><code class="value">8</code><code class="plain"> ];</code></div>
+<div class="line"><code class="plain">} GUID;</code></div>
+</div>
+    </div>
+<p   
+>在代码中的IID_IUnknown是COM库的东西，所以我们需要包含一个头文件：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;ole2.h&gt;</code></div>
+</div>
+    </div>
+<p   
+>3.定义全局变量g_dwRefCount；在构造函数中将m_dwRefCount初始化为0；实现CDBSrvFactory类的QueryInterface，AddRef，Release三个成员函数；将CDBSrvFactory类的CreateDB成员函数修改为CreateInstance；实现LockServer成员函数；添加DllGetClassObject、DllCanUnloadNow、DllUnregisterServer、DllRegisterServer四个成员函数。</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">ULONG g_dwRefCount = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// {30DF3430-0266-11cf-BAA6-00AA003E0EED}</code></div>
+<div class="line"><code class="keyword">static</code><code class="plain"> </code><code class="keyword">const</code><code class="plain"> GUID CLSID_DBSAMPLE =</code></div>
+<div class="line"><code class="plain">{ </code><code class="value">0x30df3430</code><code class="plain">, </code><code class="value">0x266</code><code class="plain">, </code><code class="value">0x11cf</code><code class="plain">, { </code><code class="value">0xba</code><code class="plain">, </code><code class="value">0xa6</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0xaa</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0x3e</code><code class="plain">, </code><code class="value">0xe</code><code class="plain">, </code><code class="value">0xed</code><code class="plain"> } };</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HRESULT CDBSrvFactory::CreateInstance(IUnknown *pUnkOuter, REFIID riid, </code><code class="keyword">void</code><code class="plain">** ppObject)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (pUnkOuter != NULL)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> CLASS_E_NOAGGREGATION;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    CDB* pDB = </code><code class="keyword">new</code><code class="plain"> CDB;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (FAILED(pDB-&gt;QueryInterface(riid, ppObject)))</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        delete pDB;</code></div>
+<div class="line"><code class="plain">        *ppObject = NULL;</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_NOINTERFACE;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NO_ERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HRESULT CDBSrvFactory::LockServer(BOOL fLock)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (fLock)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        g_dwRefCount++;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        g_dwRefCount--;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NO_ERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">CDBSrvFactory::CDBSrvFactory()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    m_dwRefCount = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HRESULT CDBSrvFactory::QueryInterface(REFIID riid, </code><code class="keyword">void</code><code class="plain">** ppObject)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (riid == IID_IUnknown || riid == IID_IClassFactory)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        *ppObject = (IDB*) </code><code class="keyword">this</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_NOINTERFACE;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    AddRef();</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NO_ERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">ULONG CDBSrvFactory::AddRef()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    g_dwRefCount++;</code></div>
+<div class="line"><code class="plain">    m_dwRefCount++;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> m_dwRefCount;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">ULONG CDBSrvFactory::Release()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    g_dwRefCount--;</code></div>
+<div class="line"><code class="plain">    m_dwRefCount--;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (m_dwRefCount == </code><code class="value">0</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        delete </code><code class="keyword">this</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> m_dwRefCount;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">STDAPI DllGetClassObject(REFCLSID rclsid, REFIID riid, </code><code class="keyword">void</code><code class="plain">** ppObject)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (rclsid == CLSID_DBSAMPLE)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        CDBSrvFactory *pFactory = </code><code class="keyword">new</code><code class="plain"> CDBSrvFactory;</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">if</code><code class="plain"> (FAILED(pFactory-&gt;QueryInterface(riid, ppObject)))</code></div>
+<div class="line"><code class="plain">        {</code></div>
+<div class="line"><code class="plain">            delete pFactory;</code></div>
+<div class="line"><code class="plain">            *ppObject = NULL;</code></div>
+<div class="line"><code class="plain">            </code><code class="keyword">return</code><code class="plain"> E_INVALIDARG;</code></div>
+<div class="line"><code class="plain">        }</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// here you could check for additional CLSID's you DLL may provide</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> CLASS_E_CLASSNOTAVAILABLE;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NO_ERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HRESULT _stdcall DllCanUnloadNow()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (g_dwRefCount)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> S_FALSE;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> S_OK;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">STDAPI DllRegisterServer(</code><code class="keyword">void</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    HKEY hKeyCLSID, hKeyInproc32;</code></div>
+<div class="line"><code class="plain">    DWORD dwDisposition;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (RegCreateKeyEx(HKEY_CLASSES_ROOT, _T(</code><code class="string">"CLSID\\{30DF3430-0266-11cf-BAA6-00AA003E0EED}"</code><code class="plain">), NULL, _T(</code><code class="string">""</code><code class="plain">), REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &amp;hKeyCLSID, &amp;dwDisposition) != ERROR_SUCCESS)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_UNEXPECTED;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (RegSetValueEx(hKeyCLSID, _T(</code><code class="string">""</code><code class="plain">), NULL, REG_SZ, (BYTE*)_T(</code><code class="string">"DB Sample Server"</code><code class="plain">), sizeof(_T(</code><code class="string">"DB Sample Server"</code><code class="plain">))) != ERROR_SUCCESS)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        RegCloseKey(hKeyCLSID);</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_UNEXPECTED;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (RegCreateKeyEx(hKeyCLSID, _T(</code><code class="string">"InprocServer32"</code><code class="plain">), NULL, _T(</code><code class="string">""</code><code class="plain">), REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &amp;hKeyInproc32, &amp;dwDisposition) != ERROR_SUCCESS)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        RegCloseKey(hKeyCLSID);</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_UNEXPECTED;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    HMODULE hModule = GetModuleHandle(_T(</code><code class="string">"DB_DLL.DLL"</code><code class="plain">));</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (!hModule)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        RegCloseKey(hKeyInproc32);</code></div>
+<div class="line"><code class="plain">        RegCloseKey(hKeyCLSID);</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_UNEXPECTED;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    TCHAR szName[MAX_PATH + </code><code class="value">1</code><code class="plain">];</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (GetModuleFileName(hModule, szName, sizeof(szName)) == </code><code class="value">0</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        RegCloseKey(hKeyInproc32);</code></div>
+<div class="line"><code class="plain">        RegCloseKey(hKeyCLSID);</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_UNEXPECTED;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (RegSetValueEx(hKeyInproc32, _T(</code><code class="string">""</code><code class="plain">), NULL, REG_SZ, (BYTE*)szName, sizeof(TCHAR)*(lstrlen(szName) + </code><code class="value">1</code><code class="plain">)) != ERROR_SUCCESS)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        RegCloseKey(hKeyInproc32);</code></div>
+<div class="line"><code class="plain">        RegCloseKey(hKeyCLSID);</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_UNEXPECTED;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    RegCloseKey(hKeyInproc32);</code></div>
+<div class="line"><code class="plain">    RegCloseKey(hKeyCLSID);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NOERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">STDAPI DllUnregisterServer(</code><code class="keyword">void</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (RegDeleteKey(HKEY_CLASSES_ROOT, _T(</code><code class="string">"CLSID\\{30DF3430-0266-11cf-BAA6-00AA003E0EED}\\InprocServer32"</code><code class="plain">)) != ERROR_SUCCESS)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_UNEXPECTED;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (RegDeleteKey(HKEY_CLASSES_ROOT, _T(</code><code class="string">"CLSID\\{30DF3430-0266-11cf-BAA6-00AA003E0EED}"</code><code class="plain">)) != ERROR_SUCCESS)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> E_UNEXPECTED;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> NOERROR;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>如上代码中的<strong class=" ">{30DF3430-0266-11cf-BAA6-00AA003E0EED}，其实就是COM对象的ID</strong>，这些都是要在注册表中去注册的，其也是一段GUID的格式，也就是变量<strong class=" ">CLSID_DBSAMPLE</strong>所表示的内容；在代码中的<strong class=" ">DB_DLL.DLL</strong>，这个为当前COM组件的文件名，自己需要注意修改一下。</p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LURFRuWvvOWHug">
+        <h3 class="heading "><span>DEF&#23548;&#20986;</span></h3>
+<p   
+>我们创建DEF文件将接口导出，以便外部引用：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">EXPORTS</code></div>
+<div class="line"><code class="plain">          ;WEP </code><code class="color1">@1</code><code class="plain"> RESIDENTNAME</code></div>
+<div class="line"><code class="plain">                    DllGetClassObject</code></div>
+<div class="line"><code class="plain">                    DllCanUnloadNow</code></div>
+<div class="line"><code class="plain">                    DllRegisterServer</code></div>
+<div class="line"><code class="plain">                    DllUnregisterServer</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWuouaIt-S9v-eUqA">
+        <h3 class="heading "><span>&#23458;&#25143;&#20351;&#29992;</span></h3>
+<p   
+>接下来给只需要将DLL文件、接口头文件、以及对应的COM对象和COM接口的GUID：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// {30DF3430-0266-11cf-BAA6-00AA003E0EED}</code></div>
+<div class="line"><code class="keyword">static</code><code class="plain"> </code><code class="keyword">const</code><code class="plain"> GUID CLSID_DBSAMPLE =</code></div>
+<div class="line"><code class="plain">{ </code><code class="value">0x30df3430</code><code class="plain">, </code><code class="value">0x266</code><code class="plain">, </code><code class="value">0x11cf</code><code class="plain">, { </code><code class="value">0xba</code><code class="plain">, </code><code class="value">0xa6</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0xaa</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0x3e</code><code class="plain">, </code><code class="value">0xe</code><code class="plain">, </code><code class="value">0xed</code><code class="plain"> } };</code></div>
+<div class="line"><code class="comments">// {30DF3432-0266-11cf-BAA6-00AA003E0EED}</code></div>
+<div class="line"><code class="keyword">static</code><code class="plain"> </code><code class="keyword">const</code><code class="plain"> GUID IID_IDB =</code></div>
+<div class="line"><code class="plain">{ </code><code class="value">0x30df3432</code><code class="plain">, </code><code class="value">0x266</code><code class="plain">, </code><code class="value">0x11cf</code><code class="plain">, { </code><code class="value">0xba</code><code class="plain">, </code><code class="value">0xa6</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0xaa</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0x3e</code><code class="plain">, </code><code class="value">0xe</code><code class="plain">, </code><code class="value">0xed</code><code class="plain"> } };</code></div>
+</div>
+    </div>
+<p   
+>然后让客户通过regsvr32命令注册组件：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">regsvr32 DLL文件路径</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_15-24-35.png" alt="images/download/attachments/21791277/image2021-10-8_15-24-35.png"   />
+    </p>
+<p   
+>如果注册失败了，有可能是非管理员权限的原因，可以使用管理员权限打开一个cmd然后运行命令：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_15-44-3.png" alt="images/download/attachments/21791277/image2021-10-8_15-44-3.png"   />
+    </p>
+<p   
+>接着客户端按如下示例代码进行编写调用即可：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include </code><code class="string">"DBInterface.h"</code></div>
+<div class="line"><code class="plain">#include &lt;iostream&gt;</code></div>
+<div class="line"><code class="plain">using namespace std;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// {30DF3430-0266-11cf-BAA6-00AA003E0EED}</code></div>
+<div class="line"><code class="keyword">static</code><code class="plain"> </code><code class="keyword">const</code><code class="plain"> GUID CLSID_DBSAMPLE =</code></div>
+<div class="line"><code class="plain">{ </code><code class="value">0x30df3430</code><code class="plain">, </code><code class="value">0x266</code><code class="plain">, </code><code class="value">0x11cf</code><code class="plain">, { </code><code class="value">0xba</code><code class="plain">, </code><code class="value">0xa6</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0xaa</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0x3e</code><code class="plain">, </code><code class="value">0xe</code><code class="plain">, </code><code class="value">0xed</code><code class="plain"> } };</code></div>
+<div class="line"><code class="comments">// {30DF3432-0266-11cf-BAA6-00AA003E0EED}</code></div>
+<div class="line"><code class="keyword">static</code><code class="plain"> </code><code class="keyword">const</code><code class="plain"> GUID IID_IDB =</code></div>
+<div class="line"><code class="plain">{ </code><code class="value">0x30df3432</code><code class="plain">, </code><code class="value">0x266</code><code class="plain">, </code><code class="value">0x11cf</code><code class="plain">, { </code><code class="value">0xba</code><code class="plain">, </code><code class="value">0xa6</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0xaa</code><code class="plain">, </code><code class="value">0x0</code><code class="plain">, </code><code class="value">0x3e</code><code class="plain">, </code><code class="value">0xe</code><code class="plain">, </code><code class="value">0xed</code><code class="plain"> } };</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">IDB* g_gDB = NULL;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="keyword">int</code><code class="plain"> _tmain(</code><code class="keyword">int</code><code class="plain"> argc, _TCHAR* argv[])</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    IClassFactory *pDBFactory = NULL;</code></div>
+<div class="line"><code class="plain">    HRESULT hRes;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 初始化</code></div>
+<div class="line"><code class="plain">    hRes = ::CoInitialize(NULL);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (FAILED(hRes))</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        cout &lt;&lt; </code><code class="string">"Error "</code><code class="plain"> &lt;&lt; hRes &lt;&lt; </code><code class="string">" CoInitialize!"</code><code class="plain"> &lt;&lt; endl;</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> FALSE;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 连接COM组件</code></div>
+<div class="line"><code class="plain">    hRes = CoGetClassObject(CLSID_DBSAMPLE, CLSCTX_SERVER, NULL, IID_IClassFactory, (</code><code class="keyword">void</code><code class="plain">**)&amp;pDBFactory);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (FAILED(hRes))</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        cout &lt;&lt; </code><code class="string">"Error "</code><code class="plain"> &lt;&lt; hRes &lt;&lt; </code><code class="string">" obtaining class factory for DB Object!"</code><code class="plain"> &lt;&lt; endl;</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> FALSE;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 得到对象ID对应的接口</code></div>
+<div class="line"><code class="plain">    hRes = pDBFactory-&gt;CreateInstance(NULL, IID_IDB, (</code><code class="keyword">void</code><code class="plain">**)&amp;g_gDB);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (FAILED(hRes))</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        cout &lt;&lt; </code><code class="string">"Error "</code><code class="plain"> &lt;&lt; hRes &lt;&lt; </code><code class="string">" creating DB Object!"</code><code class="plain"> &lt;&lt; endl;</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> FALSE;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 释放类工厂</code></div>
+<div class="line"><code class="plain">    pDBFactory-&gt;Release();</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 调用接口方法</code></div>
+<div class="line"><code class="plain">    g_gDB-&gt;Open();</code></div>
+<div class="line"><code class="plain">    g_gDB-&gt;ExecSQL();</code></div>
+<div class="line"><code class="plain">    g_gDB-&gt;Close();</code></div>
+<div class="line"><code class="plain">    g_gDB-&gt;Release();</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>如上代码中，当客户调用CoGetClassObject函数加载COM组件后，就会自动去调用DllGetClassObject函数生成类工厂指针，然后我们通过类工厂指针再调用CreateInstance函数生成类实例，返回接口指针。</p>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTeWfuuehgOefpeivhg">
+        <h1 class="heading "><span>COM&#22522;&#30784;&#30693;&#35782;</span></h1>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTeWvueixoQ">
+        <h2 class="heading "><span>COM&#23545;&#35937;</span></h2>
+<p   
+>COM对象其实就类似于C++中的对象，也就是说某个类的实例，包含了一组数据和操作。</p>
+<p   
+>在COM模型中，COM对象的位置对于客户来说是透明的，即客户代码不需要直接初始化一个COM对象，而是COM库通过一个全局标识码GUID去对其进行初始化工作。</p>
+<p   
+>GUID是一个128位的标识符，基本保证了COM对象的唯一性，另外COM接口也是用GUID来标识的。</p>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LUdVSUQ">
+        <h3 class="heading "><span>GUID</span></h3>
+<p   
+>GUID，又称之为全局唯一标识符，有16个字节，共128位二进制数，可以保证全球范围内不会重复，标识COM对象的GUID称为：CLSID。</p>
+<p   
+>COM组件中，GUID的结构定义如下：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">typedef struct _GUID {</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">long</code><code class="plain">  Data1; </code><code class="comments">// 随机数</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">short</code><code class="plain"> Data2; </code><code class="comments">// 和时间有关</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">short</code><code class="plain"> Data3; </code><code class="comments">// 和时间有关</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">char</code><code class="plain">  Data4[ </code><code class="value">8</code><code class="plain"> ]; </code><code class="comments">// 和网卡MAC有关</code></div>
+<div class="line"><code class="plain">} GUID;</code></div>
+</div>
+    </div>
+<p   
+>可以看到这个结构还是挺复杂的，如果我们想要手动生成，这将会是一件非常麻烦的事情，不过我们可以通过VS自带的功能去生成：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_17-10-0.png" alt="images/download/attachments/21791277/image2021-10-8_17-10-0.png"   />
+    </p>
+<p   
+>一般来说我们选择第三个即可：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_17-10-37.png" alt="images/download/attachments/21791277/image2021-10-8_17-10-37.png"   />
+    </p>
+<p   
+>初次之外我们害可以借助CoCreateGuid函数来生成这个GUID：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">GUID guid;</code></div>
+<div class="line"><code class="plain">CoCreateGuid(&amp;guid);</code></div>
+</div>
+    </div>
+<p   
+>从理论上讲，它是不能保证唯一，<strong class=" ">但重复的可能性非常非常小</strong>。有句夸张的说法是：&ldquo;在每秒钟产生一万亿个GUID的情况下，即使太阳变成白矮星的时候，它仍是唯一的&rdquo;。</p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTeaOpeWPow">
+        <h2 class="heading "><span>COM&#25509;&#21475;</span></h2>
+<p   
+>COM接口通常是一组函数的逻辑集合，其命名一般以&quot;I&quot;（<strong class=" ">大写的i</strong>）为前缀，并且继承IUnKnown接口；COM对象可以提供多个COM接口，每个接口提供不同的服务，因此COM接口与COM对象一样，都是用GUID来标识的，客户通过GUID来获取接口指针，再通过接口指针获取对应的服务；<strong class=" ">标识COM接口的GUID称为：IID</strong>。</p>
+<p   
+>你可以理解为<strong class=" ">没有去具体声明和实现AddRef、Release、QueryInterface这三个接口函数</strong><strong class=" ">的类</strong>就是我们的COM接口，在如上代码中也就是IDB这个类为COM接口。</p>
+<p   
+>IUnknown接口是COM的核心，因为所有其他的COM接口都必须从IUnknown继承；它包含三个接口函数：QueryInterface、AddRef和Release，其中<strong class=" ">QueryInterface用于接口查询</strong>，从COM对象的一个接口获得另一个接口，一个对象可能实现了多个接口，这样就可以通过QueryInterface在对象多个接口之间跳转从而获得多个接口提供的服务；<strong class=" ">AddRef与Release则用于管理COM对象的生命周期</strong>，当COM对象不再使用时需要释放，因此COM使用了引用计数的方法来对对象进行管理，当有一个用户获得接口指针后调用AddRef将引用计数加1，相反，当一个用户用完接口指针后就调用Release来使引用计数减1，这样当引用计数为0时，COM对象就可以从内存中释放；<strong class=" ">由于IUnknown提供了接口查询与生命周期控制两个功能，因此COM的每个接口都应该继承于它</strong>。</p>
+<p   
+>如下代码是IUnknown的定义，由此我们可以清楚其本质上就是一个含有纯虚函数的抽象类：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">class</code><code class="plain"> IUnknown</code></div>
+<div class="line"><code class="plain">{  </code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:  </code></div>
+<div class="line"><code class="plain">     virtual HRESULT __stdcall QueryInterface(</code><code class="keyword">const</code><code class="plain"> IID&amp; iid, </code><code class="keyword">void</code><code class="plain">** ppv) = </code><code class="value">0</code><code class="plain">;  </code></div>
+<div class="line"><code class="plain">     virtual ULONG __stdcall AddRef() = </code><code class="value">0</code><code class="plain">;  </code></div>
+<div class="line"><code class="plain">     virtual ULONG __stdcall Release() = </code><code class="value">0</code><code class="plain">;  </code></div>
+<div class="line"><code class="plain">}; </code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTeW6lOeUqOaooeWeiw">
+        <h2 class="heading "><span>COM&#24212;&#29992;&#27169;&#22411;</span></h2>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWuouaIty_mnI3liqHmqKHlnos">
+        <h3 class="heading "><span>&#23458;&#25143;/&#26381;&#21153;&#27169;&#22411;</span></h3>
+<p   
+>如下图就是客户/服务模型：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_17-57-43.png" alt="images/download/attachments/21791277/image2021-10-8_17-57-43.png"   />
+    </p>
+<p   
+>客户通过COM创建函数获取到COM库，COM库再通过DllGetClassObject获取组件，再通过组件获取类工厂对象接口指针，并用这个指针来调用各个方法。</p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTeW6kw">
+        <h3 class="heading "><span>COM&#24211;</span></h3>
+    <div class="section section-4" id="src-21791277_safe-id-Q09N57uE5Lu2LeWIneWni-WMluWHveaVsA">
+        <h4 class="heading "><span>&#21021;&#22987;&#21270;&#20989;&#25968;</span></h4>
+<p   
+>1.CoBuildVersion：获取COM库的版本号<br/>2.CoInitialize：初始化COM库<br/>3.CoUnInitialize：终止CO服务<br/>4.CoFreeUnsedLibraries：释放进程中所有不在使用的组件程序</p>
+    </div>
+    <div class="section section-4" id="src-21791277_safe-id-Q09N57uE5Lu2LUdVSUTlh73mlbA">
+        <h4 class="heading "><span>GUID&#20989;&#25968;</span></h4>
+<p   
+>1.IsEquaIGUID：判断两个GUID是否相等<br/>2.IsEquaIIID：判断两个IID是否相等<br/>3.ISEquaICLSID：判断两个CLSID是否相等<br/>4.CLSIDFromProgID：把字符串形式的对像标识转换为CLSID结构形式<br/>5.StringFromCLSID：把CLSID结构形式转化为字符串形式<br/>6.IIDFromString：把字符串形式的接口标识转换为IID结构形式<br/>7.StringFromIID：把IID结构形式转换为字符串形式<br/>8.StringFromGUID2：把GUID结构形式转换为字符串形式<br/>9.ProgIDFromCLSID：从CLSID获取对象标识</p>
+    </div>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWvueixoeWIm-W7uuWHveaVsA">
+        <h3 class="heading "><span>&#23545;&#35937;&#21019;&#24314;&#20989;&#25968;</span></h3>
+<p   
+>1.CoGetClassObiject：获取对象的类工厂<br/>2.CoCreateInstance：创建COM对象<br/>3.CoCreateInstanceEx：创建COM对象，可指定多个接口或远程对象<br/>4.CoRegisterClassObject：登记一个对象，以便其它应用程序可以连接到该对象<br/>5.CoRevokeClassObject：取消对象的登记操作<br/>6.CoDisconnectObject：断开其他应用程序与对象的连接</p>
+    <div class="section section-4" id="src-21791277_safe-id-Q09N57uE5Lu2LeWGheWtmOeuoeeQhuWHveaVsA">
+        <h4 class="heading "><span>&#20869;&#23384;&#31649;&#29702;&#20989;&#25968;</span></h4>
+<p   
+>1.CoTaskMemAlloc：内存分配函数<br/>2.CoTaskMemRealloc: 內存重新分配函数<br/>3.CoTaskMemFree：内存释放函数<br/>4.CoGetMallo：获取COM库的内存管理器接口</p>
+    </div>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LUhSRVNVTFTov5Tlm57lgLw">
+        <h3 class="heading "><span>HRESULT&#36820;&#22238;&#20540;</span></h3>
+<p   
+>COM要求所有的方法都会返回一个HRESULT类型的错误号，其就是一个类型定义：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">typedef LONG HRESULT;</code></div>
+</div>
+    </div>
+<p   
+>HRESULT类型的返回值反映了函数中的一些情况，其类型定义规范如下：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_18-3-47.png" alt="images/download/attachments/21791277/image2021-10-8_18-3-47.png"   />
+    </p>
+<p   
+>自定义标记(29位)反映结果是否为自定义标识，1 为是，0 则不是；操作码(16-28位)表示结果操作来源，在Windows平台上，其定义如下：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#define FACILITY_WINDOWS         </code><code class="value">8</code></div>
+<div class="line"><code class="plain">#define FACILITY_STORAGE         </code><code class="value">3</code></div>
+<div class="line"><code class="plain">#define FACILITY_RPC             </code><code class="value">1</code></div>
+<div class="line"><code class="plain">#define FACILITY_SSPI            </code><code class="value">9</code></div>
+<div class="line"><code class="plain">#define FACILITY_WIN32           </code><code class="value">7</code></div>
+<div class="line"><code class="plain">#define FACILITY_CONTROL         </code><code class="value">10</code></div>
+<div class="line"><code class="plain">#define FACILITY_NULL            </code><code class="value">0</code></div>
+<div class="line"><code class="plain">#define FACILITY_INTERNET        </code><code class="value">12</code></div>
+<div class="line"><code class="plain">#define FACILITY_ITF             </code><code class="value">4</code></div>
+<div class="line"><code class="plain">#define FACILITY_DISPATCH        </code><code class="value">2</code></div>
+<div class="line"><code class="plain">#define FACILITY_CERT            </code><code class="value">11</code></div>
+</div>
+    </div>
+<p   
+>操作结果码(0-15位)反映操作的状态，WinError.h定义了Win32函数所有可能返回结果。</p>
+<p   
+>以下是一些经常用到的返回值和宏定义：</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>返回值</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>含义</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>S_OK</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>函数执行成功，其值为0(注意，其值与TRUE相反)</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>S_FALSE</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>函数执行成功，其值为1</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>S_FAIL</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>函数执行失败，失败原因不确定</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>E_OUTOFMEMORY</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>函数执行失败，失败原因为内存分配不成功</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>E_NOTIMPL</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>函数执行失败，成员函数没有被实现</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>E_NOTINTERFACE</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>函数执行失败，组件没有实现指定的接口</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>需要注意，我们不能简单地把返回值与S_OK和S_FALSE比较，而要用<strong class=" ">SECCEEDED和FAILED宏</strong>进行判断。</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#define SUCCEEDED(hr) (((HRESULT)(hr)) &gt;= </code><code class="value">0</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">#define FAILED(hr) (((HRESULT)(hr)) &lt; </code><code class="value">0</code><code class="plain">)</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTeS4juazqOWGjOihqA">
+        <h3 class="heading "><span>COM&#19982;&#27880;&#20876;&#34920;</span></h3>
+<p   
+>COM客户和COM组件是相互独立的，COM组件的重要性质之一是位置透明性；当客户程序调用COM对象时不需要考虑COM组件所处的位置，这就是位置无关性；COM位置无关性的实现机制并不深奥，它主要依赖于注册表，这也就是为什么一定要在使用之前对COM组件进行注册的原因；COM库在接到客户程序的请求后，会根据给定的GUID到注册表中检索COM对象的注册条目，并以此来定位COM对象。</p>
+<p   
+>COM组件对应二进制文件的存放路径：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">HKEY_CLASSES_ROOT\CLSID\COM组件的CLSID\InprocServer32</code></div>
+<div class="line"><code class="plain">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\COM组件的CLSID\InprocServer32</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HKEY_CLASSES_ROOT\Wow6432Node\CLSID\COM组件的CLSID\InprocServer32</code></div>
+<div class="line"><code class="plain">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Wow6432Node\CLSID\COM组件的CLSID\InprocServer32</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_18-15-1.png" alt="images/download/attachments/21791277/image2021-10-8_18-15-1.png"   />
+    </p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTee7hOS7tg">
+        <h2 class="heading "><span>COM&#32452;&#20214;</span></h2>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWunueOsOexu-W3peWOguWvueixoQ">
+        <h3 class="heading "><span>&#23454;&#29616;&#31867;&#24037;&#21378;&#23545;&#35937;</span></h3>
+<p   
+>COM对象的创建是通过类工厂来完成的，类工厂是COM对象的生产基地，对应每一个COM类，都有一个类工厂专门用于该COM类的对象创建操作。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_18-45-58.png" alt="images/download/attachments/21791277/image2021-10-8_18-45-58.png"   />
+    </p>
+<p   
+>类厂本身也是一个COM对象，它支持一个特殊的接口IClassFactory，这个接口的定义如下：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">IClassFactory : </code><code class="keyword">public</code><code class="plain"> IUnknown</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"><code class="plain"> virtual </code><code class="comments">/* [local] */</code><code class="plain"> HRESULT STDMETHODCALLTYPE CreateInstance( </code></div>
+<div class="line"><code class="plain">     </code><code class="comments">/* [unique][in] */</code><code class="plain"> IUnknown *pUnkOuter,</code></div>
+<div class="line"><code class="plain">     </code><code class="comments">/* [in] */</code><code class="plain"> REFIID riid,</code></div>
+<div class="line"><code class="plain">     </code><code class="comments">/* [iid_is][out] */</code><code class="plain"> </code><code class="keyword">void</code><code class="plain"> **ppvObject) = </code><code class="value">0</code><code class="plain">;  </code></div>
+<div class="line"><code class="plain"> virtual </code><code class="comments">/* [local] */</code><code class="plain"> HRESULT STDMETHODCALLTYPE LockServer( </code></div>
+<div class="line"><code class="plain">     </code><code class="comments">/* [in] */</code><code class="plain"> BOOL fLock) = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">};</code></div>
+</div>
+    </div>
+<p   
+>我们可以看见它继承了IUnknown接口，并且多了两个成员函数：CreateInstance、LockServer。</p>
+<p   
+>CreateInstance函数是IClassFactory接口中最重要的函数，<strong class=" ">它用于创建相应的COM对象</strong>，因为每个类厂只针对特定的COM对象，所以CreateInstance成员函数知道该创建什么样的COM对象。</p>
+<p   
+>LockServer用于控制组件的生存周期，<strong class=" ">用于在多客户调用COM时，锁定COM，以免一个客户退出时销毁了COM</strong>，那么其他客户的调用将发生错误。</p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWunueOsOiHquWKqOazqOWGjA">
+        <h3 class="heading "><span>&#23454;&#29616;&#33258;&#21160;&#27880;&#20876;</span></h3>
+<p   
+>组件程序创建完成之后，必须要通过某种途径把它的信息注册到注册表中，然后客户程序才能根据注册表中的信息对组件程序进行操作。</p>
+<p   
+>实现自注册组件必须提供两个导出函数：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">STDAPI DllRegisterServer(</code><code class="keyword">void</code><code class="plain">) </code></div>
+<div class="line"><code class="plain">STDAPI DllUnregisterServer(</code><code class="keyword">void</code><code class="plain">) </code></div>
+</div>
+    </div>
+<p   
+><u class=" "><strong class=" ">regsvr32 com组件路径</strong></u>命令实际是regsvr32.exe调用组件的DllRegisterServer函数，实际<strong class=" ">注册的操作是在组件的DllRegisterServer函数</strong>里完成的，同样执行<u class=" "><strong class=" ">regsvr32 /u com组件路径</strong></u>命令可以进行反注册，实际进行<strong class=" ">反注册的操作是在组件的DllUnregisterServer函数</strong>里完成的。</p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWunueOsOiHquWKqOWNuOi9vQ">
+        <h3 class="heading "><span>&#23454;&#29616;&#33258;&#21160;&#21368;&#36733;</span></h3>
+<p   
+>只有当组件满足以下两个条件才能被卸载：</p>
+<ol class=" "><li class=" "><p   
+>组件中对象数为0；</p>
+</li><li class=" "><p   
+>类厂的锁计数为0。</p>
+</li></ol><p   
+>COM中的<strong class=" ">CoFreeAllLibraries</strong>函数可以检测当前进程中的所有组件程序，当发现某个组件满足上面两个条件时，就调用FreeLibrary函数把该组件从内存中释放，有两个问题：</p>
+<ol class=" "><li class=" "><p   
+>谁来调用<strong class=" ">CoFreeAllLibraries</strong>函数？是<strong class=" ">由客户来调用</strong>，一般在程序空闲的时候调用。</p>
+</li><li class=" "><p   
+>CoFreeAllLibraries函数怎么知道满足了上面说的可以卸载的条件？需要<strong class=" ">组件导出一个DllCanUnloadNow函数</strong>，如果DllCanUnloadNow函数返回<strong class=" ">S_OK表示对象可以被卸载</strong>。</p>
+</li></ol>    </div>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTeWuouaItw">
+        <h2 class="heading "><span>COM&#23458;&#25143;</span></h2>
+<p   
+>COM客户从只知道CLSID到获取到接口指针必须经过两步：</p>
+<ol class=" "><li class=" "><p   
+>得到该CLSID的类厂对象；</p>
+</li><li class=" "><p   
+>由类厂对象创建COM对象，返回接口指针给客户。</p>
+</li></ol><p   
+>客户得到对象接口指针后，可以用指针调用接口的成员函数，还可以获得其他接口的指针，从而得到COM对象的所有服务。</p>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTeaVsOaNruexu-Weiw">
+        <h2 class="heading "><span>COM&#25968;&#25454;&#31867;&#22411;</span></h2>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LUNPTeW4uOingeaVsOaNruexu-Weiw">
+        <h3 class="heading "><span>COM&#24120;&#35265;&#25968;&#25454;&#31867;&#22411;</span></h3>
+<p   
+>COM常见的数据类型如下所示，其中字体加粗部分是我们暂时不了解的：</p>
+    <div  class="confbox admonition admonition-info">
+                            <span class="admonition-icon confluence-information-macro-icon"></span>
+                <div class="admonition-body">
+<p   
+>CHAR, CHAR*, BYTE, BYTE*, SHORT, SHORT*, USHORT, USHORT*, INT, INT*, UINT, UINT*, LONG, LONG*, ULONG, ULONG*, FLOAT, FLOAT*, DOUBLE, DOUBLE*, <strong class=" ">VARIANT_BOOL, VARIANT_BOOL*, BSTR, BSTR*</strong>, IUnknown*, IUnknown**, <strong class=" ">VARIANT, VARIANT*</strong></p>
+        </div>
+    </div>
+    <div class="section section-4" id="src-21791277_safe-id-Q09N57uE5Lu2LVZBUklBTlRfQk9PTA">
+        <h4 class="heading "><span>VARIANT_BOOL</span></h4>
+<p   
+>数据类型VARIANT_BOOL的定义如下，其本质就是一个short类型：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">typedef </code><code class="keyword">short</code><code class="plain"> VARIANT_BOOL;</code></div>
+</div>
+    </div>
+<p   
+>我们想要使用这个类型的话需要包含一个头文件：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;oaidl.h&gt;</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-4" id="src-21791277_safe-id-Q09N57uE5Lu2LUJTVFI">
+        <h4 class="heading "><span>BSTR</span></h4>
+<p   
+>数据类型BSTR是COM中的字符串类型，BSTR*也就是其的指针；BSTR是指向的是宽字符串的指针，是一个带有字符计数值的字符串，且这个计数值是保存在字符数组的开头的4字节中。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_19-2-34.png" alt="images/download/attachments/21791277/image2021-10-8_19-2-34.png"   />
+    </p>
+<p   
+>在使用之前需要包含头文件（定义的文件），如果你包含了windows.h或者atlbase.h文件也可以：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;atlconv.h&gt;</code></div>
+</div>
+    </div>
+<p   
+>使用BSTR不能直接赋值，需要借助函数：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">BSTR bstrA = SysAllocString(L</code><code class="string">"Hello BSTR"</code><code class="plain">); </code><code class="comments">// 赋值</code></div>
+<div class="line"><code class="plain">BSTR bstrB = SysAllocStringLen(bstrA, SysStringLen(bstrA)); </code><code class="comments">// 指定长度赋值</code></div>
+<div class="line"><code class="plain">SysFreeString(bstrA); </code><code class="comments">// 释放</code></div>
+<div class="line"><code class="plain">SysFreeString(bstrB); </code><code class="comments">// 释放</code></div>
+</div>
+    </div>
+<p   
+>我们可以在VS中调试一下观察内存，可以很清楚的看见在Hello前面记录了字符串的长度0x14，也就是20：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_19-11-54.png" alt="images/download/attachments/21791277/image2021-10-8_19-11-54.png"   />
+    </p>
+<p   
+>如上示例中也直接将BSTR有关的函数给列出来了：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">BSTR SysAllocString(</code><code class="keyword">const</code><code class="plain"> OLECHAR *); </code><code class="comments">// 是COM中申请BSTR字符串的方法。</code></div>
+<div class="line"><code class="plain">BSTR SysAllocStringLen(</code><code class="keyword">const</code><code class="plain"> OLECHAR *, UINT); </code><code class="comments">// 根据字符串指针与字符个数构造BSTR字符串。</code></div>
+<div class="line"><code class="plain">UINT SysStringLen(BSTR); </code><code class="comments">// 获取字符串前面的计数值。</code></div>
+<div class="line"><code class="keyword">void</code><code class="plain"> SysFreeString(BSTR); </code><code class="comments">// 释放字符串，当COM中的字符串（BSTR）不再使用时，调用该函数。</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-4" id="src-21791277_safe-id-Q09N57uE5Lu2LVZBUklBTlQ">
+        <h4 class="heading "><span>VARIANT</span></h4>
+<p   
+>计算机语言多种多样，COM产生的目的之一就是要跨语言，而VARIANT数据类型就具有了跨语言的特性，同时它可能存储任何的数据类型，<strong class=" ">说夸张一点，它是万能数据类型</strong>。</p>
+<p   
+>为实现万能类型的功能，在C++中，VARIANT是一个结构体，该结构体内部又有联合体（联合了多种基本的数据类型），<u class=" "><strong class=" ">又有变量类型标志VARTYPE vt</strong></u>，可见VARIANT被设置得多么巧妙、合理。</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">typedef </code><code class="comments">/* [wire_marshal] */</code><code class="plain"> struct tagVARIANT VARIANT;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">struct tagVARIANT</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">    union </code></div>
+<div class="line"><code class="plain">        {</code></div>
+<div class="line"><code class="plain">        struct __tagVARIANT</code></div>
+<div class="line"><code class="plain">            {</code></div>
+<div class="line"><code class="plain">            VARTYPE vt;</code></div>
+<div class="line"><code class="plain">            WORD wReserved1;</code></div>
+<div class="line"><code class="plain">            WORD wReserved2;</code></div>
+<div class="line"><code class="plain">            WORD wReserved3;</code></div>
+<div class="line"><code class="plain">            union </code></div>
+<div class="line"><code class="plain">                {</code></div>
+<div class="line"><code class="plain">                LONGLONG llVal;</code></div>
+<div class="line"><code class="plain">                LONG lVal;</code></div>
+<div class="line"><code class="plain">                BYTE bVal;</code></div>
+<div class="line"><code class="plain">                SHORT iVal;</code></div>
+<div class="line"><code class="plain">                FLOAT fltVal;</code></div>
+<div class="line"><code class="plain">                DOUBLE dblVal;</code></div>
+<div class="line"><code class="plain">                VARIANT_BOOL boolVal;</code></div>
+<div class="line"><code class="plain">                _VARIANT_BOOL bool;</code></div>
+<div class="line"><code class="plain">                SCODE scode;</code></div>
+<div class="line"><code class="plain">                CY cyVal;</code></div>
+<div class="line"><code class="plain">                DATE date;</code></div>
+<div class="line"><code class="plain">                BSTR bstrVal;</code></div>
+<div class="line"><code class="plain">                IUnknown *punkVal;</code></div>
+<div class="line"><code class="plain">                IDispatch *pdispVal;</code></div>
+<div class="line"><code class="plain">                SAFEARRAY *parray;</code></div>
+<div class="line"><code class="plain">                BYTE *pbVal;</code></div>
+<div class="line"><code class="plain">                SHORT *piVal;</code></div>
+<div class="line"><code class="plain">                LONG *plVal;</code></div>
+<div class="line"><code class="plain">                LONGLONG *pllVal;</code></div>
+<div class="line"><code class="plain">                FLOAT *pfltVal;</code></div>
+<div class="line"><code class="plain">                DOUBLE *pdblVal;</code></div>
+<div class="line"><code class="plain">                VARIANT_BOOL *pboolVal;</code></div>
+<div class="line"><code class="plain">                _VARIANT_BOOL *pbool;</code></div>
+<div class="line"><code class="plain">                SCODE *pscode;</code></div>
+<div class="line"><code class="plain">                CY *pcyVal;</code></div>
+<div class="line"><code class="plain">                DATE *pdate;</code></div>
+<div class="line"><code class="plain">                BSTR *pbstrVal;</code></div>
+<div class="line"><code class="plain">                IUnknown **ppunkVal;</code></div>
+<div class="line"><code class="plain">                IDispatch **ppdispVal;</code></div>
+<div class="line"><code class="plain">                SAFEARRAY **pparray;</code></div>
+<div class="line"><code class="plain">                VARIANT *pvarVal;</code></div>
+<div class="line"><code class="plain">                PVOID byref;</code></div>
+<div class="line"><code class="plain">                CHAR cVal;</code></div>
+<div class="line"><code class="plain">                USHORT uiVal;</code></div>
+<div class="line"><code class="plain">                ULONG ulVal;</code></div>
+<div class="line"><code class="plain">                ULONGLONG ullVal;</code></div>
+<div class="line"><code class="plain">                INT intVal;</code></div>
+<div class="line"><code class="plain">                UINT uintVal;</code></div>
+<div class="line"><code class="plain">                DECIMAL *pdecVal;</code></div>
+<div class="line"><code class="plain">                CHAR *pcVal;</code></div>
+<div class="line"><code class="plain">                USHORT *puiVal;</code></div>
+<div class="line"><code class="plain">                ULONG *pulVal;</code></div>
+<div class="line"><code class="plain">                ULONGLONG *pullVal;</code></div>
+<div class="line"><code class="plain">                INT *pintVal;</code></div>
+<div class="line"><code class="plain">                UINT *puintVal;</code></div>
+<div class="line"><code class="plain">                struct __tagBRECORD</code></div>
+<div class="line"><code class="plain">                    {</code></div>
+<div class="line"><code class="plain">                    PVOID pvRecord;</code></div>
+<div class="line"><code class="plain">                    IRecordInfo *pRecInfo;</code></div>
+<div class="line"><code class="plain">                    }   __VARIANT_NAME_4;</code></div>
+<div class="line"><code class="plain">                }   __VARIANT_NAME_3;</code></div>
+<div class="line"><code class="plain">            }   __VARIANT_NAME_2;</code></div>
+<div class="line"><code class="plain">        DECIMAL decVal;</code></div>
+<div class="line"><code class="plain">        }   __VARIANT_NAME_1;</code></div>
+<div class="line"><code class="plain">    } ;</code></div>
+</div>
+    </div>
+<p   
+><strong class=" ">变量类型标志VARTYPE vt</strong>，其有对应的值：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">/* VARIANT STRUCTURE</code></div>
+<div class="line"><code class="comments"> *</code></div>
+<div class="line"><code class="comments"> *  VARTYPE vt;</code></div>
+<div class="line"><code class="comments"> *  WORD wReserved1;</code></div>
+<div class="line"><code class="comments"> *  WORD wReserved2;</code></div>
+<div class="line"><code class="comments"> *  WORD wReserved3;</code></div>
+<div class="line"><code class="comments"> *  union {</code></div>
+<div class="line"><code class="comments"> *    LONGLONG       VT_I8</code></div>
+<div class="line"><code class="comments"> *    LONG           VT_I4</code></div>
+<div class="line"><code class="comments"> *    BYTE           VT_UI1</code></div>
+<div class="line"><code class="comments"> *    SHORT          VT_I2</code></div>
+<div class="line"><code class="comments"> *    FLOAT          VT_R4</code></div>
+<div class="line"><code class="comments"> *    DOUBLE         VT_R8</code></div>
+<div class="line"><code class="comments"> *    VARIANT_BOOL   VT_BOOL</code></div>
+<div class="line"><code class="comments"> *    SCODE          VT_ERROR</code></div>
+<div class="line"><code class="comments"> *    CY             VT_CY</code></div>
+<div class="line"><code class="comments"> *    DATE           VT_DATE</code></div>
+<div class="line"><code class="comments"> *    BSTR           VT_BSTR</code></div>
+<div class="line"><code class="comments"> *    IUnknown *     VT_UNKNOWN</code></div>
+<div class="line"><code class="comments"> *    IDispatch *    VT_DISPATCH</code></div>
+<div class="line"><code class="comments"> *    SAFEARRAY *    VT_ARRAY</code></div>
+<div class="line"><code class="comments"> *    BYTE *         VT_BYREF|VT_UI1</code></div>
+<div class="line"><code class="comments"> *    SHORT *        VT_BYREF|VT_I2</code></div>
+<div class="line"><code class="comments"> *    LONG *         VT_BYREF|VT_I4</code></div>
+<div class="line"><code class="comments"> *    LONGLONG *     VT_BYREF|VT_I8</code></div>
+<div class="line"><code class="comments"> *    FLOAT *        VT_BYREF|VT_R4</code></div>
+<div class="line"><code class="comments"> *    DOUBLE *       VT_BYREF|VT_R8</code></div>
+<div class="line"><code class="comments"> *    VARIANT_BOOL * VT_BYREF|VT_BOOL</code></div>
+<div class="line"><code class="comments"> *    SCODE *        VT_BYREF|VT_ERROR</code></div>
+<div class="line"><code class="comments"> *    CY *           VT_BYREF|VT_CY</code></div>
+<div class="line"><code class="comments"> *    DATE *         VT_BYREF|VT_DATE</code></div>
+<div class="line"><code class="comments"> *    BSTR *         VT_BYREF|VT_BSTR</code></div>
+<div class="line"><code class="comments"> *    IUnknown **    VT_BYREF|VT_UNKNOWN</code></div>
+<div class="line"><code class="comments"> *    IDispatch **   VT_BYREF|VT_DISPATCH</code></div>
+<div class="line"><code class="comments"> *    SAFEARRAY **   VT_BYREF|VT_ARRAY</code></div>
+<div class="line"><code class="comments"> *    VARIANT *      VT_BYREF|VT_VARIANT</code></div>
+<div class="line"><code class="comments"> *    PVOID          VT_BYREF (Generic ByRef)</code></div>
+<div class="line"><code class="comments"> *    CHAR           VT_I1</code></div>
+<div class="line"><code class="comments"> *    USHORT         VT_UI2</code></div>
+<div class="line"><code class="comments"> *    ULONG          VT_UI4</code></div>
+<div class="line"><code class="comments"> *    ULONGLONG      VT_UI8</code></div>
+<div class="line"><code class="comments"> *    INT            VT_INT</code></div>
+<div class="line"><code class="comments"> *    UINT           VT_UINT</code></div>
+<div class="line"><code class="comments"> *    DECIMAL *      VT_BYREF|VT_DECIMAL</code></div>
+<div class="line"><code class="comments"> *    CHAR *         VT_BYREF|VT_I1</code></div>
+<div class="line"><code class="comments"> *    USHORT *       VT_BYREF|VT_UI2</code></div>
+<div class="line"><code class="comments"> *    ULONG *        VT_BYREF|VT_UI4</code></div>
+<div class="line"><code class="comments"> *    ULONGLONG *    VT_BYREF|VT_UI8</code></div>
+<div class="line"><code class="comments"> *    INT *          VT_BYREF|VT_INT</code></div>
+<div class="line"><code class="comments"> *    UINT *         VT_BYREF|VT_UINT</code></div>
+<div class="line"><code class="comments"> *  }</code></div>
+<div class="line"><code class="comments"> */</code></div>
+</div>
+    </div>
+<p   
+>当我们想用VARIANT来保存LONG类型的时候可以这样写：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">VARIANT var;</code></div>
+<div class="line"><code class="plain">VariantInit(&amp;var); </code><code class="comments">// 初始化</code></div>
+<div class="line"><code class="plain">var.vt = VT_I4; </code><code class="comments">// 变量类型标志，如上所示VT_I4对应LONG类型</code></div>
+<div class="line"><code class="plain">var.lVal = </code><code class="value">100</code><code class="plain">; </code><code class="comments">// 这里的成员lVal就表示着LONG，这个可以在VARIANT结构体的定义中找到</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">VariantClear(&amp;var); </code><code class="comments">// 清空</code></div>
+</div>
+    </div>
+<p   
+>存储学会了，接下来就要从VARIANT中读取存储的值了：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">VARIANT var;</code></div>
+<div class="line"><code class="plain">VariantInit(&amp;var); </code><code class="comments">// 初始化</code></div>
+<div class="line"><code class="plain">var.vt = VT_I4; </code><code class="comments">// 变量类型标志，如上所示VT_I4对应LONG类型</code></div>
+<div class="line"><code class="plain">var.lVal = </code><code class="value">100</code><code class="plain">; </code><code class="comments">// 这里的成员lVal就表示着LONG，这个可以在VARIANT结构体的定义中找到</code></div>
+<div class="line"> </div>
+<div class="line"><code class="keyword">if</code><code class="plain"> (var.vt == VT_I4) </code><code class="comments">// 判断</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    LONG lVar = var.lVal; </code><code class="comments">// 获取</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">VariantClear(&amp;var); </code><code class="comments">// 清空</code></div>
+</div>
+    </div>
+<p   
+>如果你想要将VARIANT进行数据类型的转换可以使用函数VariantChangeType：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">WINOLEAUTAPI VariantChangeType(</code></div>
+<div class="line"><code class="plain">    _Inout_ VARIANTARG * pvargDest, </code><code class="comments">// 目标VARIANT的指针</code></div>
+<div class="line"><code class="plain">    _In_ </code><code class="keyword">const</code><code class="plain"> VARIANTARG * pvarSrc, </code><code class="comments">// 源VARIANT的指针</code></div>
+<div class="line"><code class="plain">    _In_ USHORT wFlags, </code><code class="comments">// 强制转化的控制符</code></div>
+<div class="line"><code class="plain">    _In_ VARTYPE vt </code><code class="comments">// 需要强制转化的类型</code></div>
+<div class="line"><code class="plain">);</code></div>
+</div>
+    </div>
+<p   
+>例如我现在想将LONG类型转为FLOAT类型：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">VARIANT var;</code></div>
+<div class="line"><code class="plain">VariantInit(&amp;var); </code><code class="comments">// 初始化</code></div>
+<div class="line"><code class="plain">var.vt = VT_I4; </code><code class="comments">// 变量类型标志，如上所示VT_I4对应LONG类型</code></div>
+<div class="line"><code class="plain">var.lVal = </code><code class="value">100</code><code class="plain">; </code><code class="comments">// 这里的成员lVal就表示着LONG，这个可以在VARIANT结构体的定义中找到</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">VariantChangeType(&amp;var, &amp;var, </code><code class="value">0</code><code class="plain">, VT_R4);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">VariantClear(&amp;var); </code><code class="comments">// 清空</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_21-0-52.png" alt="images/download/attachments/21791277/image2021-10-8_21-0-52.png"   />
+    </p>
+<p   
+></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791277_safe-id-Q09N57uE5Lu2LUFUTA">
+        <h1 class="heading "><span>ATL</span></h1>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeeugOS7iw">
+        <h2 class="heading "><span>&#31616;&#20171;</span></h2>
+<p   
+>ATL是活动(动态)模板库(ActiveX Template Library)的缩写，它是一套C++模版；ATL的基本目标：<strong class=" ">使COM开发尽可能自动化</strong>，这个基本目标决定了ATL只面向COM开发提供支持。</p>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeeUqEFUTOWItuS9nOeugOWNleWvueixoQ">
+        <h2 class="heading "><span>&#29992;ATL&#21046;&#20316;&#31616;&#21333;&#23545;&#35937;</span></h2>
+<p   
+>创建ATL工程：直接使用VS创建默认的即可。</p>
+<p   
+>添加简单对象：通过可视化操作直接去创建，相当于给你创建了头文件（h）和实现文件（cpp），以及在idl文件中添加了内容。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_22-45-10.png" alt="images/download/attachments/21791277/image2021-10-8_22-45-10.png"   />
+    </p>
+<p   
+>添加接口：在这里创建完成之后在头文件中加入了接口的声明，在定义文件中添加了接口的定义，并且在idl文件中也添加了对应的接口信息。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_22-47-11.png" alt="images/download/attachments/21791277/image2021-10-8_22-47-11.png"   />
+    </p>
+<p   
+>在添加接口的时候可以选择接口的参数类型，根据这个接口的作用去选择。</p>
+<p   
+>至此整个步骤了解之后就会产生的一些疑问：</p>
+<ol class=" "><li class=" "><p   
+>ProgID是什么：<strong class=" ">ProgID等价于CLSID</strong></p>
+</li><li class=" "><p   
+>找不到COM类的AddRef、Release、QueryInterface函数的实现</p>
+</li><li class=" "><p   
+>找不到类厂的定义和实现</p>
+<ol class=" "><li class=" "><p   
+>问题2、3在ATL中实际上是换了一个形式出现了，可以在头文件中找到，见如下图注释：</p>
+</li><li class=" "><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_22-50-58.png" alt="images/download/attachments/21791277/image2021-10-8_22-50-58.png"   />
+    </li></ol></li><li class=" "><p   
+>注册表脚本文件有什么作用：注册表脚本文件就是资源文件中的rgs后缀名文件，这里其实是要写入注册表里的信息，当调用注册函数的时候就会使用这里的信息写入到注册表中</p>
+<ol class=" "><li class=" "><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_22-54-49.png" alt="images/download/attachments/21791277/image2021-10-8_22-54-49.png"   />
+    </li></ol></li><li class=" "><p   
+>后缀为idl的文件是什么文件：IDL全称Interface Description Language，中文为接口描述语言；IDL的主要作用是用来以一种与语言无关的方法来定义一个组件的接口（它的方法和参数），使组件的接口描述在任何语言环境中都认识；IDL是一个文本文件，它的语言语法比较简单，很像C语言；在ATL中IDL文件由MIDL编译，编译后生成TLB文件，类型库以TLB文件形式单独存在，同时也保存在目标文件的资源中，因此我们在引入类型库的时候，即可以指定TLB文件，也可以指定目标文件。</p>
+<ol class=" "><li class=" "><p   
+>我们可以看一下这个idl文件，其具体含义可以见如下图注释：</p>
+</li><li class=" "><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_23-5-27.png" alt="images/download/attachments/21791277/image2021-10-8_23-5-27.png"   />
+    </li></ol></li><li class=" "><p   
+>组件的CLSID在哪里：如上图注释所示。</p>
+</li></ol><p   
+>最后你只需要编译一下，在项目Debug目录可以找到TLB文件：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_23-35-51.png" alt="images/download/attachments/21791277/image2021-10-8_23-35-51.png"   />
+    </p>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LU1GQ-iwg-eUqENPTee7hOS7tg">
+        <h2 class="heading "><span>MFC&#35843;&#29992;COM&#32452;&#20214;</span></h2>
+<p   
+>首先你需要创建一个MFC项目，选择基于对话框Dialog创建即可，而后将其他的控件删除留一个按钮便于后续调用，接着你需要引入类型库：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_23-45-27.png" alt="images/download/attachments/21791277/image2021-10-8_23-45-27.png"   />
+    </p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#</code><code class="keyword">import</code><code class="plain"> </code><code class="string">"C:\\Users\\chen\\Documents\\Visual Studio 2013\\Projects\\DBTest\\DBTest\\Debug\\DBTest.tlb"</code><code class="plain"> no_namespace</code></div>
+</div>
+    </div>
+<p   
+>然后，你需要在头文件中定义好这个接口指针：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_0-0-12.png" alt="images/download/attachments/21791277/image2021-10-9_0-0-12.png"   />
+    </p>
+<p   
+>接着在OnInitDialog初始化的时候去初始化COM，根据ProgId创建COM对象：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">HRESULT hRes;</code></div>
+<div class="line"><code class="plain">CoInitialize(NULL);</code></div>
+<div class="line"><code class="plain">hRes = m_pDB.CreateInstance(L</code><code class="string">"TESTDBConnect.Ado.1"</code><code class="plain">);</code></div>
+<div class="line"><code class="keyword">if</code><code class="plain"> (FAILED(hRes))</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">       ::MessageBox(NULL, _T(</code><code class="string">"Error"</code><code class="plain">), _T(</code><code class="string">"Title"</code><code class="plain">), MB_OK);</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>最后，我们在按钮左键单击事件中去调用接口函数即可：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_0-4-30.png" alt="images/download/attachments/21791277/image2021-10-9_0-4-30.png"   />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_0-4-49.png" alt="images/download/attachments/21791277/image2021-10-9_0-4-49.png"   />
+    </p>
+<p   
+>在这里之所以能成功，是因为我们在编译ATL项目的时候就自动注册了这个COM组件（如果你编译项目失败，可以尝试使用管理员权限打开VS）。</p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791277_safe-id-Q09N57uE5Lu2LeaLk-WxleaTjeS9nA">
+        <h1 class="heading "><span>&#25299;&#23637;&#25805;&#20316;</span></h1>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeWKoOWxnuaApw">
+        <h2 class="heading "><span>&#21152;&#23646;&#24615;</span></h2>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2Lea3u-WKoOe7hOS7tuWxnuaApw">
+        <h3 class="heading "><span>&#28155;&#21152;&#32452;&#20214;&#23646;&#24615;</span></h3>
+<p   
+>我们现在所模拟的是一个DB的COM组件，而现在我们要添加一个DB连接的状态，这时候就需要通过ATL来添加属性了，如下图所示操作，当你添加一个属性之后在头文件中就会多出两个成员函数的声明以及在实现文件中多出对应的代码实现，最后在idl文件中也可以看见接口函数列表也多出了这些内容。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_18-46-4.png" alt="images/download/attachments/21791277/image2021-10-9_18-46-4.png"   />
+    </p>
+<p   
+>通过多出的代码我们可以知道，原来这里通过ATL添加的State属性需要使用get_State来获取值，以及通过put_State来修改值，但是这里的最关键的值我们却没有看见，所以我们可以选择在类中去声明一个成员变量：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_18-50-16.png" alt="images/download/attachments/21791277/image2021-10-9_18-50-16.png"   />
+    </p>
+<p   
+>接着我们去实现这两个方法即可：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">STDMETHODIMP CDBConnect::get_State(LONG* pVal)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// TODO:  在此添加实现代码</code></div>
+<div class="line"><code class="plain">    *pVal = m_iState;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> S_OK;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">STDMETHODIMP CDBConnect::put_State(LONG newVal)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// TODO:  在此添加实现代码</code></div>
+<div class="line"><code class="plain">    m_iState = newVal;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> S_OK;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>接着要在对象创建的时候去初始化这个值，在ATL中初始化的话，你可以在头文件中找到<strong class=" ">FinalConstruct</strong>方法，并在该方法体中去初始化：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_18-55-36.png" alt="images/download/attachments/21791277/image2021-10-9_18-55-36.png"   />
+    </p>
+<p   
+></p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWuouaIt-S9v-eUqOWxnuaApw">
+        <h3 class="heading "><span>&#23458;&#25143;&#20351;&#29992;&#23646;&#24615;</span></h3>
+<p   
+>在客户侧去使用这些属性十分简单，直接访问其对应的函数，或直接访问这个属性即可。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_19-34-49.png" alt="images/download/attachments/21791277/image2021-10-9_19-34-49.png"   />
+    </p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeWkmuaOpeWPow">
+        <h2 class="heading "><span>&#22810;&#25509;&#21475;</span></h2>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWunueOsOWkmuaOpeWPow">
+        <h3 class="heading "><span>&#23454;&#29616;&#22810;&#25509;&#21475;</span></h3>
+<p   
+>我们之前写的COM组件，只有一个类并且只有一个接口，但是我们完全可以让一个COM类提供多个接口。</p>
+<p   
+>实现多接口需要手动去做一些改造，首先我们需要在idl文件中加入接口相关的信息，例如这里我加入一个检测的接口，并且接口函数只有一个检测功能：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_22-24-31.png" alt="images/download/attachments/21791277/image2021-10-9_22-24-31.png"   />
+    </p>
+<p   
+>不要忘记在接口列表中也将接口添加上去：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_22-38-50.png" alt="images/download/attachments/21791277/image2021-10-9_22-38-50.png"   />
+    </p>
+<p   
+>接着我们需要在DBConnect头文件中声明接口和接口函数：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">class</code><code class="plain"> ATL_NO_VTABLE CDBConnect :</code></div>
+<div class="line"><code class="plain">       </code><code class="keyword">public</code><code class="plain"> CComObjectRootEx&lt;CComSingleThreadModel&gt;, </code><code class="comments">// 这里实现了IUnknow的三个函数</code></div>
+<div class="line"><code class="plain">       </code><code class="keyword">public</code><code class="plain"> CComCoClass&lt;CDBConnect, &amp;CLSID_DBConnect&gt;, </code><code class="comments">// 这里生成了类工厂</code></div>
+<div class="line"><code class="plain">       </code><code class="keyword">public</code><code class="plain"> IDBConnect,</code></div>
+<div class="line"><code class="plain">       </code><code class="keyword">public</code><code class="plain"> IDBConnectChk</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">...</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">BEGIN_COM_MAP(CDBConnect)</code></div>
+<div class="line"><code class="plain">       COM_INTERFACE_ENTRY(IDBConnect)</code></div>
+<div class="line"><code class="plain">       COM_INTERFACE_ENTRY(IDBConnectChk)</code></div>
+<div class="line"><code class="plain">END_COM_MAP()</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">...</code></div>
+<div class="line"> </div>
+<div class="line"><code class="keyword">public</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">...</code></div>
+<div class="line"><code class="plain">       STDMETHOD(CheckSQL)(BSTR sql);</code></div>
+<div class="line"><code class="plain">};</code></div>
+</div>
+    </div>
+<p   
+>然后还要去实现这个接口函数：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">STDMETHODIMP CDBConnect::CheckSQL(BSTR sql)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// TODO:  在此添加实现代码</code></div>
+<div class="line"><code class="plain">    ::MessageBox(NULL, _T(</code><code class="string">"CheckSQL"</code><code class="plain">), _T(</code><code class="string">"Alert"</code><code class="plain">), MB_OK);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> S_OK;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>如果你想让自己的工程看起来规范化，可以替换一下ProgID、Version，当前是1.0版本，可以变成2.0版本，ProgID的最后那个&ldquo;.1&rdquo;就表示版本号也可以替换一下。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_22-36-26.png" alt="images/download/attachments/21791277/image2021-10-9_22-36-26.png"   />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_22-38-4.png" alt="images/download/attachments/21791277/image2021-10-9_22-38-4.png"   />
+    </p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWuouaIt-S9v-eUqOWkmuaOpeWPow">
+        <h3 class="heading "><span>&#23458;&#25143;&#20351;&#29992;&#22810;&#25509;&#21475;</span></h3>
+<p   
+>在客户侧去使用多接口也很简单，首先引入类型文件，其次定义接口指针：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_22-48-20.png" alt="images/download/attachments/21791277/image2021-10-9_22-48-20.png"   />
+    </p>
+<p   
+>接着你需要在OnInitDialog函数内去切换接口，这需要使用到QueryInterface方法，你需要传递两个参数，一个是接口的IID，一个是接口指针的地址；接口的IID可以通过COM组件项目的<strong class=" ">&ldquo;xxx_i.c&rdquo;</strong>文件找到，这是idl生成的，所以需要你编译之后才有内容，接着<strong class=" ">将MIDL_DEFINE_GUID的宏定义以及对应接口的宏调用复制过来</strong>，IID_IDBConnectChk就是最终的接口对应的IID：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_22-51-4.png" alt="images/download/attachments/21791277/image2021-10-9_22-51-4.png"   />
+    </p>
+<p   
+>再接着我们对应填充参数即可：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">hRes = m_pDB.QueryInterface(IID_IDBConnectChk, &amp;m_pDBChk);</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_22-54-12.png" alt="images/download/attachments/21791277/image2021-10-9_22-54-12.png"   />
+    </p>
+<p   
+>最后我们只需要调用接口函数即可：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">void</code><code class="plain"> CDB_ClientDlg::OnBnClickedButton1()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// TODO:  在此添加控件通知处理程序代码</code></div>
+<div class="line"><code class="plain">    m_pDBChk-&gt;CheckSQL(L</code><code class="string">""</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_22-56-15.png" alt="images/download/attachments/21791277/image2021-10-9_22-56-15.png"   />
+    </p>
+<p   
+>最后需要注意的是idl生成的两个文件<strong class=" ">可以直接被引用</strong>，这样你就可以<strong class=" ">不用去引入类型库文件</strong>（tlb文件）了：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_23-1-38.png" alt="images/download/attachments/21791277/image2021-10-9_23-1-38.png"   />
+    </p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeWkmkNPTeexuw">
+        <h2 class="heading "><span>&#22810;COM&#31867;</span></h2>
+<p   
+>既然COM可以多接口，那也同样可以多个COM类，这个的操作步骤在ATL中都已经了解过了，不过多赘述。<br/><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-8_22-45-10.png" alt="images/download/attachments/21791277/image2021-10-8_22-45-10.png"   />
+    </p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791277_safe-id-Q09N57uE5Lu2LeiHquWKqOWMlg">
+        <h1 class="heading "><span>&#33258;&#21160;&#21270;</span></h1>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeeugOS7iy4x">
+        <h2 class="heading "><span>&#31616;&#20171;</span></h2>
+<p   
+>编译型语言在编译之前引入类型库(tlb文件)，编译器编译的时候就知道如何编译接口函数的调用了，这种方式我们称为前绑定；而脚本语言是解释执行的，它执行的时候不会知道具体的函数地址，自动化为此诞生了后绑定；<strong class=" ">自动化组件其实就是实现了IDispatch（自动化）接口的组件</strong>；解释性语言跟宏语言，要调用COM组件的自定义接口时，都是通过自动化控制程序把自定义接口中的函数名称的字符串跟函数参数传递给IDispatch，让IDispatch间接地去执行自定义接口中的函数；所以本节课所需要学习的就是<strong class=" ">IDispatch（自动化）接口</strong>。</p>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUlEaXNwYXRjaO-8iOiHquWKqOWMlu-8ieaOpeWPow">
+        <h2 class="heading "><span>IDispatch&#65288;&#33258;&#21160;&#21270;&#65289;&#25509;&#21475;</span></h2>
+<p   
+>IDispatch接口要实现四个函数：</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>函数名</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>作用</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>HRESULT GetTypeInfoCount()</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>获取组件中提供几个类型库</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>HRESULT GetTypeInfo()</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>调用者通过该函数取得他想要的类型库</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>HRESULT GetIDsOfNames()</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>根据函数名称取得函数序号，为调用 Invoke() 做准备</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>HRESULT Invoke()</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>根据序号，执行函数</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_23-11-25.png" alt="images/download/attachments/21791277/image2021-10-9_23-11-25.png"   />
+    </p>
+<p   
+>如上图所示受限我们需要使用IDispatch接口的GetIDsOfNames函数去获取函数序号，接着再使用Invoke函数根据序号获取函数的地址然后执行，这样下来执行效率是比较低的，所以ATL从效率出发，实现了一种叫<strong class=" ">双接口(dual)</strong>的接口模式，我们来了解一下。</p>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeWPjOaOpeWPow">
+        <h2 class="heading "><span>&#21452;&#25509;&#21475;</span></h2>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeekuuaEj-Wbvg">
+        <h3 class="heading "><span>&#31034;&#24847;&#22270;</span></h3>
+<p   
+>如下是双接口示意图，我们可以看见他有三个部分，分别是IUnknow、IDispatch、自定义接口，所谓双接口，其实是在一个VTAB的虚函数表中容纳了三个接口，因为任何接口都是从IUnknown派生的，所以就不强调IUnknown了，就称之为双接口。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_23-13-7.png" alt="images/download/attachments/21791277/image2021-10-9_23-13-7.png"   />
+    </p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeWcuuaZr-S4juS8mOeCuQ">
+        <h3 class="heading "><span>&#22330;&#26223;&#19982;&#20248;&#28857;</span></h3>
+<p   
+>如下表所示是在不同场景下使用双接口、原因与使用结果：</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>使用方式</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>原因</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>结果</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>脚本语言使用组件</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>解释器只认识IDispatch接口</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>可以调用，但执行效率最低</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>编译型语言使用组件</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>它认识IDispatch接口</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>可以调用，执行效率比较低</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>编译型语言使用组件</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>它装载类型库就认识了Ixxx接口</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>可以直接调用Ixxx函数，效率最高</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>最终我们得到一个结论，那就是双接口即满足脚本语言的使用方便，又满足编译语言的使用高效性，这就是它的优点。</p>
+<p   
+><strong class=" ">注：</strong>如果不需要支持脚本语言最好不要用双接口，因为双接口、IDispatch接口只支持自动化的参数类型，使用受到限制，某些情况下很不方便。</p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LeS9v-eUqOiHquWKqOWMlue7hOS7tg">
+        <h2 class="heading "><span>&#20351;&#29992;&#33258;&#21160;&#21270;&#32452;&#20214;</span></h2>
+<p   
+>使用自动化组件并不难，跟之前一样创建ATL项目以及简单对象，只不过在创建对象的时候需要选择接口类型为双重：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_23-37-7.png" alt="images/download/attachments/21791277/image2021-10-9_23-37-7.png"   />
+    </p>
+<p   
+>接着添加方法即可：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_23-39-50.png" alt="images/download/attachments/21791277/image2021-10-9_23-39-50.png"   />
+    </p>
+<p   
+>当你添加的时候你就会发发型，这个方法名会自动赋予ID，这个你可以自定义，也可以不用管它。</p>
+<p   
+>实现好接口函数之后你只需要编译即可：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_23-41-43.png" alt="images/download/attachments/21791277/image2021-10-9_23-41-43.png"   />
+    </p>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LUphdmFTY3JpcHTosIPnlKg">
+        <h3 class="heading "><span>JavaScript&#35843;&#29992;</span></h3>
+<p   
+>接着我们想要在JavaScript中去调用这个COM组件，编写代码：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">&lt;script type=</code><code class="string">"text/javascript"</code><code class="plain">&gt;</code></div>
+<div class="line"><code class="plain">    var myCom = </code><code class="keyword">new</code><code class="plain"> ActiveXObject(</code><code class="string">"DualDBConnect.Ado.1"</code><code class="plain">); </code><code class="comments">// ProgID</code></div>
+<div class="line"><code class="plain">    function OpenTest() {</code></div>
+<div class="line"><code class="plain">        myCom.Open();</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">&lt;/script&gt;</code></div>
+<div class="line"><code class="plain">&lt;input type=</code><code class="string">"button"</code><code class="plain"> value=</code><code class="string">"Open"</code><code class="plain"> onclick=</code><code class="string">"OpenTest()"</code><code class="plain"> /&gt;</code></div>
+</div>
+    </div>
+<p   
+>接着在IE浏览器中打开这个HTML页面，并允许阻止的内容，单击即可调用接口函数：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_23-47-8.png" alt="images/download/attachments/21791277/image2021-10-9_23-47-8.png"   />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-9_23-46-20.png" alt="images/download/attachments/21791277/image2021-10-9_23-46-20.png"   />
+    </p>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791277_safe-id-Q09N57uE5Lu2LeaZuuiDveexu-Weiw">
+        <h1 class="heading "><span>&#26234;&#33021;&#31867;&#22411;</span></h1>
+<p   
+>之前我们所了解过VARIANT类型，该类型的优点我们都知道是其<strong class=" ">可以兼容所有的数据类型</strong>，但同时，我们了解VARIANT类型初始化赋值十分繁琐。</p>
+<p   
+>为了使用VARIANT类型更加方便，ATL对VARIANT数据类型做了封装，封装了一个CComVariant类型，它内部维护了一个VARIANT的数据结构，所以我们可以很方便的在大多少情况下<strong class=" ">用CComVariant来替代VARIANT</strong>。</p>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUNDb21WYXJpYW50">
+        <h2 class="heading "><span>CComVariant</span></h2>
+<p   
+>CComVariant的数据结构定义可以自行去查看，由于代码过长这里不过多展示，从定义中我们可以看出，其提供了几乎所有数据类型的构造，这就意味着我们初始化CComVaiant对象时可以简单的采用：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">CComVaiant comVar(</code><code class="string">"ABC"</code><code class="plain">);</code></div>
+</div>
+    </div>
+<p   
+>并其提供了所有类型赋值运算符的重载，可以采用下面方式直接赋值：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">comVar = </code><code class="string">"XYZ"</code><code class="plain">;</code></div>
+</div>
+    </div>
+<p   
+>由于它内部维护了一个VARIANT的数据结构，我们也可以使用VARIANT类型的方式：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">CComVaiant comVar(</code><code class="value">123</code><code class="plain">, VT_I4);</code></div>
+</div>
+    </div>
+<p  class="auto-cursor-target" 
+>其他的使用方法都如出一辙，同样，也不过多赘述了。</p>
+    </div>
+    <div class="section section-2" id="src-21791277_safe-id-Q09N57uE5Lu2LUNDb21QdHLjgIFDQ29tUUlQdHI">
+        <h2 class="heading "><span>CComPtr&#12289;CComQIPtr</span></h2>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeeugOS7iy4y">
+        <h3 class="heading "><span>&#31616;&#20171;</span></h3>
+<p   
+>C++在调用COM接口指针时是很危险的，因为使用过程需要每一个使用都严格并且正确地调用AddRef与Release方法。一旦出现问题，就会造成对象不能被正常释放或者对象被重复删除。</p>
+<p   
+>CComPtr、CComQIPtr是ATL为了解决COM引用计数问题提供的一个类模版，因为它的使用和行为上类似与一个接口指针，所以有一个通俗易懂的名字：智能指针。</p>
+<p   
+>这两个模版类都继承自CComPtrBase，不同之处在于CComQIPtr能在必要的时候自动的对所需接口进行查询（如：对与此智能指针参数化类型不同的指针赋值时，会自动查询是否有所需的接口）。</p>
+<p   
+><strong class=" ">CComPtrBase类封装了CComPtr和CComQIPtr中公共的大多数函数</strong>，从而实现代码的复用。</p>
+    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeavlOi-gw">
+        <h3 class="heading "><span>&#27604;&#36739;</span></h3>
+<p   
+>智能指针与接口指针的比较如下：</p>
+<ol class=" "><li class=" "><p   
+><strong class=" ">CComPtr&lt;IDBConnect&gt; spDBConn;</strong>创建了一个智能指针，其实它是一个类对象，对象内部有一个IDBConnect*的指针变量，而IDBConnect* pDBConn就是一个指针；</p>
+</li><li class=" "><p   
+>二者操作的用法和意义一样；</p>
+</li><li class=" "><p   
+>智能指针不能执行AddRef与Release操作，因为智能指针封装了COM接口指针的AddRef与Release操作，会智能判断何时内部调用COM接口的AddRef，何时调用COM接口的Release。</p>
+</li></ol>    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeazqOaEjw">
+        <h3 class="heading "><span>&#27880;&#24847;</span></h3>
+<p   
+>智能指针使用的注意点：</p>
+<ol class=" "><li class=" "><p   
+>智能指针已经保证了AddRef和Release的正确调用，所以不需要，也不能够再调用AddRef和Release；</p>
+</li><li class=" "><p   
+>如果要释放一个智能指针，直接给它赋NULL,这样内部才COM接口指针会自动执行Release操作，来减少应用计数；</p>
+</li><li class=" "><p   
+>当对智能指针取地址时(&amp;运算符操作)，要确保智能指针为NULL，因为&amp;是要返回内部的COM接口指针的，如果不为NULL，则旧的COM接口指针将没有执行Release而直接赋值了一个旧的COM接口指针。</p>
+</li></ol>    </div>
+    <div class="section section-3" id="src-21791277_safe-id-Q09N57uE5Lu2LeS9v-eUqA">
+        <h3 class="heading "><span>&#20351;&#29992;</span></h3>
+<p   
+>在使用只能智能指针需要包含一个头文件：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;atlbase.h&gt;</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-10_0-21-23.png" alt="images/download/attachments/21791277/image2021-10-10_0-21-23.png"   />
+    </p>
+<p   
+>接着调用即可：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">HRESULT hRes;</code></div>
+<div class="line"><code class="plain">CComPtr&lt;IUnknown&gt; spUnk;</code></div>
+<div class="line"><code class="plain">CComPtr&lt;IDualDBConnect&gt; spDBConn;</code></div>
+<div class="line"><code class="plain">hRes = spUnk.CoCreateInstance(L</code><code class="string">"DualDBConnect.Ado.1"</code><code class="plain">); </code><code class="comments">// 创建IUnknown</code></div>
+<div class="line"><code class="keyword">if</code><code class="plain"> (FAILED(hRes))</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ::MessageBox(NULL, _T(</code><code class="string">"Error"</code><code class="plain">), _T(</code><code class="string">"Title"</code><code class="plain">), MB_OK);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"><code class="plain">hRes = spUnk-&gt;QueryInterface(&amp;spDBConn); </code><code class="comments">// 寻找IDualDBConnect</code></div>
+<div class="line"><code class="keyword">if</code><code class="plain"> (FAILED(hRes))</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ::MessageBox(NULL, _T(</code><code class="string">"Error"</code><code class="plain">), _T(</code><code class="string">"Title"</code><code class="plain">), MB_OK);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"><code class="plain">spDBConn-&gt;Open(); </code><code class="comments">// 调用</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791277/image2021-10-10_0-27-15.png" alt="images/download/attachments/21791277/image2021-10-10_0-27-15.png"   />
+    </p>
+<p   
+>我们也可以使用CComQIPtr，这个智能指针可以直接赋值而不需要使用QueryInterface方法：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">HRESULT hRes;</code></div>
+<div class="line"><code class="plain">CComPtr&lt;IUnknown&gt; spUnk;</code></div>
+<div class="line"><code class="plain">CComQIPtr&lt;IDualDBConnect&gt; spDBConn;</code></div>
+<div class="line"><code class="plain">hRes = spUnk.CoCreateInstance(L</code><code class="string">"DualDBConnect.Ado.1"</code><code class="plain">);</code></div>
+<div class="line"><code class="keyword">if</code><code class="plain"> (FAILED(hRes))</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ::MessageBox(NULL, _T(</code><code class="string">"Error"</code><code class="plain">), _T(</code><code class="string">"Title"</code><code class="plain">), MB_OK);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"><code class="plain">spDBConn = spUnk;</code></div>
+<div class="line"><code class="keyword">if</code><code class="plain"> (!spDBConn)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ::MessageBox(NULL, _T(</code><code class="string">"Error"</code><code class="plain">), _T(</code><code class="string">"Title"</code><code class="plain">), MB_OK);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"><code class="plain">spDBConn-&gt;Open();</code></div>
+</div>
+    </div>
+<p   
+>需要注意CComQIPtr不能定义IUnknown指针，所以只需要修改spDBConn为CComQIPtr即可。</p>
+<p   
+>同样你可以简化这种写法，直接使用接口的IID即可：</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// MIDL_DEFINE_GUID(IID, IID_IDualDBConnect,0x8D7C23E2,0xEDE3,0x4E10,0x96,0x6F,0x2D,0x56,0x2C,0x93,0xD1,0xFA);</code></div>
+<div class="line"><code class="comments">// 将这个转为IID格式即可</code></div>
+<div class="line"><code class="plain">IID IID_IDualDBConnect = { </code><code class="value">0x8D7C23E2</code><code class="plain">, </code><code class="value">0xEDE3</code><code class="plain">, </code><code class="value">0x4E10</code><code class="plain">, { </code><code class="value">0x96</code><code class="plain">, </code><code class="value">0x6F</code><code class="plain">, </code><code class="value">0x2D</code><code class="plain">, </code><code class="value">0x56</code><code class="plain">, </code><code class="value">0x2C</code><code class="plain">, </code><code class="value">0x93</code><code class="plain">, </code><code class="value">0xD1</code><code class="plain">, </code><code class="value">0xFA</code><code class="plain"> } };</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HRESULT hRes;</code></div>
+<div class="line"><code class="plain">CComQIPtr&lt;IDualDBConnect, &amp;IID_IDualDBConnect&gt; spDBConn;</code></div>
+<div class="line"><code class="plain">hRes = spDBConn.CoCreateInstance(L</code><code class="string">"DualDBConnect.Ado.1"</code><code class="plain">);</code></div>
+<div class="line"><code class="keyword">if</code><code class="plain"> (FAILED(hRes))</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ::MessageBox(NULL, _T(</code><code class="string">"Error"</code><code class="plain">), _T(</code><code class="string">"Title"</code><code class="plain">), MB_OK);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"><code class="plain">spDBConn-&gt;Open();</code></div>
+</div>
+    </div>
+    </div>
+    </div>
+    </div>
+        </div>
+
+    </article>
+
+
+            <nav id="ht-post-nav">
+                <a href="STL.html" class="ht-post-nav-prev">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-prev" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-45.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>STL</span>
+        </a>
+                <a href="QT%E5%9F%BA%E7%A1%80.html" class="ht-post-nav-next">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-next" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-225.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>QT&#22522;&#30784;</span>
+        </a>
+    </nav>    
+            
+    <footer id="ht-footer">
+    <a href="#" id="ht-jump-top" class="sp-aui-icon-small sp-aui-iconfont-arrows-up"></a>
+</footer></div>
+
+<div>
+    <div id="ht-mq-detect"></div>
+</div>
+
+    <script src="js/lunr.js"></script>
+    <script src="js/lunr-extras.js"></script>
+    <script src="assets/js/scroll-search.js"></script>
+
+    <script src="assets/js/expand-macro.js"></script>
+</body>
+</html>

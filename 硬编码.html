@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>&#30828;&#32534;&#30721; - &#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</title>
+
+    
+    <link rel="stylesheet" href="assets/css/expand-macro.css">
+
+            <meta name="scroll-content-language-key" content="">
+    
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/translate.js"></script>
+
+
+<script type="text/javascript" src="assets/js/scroll-tree.js"></script>
+
+<script type="text/javascript" src="assets/js/theme.main.js"></script>
+
+    <script type="text/javascript" src="assets/js/iframeResizer.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/content-style.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+
+<link rel="stylesheet" href="assets/css/theme.main.css">
+<link rel="stylesheet" href="assets/css/theme.colors.css">
+
+            <!-- ES5 support for older browsers, needed by lunr -->
+        <script src="js/augment.js"></script>
+        <script id="worker" type="javascript/worker">
+
+        startIndex = function() {
+            idx = lunr.Index.load(lunrIndex);
+            idx.pipeline.remove(lunr.stopWordFilter);
+            postMessage({type: "setup-complete"});
+        }
+
+        onmessage = function (event) {
+            var message = event.data;
+
+            if ((message.type === 'setup') && message.baseUrl) {
+                var url = message.baseUrl;
+                importScripts(url + 'js/lunr.js');
+                importScripts(url + 'js/lunr-extras.js');
+                importScripts(url + 'js/lunr-index.js');
+                importScripts(url + 'js/lunr-data.js');
+                startIndex();
+            }
+
+            if (idx && (message.type === 'search-request') && message.query) {
+                var searchWord = message.query;
+                var results = idx.search(searchWord).map(function (result) {
+                    return lunrData.filter(function (d) {
+                        return d.id === parseInt(result.ref, 10)
+                    })[0]
+                });
+                postMessage({type: 'search-results', results: results, query: searchWord, queryId: message.queryId});
+            }
+        }
+
+    </script>
+    </head>
+
+<body pageid="8684305">
+
+<div id="ht-loader">
+    <noscript>
+        <p style="width: 100%; text-align:center; position: absolute; margin-top: 200px;">This content cannot be displayed without JavaScript.<br>Please enable JavaScript and reload the page.</p>
+    </noscript>
+</div>
+
+<div>
+   	<header id="ht-headerbar">
+    <div class="ht-headerbar-left">
+        <a href="" id="ht-menu-toggle" class="sp-aui-icon-small sp-aui-iconfont-appswitcher"></a>
+    </div>
+    <div class="ht-headerbar-right">
+            <div class="sp-aui-icon-small ht-search-index-loader ht-header-icon"></div>
+
+        <div id="ht-search">
+            <div class="ht-search-input" style="display: none;">
+              	<a href="#" class="sp-aui-icon-small sp-aui-iconfont-remove ht-search-clear"></a>
+
+                <form action="#" method="GET" id="search">
+                    <input class="search-input" type="text" placeholder="Search" tabindex="-1" autocomplete="off" name="q" value="">
+                    <input type="hidden" name="max" value="15" />
+                    <input type="submit" style="display:none" tabindex="-4"/>
+                </form>
+
+                <a href="#" id="ht-search-button" class="ht-header-icon ht-header-icon-svg">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path d="M29.572,28.802 L28.801,29.571 C28.515,29.857 28.187,30 27.816,30 C27.445,30 27.116,29.857 26.831,29.571 L21.392,24.134 C20.193,24.762 18.908,25.076 17.538,25.076 C15.396,25.076 13.605,24.348 12.163,22.892 C10.721,21.436 10,19.651 10,17.538 C10,15.397 10.721,13.605 12.163,12.163 C13.605,10.721 15.396,10 17.538,10 C19.651,10 21.434,10.721 22.89,12.163 C24.347,13.605 25.075,15.397 25.075,17.538 C25.075,18.937 24.761,20.222 24.132,21.393 L29.572,26.832 C29.857,27.118 30,27.446 30,27.817 C30,28.188 29.857,28.517 29.572,28.802 L29.572,28.802 Z M13.662,21.414 C14.732,22.485 16.024,23.02 17.538,23.02 C19.051,23.02 20.343,22.485 21.413,21.414 C22.484,20.344 23.019,19.052 23.019,17.538 C23.019,16.025 22.484,14.733 21.413,13.662 C20.343,12.592 19.051,12.056 17.538,12.056 C16.024,12.056 14.732,12.592 13.662,13.662 C12.591,14.733 12.056,16.025 12.056,17.538 C12.056,19.052 12.591,20.344 13.662,21.414 L13.662,21.414 Z"></path>
+                        </g>
+                    </svg>
+              	</a>
+
+                <div class="ht-search-dropdown ht-dropdown">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>   	<aside id="ht-sidebar">
+    <div class="ht-sidebar-content">
+        <div class="ht-sidebar-content-scroll-container">
+            <header class="ht-sidebar-header">
+                <h1 class="ht-logo">
+                    <span class="ht-logo-label">BinaryLearning</span>
+                    <img class="space-logo" src="global.logo" />
+                </h1>
+                <a href="Binary-Learning.html" class="ht-space-link">
+                    <h2>&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</h2>
+                </a>
+                <p><br>ᴀᴜᴛʜᴏʀ: ᴋᴇʏ<br><br>不积跬步，无以至千里；<br>不积小流，无以成江海。</p>
+            </header>
+                            <iframe id="ht-nav" src="toc.html?pageId=21791281"></iframe>
+                <script>
+                    $('iframe#ht-nav').iFrameResize(
+                            { 'log': true, 'autoResize': true, 'heightCalculationMethod': 'lowestElement', 'checkOrigin': false });
+                </script>
+                    </div>
+    </div>
+
+</aside></div>
+
+<div id="ht-wrap-container">
+
+            
+    <div id="ht-sidebar-dragbar">
+    <div class="ht-sidebar-drag-handle">
+        <span class="drag-handle-1"></span>
+        <span class="drag-handle-2"></span>
+        <span class="drag-handle-3"></span>
+    </div>
+</div>
+    <article id="ht-content" class="ht-content">
+        <header class="ht-content-header">
+            <div id="ht-breadcrumb">
+    <ul>
+        <li><a href="Binary-Learning.html">&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</a></li>
+                                                                                     <li><a href="%E5%88%9D%E7%BA%A7%E7%AF%87.html">&#21021;&#32423;&#31687;</a></li>
+                                                            </ul>
+</div>            <h1 id="src-21791281"> <span>&#30828;&#32534;&#30721;</span></h1>
+        </header>
+
+        <div id="main-content" class="wiki-content sp-grid-section" data-index-for-search="true">
+
+    <div class="section section-1" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeehrOe8lueggeamgui_sA">
+        <h1 class="heading "><span>&#30828;&#32534;&#30721;&#27010;&#36848;</span></h1>
+<p   
+>计算机只认识0和1，也就是二进制，任何一个可执行程序最终就是0和1组成，如果非要细分的化，可以分为两个部分：<strong class=" ">数据和指令</strong>，但是对于这两个部分没有明显的界限，如果你把某个地址给到CPU的EIP寄存器，这时候这个地址就会当成指令去执行，但是指令是有自己的格式，<strong class=" ">如果你指向的地址没有按照指令的格式来，就会执行出错，换句话说，如果你指向的地址是一段数据，但是这个数据格式也是按照指令格式的，那么也就会去执行</strong>。</p>
+<p   
+>指令的格式取决于你的CPU类型：X86、X64、Arm...而所谓的<strong class=" ">硬编码就是机器码、指令</strong>，本章节主要讲解的格式就是<strong class=" ">X86的指令格式</strong>。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-25_22-43-36.png" alt="images/download/attachments/21791281/image2021-10-25_22-43-36.png"   />
+    </p>
+<p   
+>如下图所示，是两个软件中打开着某个可执行文件（左 DTDebug，右 IDA），我们可以看见用红色方框，标记的部分就是硬编码，其右边是汇编指令，但实际上你所看见的这些汇编指令都是这些软件的反汇编引擎帮你<strong class=" ">从硬编码转换而来的</strong>（可执行文件并不会有这些东西，都是0和1）。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-25_23-11-57.png" alt="images/download/attachments/21791281/image2021-10-25_23-11-57.png"   />
+    </p>
+<p   
+>所有与计算机底层相关的行业都需要深入学习、了解硬编码，例如病毒行业的<strong class=" ">ShellCode</strong>，反病毒行业的<strong class=" ">特征码</strong>，加密与破解行业的<strong class=" ">指令壳、VMP</strong>，外挂行业的<strong class=" ">HOOK</strong>以及反外挂行业的<strong class=" ">提串</strong>都离不开硬编码的学习。</p>
+    </div>
+    <div class="section section-1" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeWJjee8gOaMh-S7pA">
+        <h1 class="heading "><span>&#21069;&#32512;&#25351;&#20196;</span></h1>
+<p   
+>如下图所示就是硬编码的结构，其有6个部分，我们现在所要了解的就是前缀指令，也就是第一部分。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-25_22-43-36.png" alt="images/download/attachments/21791281/image2021-10-25_22-43-36.png"   />
+    </p>
+<p   
+>我们可以在DTDebug中找到前缀指令，如下图所示在硬编码的区域在前缀指令之后<strong class=" ">有一个&quot;:&quot;冒号</strong>，这是为了方便使用者使用：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-30_14-17-46.png" alt="images/download/attachments/21791281/image2021-10-30_14-17-46.png"   />
+    </p>
+    <div class="section section-2" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeWJjee8gOaMh-S7pOWIhue7hA">
+        <h2 class="heading "><span>&#21069;&#32512;&#25351;&#20196;&#20998;&#32452;</span></h2>
+<p   
+>上文中我们了解到硬编码的结构，在结构图中第一部分为前缀指令，前缀指令下面有一个描述是<strong class=" ">&ldquo;最多有四个前缀，每个前缀只能有1个字节&rdquo;（并且途中表示前缀指令是可选的，所以前缀指令最少占0字节，最多占4字节）</strong>，这也就表示这前缀指令是有分组的，<strong class=" ">也就是四组，在前缀指令中每组只能出现一个</strong>，分组如下所示：</p>
+<ul class=" "><li class=" "><p   
+>LOCK和REPEAT前缀指令：</p>
+<ol class=" "><li class=" "><p   
+>LOCK(<strong class=" ">硬编码：</strong>F0)：LOCK是用来<strong class=" ">锁地址总线</strong>，例如01002891这个地址开头是LOCK指令，当前地址在<strong class=" ">多核情况</strong>下，只能有一个核CPU去读这个地址，其他核CPU是可以不读取的；</p>
+</li><li class=" "><p   
+>REPNE/REPNZ(<strong class=" ">硬编码：</strong>F2)：<strong class=" ">REP*</strong>就是我们之前汇编所学过的重复指令，在这里的NE或者NZ表示根据EFLAG标志寄存器ZF位为0的时候执行；</p>
+</li><li class=" "><p   
+>REP/REPZ(<strong class=" ">硬编码：</strong>F3)；重复指令，在这里Z表示根据EFLAG标志寄存器ZF位为1的时候执行。</p>
+</li></ol></li><li class=" "><p   
+>段前缀指令</p>
+<ul class=" "><li class=" "><p   
+>这里的段实际上表示着<strong class=" ">段寄存器</strong>，如下英文字母都表示是寄存器：</p>
+<ol class=" "><li class=" "><p   
+>CS(<strong class=" ">硬编码：</strong>2E)</p>
+</li><li class=" "><p   
+>SS(<strong class=" ">硬编码：</strong>36)</p>
+</li><li class=" "><p   
+>DS(<strong class=" ">硬编码：</strong>3E)</p>
+</li><li class=" "><p   
+>ES(<strong class=" ">硬编码：</strong>26)</p>
+</li><li class=" "><p   
+>FS(<strong class=" ">硬编码：</strong>64)</p>
+</li><li class=" "><p   
+>GS(<strong class=" ">硬编码：</strong>65)</p>
+</li></ol></li></ul></li></ul><ul class=" "><li class=" "><ul class=" "><li class=" "><p   
+>如下图所示为DTDebug中的段寄存器位置：</p>
+</li></ul></li></ul><p   style="margin-left:90px;"
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-30_15-46-35.png" alt="images/download/attachments/21791281/image2021-10-30_15-46-35.png"   />
+    </p>
+<ol class=" "><li class=" "><ul class=" "><li class=" "><p   
+>默认情况下你要使用段寄存器的地址不加段前缀指令时都为DS段寄存器的地址：</p>
+</li></ul></li></ol><p   style="margin-left:90px;"
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-30_15-51-4.png" alt="images/download/attachments/21791281/image2021-10-30_15-51-4.png"   />
+    </p>
+<ol class=" "><li class=" "><ul class=" "><li class=" "><p   
+>如果你想使用其他段寄存器就可以在这段硬编码之前加入对应段前缀指令（在DTDebug中选中需要修改的然后按快捷键<strong class=" ">Ctrl+E</strong>进行修改）：</p>
+</li></ul></li></ol><p   style="margin-left:90px;"
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-30_15-55-56.png" alt="images/download/attachments/21791281/image2021-10-30_15-55-56.png"   />
+    </p>
+<ul class=" "><li class=" "><p   
+>操作数宽度前缀指令，<strong class=" ">硬编码：</strong>66，其是用来改变操作数的宽度，这种改变是双向的，例如你当前操作数的宽度是32位的，当你在硬编码之前加上66，则操作数的宽度变成16位，反之如果你当前操作数的宽度是16位的，加上之后就会变成32位。</p>
+<ul class=" "><li class=" "><p   
+>例如在如下的程序中有一个硬编码55，对应的汇编就是PUSH EBP，这个EBP的宽度是32位的，<strong class=" ">这里的宽度之所以是32位是因为当前CPU的模式是32位的</strong>，想要知道当前CPU模式就需要涉及段寄存器的知识，这里我们简单了解下（后续课程深入了解），在段寄存器CS中有一个属性位称之为DB位，当DB位为1的时候当前CPU处于32位模式，为0的时候就表示当前CPU处于16位模式，所以在这里是32位的模式操作数也就是32为宽度。</p>
+</li></ul></li></ul><p   style="margin-left:90px;"
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-30_16-17-46.png" alt="images/download/attachments/21791281/image2021-10-30_16-17-46.png"   />
+    </p>
+<ul class=" "><li class=" "><ul class=" "><li class=" "><p   
+>那如果你在32位的模式下去使用16位的寄存器，就可以在硬编码之前加上66:</p>
+</li></ul></li></ul><p   style="margin-left:90px;"
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-30_16-20-23.png" alt="images/download/attachments/21791281/image2021-10-30_16-20-23.png"   />
+    </p>
+<ul class=" "><li class=" "><p   
+>地址宽度前缀指令，<strong class=" ">硬编码：</strong>67，其用来改变地址宽度，你可以与操作数宽度前缀指令一样去理解（<strong class=" ">双向改变</strong>），例如在32位模式下寻址默认是32位的地址宽度，但是当你在硬编码之前加上67之后，寻址就按照16位的地址宽度进行了：</p>
+</li></ul><p   style="margin-left:30px;"
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-30_16-25-57.png" alt="images/download/attachments/21791281/image2021-10-30_16-25-57.png"   />
+    </p>
+<p   
+><strong class=" ">注意</strong>：前缀指令使用的时候是没有顺序的。</p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeWumumVv-aMh-S7pOS4juWPmOmVv-aMh-S7pA">
+        <h1 class="heading "><span>&#23450;&#38271;&#25351;&#20196;&#19982;&#21464;&#38271;&#25351;&#20196;</span></h1>
+<p   
+>如下图是硬编码的结构，第二部分的<strong class=" ">Opcode是整个指令的灵魂</strong>，硬编码结构中的任何部分都可以没有，但是Opcode是必须要有的。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-25_22-43-36.png" alt="images/download/attachments/21791281/image2021-10-25_22-43-36.png"   />
+    </p>
+<p   
+>Opcode最少1个字节，最多3个字节；如下图我们可以看见硬编码排列是不整齐的，有的一行是1个字节，有的则是2个、5个字节，<strong class=" ">Opcode、ModR/M、SIB这三个组合在一块就可以决定一行指令的宽度（抛开前缀指令）</strong>，后面的Displacement、Immediate就是配角，当前面的三个确定了，这两个也就确定了。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-25_23-11-57.png" alt="images/download/attachments/21791281/image2021-10-25_23-11-57.png"   />
+    </p>
+<p   
+><strong class=" ">Opcode、ModR/M、SIB</strong>之间的关系是这样的：Opcode决定有没有ModR/M，ModR/M决定有没有SIB。</p>
+    <div class="section section-2" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeS7gOS5iOaYr-WumumVv-OAgeWPmOmVv-aMh-S7pA">
+        <h2 class="heading "><span>&#20160;&#20040;&#26159;&#23450;&#38271;&#12289;&#21464;&#38271;&#25351;&#20196;</span></h2>
+<p   
+>如下图所示50、52之类的硬编码实际上就是<strong class=" ">定长指令</strong>，但并不表示定长指令就只有一个字节；同样，如00D4、0034C3之类的硬编码就是<strong class=" ">变长指令</strong>。</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_12-57-34.png" alt="images/download/attachments/21791281/image2021-10-31_12-57-34.png"   />
+    </p>
+<p   
+>简而言之，<strong class=" ">定长指令</strong>可以直接通过Opcode确定硬编码长度，<strong class=" ">变长指令</strong>就无法通过Opcode确定硬编码长度。</p>
+    </div>
+    <div class="section section-2" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeWmguS9leWMuuWIhuaMh-S7pOaYr-WumumVv-aIluWPmOmVvw">
+        <h2 class="heading "><span>&#22914;&#20309;&#21306;&#20998;&#25351;&#20196;&#26159;&#23450;&#38271;&#25110;&#21464;&#38271;</span></h2>
+<p   
+>如何区分指令是定长或变长，这需要去根据官方的文档来看：</p>
+<p   
+><a  class="confluence-embedded-file" href="attachments_21792842_1_Volume_2_325383_NoRestriction.pdf"><img    src="images/rest/documentConversion/latest/conversion/thumbnail/21792842/1.jpg" alt="images/rest/documentConversion/latest/conversion/thumbnail/21792842/1.jpg"  height="250" />
+</a></p>
+<p   
+>如下图所示展开到「A.3 ONE, TWO, AND THREE-BYTE OPCODE MAPS」，向下拉就可以看到一张表，这张表是1个字节的Opcode的对应表，但实际上其他字节的Opcode就是通过这张表进行扩展的，所以这张表就是主表，也是所有x86硬编码中最重要的一张表（<strong class=" ">这张图中的表是不完整的，向下拉还有一张表，两张表拼在一块才是完整的</strong>）：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_13-7-46.png" alt="images/download/attachments/21791281/image2021-10-31_13-7-46.png"   />
+    </p>
+<p   
+>通过这张表，我们可以直接看到之前举例的定长指令50就正是对应着PUSH EAX，举一反三，51就是PUSH ECX...，图中的<strong class=" ">rAX表示着这里可以是64位的RAX（64位模式下才有）、32位的EAX、16位的AX</strong>，而<strong class=" ">eAX则表示这里可以是32位的EAX、16位的AX（默认取决于你的CPU运行模式）</strong>：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_13-13-59.png" alt="images/download/attachments/21791281/image2021-10-31_13-13-59.png"   />
+    </p>
+<p   
+>但是我们之前举例的变长指令00却让有点让人摸不着头脑：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_13-15-28.png" alt="images/download/attachments/21791281/image2021-10-31_13-15-28.png"   />
+    </p>
+<p   
+>这里我们知道对应的汇编代码是ADD，但是表格中的Eb,Gb却不清楚是什么；实际上这是Intel定义的一种Zz表示法，第一个字母为大写，第二个字母为小写。</p>
+<p   
+>在文档的「A.2.1 Codes for Addressing Method」、「A.2.2 Codes for Operand Type」中有解释每个字母的含义，</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_13-28-54.png" alt="images/download/attachments/21791281/image2021-10-31_13-28-54.png"   />
+    </p>
+<p   
+>结合内容，再根据之前知道的Opcode决定有没有ModR/M，返过来一推，<strong class=" ">Opcode后面有ModR/M则表示这是一个变长指令，没有则是一个定长指令</strong>，也就是说操作数只要存在Ex或Gx的就为定长指令，没有的则为定长指令。</p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791281_safe-id-aWQt56Gs57yW56CBLee7j-WFuOWumumVv-aMh-S7pA">
+        <h1 class="heading "><span>&#32463;&#20856;&#23450;&#38271;&#25351;&#20196;</span></h1>
+<p   
+>经典定长指令，就是我们以后会经常见到、使用的定长指令；<strong class=" ">注意以下都是以x86环境去讲解，在实际的硬编码对应的汇编指令中其他环境对应的指令并不是这些</strong>。</p>
+    <div class="section section-2" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeS_ruaUuUVSWA">
+        <h2 class="heading "><span>&#20462;&#25913;ERX</span></h2>
+<p   
+>标题中的ERX就表示EAX、ECX、EDX等等32位的寄存器。</p>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLVBVU0gvUE9Q">
+        <h3 class="heading "><span>PUSH/POP</span></h3>
+<p   
+>PUSH：压入栈；POP：推出堆。</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>定长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x50</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUSH EAX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x51</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUSH ECX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x52</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUSH EDX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x53</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUSH EBX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x54</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUSH ESP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x55</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUSH EBP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x56</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUSH ESI</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x57</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUSH EDI</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x58</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>POP EAX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x59</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>POP ECX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x5A</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>POP EDX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x5B</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>POP EBX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x5C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>POP ESP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x5D</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>POP EBP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x5E</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>POP ESI</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x5F</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>POP EDI</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLUlOQy9ERUM">
+        <h3 class="heading "><span>INC/DEC</span></h3>
+<p   
+>INC：加1；DEC：减1。</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>定长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x40</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>INC EAX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x41</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>INC ECX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x42</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>INC EDX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x43</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>INC EBX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x44</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>INC ESP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x45</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>INC EBP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x46</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>INC ESI</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x47</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>INC EDI</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x48</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DEC EAX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x49</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DEC ECX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x4A</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DEC EDX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x4B</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DEC EBX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x4C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DEC ESP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x4D</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DEC EBP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x4E</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DEC ESI</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x4F</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DEC EDI</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLU1PVlJiLEli">
+        <h3 class="heading "><span>MOV Rb, Ib</span></h3>
+<p   
+>MOV：数据传送。</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>定长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV AL, Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV CL, Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB2</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV DL, Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB3</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV BL, Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB4</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV AH, Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB5</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV CH, Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB6</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV DH, Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB7</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV BH, Ib</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>标题里的Rb表示着8位寄存器，Ib表示着是8位立即数，这些都可以通过之前的PDF文档查阅得知（1字节等于8位）：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_22-15-11.png" alt="images/download/attachments/21791281/image2021-10-31_22-15-11.png"   />
+    </p>
+<p   
+>在官方的表格中也可以很直观的看见：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_22-17-6.png" alt="images/download/attachments/21791281/image2021-10-31_22-17-6.png"   />
+MOV ERX, Id</p>
+<p   
+>MOV：数据传送。</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>定长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB8</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV EAX, Id</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xB9</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV ECX, Id</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xBA</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV EDX, Id</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xBB</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV EBX, Id</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xBC</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV ESP, Id</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xBD</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV EBP, Id</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xBE</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV ESI, Id</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xBF</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV EDI, Id</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>标题里的Id，I我们都知道是立即数了，再来看一下官方文档的d：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_22-24-34.png" alt="images/download/attachments/21791281/image2021-10-31_22-24-34.png"   />
+    </p>
+<p   
+>也就表示这里的Id是32位的立即数，其实你也可以不用看官方的释义，我们可以这样推出：首先这是一个定长指令，长度是固定的，其次这里的ERX就表示着32位寄存器，由此可以得出后面的立即数是必须是固定的长度，所以只能是32位的立即数。</p>
+<p   
+>需要注意的是我们当前环境是x86的所以用Id来代替立即数的表示，在实际表格中立即数是由Iv来表示的：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_22-34-4.png" alt="images/download/attachments/21791281/image2021-10-31_22-34-4.png"   />
+    </p>
+<p   
+>这是由于寄存器是rAX，在64位模式下有三种表达方式，所以Iv表示的立即数的大小是取决于操作数的属性的：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-10-31_22-37-51.png" alt="images/download/attachments/21791281/image2021-10-31_22-37-51.png"   />
+    </p>
+    </div>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLVhDSEdFQVgsRVJY">
+        <h3 class="heading "><span>XCHG EAX, ERX</span></h3>
+<p   
+>XCHG：内容交换。</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>定长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x90</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+><strong class=" "><del class=" ">XCHG EAX, EAX</del> = NOP</strong></p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x91</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>XCHG EAX, ECX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x92</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>XCHG EAX, EDX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x93</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>XCHG EAX, EBX</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x94</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>XCHG EAX, ESP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x95</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>XCHG EAX, EBP</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x96</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>XCHG EAX, ESI</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x97</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>XCHG EAX, EDI</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>XCHG是用来做内容交换的，0x90对应着<strong class=" ">XCHG EAX, EAX</strong>，这就没有任何意义了，所以Intel给其定义了一个新的指令叫<strong class=" ">NOP</strong>，这个我们称之为无效指令，也就表示这个指令是没有任何意义的。</p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeS_ruaUuUVJUA">
+        <h2 class="heading "><span>&#20462;&#25913;EIP</span></h2>
+<p   
+>我们在学习会变的时候都知道无法通过MOV、ADD之类的指令去修改EIP，所以要修改EIP需要借助JCC、CALL、JMP之类的指令进行，接下来我们学习的硬编码就跟这些指令有关的。</p>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLTB4NzAtMHg3Rg">
+        <h3 class="heading "><span>0x70 - 0x7F</span></h3>
+<p   
+>条件跳转，后跟一个字节立即数的偏移(有符号)，共两个字节。 如果条件成立，跳转到<strong class=" ">当前指令地址 + 当前指令长度 + Ib</strong> ，向下跳的范围是0x0 - 0x7f，向上跳的范围是0x80 - 0xFF。</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>定长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x70</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JO</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x71</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNO</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x72</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JB/JNAE/JC</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x73</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNB/JAE/JNC</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x74</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JZ/JE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x75</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNZ/JNE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x76</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JBE/JNA</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x77</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNBE/JA</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x78</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JS</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x79</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNS</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x7A</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JP/JPE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x7B</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNP/JPO</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x7C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JL/JNGE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x7D</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNL/JGE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x7E</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JLE/JNG</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x7F</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNLE/JG</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLTB4MEYweDgwLTB4MEYweDhG">
+        <h3 class="heading "><span>0x0F 0x80 - 0x0F 0x8F</span></h3>
+<p   
+>条件跳转，后跟四个字节立即数的偏移(有符号)，共五个字节。如果条件成立，跳转到<strong class=" ">当前指令地址 + 当前指令长度 + Id</strong>，向下跳的范围是0x0 - 0x7FFFFFFFF，向上跳的范围是：0x80000000 - 0xFFFFFFFF。</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>定长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x80</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JO</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x81</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNO</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x82</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JB/JNAE/JC</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x83</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNB/JAE/JNC</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x84</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JZ/JE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x85</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNZ/JNE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x86</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JBE/JNA</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x87</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNBE/JA</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x88</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JS</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x89</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNS</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x8A</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JP/JPE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x8B</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNP/JPO</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x8C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JL/JNGE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x8D</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNL/JGE</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x8E</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JLE/JNG</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0F 0x8F</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JNLE/JG</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLTB4RTAtMHhFOQ">
+        <h3 class="heading "><span>0xE0 - 0xE9</span></h3>
+<p   
+>如下表格中的J就表示偏移量，宽度根据后面b或者d决定（具体可以看文档释义）。</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>定长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>宽度</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>作用</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xE0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>LOOPNE/LOOPNZ Ib (Jb)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共2字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>先进行 ECX = ECX - 1 当 ZF = 0 &amp;&amp; ECX!=0 时跳转到当前指令地址 + 当前指令长度 + Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0XE1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>LOOPE/LOOPZ Ib (Jb)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共2字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>先进行 ECX = ECX - 1 当 ZF = 1 &amp;&amp; ECX != 0 时跳转到当前指令地址 + 当前指令长度 + Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0XE2</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>LOOP Ib (Jb)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共2字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>先进行 ECX = ECX - 1 当 ECX!=0 时跳转到当前指令地址 + 当前指令长度 + Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0XE3</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JrCXZ Ib (Jb) (在32位模式中rCX为ECX)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共2字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>当 ECX = 0 时跳转到当前指令地址 + 当前指令长度 + Ib(自己控制步长)</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xE8</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>CALL Id (Jd)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共5字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>CALL指令的下一条指令地址入栈后，跳转到当前指令地址 + 当前指令长度 + Id</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xE9</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JMP Id (Jd)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共5字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>跳转到当前指令地址 + 当前指令长度 + Id</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeWFtuS7luaMh-S7pA">
+        <h3 class="heading "><span>&#20854;&#20182;&#25351;&#20196;</span></h3>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>定长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>宽度</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>作用</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xEA</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JMP Ap （Ap：六字节长度的直接地址）</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共7字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JMP CS:Id 将Ap中的高2位赋值给CS，低4位直接赋值给EIP， 即跳转</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xEB</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>JMP Ib (Jb)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共1字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>跳转到当前指令地址 + 当前指令长度 + Ib</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xC3</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RET</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共1字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>EIP出栈</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xC2</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RET Iw</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共3字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>EIP出栈后，进行 ESP = ESP + Iw</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0XCB</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RETF （return far）</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共1字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>出栈8个字节，低4个字节赋值给EIP，高4个字节中低2位赋值给CS</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xCA</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RETF Iw</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>共3字节</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>出栈8个字节，低4个字节赋值给EIP，高4个字节中低2位赋值给CS后，ESP = ESP + Iw</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-21791281_safe-id-aWQt56Gs57yW56CBLee7j-WFuOWPmOmVv-aMh-S7pA">
+        <h1 class="heading "><span>&#32463;&#20856;&#21464;&#38271;&#25351;&#20196;</span></h1>
+    <div class="section section-2" id="src-21791281_safe-id-aWQt56Gs57yW56CBLU1vZFIvTQ">
+        <h2 class="heading "><span>ModR/M</span></h2>
+<p   
+><strong class=" ">当指令中出现内存操作对象的时候，就需要在操作码后面附加一个字节来进行补充说明</strong>，这个字节被称为ModR/M，其只有一个字节宽度，但如果你看PDF官方文档中那个表的话就会发现其有两个参数，这也正是它复杂的地方。</p>
+<p   
+>如下所示就几个经典的变长指令：</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>变长指令</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>汇编代码</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x88</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV Eb, Gb</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x89</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV Ev, Gv</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x8A</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV Gb, Eb</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x8B</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>MOV Gv, Ev</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>指令中参数的释义如下所示：</p>
+    <div  class="confbox admonition admonition-info">
+                            <span class="admonition-icon confluence-information-macro-icon"></span>
+                <div class="admonition-body">
+<p   
+>G：通用寄存器</p>
+<p   
+>E：寄存器/内存</p>
+<p   
+>b：字节</p>
+<p   
+>v：字、双字或四字</p>
+        </div>
+    </div>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeeQhuino01vZFIvTQ">
+        <h3 class="heading "><span>&#29702;&#35299;ModR/M</span></h3>
+<p   
+>ModR/M这个字节的8个位被拆分成了3个部分：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-11-1_21-36-32.png" alt="images/download/attachments/21791281/image2021-11-1_21-36-32.png"   />
+    </p>
+<p   
+>其中，Reg/Opcode(第3、4、5位，共3个位)描述指令中的G部分，即寄存器，如下就是这三个位对应寄存器的表示：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-11-1_21-43-22.png" alt="images/download/attachments/21791281/image2021-11-1_21-43-22.png"   />
+    </p>
+<p   
+>Mod(第6、7位，共2个位)和R/M(第0、1、2位，共3个位)共同描述指令中的E部分，即寄存器/内存。</p>
+<p   
+>那么，这8个位具体是如何工作的呢，Intel操作手册给出了一张表(Table 2-2)：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-11-1_21-53-38.png" alt="images/download/attachments/21791281/image2021-11-1_21-53-38.png"   />
+    </p>
+    </div>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeaJi-WKqOino-aekOaMh-S7pA">
+        <h3 class="heading "><span>&#25163;&#21160;&#35299;&#26512;&#25351;&#20196;</span></h3>
+<p   
+>现在有一个指令为：0x88 0x01，用如上那张表和我们所学的ModR/M的知识对该指令进行一步步解析。</p>
+<p   
+>首先我们知道第一个字节是0x88，再根据官方文档知道其有Gx或Ex这样的参数，那就表示它有ModR/M这个字节，也就表示它是一个变长指令，所以Opcode和ModR/M如下所示：</p>
+    <div  class="tablewrap">
+        <table class="relative-table wrapped confluenceTable">
+                    <colgroup>
+                                    <col  width="66.2338%"/>
+                                    <col  width="33.7662%"/>
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>Opcode</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>ModR/M</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x88 - MOV Eb, Gb</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x01</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>接着我们要拆分ModR/M为三个部分，先将其转为2进制：0000 0001，然后拆分：</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="2">
+    <p   
+>Mod</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="3">
+    <p   
+>Reg/Opcode</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="3">
+    <p   
+>R/M</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>接着我们对照着表来进行解析就得出了汇编代码：MOV BYTE PTR DS:[ECX], AL</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-11-1_22-9-1.png" alt="images/download/attachments/21791281/image2021-11-1_22-9-1.png"   />
+    </p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791281_safe-id-aWQt56Gs57yW56CBLVJlZy9PcGNvZGU">
+        <h2 class="heading "><span>Reg/Opcode</span></h2>
+<p   
+>之前我们了解到ModR/M结构可以拆分为三部分，其中Reg/Opcode的描述了G的意义（通用寄存器），但其并不仅仅用来表示寄存器，有时候也可以用来表示Opcode。</p>
+<p   
+>在官方文档的Table A-2中，有0x80、0x81、0x82、0x83这几个编码没有给出具体的指令，我们可以看见在原来指令的位置变成了Immediate Grp 1(1A)：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-11-1_22-18-27.png" alt="images/download/attachments/21791281/image2021-11-1_22-18-27.png"   />
+    </p>
+<p   
+>首先这个1A我们可以查文档的Table A-1中有描述：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-11-1_22-40-34.png" alt="images/download/attachments/21791281/image2021-11-1_22-40-34.png"   />
+    </p>
+<p   
+>其表示在ModR/M字节的3、4、5位可以作为Opcode的拓宽，也就可以认为其不用来表示通用寄存器了。</p>
+<p   
+>而当你看见Immediate Grp的时候就需要带入ModR/M字节的3、4、5位去看Table A-6这张表的内容，才能知道具体的指令是什么：</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-11-1_22-42-31.png" alt="images/download/attachments/21791281/image2021-11-1_22-42-31.png"   />
+    </p>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeaJi-WKqOino-aekOaMh-S7pC4x">
+        <h3 class="heading "><span>&#25163;&#21160;&#35299;&#26512;&#25351;&#20196;</span></h3>
+<p   
+>现在有一个指令为：0x80 0x65 0x08 0xFF，用如上那张表和我们所学的ModR/M的知识对该指令进行一步步解析。</p>
+<p   
+>首先我们知道第一个字节是0x80，再根据官方文档知道其有Gx或Ex这样的参数，那就表示它有ModR/M这个字节，也就表示它是一个变长指令，所以Opcode和ModR/M如下所示：</p>
+    <div  class="tablewrap">
+        <table class="relative-table wrapped confluenceTable">
+                    <colgroup>
+                                    <col  width="66.2338%"/>
+                                    <col  width="33.7662%"/>
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>Opcode</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>ModR/M</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x80 - XXX Eb, Ib</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x65</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>接着我们要拆分ModR/M为三个部分，先将其转为2进制：0110 0101，然后拆分：</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="2">
+    <p   
+>Mod</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="3">
+    <p   
+>Reg/Opcode</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="3">
+    <p   
+>R/M</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>Mod与R/M字段查Table 2-2得到对应的结构：[EBP+DIS8(8位偏移量)]，Reg/Opcode字段根据上文所示那张表就可以得到对应的指令为：AND。</p>
+<p   
+>所以最终我们变成了这样的指令：<u class=" "><strong class=" ">AND [EBP+DIS8], Ib</strong></u>，再带入最后的两个字节（<strong class=" ">这也是最开始我们了解硬编码结构中的最后2部分</strong>）替换DIS8和Ib变成：<u class=" "><strong class=" ">AND BYTE PTR SS:[EBP+0x08], 0xFF</strong></u>。</p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-21791281_safe-id-aWQt56Gs57yW56CBLVNJQg">
+        <h2 class="heading "><span>SIB</span></h2>
+<p   
+>根据之前的了解我们可以知道ModR/M字段是用来进行内存寻址的，可当地址形如DS:[EAX + ECX*2 + 12345678]时，仅仅靠ModR/M字段，是描述不出来的，这时就在ModR/M后面增加一个SIB字节，其与ModR/M字段共同描述。</p>
+<p   
+>当你手动解析某一个指令的时候发现出现如下这三种情况，有<strong class=" ">&ldquo;[--]&rdquo;</strong>的存在就表示ModR/M字段无法描述出来这段地址，你就需要SIB字节来填充这些<strong class=" ">&ldquo;[--]&rdquo;</strong>，也就表示在ModR/M字段之后一定存在SIB。</p>
+    <div  class="tablewrap">
+        <table class="relative-table wrapped confluenceTable">
+                    <colgroup>
+                                    <col  width="30.0837%"/>
+                                    <col  width="11.2831%"/>
+                                    <col  width="18.3821%"/>
+                                    <col  width="20.9205%"/>
+                                    <col  width="19.3305%"/>
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="3">
+    <p   
+>Effetive Address</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>Mod</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>R/M</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="3">
+    <p   
+>[--][--]</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>00</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>100</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="3">
+    <p   
+>[--][--]+disp8</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>01</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>100</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="3">
+    <p   
+>[--][--]+disp32</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>10</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>100</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p  class="auto-cursor-target" 
+>SIB字节的8个位被分成了三部分：</p>
+<p  class="auto-cursor-target" 
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-11-1_23-3-58.png" alt="images/download/attachments/21791281/image2021-11-1_23-3-58.png"   />
+    </p>
+<p  class="auto-cursor-target" 
+>在例子 DS:[EAX + ECX*2 + 12345678] 中，Scale描述2的1次方，Index描述ECX, Base描述EAX，而12345678由ModR/M字段决定，所以SIB字段的描述方式为：</p>
+    <div  class="confbox admonition admonition-info">
+                            <span class="admonition-icon confluence-information-macro-icon"></span>
+                <div class="admonition-body">
+<p   
+>Base + Index * 2的Scale次方 (只能为 *1 *2 *4 *8)</p>
+        </div>
+    </div>
+<p  class="auto-cursor-target" 
+>而你要想查询三部分每个对应着什么内容就要去查看Table 2-3：</p>
+<p  class="auto-cursor-target" 
+><img  class="confluence-embedded-image"  src="images/download/attachments/21791281/image2021-11-1_23-14-2.png" alt="images/download/attachments/21791281/image2021-11-1_23-14-2.png"   />
+    </p>
+    <div class="section section-3" id="src-21791281_safe-id-aWQt56Gs57yW56CBLeaJi-WKqOino-aekOaMh-S7pC4y">
+        <h3 class="heading "><span>&#25163;&#21160;&#35299;&#26512;&#25351;&#20196;</span></h3>
+<p   
+>现在有一个指令为：0x88 0x84 0x48，其对应的Opcode、ModR/M、SIB如下：</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>Opcode</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>ModR/M</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>SIB</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x88 - MOV Eb, Gb</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x84</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x48</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>ModR/M转为二进制：1000 0100，拆分如下：</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="2">
+    <p   
+>Mod</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="3">
+    <p   
+>Reg/Opcode</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="3">
+    <p   
+>R/M</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>Mod与R/M字段查Table 2-2得到对应的结构：[--][--]+disp32，这就表示需要SIB来进行补充。</p>
+<p   
+>SIP转为二进制：0100 1000，拆分如下：</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col  width="30.0"/>
+                                    <col  width="30.0"/>
+                                    <col  width="30.0"/>
+                                    <col  width="30.0"/>
+                                    <col  width="30.0"/>
+                                    <col  width="29.0"/>
+                                    <col  width="30.0"/>
+                                    <col  width="30.0"/>
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="2">
+    <p   
+>Scale</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="3">
+    <p   
+>Index</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="3">
+    <p   
+>Base</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>接着查Table 2-3，Base对应着EAX，Base和Index就是[ECX*2]，最终得到[EAX + ECX*2]。</p>
+<p   
+>最终指令就是：<u class=" "><strong class=" ">MOV [EAX + ECX * 2 + disp32], AL</strong></u>。</p>
+    </div>
+    </div>
+    </div>
+        </div>
+
+    </article>
+
+
+            <nav id="ht-post-nav">
+                <a href="QT%E5%9F%BA%E7%A1%80.html" class="ht-post-nav-prev">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-prev" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-45.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>QT&#22522;&#30784;</span>
+        </a>
+                <a href="PE%E5%9F%BA%E7%A1%80.html" class="ht-post-nav-next">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-next" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-225.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>PE&#22522;&#30784;</span>
+        </a>
+    </nav>    
+            
+    <footer id="ht-footer">
+    <a href="#" id="ht-jump-top" class="sp-aui-icon-small sp-aui-iconfont-arrows-up"></a>
+</footer></div>
+
+<div>
+    <div id="ht-mq-detect"></div>
+</div>
+
+    <script src="js/lunr.js"></script>
+    <script src="js/lunr-extras.js"></script>
+    <script src="assets/js/scroll-search.js"></script>
+
+    <script src="assets/js/expand-macro.js"></script>
+</body>
+</html>
