@@ -4,7 +4,10 @@
 
 ## 学习顺序
 
-1. 汇编
+### 初级
+
+0. 汇编
+
 2. C
 3. C++
 4. Win32
@@ -23,3 +26,4 @@
 
 1. PDF版本：https://github.com/gh0stkey/Binary-Learning
 2. 在线版本：https://gh0st.cn/Binary-Learning/
+
