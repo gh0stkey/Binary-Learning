@@ -845,14 +845,14 @@
 </div>
     </div>
 <p   
->再拼接上指令（<strong class=" ">别忘了小端存储模式</strong>）插入即可（这里的指令进行了简化，省略了JMP跳回原OEP地址部分）：</p>
+>再拼接上指令（<strong class=" ">别忘了小端存储模式</strong>）插入即可（这里的指令进行了简化，省略了JMP跳回原AddressOfEntryPoint地址部分）：</p>
     <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
                 <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
 <div class="line"><code class="plain">6A </code><code class="value">00</code><code class="plain"> 6A </code><code class="value">00</code><code class="plain"> 6A </code><code class="value">00</code><code class="plain"> 6A </code><code class="value">00</code><code class="plain"> E8 F8 D4 D3 </code><code class="value">76</code></div>
 </div>
     </div>
 <p   
->最后我们需要修改一下OEP（AddressOfEntryPoint），这里修改也按照之前得出的指令地址去除ImageBase的值进行修改：</p>
+>最后我们需要修改一下OEP（<strong class=" ">这里的OEP是Original EntryPoint，也就是原始入口点，没有加壳以及其他修改的情况下，AddressOfEntryPoint就是OEP，但是如果存在修改/加壳的情况，AddressOfEntryPoint只能称为是EP，因为不是原始入口点，你需要自己去寻找了</strong>）这里修改也按照之前得出的指令地址去除ImageBase的值进行修改：</p>
 <p   
 ><img  class="confluence-embedded-image"  src="images/download/attachments/26902549/image2021-12-9_16-42-36.png" alt="images/download/attachments/26902549/image2021-12-9_16-42-36.png"   />
     </p>
