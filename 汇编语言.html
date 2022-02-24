@@ -1135,7 +1135,7 @@
 <p   
 >系统：Windows 7、XP</p>
 <p   
->逆向工具：<a   href="attachments_8684357_1_DTDebug.rar">DTDebug.rar</a>、Ollydebug</p>
+>逆向工具：DTDebug、Ollydebug</p>
 <p   
 ><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-26_21-28-25.png" alt="images/download/attachments/8684311/image2021-1-26_21-28-25.png"   />
     </p>
@@ -1818,7 +1818,7 @@
     <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
                 <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
 <div class="line"><code class="comments">// CALL 寄存器/内存/立即数</code></div>
-<div class="line"><code class="comments">// 含义：跟JMP指令的功能是一样的，同样也可以修改EIP的值，不同的点说，CALL指令执行后会将其下一条指令地址压入堆栈，ESP栈顶指针的值减4</code></div>
+<div class="line"><code class="comments">// 含义：跟JMP指令的功能是一样的，同样也可以修改EIP的值，不同的点是，CALL指令执行后会将其下一条指令地址压入堆栈，ESP栈顶指针的值减4</code></div>
 <div class="line"><code class="comments">// 注意：在我们使用DTDebug调试的时候，要跟进CALL指令不能使用F8要是用F7，这里涉及调试器相关的知识，暂时不深入了解</code></div>
 </div>
     </div>
@@ -1830,7 +1830,7 @@
     <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
                 <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
 <div class="line"><code class="plain">RET</code></div>
-<div class="line"><code class="comments">// 含义：将当前栈顶指针的值赋给EIP，然后让栈顶指针加4&lt;/p&gt;</code></div>
+<div class="line"><code class="comments">// 含义：将当前栈顶指针的值赋给EIP，然后让栈顶指针加4</code></div>
 </div>
     </div>
     </div>
@@ -1945,7 +1945,7 @@
 <p   
 >之前都是借用ESP去寻址确定一些参数 ，但如果存到堆栈里面的值过多，那么就得不断地调整ESP的指向，这是ESP寻址的缺点。</p>
 <p   
->那么EBP寻址的思路是什么呢？先把EBP的值保存起来 然后然后EBP指向ESP的位置，然后在原来的堆栈基础上ESP上移，重新变成一块新的堆栈；之后新的程序再使用堆栈的时候，只影响ESP但不会影响EBP，那我们寻址的时候使用EBP去寻址，EBP的位置相对固定，程序不管如何操作ESP都会不停浮动，但是EBP相对稳定。</p>
+>那么EBP寻址的思路是什么呢？先把EBP的值保存起来，然后将EBP指向ESP的位置，接着在原来的堆栈基础上将ESP上移，重新变成一块新的堆栈；之后新的程序再使用堆栈的时候，只影响ESP但不会影响EBP，那我们寻址的时候使用EBP去寻址，EBP的位置相对固定，程序不管如何操作ESP都会不停浮动，但是EBP相对稳定。</p>
 <p   
 ><img  class="confluence-embedded-image"  src="images/download/attachments/8684311/image2021-1-27_1-3-32.png" alt="images/download/attachments/8684311/image2021-1-27_1-3-32.png"   />
     </p>
@@ -2050,7 +2050,7 @@
     <div class="section section-2" id="src-8684311_safe-id-aWQt5rGH57yW6K-t6KiALUpDQw">
         <h2 class="heading "><span>JCC</span></h2>
 <p   
-><a   href="attachments_8684404_1_009_JCC.xls">JCC指令</a>与标志寄存器是挂钩的，有太多了，不需要去背诵。</p>
+>JCC指令与标志寄存器是挂钩的，有太多了，不需要去背诵。</p>
 <p   
 ></p>
 <p   
