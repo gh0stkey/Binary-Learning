@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>&#36827;&#31243;&#19982;&#32447;&#31243; - &#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</title>
+
+    
+    <link rel="stylesheet" href="assets/css/expand-macro.css">
+
+            <meta name="scroll-content-language-key" content="">
+    
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/translate.js"></script>
+
+<script type="text/javascript" src="assets/js/theme.main.js"></script>
+
+    <script type="text/javascript" src="assets/js/iframeResizer.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/content-style.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+
+<link rel="stylesheet" href="assets/css/theme.main.css">
+<link rel="stylesheet" href="assets/css/theme.colors.css">
+
+            <!-- ES5 support for older browsers, needed by lunr -->
+        <script src="js/augment.js"></script>
+        <script id="worker" type="javascript/worker">
+
+        startIndex = function() {
+            idx = lunr.Index.load(lunrIndex);
+            idx.pipeline.remove(lunr.stopWordFilter);
+            postMessage({type: "setup-complete"});
+        }
+
+        onmessage = function (event) {
+            var message = event.data;
+
+            if ((message.type === 'setup') && message.baseUrl) {
+                var url = message.baseUrl;
+                importScripts(url + 'js/lunr.js');
+                importScripts(url + 'js/lunr-extras.js');
+                importScripts(url + 'js/lunr-index.js');
+                importScripts(url + 'js/lunr-data.js');
+                startIndex();
+            }
+
+            if (idx && (message.type === 'search-request') && message.query) {
+                var searchWord = message.query;
+                var results = idx.search(searchWord).map(function (result) {
+                    return lunrData.filter(function (d) {
+                        return d.id === parseInt(result.ref, 10)
+                    })[0]
+                });
+                postMessage({type: 'search-results', results: results, query: searchWord, queryId: message.queryId});
+            }
+        }
+
+    </script>
+    </head>
+
+<body pageid="1015827">
+
+<div id="ht-loader">
+    <noscript>
+        <p style="width: 100%; text-align:center; position: absolute; margin-top: 200px;">This content cannot be displayed without JavaScript.<br>Please enable JavaScript and reload the page.</p>
+    </noscript>
+</div>
+
+<div>
+   	<header id="ht-headerbar">
+    <div class="ht-headerbar-left">
+        <a href="" id="ht-menu-toggle" class="sp-aui-icon-small sp-aui-iconfont-appswitcher"></a>
+    </div>
+    <div class="ht-headerbar-right">
+            <div class="sp-aui-icon-small ht-search-index-loader ht-header-icon"></div>
+
+        <div id="ht-search">
+            <div class="ht-search-input" style="display: none;">
+              	<a href="#" class="sp-aui-icon-small sp-aui-iconfont-remove ht-search-clear"></a>
+
+                <form action="#" method="GET" id="search">
+                    <input class="search-input" type="text" placeholder="Search" tabindex="-1" autocomplete="off" name="q" value="">
+                    <input type="hidden" name="max" value="15" />
+                    <input type="submit" style="display:none" tabindex="-4"/>
+                </form>
+
+                <a href="#" id="ht-search-button" class="ht-header-icon ht-header-icon-svg">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path d="M29.572,28.802 L28.801,29.571 C28.515,29.857 28.187,30 27.816,30 C27.445,30 27.116,29.857 26.831,29.571 L21.392,24.134 C20.193,24.762 18.908,25.076 17.538,25.076 C15.396,25.076 13.605,24.348 12.163,22.892 C10.721,21.436 10,19.651 10,17.538 C10,15.397 10.721,13.605 12.163,12.163 C13.605,10.721 15.396,10 17.538,10 C19.651,10 21.434,10.721 22.89,12.163 C24.347,13.605 25.075,15.397 25.075,17.538 C25.075,18.937 24.761,20.222 24.132,21.393 L29.572,26.832 C29.857,27.118 30,27.446 30,27.817 C30,28.188 29.857,28.517 29.572,28.802 L29.572,28.802 Z M13.662,21.414 C14.732,22.485 16.024,23.02 17.538,23.02 C19.051,23.02 20.343,22.485 21.413,21.414 C22.484,20.344 23.019,19.052 23.019,17.538 C23.019,16.025 22.484,14.733 21.413,13.662 C20.343,12.592 19.051,12.056 17.538,12.056 C16.024,12.056 14.732,12.592 13.662,13.662 C12.591,14.733 12.056,16.025 12.056,17.538 C12.056,19.052 12.591,20.344 13.662,21.414 L13.662,21.414 Z"></path>
+                        </g>
+                    </svg>
+              	</a>
+
+                <div class="ht-search-dropdown ht-dropdown">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>   	<aside id="ht-sidebar">
+    <div class="ht-sidebar-content">
+        <div class="ht-sidebar-content-scroll-container">
+            <header class="ht-sidebar-header">
+                <h1 class="ht-logo">
+                    <span class="ht-logo-label">BinaryLearning</span>
+                    <img class="space-logo" src="global.logo" />
+                </h1>
+                <a href="Binary-Learning.html" class="ht-space-link">
+                    <h2>&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</h2>
+                </a>
+                <p><br><a href="https://github.com/gh0stkey/Binary-Learning" target="_blank">ᴀᴜᴛʜᴏʀ: ᴋᴇʏ</a><br><br>不积跬步，无以至千里；<br>不积小流，无以成江海。</p>
+            </header>
+                            <iframe id="ht-nav" src="toc.html?pageId=1703937"></iframe>
+                <script>
+                    $('iframe#ht-nav').iFrameResize(
+                            { 'log': true, 'autoResize': true, 'heightCalculationMethod': 'lowestElement', 'checkOrigin': false });
+                </script>
+                    </div>
+    </div>
+
+</aside></div>
+
+<div id="ht-wrap-container">
+
+            
+    <div id="ht-sidebar-dragbar">
+    <div class="ht-sidebar-drag-handle">
+        <span class="drag-handle-1"></span>
+        <span class="drag-handle-2"></span>
+        <span class="drag-handle-3"></span>
+    </div>
+</div>
+    <article id="ht-content" class="ht-content">
+        <header class="ht-content-header">
+            <div id="ht-breadcrumb">
+    <ul>
+        <li><a href="Binary-Learning.html">&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</a></li>
+                                                                                     <li><a href="%E4%B8%AD%E7%BA%A7%E7%AF%87.html">&#20013;&#32423;&#31687;</a></li>
+                                                            </ul>
+</div>            <h1 id="src-1703937"> <span>&#36827;&#31243;&#19982;&#32447;&#31243;</span></h1>
+        </header>
+
+        <div id="main-content" class="wiki-content sp-grid-section" data-index-for-search="true">
+
+<p   
+>&#22312;&#21021;&#32423;&#29677;&#30340;&#23398;&#20064;&#21518;&#25105;&#20204;&#37117;&#20250;&#26377;&#36827;&#31243;&#12289;&#32447;&#31243;&#30340;&#27010;&#24565;&#65292;&#20174;&#25805;&#20316;&#31995;&#32479;&#30340;&#35282;&#24230;&#21435;&#30475;&#36827;&#31243;&#12289;&#32447;&#31243;&#23454;&#38469;&#19978;&#37117;&#26159;&#32467;&#26500;&#20307;&#65292;&#24403;&#21019;&#24314;&#19968;&#20010;&#36827;&#31243;&#25110;&#32447;&#31243;&#65292;&#26412;&#36136;&#19978;&#23601;&#26159;&#20998;&#37197;&#19968;&#22359;&#20869;&#23384;&#26469;&#22635;&#20805;&#23545;&#24212;&#30340;&#32467;&#26500;&#20307;&#12290;&#22240;&#27492;&#25105;&#20204;&#35201;&#25720;&#28165;&#26970;&#36827;&#31243;&#12289;&#32447;&#31243;&#30340;&#20855;&#20307;&#32454;&#33410;&#65292;&#23601;&#35201;&#23545;&#23427;&#20204;&#30340;&#32467;&#26500;&#20307;&#36275;&#22815;&#20102;&#35299;&#12290;</p>
+    <div class="section section-1" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLei_m-eoi-e7k-aehOS9kw">
+        <h1 class="heading "><span>&#36827;&#31243;&#32467;&#26500;&#20307;</span></h1>
+<p   
+>&#27599;&#20010;Windows&#36827;&#31243;&#22312;0&#29615;&#37117;&#26377;&#19968;&#20010;&#23545;&#24212;&#30340;&#32467;&#26500;&#20307;&#65306;_EPROCESS&#65292;&#35813;&#32467;&#26500;&#20307;&#21253;&#21547;&#20102;&#36827;&#31243;&#25152;&#26377;&#30340;&#37325;&#35201;&#20449;&#24687;&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#20351;&#29992;Windbg&#26469;&#26597;&#30475;&#35813;&#32467;&#26500;&#20307;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-23_15-47-42.png" alt="images/download/attachments/1703937/image2022-11-23_15-47-42.png" width="400"  />
+    </p>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLee7k-aehOS9k-aIkOWRmA">
+        <h2 class="heading "><span>&#32467;&#26500;&#20307;&#25104;&#21592;</span></h2>
+<p   
+>&#25105;&#20204;&#36890;&#36807;Windbg&#21487;&#20197;&#30475;&#21040;&#36827;&#31243;&#32467;&#26500;&#20307;_EPROCESS&#26377;&#24456;&#22810;&#20010;&#25104;&#21592;&#65292;&#30446;&#21069;&#25105;&#20204;&#21482;&#38656;&#35201;&#20102;&#35299;&#19968;&#20123;&#27604;&#36739;&#37325;&#35201;&#30340;&#25104;&#21592;&#65292;&#20854;&#20182;&#30340;&#21487;&#20197;&#31561;&#29992;&#21040;&#26102;&#20877;&#20102;&#35299;&#12290;</p>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLV9LUFJPQ0VTUw">
+        <h3 class="heading "><span>_KPROCESS</span></h3>
+<p   
+>&#36827;&#31243;&#32467;&#26500;&#20307;_EPROCESS&#30340;&#31532;&#19968;&#20010;&#25104;&#21592;&#65288;&#21363;0x0&#20559;&#31227;&#20301;&#65289;&#20063;&#26159;&#19968;&#20010;&#32467;&#26500;&#20307;_KPROCESS&#65292;&#25105;&#20204;&#20063;&#21487;&#20197;&#20351;&#29992;Windbg&#26469;&#26597;&#30475;&#19968;&#19979;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-24_10-53-30.png" alt="images/download/attachments/1703937/image2022-11-24_10-53-30.png" width="400"  />
+    </p>
+<p   
+>&#20197;&#19979;&#23601;&#26159;&#19968;&#20123;_KPROCESS&#30340;&#25104;&#21592;&#65292;&#25105;&#20204;&#21487;&#20197;&#31616;&#21333;&#20102;&#35299;&#19968;&#19979;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="relative-table wrapped confluenceTable">
+                    <colgroup>
+                                    <col  width="9.39348%"/>
+                                    <col  width="37.5739%"/>
+                                    <col  width="53.0609%"/>
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20559;&#31227;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#25104;&#21592;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20316;&#29992;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>Header (_DISPATCHER_HEADER)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#21487;&#31561;&#24453;&#23545;&#35937;&#65292;&#21487;&#20197;&#36890;&#36807;WaitForSingleObject&#20989;&#25968;&#26469;&#20351;&#29992;&#21487;&#31561;&#24453;&#23545;&#35937;&#65288;&#20363;&#22914;&#20114;&#26021;&#20307;&#12289;&#20107;&#20214;&#65289;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x18</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DirectoryTableBase ([2] Uint4B)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#39029;&#30446;&#24405;&#34920;&#22522;&#22336; &#65292;&#19968;&#20010;&#36827;&#31243;&#37117;&#26377;&#19968;&#20010;&#39029;&#30446;&#24405;&#34920;&#65292;&#22312;&#35813;&#34920;&#37324;&#35760;&#24405;&#30528;&#32447;&#24615;&#22320;&#22336;&#25152;&#24341;&#29992;&#30340;&#29289;&#29702;&#39029;&#65292;&#25152;&#20197;&#20462;&#25913;&#35813;&#25104;&#21592;&#23601;&#21487;&#20197;&#25511;&#21046;&#25972;&#20010;&#36827;&#31243;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x38</p>
+<p   
+>0x3C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>KernelTime (Uint4B)</p>
+<p   
+>UserTime (Uint4B)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#32479;&#35745;&#20449;&#24687;&#65292;&#20998;&#21035;&#35760;&#24405;&#20102;&#19968;&#20010;&#36827;&#31243;&#22312;0&#29615;&#12289;3&#29615;&#25152;&#33457;&#36153;&#30340;&#26102;&#38388;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x5C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>Affinity (Uint4B)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#35268;&#23450;&#20102;&#36827;&#31243;&#37324;&#38754;&#30340;&#25152;&#26377;&#32447;&#31243;&#21487;&#20197;&#22312;&#21738;&#20010;CPU&#19978;&#36816;&#34892;&#12290;&#22914;&#26524;&#35813;&#25104;&#21592;&#20540;&#20026;1&#21017;&#36825;&#20010;&#36827;&#31243;&#30340;&#25152;&#26377;&#32447;&#31243;&#21482;&#33021;&#22312;0&#21495;CPU&#19978;&#36816;&#34892;&#65292;&#20063;&#23601;&#34920;&#31034;&#25105;&#20204;&#21487;&#20197;&#23558;&#35813;&#25104;&#21592;&#20540;&#36716;&#20026;&#20108;&#36827;&#21046;&#25968;&#20540;&#65292;<strong class=" ">&#31532;N&#20301;&#20026;1&#21363;&#34920;&#31034;&#21487;&#20197;&#22312;N&#21495;CPU&#19978;&#36816;&#34892;&#25152;&#26377;&#32447;&#31243;&#65292;&#20030;&#19968;&#21453;&#19977;&#65292;&#22914;&#26524;&#35813;&#20540;&#20026;5&#65292;&#21017;&#31532;0&#12289;2&#20301;&#20026;1&#65292;&#20063;&#23601;&#34920;&#31034;&#21487;&#20197;&#22312;0&#12289;2&#21495;CPU&#19978;&#36816;&#34892;&#12290;</strong></p>
+<p   
+>&#20174;&#25105;&#20204;&#30340;&#23454;&#39564;&#29615;&#22659;&#19978;&#26469;&#30475;&#35813;&#25104;&#21592;&#20165;&#26377;4&#23383;&#33410;&#65288;&#21363;32&#20301;&#65289;&#65292;&#25152;&#20197;&#20063;&#23601;&#21482;&#25903;&#25345;32&#26680;CPU&#12290;</p>
+<p   
+><strong class=" ">&#25105;&#20204;&#20102;&#35299;&#22522;&#26412;&#36923;&#36753;&#20043;&#21518;&#23601;&#21487;&#20197;&#26126;&#30333;&#65292;&#20551;&#35774;&#26576;&#21488;&#35745;&#31639;&#26426;&#21482;&#26377;1&#26680;&#30340;CPU&#65292;&#25105;&#20204;&#23558;&#35813;&#25104;&#21592;&#20540;&#35774;&#20026;&#22823;&#20110;1&#30340;&#25968;&#20540;&#65292;&#37027;&#20040;&#35813;&#36827;&#31243;&#23601;&#27809;&#27861;&#36816;&#34892;&#20102;&#12290;</strong></p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x62</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>BasePriority (Char)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#22522;&#30784;&#20248;&#20808;&#32423;&#25110;&#26368;&#20302;&#20248;&#20808;&#32423;&#65292;&#35268;&#23450;&#20102;&#35813;&#36827;&#31243;&#20013;&#25152;&#26377;&#32447;&#31243;&#26368;&#22522;&#26412;&#30340;&#20248;&#20808;&#32423;&#12290;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeWFtuS7luaIkOWRmA">
+        <h3 class="heading "><span>&#20854;&#20182;&#25104;&#21592;</span></h3>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#26469;&#20102;&#35299;&#19968;&#19979;_EPROCESS&#30340;&#20854;&#20182;&#20960;&#20010;&#25104;&#21592;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20559;&#31227;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#25104;&#21592;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20316;&#29992;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x70</p>
+<p   
+>0x78</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>CreateTime (_LARGE_INTEGER)</p>
+<p   
+>ExitTime (_LARGE_INTEGER)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#35760;&#24405;&#20449;&#24687;&#65292;&#20998;&#21035;&#34920;&#31034;&#36827;&#31243;&#21019;&#24314;&#12289;&#36864;&#20986;&#30340;&#26102;&#38388;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x84</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>UniqueProcessId (Ptr32 Void)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36827;&#31243;&#32534;&#21495;&#65292;&#20063;&#23601;&#26159;&#25105;&#20204;&#36890;&#36807;&#20219;&#21153;&#31649;&#29702;&#22120;&#20013;&#25152;&#30475;&#35265;&#30340;PID&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x88</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ActiveProcessLinks (_LIST_ENTRY)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#21452;&#21521;&#38142;&#34920;&#65292;&#23558;&#25152;&#26377;&#27963;&#21160;&#30340;&#36827;&#31243;&#37117;&#38142;&#25509;&#25104;&#19968;&#20010;&#34920;&#65292;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;&#36825;&#20010;&#25104;&#21592;&#25214;&#21040;&#21069;&#19968;&#20010;&#36827;&#31243;&#21644;&#21518;&#19968;&#20010;&#36827;&#31243;&#30340;&#32467;&#26500;&#20307;&#65288;&#38656;&#35201;&#27880;&#24847;&#36825;&#37324;&#25214;&#21040;&#30340;&#24182;&#19981;&#26159;&#32467;&#26500;&#20307;&#30340;&#36215;&#22987;&#20301;&#32622;&#65292;&#32780;&#26159;&#32467;&#26500;&#20307;&#30340;0x88&#20559;&#31227;&#20301;&#65289;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x90</p>
+<p   
+>0x9C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>QuotaUsage ([3] Uint4B)</p>
+<p   
+>QuotaPeak ([3] Uint4B)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#32479;&#35745;&#20449;&#24687;&#65292;&#19982;&#29289;&#29702;&#39029;&#26377;&#20851;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xA8</p>
+<p   
+>0xAC</p>
+<p   
+>0xB0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>CommitCharge (Uint4B)</p>
+<p   
+>PeakVirtualSize (Uint4B)</p>
+<p   
+>VirtualSize (Uint4B)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#32479;&#35745;&#20449;&#24687;&#65292;&#19982;&#34394;&#25311;&#20869;&#23384;&#26377;&#20851;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xBC</p>
+<p   
+>0xC0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DebugPort (Ptr32 Void)</p>
+<p   
+>ExceptionPort (Ptr32 Void)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#19982;&#35843;&#35797;&#30456;&#20851;&#30340;&#20449;&#24687;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xC4</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ObjectTable (Ptr32 _HANDLE_TABLE)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#21477;&#26564;&#34920;&#65292;&#23384;&#20648;&#20102;&#24403;&#21069;&#36827;&#31243;&#20351;&#29992;&#30340;&#20854;&#20182;&#20869;&#26680;&#23545;&#35937;&#30340;&#21477;&#26564;&#65307;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;&#36941;&#21382;&#20854;&#20182;&#36827;&#31243;&#30340;&#21477;&#26564;&#34920;&#65292;&#22914;&#26524;&#34920;&#20013;&#23384;&#22312;&#24403;&#21069;&#36827;&#31243;&#30340;&#36827;&#31243;&#32467;&#26500;&#20307;&#22320;&#22336;&#65292;&#37027;&#23601;&#35828;&#26126;&#24403;&#21069;&#36827;&#31243;&#34987;&#20351;&#29992;&#65292;&#20063;&#23601;&#26159;&#34987;&#35843;&#35797;&#65292;&#25105;&#20204;&#21487;&#20197;&#27492;&#20316;&#20026;&#19968;&#31181;&#21453;&#35843;&#35797;&#30340;&#25163;&#27573;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x11C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>VadRoot (Ptr32 Void)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#26631;&#35782;&#20102;&#29992;&#25143;&#31354;&#38388;&#65288;&#20302;2G&#65289;&#26377;&#21738;&#20123;&#22320;&#22336;&#27809;&#34987;&#21344;&#29992;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x174</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ImageFileName ([16] UChar)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#24403;&#21069;&#36827;&#31243;&#30340;&#21517;&#23383;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x1A0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ActiveThreads (Uint4B)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#24403;&#21069;&#36827;&#31243;&#30340;&#27963;&#21160;&#32447;&#31243;&#25968;&#37327;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x1B0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>Peb (_PEB)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PEB&#65288;Process Environment Block&#65292;&#36827;&#31243;&#29615;&#22659;&#22359;&#65289;&#65306;&#36827;&#31243;&#22312;3&#29615;&#30340;&#19968;&#20010;&#32467;&#26500;&#20307;&#65292;&#37324;&#38754;&#21253;&#21547;&#20102;&#36827;&#31243;&#30340;&#27169;&#22359;&#21015;&#34920;&#12289;&#26159;&#21542;&#22788;&#20110;&#35843;&#35797;&#29366;&#24577;&#31561;&#20449;&#24687;&#12290;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    <div class="section section-4" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLUFjdGl2ZVByb2Nlc3NMaW5rcw">
+        <h4 class="heading "><span>ActiveProcessLinks</span></h4>
+<p   
+>&#22914;&#19979;&#25152;&#31034;&#23601;&#27963;&#21160;&#36827;&#31243;&#21452;&#21521;&#38142;&#34920;&#30340;&#23436;&#25972;&#32467;&#26500;&#65292;PsActiveProcessHead&#25351;&#21521;&#20102;&#35813;&#38142;&#34920;&#30340;&#34920;&#22836;&#20301;&#32622;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-24_11-46-10.png" alt="images/download/attachments/1703937/image2022-11-24_11-46-10.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#22312;Windbg&#20013;&#26597;&#30475;&#34920;&#22836;&#65292;&#24182;&#23545;&#24212;&#25214;&#21040;&#20854;&#25351;&#21521;&#30340;&#36827;&#31243;&#32467;&#26500;&#20307;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-24_15-56-18.png" alt="images/download/attachments/1703937/image2022-11-24_15-56-18.png" width="400"  />
+    </p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLee6v-eoi-e7k-aehOS9kw">
+        <h1 class="heading "><span>&#32447;&#31243;&#32467;&#26500;&#20307;</span></h1>
+<p   
+>&#27599;&#20010;&#36827;&#31243;&#40664;&#35748;&#37117;&#20250;&#26377;&#19968;&#20010;&#32447;&#31243;&#65292;&#27599;&#21551;&#21160;&#19968;&#20010;&#32447;&#31243;&#65292;&#22312;&#20869;&#23384;&#37324;&#23601;&#20250;&#22810;&#19968;&#20010;&#32447;&#31243;&#32467;&#26500;&#20307;&#65292;&#21363;_ETHREAD&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#20351;&#29992;Windbg&#26469;&#26597;&#30475;&#35813;&#32467;&#26500;&#20307;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-24_16-41-32.png" alt="images/download/attachments/1703937/image2022-11-24_16-41-32.png" width="400"  />
+    </p>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLee7k-aehOS9k-aIkOWRmC4x">
+        <h2 class="heading "><span>&#32467;&#26500;&#20307;&#25104;&#21592;</span></h2>
+<p   
+>&#25105;&#20204;&#36890;&#36807;Windbg&#21487;&#20197;&#30475;&#21040;&#36827;&#31243;&#32467;&#26500;&#20307;_ETHREAD&#26377;&#24456;&#22810;&#20010;&#25104;&#21592;&#65292;&#30446;&#21069;&#25105;&#20204;&#21482;&#38656;&#35201;&#20102;&#35299;&#19968;&#20123;&#27604;&#36739;&#37325;&#35201;&#30340;&#25104;&#21592;&#65292;&#20854;&#20182;&#30340;&#21487;&#20197;&#31561;&#29992;&#21040;&#26102;&#20877;&#20102;&#35299;&#12290;</p>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLV9LVEhSRUFE">
+        <h3 class="heading "><span>_KTHREAD</span></h3>
+<p   
+>&#19982;&#36827;&#31243;&#32467;&#26500;&#20307;&#19968;&#26679;&#65292;&#32447;&#31243;&#32467;&#26500;&#20307;&#30340;&#31532;&#19968;&#20010;&#25104;&#21592;&#65288;&#21363;0x0&#20559;&#31227;&#20301;&#65289;&#20063;&#26159;&#19968;&#20010;&#32467;&#26500;&#20307;_KTHREAD&#65292;&#25105;&#20204;&#21487;&#20197;&#20351;&#29992;Windbg&#26469;&#26597;&#30475;&#19968;&#19979;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-25_13-47-27.png" alt="images/download/attachments/1703937/image2022-11-25_13-47-27.png" width="400"  />
+    </p>
+<p   
+>&#25105;&#20204;&#31616;&#21333;&#20102;&#35299;&#19968;&#19979;&#23427;&#30340;&#20960;&#20010;&#25104;&#21592;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20559;&#31227;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#25104;&#21592;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20316;&#29992;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>Header (_DISPATCHER_HEADER)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#21487;&#31561;&#24453;&#23545;&#35937;&#65292;&#19982;&#36827;&#31243;&#32467;&#26500;&#20307;&#30340;_KPROCESS&#20013;&#30340;Header&#25104;&#21592;&#26159;&#19968;&#26679;&#30340;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x18</p>
+<p   
+>0x1C</p>
+<p   
+>0x28</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>InitialStack (Ptr32 Void)</p>
+<p   
+>StackLimit (Ptr32 Void)</p>
+<p   
+>KernelStack (Ptr32 Void)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#19982;&#32447;&#31243;&#20999;&#25442;&#26377;&#20851;&#30340;&#25104;&#21592;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x20</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>Teb (Ptr32 Void)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>TEB&#65288;Thread Environment Block&#65292;&#32447;&#31243;&#29615;&#22659;&#22359;&#65289;&#65292;&#32447;&#31243;&#22312;3&#29615;&#30340;&#19968;&#20010;&#32467;&#26500;&#20307;&#65292;&#37324;&#38754;&#21253;&#21547;&#20102;&#32447;&#31243;&#30340;&#30456;&#20851;&#20449;&#24687;&#12290;&#25105;&#20204;&#22312;3&#29615;&#21487;&#20197;&#36890;&#36807;FS:[0]&#26469;&#25214;&#21040;TEB&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x2C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DebugActive (UChar)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#22914;&#26524;&#35813;&#20540;&#20026;-1&#21017;&#34920;&#31034;&#19981;&#33021;&#20351;&#29992;&#35843;&#35797;&#23492;&#23384;&#22120;&#65306;Dr0-Dr7&#65292;&#22914;&#26524;&#24403;&#21069;&#32447;&#31243;&#27491;&#22312;&#34987;&#35843;&#35797;&#21017;&#35813;&#20540;&#23601;&#19981;&#26159;-1&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x34</p>
+<p   
+>0xE8</p>
+<p   
+>0x138</p>
+<p   
+>0x14C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ApcState (_KAPC_STATE)</p>
+<p   
+>ApcQueueLock (Uint4B)</p>
+<p   
+>ApcStatePointer ([2] Ptr32 _KAPC_STATE)</p>
+<p   
+>SavedApcState (_KAPC_STATE)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#19982;APC&#30456;&#20851;&#30340;&#25104;&#21592;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x2D</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>State (Uchar)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#34920;&#31034;&#32447;&#31243;&#29366;&#24577;&#65306;&#20934;&#22791;&#23601;&#32490;&#12289;&#31561;&#24453;&#12289;&#27491;&#22312;&#25191;&#34892;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x6C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>BasePriority (Char)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#22522;&#30784;&#20248;&#20808;&#32423;&#25110;&#26368;&#20302;&#20248;&#20808;&#32423;&#65292;&#23427;&#30340;&#21021;&#22987;&#20540;&#23601;&#26159;&#25152;&#23646;&#36827;&#31243;&#30340;&#32467;&#26500;&#20307;&#30340;BasePriority&#20540;&#65292;&#22914;&#26524;&#20320;&#24819;&#35201;&#20462;&#25913;&#21487;&#20197;&#36890;&#36807;KeSetBasePriorityThread&#20989;&#25968;&#36827;&#34892;&#37325;&#26032;&#35774;&#23450;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x70</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>WaitBlock ([4] _KWAIT_BLOCK)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#22914;&#26524;&#24403;&#21069;&#32447;&#31243;&#25191;&#34892;&#20102;WaitForSingleObject&#20989;&#25968;&#65292;&#37027;&#20040;&#24403;&#21069;&#32447;&#31243;&#32467;&#26500;&#20307;&#20013;_KTHREAD&#30340;WaitBlock&#25104;&#21592;&#23601;&#20250;&#35760;&#24405;&#31561;&#24453;&#30340;&#23545;&#35937;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xE0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ServiceTable (Ptr32 Void)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#25351;&#21521;&#31995;&#32479;&#26381;&#21153;&#34920;&#30340;&#22522;&#22336;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x134</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>TrapFrame (Ptr32 _KTRAP_FRAME)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#32467;&#26500;&#20307;&#65292;&#29992;&#20110;&#36827;0&#29615;&#26102;&#20445;&#23384;&#29615;&#22659;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x140</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PreviousMode (Char)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#20808;&#21069;&#27169;&#24335;&#65292;&#26576;&#20123;&#20869;&#26680;&#20989;&#25968;&#20250;&#21028;&#26029;&#31243;&#24207;&#35843;&#29992;&#23427;&#26102;&#26159;0&#29615;&#36824;&#26159;3&#29615;&#65292;&#23601;&#26159;&#36890;&#36807;&#35813;&#25104;&#21592;&#21435;&#21028;&#26029;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x1B0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ThreadListEntry (_LIST_ENTRY)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#21452;&#21521;&#38142;&#34920;&#65292;&#19968;&#20010;&#36827;&#31243;&#30340;&#25152;&#26377;&#32447;&#31243;&#37117;&#38142;&#20837;&#36825;&#20010;&#34920;&#20013;&#20102;&#12290;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeWFtuS7luaIkOWRmC4x">
+        <h3 class="heading auto-cursor-target"><span>&#20854;&#20182;&#25104;&#21592;</span></h3>
+<p   
+>&#38500;&#20102;_KTHREAD&#20197;&#22806;&#65292;&#25105;&#20204;&#26469;&#30475;&#19968;&#19979;&#20854;&#20182;&#20960;&#20010;&#22312;_ETHREAD&#32467;&#26500;&#20307;&#20013;&#30340;&#25104;&#21592;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20559;&#31227;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#25104;&#21592;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20316;&#29992;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x1EC</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>Cid (_CLIENT_ID)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36827;&#31243;&#26377;&#32534;&#21495;&#65292;&#32447;&#31243;&#20063;&#26377;&#33258;&#24049;&#30340;&#32534;&#21495;&#65292;&#20063;&#23601;&#26159;&#36825;&#37324;&#30340;CID&#65292;&#38656;&#35201;&#27880;&#24847;&#30340;&#26159;&#36825;&#37324;&#30340;CID&#19981;&#20809;&#26159;&#32447;&#31243;ID&#65292;&#20063;&#21253;&#21547;&#20102;&#36827;&#31243;ID&#12290;&#21363;_CLIENT_ID[0]&#20026;&#36827;&#31243;ID&#65292;_CLIENT_ID[4]&#20026;&#32447;&#31243;ID&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x220</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ThreadsProcess (Ptr32 _EPROCESS)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#25351;&#21521;&#24403;&#21069;&#32447;&#31243;&#25152;&#23646;&#36827;&#31243;&#30340;_EPROCESS&#32467;&#26500;&#20307;&#22320;&#22336;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x22C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ThreadListEntry (_LIST_ENTRY)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#21452;&#21521;&#38142;&#34920;&#65292;&#19968;&#20010;&#36827;&#31243;&#30340;&#25152;&#26377;&#32447;&#31243;&#37117;&#38142;&#20837;&#36825;&#20010;&#34920;&#20013;&#20102;&#12290;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLV9LUENS">
+        <h1 class="heading auto-cursor-target"><span>_KPCR</span></h1>
+<p   
+>&#22914;&#26524;&#35201;&#36870;&#21521;&#20998;&#26512;&#25805;&#20316;&#31995;&#32479;&#20869;&#26680;&#20195;&#30721;&#65292;&#38656;&#35201;&#20855;&#22791;&#20004;&#20010;&#21069;&#32622;&#30693;&#35782;&#65306;1.&#27573;&#12289;&#39029;&#30456;&#20851;&#20195;&#30721;&#33021;&#22815;&#29702;&#35299;&#65307;2.&#33267;&#23569;&#35201;&#30693;&#36947;&#19977;&#20010;&#32467;&#26500;&#20307;&#65306;_EPROCESS&#12289;_ETHREAD&#12289;_KPCR&#12290;&#22240;&#27492;&#26412;&#31456;&#33410;&#25105;&#20204;&#38656;&#35201;&#20102;&#35299;_KPCR&#32467;&#26500;&#20307;&#12290;</p>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeS7i-e7jQ">
+        <h2 class="heading "><span>&#20171;&#32461;</span></h2>
+<p   
+>&#27599;&#20010;&#36827;&#31243;&#25110;&#32447;&#31243;&#37117;&#19968;&#20010;&#32467;&#26500;&#20307;&#26469;&#25551;&#36848;&#26412;&#36523;&#65292;&#21516;&#26679;CPU&#20063;&#26377;&#36825;&#26679;&#19968;&#20010;&#32467;&#26500;&#20307;&#26469;&#25551;&#36848;&#33258;&#24049;&#65292;&#21363;_KPCR&#12290;</p>
+<p   
+><strong class=" ">&#24403;&#32447;&#31243;&#36827;&#20837;0&#29615;&#26102;&#65292;FS:[0]&#25351;&#21521;&#30340;&#23601;&#19981;&#20877;&#26159;TEB&#20102;&#65292;&#32780;&#21464;&#25104;&#20102;_KPCR&#65307;</strong>&#27599;&#20010;CPU&#65288;&#27599;&#26680;&#65289;&#37117;&#26377;&#19968;&#20010;_KPCR&#32467;&#26500;&#20307;&#65292;&#35813;&#32467;&#26500;&#20307;&#20013;&#23384;&#20648;&#20102;CPU&#26412;&#36523;&#38656;&#35201;&#29992;&#21040;&#30340;&#19968;&#20123;&#37325;&#35201;&#25968;&#25454;&#65306;&#22914;GDT&#12289;IDT&#20197;&#21450;&#32447;&#31243;&#30456;&#20851;&#30340;&#19968;&#20123;&#20449;&#24687;&#12290;</p>
+<p   
+>&#25105;&#20204;&#21516;&#26679;&#21487;&#20197;&#22312;Windbg&#20013;&#26597;&#30475;_KPCR&#32467;&#26500;&#20307;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-28_14-49-51.png" alt="images/download/attachments/1703937/image2022-11-28_14-49-51.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaIkOWRmA">
+        <h2 class="heading "><span>&#25104;&#21592;</span></h2>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLV9OVF9USUI">
+        <h3 class="heading "><span>_NT_TIB</span></h3>
+<p   
+>&#22312;_KPCR&#32467;&#26500;&#20307;&#20013;&#30340;0x0&#20559;&#31227;&#20301;&#25104;&#21592;&#65292;&#23427;&#26159;&#19968;&#20010;&#32467;&#26500;&#20307;_NT_TIB&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-28_14-51-36.png" alt="images/download/attachments/1703937/image2022-11-28_14-51-36.png" width="400"  />
+    </p>
+<p   
+>&#35813;&#32467;&#26500;&#20307;&#20960;&#20010;&#37325;&#35201;&#30340;&#25104;&#21592;&#22914;&#19979;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20559;&#31227;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#25104;&#21592;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20316;&#29992;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ExceptionList (Ptr32 _EXCEPTION_REGISTRATION_RECORD)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#34920;&#31034;&#24403;&#21069;&#32447;&#31243;&#20869;&#26680;&#24322;&#24120;&#38142;&#34920;(SEH)&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x4</p>
+<p   
+>0x8</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>StackBase (Ptr32 Void)</p>
+<p   
+>StackLimit (Ptr32 Void)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#34920;&#31034;&#24403;&#21069;&#32447;&#31243;&#20869;&#26680;&#26632;&#30340;&#22522;&#22336;&#21644;&#22823;&#23567;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x18</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>Self (Ptr32 _NT_TIB)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#25351;&#38024;&#65292;&#25351;&#21521;&#20102;&#24403;&#21069;_NT_TIB&#32467;&#26500;&#20307;&#65292;&#20063;&#23601;&#26159;_KPCR&#32467;&#26500;&#20307;&#65288;&#20415;&#20110;&#26597;&#25214;&#65289;&#12290;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeWFtuS7lg">
+        <h3 class="heading auto-cursor-target"><span>&#20854;&#20182;</span></h3>
+<p   
+>_KPCR&#32467;&#26500;&#20307;&#20854;&#20182;&#20960;&#20010;&#25104;&#21592;&#30340;&#20449;&#24687;&#22914;&#19979;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20559;&#31227;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#25104;&#21592;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20316;&#29992;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x1C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>SelfPcr (Ptr32 _KPCR)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#25351;&#38024;&#65292;&#25351;&#21521;&#20102;&#24403;&#21069;_KPCR&#32467;&#26500;&#20307;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x20</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>Prcb (Ptr32 _KPRCB)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#25351;&#38024;&#65292;&#25351;&#21521;&#20102;_KPRCP&#32467;&#26500;&#20307;&#65292;&#21363;_KPCR&#32467;&#26500;&#20307;0x120&#20559;&#31227;&#20301;&#30340;&#25104;&#21592;&#12290;&#36825;&#37324;&#20063;&#26159;&#20026;&#20102;&#26041;&#20415;&#25214;&#21040;&#32467;&#26500;&#20307;&#65292;&#38450;&#27490;_KPCR&#32467;&#26500;&#20307;&#21457;&#29983;&#20102;&#21464;&#21270;&#65292;&#23601;&#21487;&#20197;&#36890;&#36807;&#35813;&#25104;&#21592;&#25214;&#21040;_KPRCP&#32467;&#26500;&#20307;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x38</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IDT (Ptr32 _KIDTENTRY)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#25351;&#38024;&#65292;&#25351;&#21521;&#20102;    <span style="color: #172b4d;">
+&#20013;&#26029;&#25551;&#36848;&#31526;&#34920;IDT&#12290;    </span>
+</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x3C</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>GDT (Ptr32 _KGDTENTRY)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#25351;&#38024;&#65292;&#25351;&#21521;&#20102;&#20840;&#23616;    <span style="color: #172b4d;">
+&#25551;&#36848;&#31526;&#34920;GDT&#12290;    </span>
+</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x40</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>TSS (Ptr32 _KTSS)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#25351;&#38024;&#65292;&#25351;&#21521;&#20102;&#20219;&#21153;&#27573;TSS&#65292;&#27599;&#20010;CPU&#37117;&#26377;&#19968;&#20010;TSS&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x51</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>Number (UChar)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#34920;&#31034;CPU&#30340;&#32534;&#21495;&#65306;1&#12289;2&#12289;3&#12289;4...</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x120</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PrcbData (_KPRCB)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#25299;&#23637;&#32467;&#26500;&#20307;&#12290;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLV9LUFJDQg">
+        <h3 class="heading auto-cursor-target"><span>_KPRCB</span></h3>
+<p   
+>_KPRCB&#26159;_KPCR&#32467;&#26500;&#20307;&#30340;&#25299;&#23637;&#32467;&#26500;&#20307;&#65292;&#25105;&#20204;&#20808;&#20102;&#35299;&#20960;&#20010;&#25104;&#21592;&#65292;&#21518;&#32493;&#29992;&#21040;&#20102;&#20877;&#36880;&#20010;&#21435;&#20102;&#35299;&#12290;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20559;&#31227;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#25104;&#21592;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20316;&#29992;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x4</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>CurrentThread (Ptr32 _KTHREAD)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#25351;&#38024;&#65292;&#25351;&#21521;&#24403;&#21069;&#32447;&#31243;&#30340;&#32467;&#26500;&#20307;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x8</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>NextThread (Ptr32 _KTHREAD)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#25351;&#38024;&#65292;&#25351;&#21521;&#21363;&#23558;&#20999;&#25442;&#30340;&#19979;&#19968;&#20010;&#32447;&#31243;&#30340;&#32467;&#26500;&#20307;&#12290;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xC</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IdleThread (Ptr32 _KTHREAD)</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36825;&#26159;&#19968;&#20010;&#25351;&#38024;&#65292;&#25351;&#21521;&#20102;&#19968;&#20010;&#31354;&#38386;&#30340;&#32447;&#31243;&#30340;&#32467;&#26500;&#20307;&#12290;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLTMz5Liq6ZO-6KGo">
+        <h1 class="heading auto-cursor-target"><span>33&#20010;&#38142;&#34920;</span></h1>
+<p   
+>&#32447;&#31243;&#26377;3&#31181;&#29366;&#24577;&#65306;&#23601;&#32490;&#12289;&#31561;&#24453;&#12289;&#36816;&#34892;&#12290;&#27491;&#22312;&#36816;&#34892;&#20013;&#30340;&#32447;&#31243;&#23384;&#20648;&#22312;_KPCR&#32467;&#26500;&#20307;&#20013;&#65292;&#23601;&#32490;&#21644;&#31561;&#24453;&#30340;&#32447;&#31243;&#20840;&#22312;&#21478;&#22806;&#30340;33&#20010;&#38142;&#34920;&#20013;&#12290;&#36825;33&#20010;&#38142;&#34920;&#26377;1&#20010;&#31561;&#24453;&#38142;&#34920;&#26680;32&#20010;&#23601;&#32490;&#38142;&#34920;&#65288;&#25105;&#20204;&#20063;&#31216;&#20043;&#20026;&#35843;&#24230;&#38142;&#34920;&#65289;&#12290;</p>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeetieW-hemTvuihqA">
+        <h2 class="heading "><span>&#31561;&#24453;&#38142;&#34920;</span></h2>
+<p   
+>&#25152;&#35859;&#31561;&#24453;&#38142;&#34920;&#65292;&#21363;&#24403;&#32447;&#31243;&#35843;&#29992;&#20102;Sleep&#12289;WaitForSingleObject&#31561;&#20989;&#25968;&#26102;&#65292;&#23601;&#20250;&#34987;&#38142;&#20837;&#35813;&#34920;&#12290;</p>
+<p   
+>&#31561;&#24453;&#38142;&#34920;&#26159;&#19968;&#20010;&#21452;&#21521;&#38142;&#34920;&#65292;&#22240;&#27492;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;KiWaitListHead&#26469;&#36941;&#21382;&#36825;&#24352;&#34920;&#65292;&#25214;&#21040;&#25152;&#26377;&#30340;&#31561;&#24453;&#32447;&#31243;&#12290;&#22914;&#19979;&#22270;&#25152;&#31034;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;KiWaitListHead&#36825;&#20010;&#20840;&#23616;&#21464;&#37327;&#65292;&#22312;Windbg&#20013;&#25214;&#21040;&#31561;&#24453;&#38142;&#34920;&#22836;&#65292;&#23427;&#30340;&#20004;&#20010;&#25104;&#21592;&#20998;&#21035;&#25351;&#21521;&#20102;&#21069;&#12289;&#21518;&#30340;&#31561;&#24453;&#32447;&#31243;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-28_15-33-18.png" alt="images/download/attachments/1703937/image2022-11-28_15-33-18.png" width="400"  />
+    </p>
+<p   
+>&#22914;&#26524;&#25105;&#20204;&#24819;&#35201;&#25214;&#21040;&#23427;&#20204;&#23545;&#24212;&#30340;&#32447;&#31243;&#32467;&#26500;&#20307;&#38656;&#35201;&#22312;&#22320;&#22336;&#19978;&#20943;&#21435;0x60&#65292;&#22240;&#20026;&#36825;&#37324;&#35760;&#24405;&#30340;&#22320;&#22336;&#23454;&#38469;&#19978;&#26159;_ETHREAD&#65288;_KTHREAD&#65289;&#20013;&#30340;0x60&#20559;&#31227;&#20301;&#25104;&#21592;WaitListEntry&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-28_15-50-2.png" alt="images/download/attachments/1703937/image2022-11-28_15-50-2.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeiwg-W6pumTvuihqA">
+        <h2 class="heading "><span>&#35843;&#24230;&#38142;&#34920;</span></h2>
+<p   
+>&#35843;&#24230;&#38142;&#34920;&#26377;32&#20010;&#65292;&#20063;&#23601;&#26377;32&#20010;&#34920;&#22836;&#65292;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;&#20840;&#23616;&#21464;&#37327;KiDispatcherReadyListHead&#25214;&#21040;&#12290;&#22312;&#36825;32&#20010;&#38142;&#34920;&#20013;&#65292;&#27599;&#20010;&#38142;&#34920;&#38142;&#20837;&#30340;&#32447;&#31243;&#30340;&#20248;&#20808;&#32423;&#26159;&#19981;&#19968;&#26679;&#30340;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-28_15-58-17.png" alt="images/download/attachments/1703937/image2022-11-28_15-58-17.png" width="400"  />
+    </p>
+<p   
+>&#21516;&#26679;&#65292;&#22312;&#38142;&#34920;&#20013;&#34987;&#38142;&#20837;&#30340;&#22320;&#22336;&#20026;_ETHREAD&#65288;_KTHREAD&#65289;&#20013;&#30340;0x60&#20559;&#31227;&#20301;&#25104;&#21592;SwapListEntry&#12290;&#65288;0x60&#20559;&#31227;&#20301;&#26377;&#20004;&#20010;&#21547;&#20041;&#65289;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-11-28_16-5-3.png" alt="images/download/attachments/1703937/image2022-11-28_16-5-3.png" width="400"  />
+    </p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLee6v-eoi-WIh-aNog">
+        <h1 class="heading "><span>&#32447;&#31243;&#20999;&#25442;</span></h1>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaooeaLn-e6v-eoi-WIh-aNog">
+        <h2 class="heading "><span>&#27169;&#25311;&#32447;&#31243;&#20999;&#25442;</span></h2>
+<p   
+>Windows&#19979;&#30340;&#32447;&#31243;&#20999;&#25442;&#26159;&#27604;&#36739;&#22797;&#26434;&#30340;&#65292;&#20026;&#20102;&#26356;&#22909;&#30340;&#23398;&#20064;&#25105;&#20204;&#38656;&#35201;&#35835;&#19968;&#20221;&#20195;&#30721;&#65292;&#36825;&#20221;&#20195;&#30721;&#26159;&#29992;&#26469;&#36827;&#34892;&#27169;&#25311;Windows&#32447;&#31243;&#20999;&#25442;&#30340;&#12290;</p>
+<p   
+><img    src="images/inline/8e5f22a30e18a66fdf98b8fe13b8096216a133029af2e40161a4d9b6726f8f23.png" alt="images/inline/8e5f22a30e18a66fdf98b8fe13b8096216a133029af2e40161a4d9b6726f8f23.png"  height="150" />
+    </p>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaooeaLn-e6v-eoi-e7k-aehOS9kw">
+        <h3 class="heading "><span>&#27169;&#25311;&#32447;&#31243;&#32467;&#26500;&#20307;</span></h3>
+<p   
+>&#27169;&#25311;&#20195;&#30721;&#30340;&#31532;&#19968;&#37096;&#20998;&#23601;&#26159;&#35201;&#27169;&#25311;&#32447;&#31243;&#32467;&#26500;&#20307;&#65292;&#25105;&#20204;&#20445;&#30041;&#26368;&#37325;&#35201;&#30340;&#25104;&#21592;&#36827;&#34892;&#27169;&#25311;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">//线程信息的结构</code></div>
+<div class="line"><code class="plain">typedef struct</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">const</code><code class="plain"> </code><code class="keyword">char</code><code class="plain">* name;                 </code><code class="comments">// 线程名</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">int</code><code class="plain"> Flags;                        </code><code class="comments">// 线程状态</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">int</code><code class="plain"> SleepMillsecondDot;           </code><code class="comments">// 休眠时间</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">void</code><code class="plain">* initialStack;               </code><code class="comments">// 线程堆栈起始位置</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">void</code><code class="plain">* StackLimit;                 </code><code class="comments">// 线程堆栈界限</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">void</code><code class="plain">* KernelStack;                </code><code class="comments">// 线程堆栈当前位置，也就是ESP</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">void</code><code class="plain">* lpParameter;                </code><code class="comments">// 线程函数的参数</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">void</code><code class="plain">(*func)(</code><code class="keyword">void</code><code class="plain">* lpParameter);   </code><code class="comments">// 线程函数</code></div>
+<div class="line"><code class="plain">}GMThread_t;</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeiwg-W6pumTvuihqC4x">
+        <h3 class="heading "><span>&#35843;&#24230;&#38142;&#34920;</span></h3>
+<p   
+>&#22312;&#20195;&#30721;&#20013;&#26377;&#19968;&#20010;&#32467;&#26500;&#20307;&#25968;&#32452;&#65292;&#21363;&#32447;&#31243;&#32467;&#26500;&#20307;&#25968;&#32452;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">extern GMThread_t GMThreadList[MAXGMTHREAD];</code></div>
+</div>
+    </div>
+<p   
+>&#25105;&#20204;&#30693;&#36947;&#32447;&#31243;&#26377;&#19977;&#31181;&#19981;&#21516;&#30340;&#29366;&#24577;&#65292;&#36825;&#20123;&#19981;&#21516;&#29366;&#24577;&#30340;&#32447;&#31243;&#26681;&#25454;&#20248;&#20808;&#32423;&#23384;&#20648;&#22312;&#19981;&#21516;&#30340;&#38142;&#34920;&#37324;&#65292;&#22312;&#36825;&#37324;&#25105;&#20204;&#27169;&#25311;&#30340;&#27809;&#26377;&#37027;&#20040;&#22797;&#26434;&#65292;&#21482;&#20351;&#29992;&#19968;&#20010;&#38142;&#34920;&#26469;&#23384;&#20648;&#25152;&#26377;&#29366;&#24577;&#30340;&#32447;&#31243;&#12290;</p>
+<p   
+>&#25152;&#35859;&#21019;&#24314;&#32447;&#31243;&#65292;&#26412;&#36136;&#23601;&#26159;&#21019;&#24314;&#19968;&#20010;&#32467;&#26500;&#20307;&#65292;&#28982;&#21518;&#23558;&#32467;&#26500;&#20307;&#23384;&#21040;&#36825;&#20010;&#32467;&#26500;&#20307;&#25968;&#32452;&#20013;&#65292;&#25105;&#20204;&#21487;&#20197;&#26681;&#25454;&#32447;&#31243;&#32467;&#26500;&#20307;&#30340;Flags&#25104;&#21592;&#26469;&#21028;&#26029;&#32447;&#31243;&#30340;&#29366;&#24577;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-5_14-0-33.png" alt="images/download/attachments/1703937/image2022-12-5_14-0-33.png" width="400"  />
+    </p>
+<p   
+>&#32467;&#26500;&#20307;&#23384;&#20648;&#30340;&#26102;&#20505;&#26159;&#20174;&#19979;&#26631;&#20026;1&#30340;&#32034;&#24341;&#20013;&#24320;&#22987;&#30340;&#65292;&#19979;&#26631;&#20026;0&#30340;&#32034;&#24341;&#20013;&#23384;&#20648;&#30340;&#26159;&#24403;&#21069;&#20989;&#25968;&#30340;&#32447;&#31243;&#20449;&#24687;&#12290;</p>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeWIneWni-WMlue6v-eoiw">
+        <h3 class="heading "><span>&#21021;&#22987;&#21270;&#32447;&#31243;</span></h3>
+<p   
+>&#25105;&#20204;&#21019;&#24314;&#19968;&#20010;&#32447;&#31243;&#65292;&#23601;&#26159;&#21019;&#24314;&#32467;&#26500;&#20307;&#65292;&#25509;&#30528;&#25105;&#20204;&#21021;&#22987;&#21270;&#32447;&#31243;&#65292;&#23601;&#26159;&#35201;&#20934;&#22791;&#20869;&#23384;&#31354;&#38388;&#65292;&#24182;&#23558;&#32467;&#26500;&#20307;&#25104;&#21592;&#30340;&#20540;&#22635;&#20805;&#22909;&#65292;&#22914;&#19979;&#20195;&#30721;&#23601;&#23436;&#25104;&#20102;&#36825;&#20123;&#25805;&#20316;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 初始化线程的信息</code></div>
+<div class="line"><code class="keyword">void</code><code class="plain"> initGMThread(GMThread_t* GMThreadp, </code><code class="keyword">const</code><code class="plain"> </code><code class="keyword">char</code><code class="plain">* name, </code><code class="keyword">void</code><code class="plain">(*func)(</code><code class="keyword">void</code><code class="plain">* lpParameter), </code><code class="keyword">void</code><code class="plain">* lpParameter)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">char</code><code class="plain">* StackPages;</code></div>
+<div class="line"><code class="plain">    unsigned </code><code class="keyword">int</code><code class="plain">* StackDWordParam;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 结构体初始化赋值：状态、名称、函数地址、函数参数</code></div>
+<div class="line"><code class="plain">    GMThreadp-&gt;Flags = GMTHREAD_CREATE;</code></div>
+<div class="line"><code class="plain">    GMThreadp-&gt;name = name;</code></div>
+<div class="line"><code class="plain">    GMThreadp-&gt;func = func;</code></div>
+<div class="line"><code class="plain">    GMThreadp-&gt;lpParameter = lpParameter;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 申请内存空间，大小为GMTHREADSTACKSIZE = 0x8000</code></div>
+<div class="line"><code class="plain">    StackPages = (unsigned </code><code class="keyword">char</code><code class="plain">*)VirtualAlloc(NULL, GMTHREADSTACKSIZE, MEM_COMMIT, PAGE_READWRITE);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 空间清零</code></div>
+<div class="line"><code class="plain">    ZeroMemory(StackPages, GMTHREADSTACKSIZE);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 由于堆栈的操作是从高地址往低地址的，所以为了模拟这一效果，我们将将申请的内存空间地址加上初始化的大小就得到了线程的内存空间初始化地址</code></div>
+<div class="line"><code class="plain">    GMThreadp-&gt;initialStack = StackPages + GMTHREADSTACKSIZE;</code></div>
+<div class="line"><code class="plain">    StackDWordParam = (unsigned </code><code class="keyword">int</code><code class="plain">*)GMThreadp-&gt;initialStack;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 入栈</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)GMThreadp); </code><code class="comments">// 线程结构体，用于线程函数地址、函数参数地址的寻找</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)</code><code class="value">9</code><code class="plain">); </code><code class="comments">// 平衡堆栈</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)GMThreadStartup); </code><code class="comments">// 启动线程的函数，用于调用线程函数</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 压入的对应寄存器初始值</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)</code><code class="value">5</code><code class="plain">); </code><code class="comments">// ebp</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)</code><code class="value">7</code><code class="plain">); </code><code class="comments">// edi</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)</code><code class="value">6</code><code class="plain">); </code><code class="comments">// esi</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)</code><code class="value">3</code><code class="plain">); </code><code class="comments">// ebx</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)</code><code class="value">2</code><code class="plain">); </code><code class="comments">// ecx</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)</code><code class="value">1</code><code class="plain">); </code><code class="comments">// edx</code></div>
+<div class="line"><code class="plain">    PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)</code><code class="value">0</code><code class="plain">); </code><code class="comments">// eax</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置当前线程的栈顶</code></div>
+<div class="line"><code class="plain">    GMThreadp-&gt;KernelStack = StackDWordParam;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置线程状态为准备</code></div>
+<div class="line"><code class="plain">    GMThreadp-&gt;Flags = GMTHREAD_READY;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#36825;&#27573;&#20195;&#30721;&#25191;&#34892;&#23436;&#25104;&#20043;&#21518;&#30340;&#20869;&#23384;&#31354;&#38388;&#20998;&#24067;&#23601;&#22914;&#19979;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-6_14-59-26.png" alt="images/download/attachments/1703937/image2022-12-6_14-59-26.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLee6v-eoi-WIh-aNoi4x">
+        <h3 class="heading "><span>&#32447;&#31243;&#20999;&#25442;</span></h3>
+<p   
+>&#21021;&#22987;&#21270;&#32447;&#31243;&#20043;&#21518;&#65292;&#20063;&#23601;&#26159;&#25191;&#34892;&#23436;RegisterGMThread&#20989;&#25968;&#65292;&#23601;&#36827;&#20837;&#20102;&#32447;&#31243;&#20999;&#25442;&#36816;&#34892;&#65292;&#21363;Scheduling&#20989;&#25968;&#12290;&#35813;&#20989;&#25968;&#36941;&#21382;&#35843;&#24230;&#38142;&#34920;&#65292;&#25214;&#21040;&#20854;&#20013;&#30340;&#32447;&#31243;&#32467;&#26500;&#20307;&#65292;&#24182;&#26681;&#25454;Flags&#25104;&#21592;&#21028;&#26029;&#32447;&#31243;&#26159;&#21542;&#20026;&#20934;&#22791;&#29366;&#24577;&#65292;&#33719;&#21462;&#23545;&#24212;&#30340;&#32447;&#31243;&#32467;&#26500;&#20307;&#36890;&#36807;SwitchContext&#20989;&#25968;&#36827;&#34892;&#32447;&#31243;&#20999;&#25442;&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">void</code><code class="plain"> Scheduling(</code><code class="keyword">void</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">int</code><code class="plain"> i;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">int</code><code class="plain"> TickCount;</code></div>
+<div class="line"><code class="plain">    GMThread_t* SrcGMThreadp;</code></div>
+<div class="line"><code class="plain">    GMThread_t* DstGMThreadp;</code></div>
+<div class="line"><code class="plain">    TickCount = GetTickCount();</code></div>
+<div class="line"><code class="plain">    SrcGMThreadp = &amp;GMThreadList[CurrentThreadIndex];</code></div>
+<div class="line"><code class="plain">    DstGMThreadp = &amp;GMThreadList[</code><code class="value">0</code><code class="plain">];</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="keyword">for</code><code class="plain"> (i = </code><code class="value">1</code><code class="plain">; GMThreadList[i].name; i++) {</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 判断休眠状态的线程休眠时间是否小于程序启动至今的时间，如果是则将线程状态调整为等待</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">if</code><code class="plain"> (GMThreadList[i].Flags &amp; GMTHREAD_SLEEP) {</code></div>
+<div class="line"><code class="plain">            </code><code class="keyword">if</code><code class="plain"> (TickCount &gt; GMThreadList[i].SleepMillsecondDot) {</code></div>
+<div class="line"><code class="plain">                GMThreadList[i].Flags = GMTHREAD_READY;</code></div>
+<div class="line"><code class="plain">            }</code></div>
+<div class="line"><code class="plain">        }</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">if</code><code class="plain"> (GMThreadList[i].Flags &amp; GMTHREAD_READY) {</code></div>
+<div class="line"><code class="plain">            DstGMThreadp = &amp;GMThreadList[i]; </code><code class="comments">// 获取准备状态的线程结构体</code></div>
+<div class="line"><code class="plain">            </code><code class="keyword">break</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">        }</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    CurrentThreadIndex = DstGMThreadp - GMThreadList;</code></div>
+<div class="line"><code class="plain">    SwitchContext(SrcGMThreadp, DstGMThreadp);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#26469;&#30475;&#32447;&#31243;&#20999;&#25442;&#30340;&#20989;&#25968;SwitchContext&#65292;&#19968;&#24320;&#22987;&#36827;&#34892;&#22534;&#26632;&#30340;&#25552;&#21319;&#28982;&#21518;&#23558;&#24403;&#21069;&#32447;&#31243;&#29992;&#21040;&#30340;&#23492;&#23384;&#22120;&#20837;&#26632;&#65292;&#25509;&#30528;&#20998;&#21035;&#32473;ESI&#12289;EDI&#23384;&#20837;&#24403;&#21069;&#21644;&#35201;&#20999;&#25442;&#30340;&#32447;&#31243;&#32467;&#26500;&#20307;&#22320;&#22336;&#65292;&#24182;&#23558;&#24403;&#21069;&#30340;&#26632;&#39030;&#21363;ESP&#23492;&#23384;&#22120;&#32473;&#21040;&#24403;&#21069;&#32447;&#31243;&#32467;&#26500;&#20307;&#30340;KernelStack&#25104;&#21592;&#65292;&#28982;&#21518;&#23601;&#26159;&#32463;&#20856;&#30340;&#32447;&#31243;&#20999;&#25442;&#25805;&#20316;&#65292;&#23558;&#24403;&#21069;&#30340;&#26632;&#39030;&#25351;&#21521;&#35201;&#20999;&#25442;&#30340;&#32447;&#31243;&#32467;&#26500;&#20307;&#25104;&#21592;KernelStack&#65292;&#20877;&#23558;&#20854;&#23545;&#24212;&#23384;&#20837;&#30340;&#32467;&#26500;&#20307;&#36827;&#34892;&#24377;&#20986;&#65292;<strong class=" ">&#26368;&#21518;RET&#25351;&#20196;&#26368;&#20026;&#31934;&#24039;&#65292;&#23558;&#21551;&#21160;&#32447;&#31243;&#30340;&#20989;&#25968;&#22320;&#22336;&#32473;&#21040;EIP&#65292;&#36825;&#26679;&#19979;&#19968;&#27425;&#35201;&#25191;&#34892;&#30340;&#20989;&#25968;&#23601;&#26159;&#21551;&#21160;&#32447;&#31243;&#30340;&#20989;&#25968;</strong>&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 切换线程</code></div>
+<div class="line"><code class="plain">__declspec(naked) </code><code class="keyword">void</code><code class="plain"> SwitchContext(GMThread_t* SrcGMThreadp, GMThread_t* DstGMThreadp)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    __asm {</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 提升堆栈</code></div>
+<div class="line"><code class="plain">        push ebp</code></div>
+<div class="line"><code class="plain">        mov ebp, esp</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 当前线程用到的寄存器入栈</code></div>
+<div class="line"><code class="plain">        push edi</code></div>
+<div class="line"><code class="plain">        push esi</code></div>
+<div class="line"><code class="plain">        push ebx</code></div>
+<div class="line"><code class="plain">        push ecx</code></div>
+<div class="line"><code class="plain">        push edx</code></div>
+<div class="line"><code class="plain">        push eax</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 将当前线程结构体和要切换的线程结构体分别存入ESI和EDI寄存器</code></div>
+<div class="line"><code class="plain">        mov esi, SrcGMThreadp</code></div>
+<div class="line"><code class="plain">        mov edi, DstGMThreadp</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 把当前线程的栈顶存入到结构体的KernelStack成员中</code></div>
+<div class="line"><code class="plain">        mov [esi + GMThread_t.KernelStack], esp</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 经典线程切换，另外一个线程复活</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 将要切换的线程结构体成员KernelStack给到ESP寄存器（栈顶），也就是栈的切换</code></div>
+<div class="line"><code class="plain">        mov esp, [edi + GMThread_t.KernelStack]</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 分别弹出要切换的线程结构体初始化的寄存器值</code></div>
+<div class="line"><code class="plain">        pop eax</code></div>
+<div class="line"><code class="plain">        pop edx</code></div>
+<div class="line"><code class="plain">        pop ecx</code></div>
+<div class="line"><code class="plain">        pop ebx</code></div>
+<div class="line"><code class="plain">        pop esi</code></div>
+<div class="line"><code class="plain">        pop edi</code></div>
+<div class="line"><code class="plain">        pop ebp</code></div>
+<div class="line"><code class="plain">        ret </code><code class="comments">// 将启动线程的函数地址给到EIP</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-6_16-16-49.png" alt="images/download/attachments/1703937/image2022-12-6_16-16-49.png" width="400"  />
+    </p>
+<p   
+>&#21551;&#21160;&#32447;&#31243;&#30340;&#20989;&#25968;&#22914;&#19979;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#21040;&#23427;&#20351;&#29992;&#32447;&#31243;&#32467;&#26500;&#20307;&#30340;func&#25104;&#21592;&#20989;&#25968;&#65292;&#20256;&#36882;&#21442;&#25968;&#20026;lpParameter&#25104;&#21592;&#65292;&#36825;&#26679;&#25105;&#20204;&#23601;&#21487;&#20197;&#39034;&#21033;&#30340;&#21435;&#25191;&#34892;&#23545;&#24212;&#32447;&#31243;&#30340;&#20989;&#25968;&#65292;&#26368;&#21518;&#23558;&#32447;&#31243;&#30340;&#29366;&#24577;&#35774;&#20026;&#36864;&#20986;&#29366;&#24577;&#65292;&#20877;&#36827;&#20837;Scheduling&#20989;&#25968;&#36827;&#34892;&#32447;&#31243;&#20999;&#25442;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">void</code><code class="plain"> GMThreadStartup(GMThread_t* GMThreadp)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    GMThreadp-&gt;func(GMThreadp-&gt;lpParameter);</code></div>
+<div class="line"><code class="plain">    GMThreadp-&gt;Flags = GMTHREAD_EXIT;</code></div>
+<div class="line"><code class="plain">    Scheduling();</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#36825;&#37324;&#23454;&#38469;&#19978;&#26377;&#19968;&#20010;&#32454;&#33410;&#65292;<strong class=" ">&#34429;&#28982;&#24403;RET&#25351;&#20196;&#23558;&#21551;&#21160;&#32447;&#31243;&#30340;&#20989;&#25968;&#22320;&#22336;&#24377;&#32473;&#20102;EIP&#65292;&#20294;&#26159;&#21551;&#21160;&#32447;&#31243;&#20989;&#25968;&#26159;&#26377;&#21442;&#25968;&#30340;&#65292;&#36825;&#20010;&#21442;&#25968;&#23601;&#26159;&#19968;&#20010;&#32447;&#31243;&#32467;&#26500;&#20307;&#65292;&#32780;&#36825;&#37324;&#25105;&#20204;&#24182;&#27809;&#26377;&#36827;&#34892;&#21442;&#25968;&#30340;&#20256;&#36882;&#65292;&#37027;&#20040;&#23427;&#26159;&#22914;&#20309;&#25214;&#21040;&#21442;&#25968;&#30340;&#21602;&#65311;</strong>&#23454;&#38469;&#19978;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;&#21453;&#27719;&#32534;&#26469;&#30475;&#19968;&#19979;&#65292;&#36890;&#36807;&#21453;&#27719;&#32534;&#25105;&#20204;&#21487;&#20197;&#30475;&#21040;&#21363;&#20351;&#20320;&#27809;&#26377;&#20256;&#36882;&#21442;&#25968;&#65292;&#20294;&#26159;&#22312;&#21453;&#27719;&#32534;&#30340;&#25351;&#20196;&#23618;&#23427;&#20250;&#36890;&#36807;[EBP+8]&#30340;&#26041;&#24335;&#21435;&#21462;&#21442;&#25968;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-6_16-11-25.png" alt="images/download/attachments/1703937/image2022-12-6_16-11-25.png" width="600"  />
+    </p>
+<p   
+>&#25152;&#20197;&#25105;&#20204;&#22312;&#21021;&#22987;&#21270;&#32447;&#31243;&#30340;&#20195;&#30721;&#20013;&#65292;&#21521;&#22534;&#26632;&#20013;&#38543;&#20415;&#21387;&#20837;&#20102;&#19968;&#20010;&#20540;&#65292;&#29992;&#20110;&#24179;&#34913;&#22534;&#26632;&#65292;&#36825;&#26679;&#23601;&#21487;&#20197;&#30830;&#20445;&#24403;&#25191;&#34892;&#35813;&#20989;&#25968;&#26102;&#33021;&#39034;&#21033;&#30340;&#36890;&#36807;[EBP+8]&#30340;&#26041;&#24335;&#26469;&#21462;&#21040;&#32447;&#31243;&#32467;&#26500;&#20307;&#65292;&#28982;&#21518;&#20877;&#25214;&#21040;&#23545;&#24212;&#30340;&#25104;&#21592;&#20989;&#25968;&#12289;&#20989;&#25968;&#21442;&#25968;&#36827;&#34892;&#35843;&#29992;&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">PushStack(&amp;StackDWordParam, (unsigned </code><code class="keyword">int</code><code class="plain">)</code><code class="value">9</code><code class="plain">); </code><code class="comments">// 平衡堆栈</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaAu-e7kw">
+        <h3 class="heading "><span>&#24635;&#32467;</span></h3>
+<ol class=" "><li class=" "><p   
+>&#32447;&#31243;&#19981;&#26159;&#34987;&#21160;&#20999;&#25442;&#30340;&#65292;&#32780;&#26159;&#20027;&#21160;&#30340;&#65292;&#36825;&#28857;&#25105;&#20204;&#22312;&#32447;&#31243;&#20989;&#25968;&#30340;&#23454;&#29616;&#20195;&#30721;&#19978;&#26377;&#20307;&#29616;&#65292;&#21363;&#27599;&#20010;&#32447;&#31243;&#20989;&#25968;&#37117;&#35843;&#29992;&#20102;&#32447;&#31243;&#20999;&#25442;&#30340;&#20989;&#25968;</p>
+<ul class=" "><li class=" "><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-6_16-21-13.png" alt="images/download/attachments/1703937/image2022-12-6_16-21-13.png" width="400"  />
+    </li></ul></li><li class=" "><p   
+>&#32447;&#31243;&#20999;&#25442;&#24182;&#27809;&#26377;&#36890;&#36807;TSS&#26469;&#20445;&#25252;&#23492;&#23384;&#22120;&#65292;&#32780;&#26159;&#36890;&#36807;&#22534;&#26632;&#30340;&#26041;&#24335;&#65307;</p>
+</li><li class=" "><p   
+>&#32447;&#31243;&#30340;&#20999;&#25442;&#36807;&#31243;&#26412;&#36136;&#19978;&#23601;&#26159;&#22534;&#26632;&#30340;&#20999;&#25442;&#36807;&#31243;&#12290;</p>
+</li></ol>    </div>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeS4u-WKqOWIh-aNog">
+        <h2 class="heading "><span>&#20027;&#21160;&#20999;&#25442;</span></h2>
+<p   
+>&#22312;&#32447;&#31243;&#27169;&#25311;&#30340;&#20195;&#30721;&#20013;&#65292;&#26377;&#19968;&#20010;&#37325;&#35201;&#30340;&#20989;&#25968;SwitchContext&#65292;&#23427;&#26159;&#29992;&#20110;&#32447;&#31243;&#20999;&#25442;&#30340;&#65292;&#32780;&#23545;&#24212;&#22312;Windows&#19978;&#26377;&#30528;&#31867;&#20284;&#21151;&#33021;&#30340;&#20989;&#25968;&#23601;&#26159;KiSwapContext&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;IDA&#25171;&#24320;Ntoskrnl.exe&#20869;&#26680;&#27169;&#22359;&#25214;&#21040;&#35813;&#20989;&#25968;&#65292;&#26469;&#30475;&#19968;&#19979;&#23427;&#30340;&#20316;&#29992;&#65292;&#26681;&#25454;&#21453;&#27719;&#32534;&#25105;&#20204;&#21487;&#20197;&#30475;&#35265;&#65292;&#35813;&#20989;&#25968;&#19968;&#24320;&#22987;&#23601;&#26159;&#20445;&#23384;&#24403;&#21069;&#32447;&#31243;&#25152;&#20351;&#29992;&#30340;&#23492;&#23384;&#22120;&#65292;&#28982;&#21518;&#26681;&#25454;_KPCR&#21462;&#20986;_KTHREAD&#32467;&#26500;&#20307;&#65292;&#24182;&#19988;&#20174;&#29238;&#20989;&#25968;&#20256;&#36882;&#30340;&#21442;&#25968;ECX&#20013;&#25343;&#21040;&#35201;&#20999;&#25442;&#30340;&#32447;&#31243;&#32467;&#26500;&#20307;&#22320;&#22336;&#65292;<strong class=" ">&#23558;&#35813;&#22320;&#22336;&#26367;&#25442;&#33267;_KPCR&#32467;&#26500;&#20307;&#20013;&#29992;&#20110;&#24403;&#21069;&#32447;&#31243;&#30340;_KTHREAD&#32467;&#26500;&#20307;&#25104;&#21592;&#30340;&#20301;&#32622;</strong>&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_14-20-16.png" alt="images/download/attachments/1703937/image2022-12-7_14-20-16.png" width="600"  />
+    </p>
+<p   
+>&#20174;&#29238;&#20989;&#25968;&#20256;&#36882;&#30340;&#21442;&#25968;ECX&#65292;&#25105;&#20204;&#21487;&#20197;&#36319;&#36827;&#30475;&#19968;&#19979;KiSwapThread&#20989;&#25968;&#65292;&#22914;&#19979;&#22270;&#25152;&#31034;ECX&#26159;&#36890;&#36807;EAX&#24471;&#26469;&#30340;&#65292;&#32780;EAX&#26159;&#36890;&#36807;KiFindReadyThread&#20989;&#25968;&#36820;&#22238;&#30340;&#65292;&#35813;&#20989;&#25968;&#20174;&#23383;&#38754;&#24847;&#24605;&#23601;&#26159;&#23547;&#25214;&#20934;&#22791;&#23601;&#32490;&#30340;&#32447;&#31243;&#65292;&#36820;&#22238;&#30340;&#33258;&#28982;&#23601;&#26159;&#19968;&#20010;&#32447;&#31243;&#32467;&#26500;&#20307;&#20102;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_14-23-37.png" alt="images/download/attachments/1703937/image2022-12-7_14-23-37.png" width="600"  />
+    </p>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#22238;&#21040;KiSwapContext&#65292;&#21521;&#19979;&#36208;&#23601;&#20250;&#21457;&#29616;&#30495;&#27491;&#30340;&#32447;&#31243;&#20999;&#25442;&#26159;&#22312;SwapContext&#20989;&#25968;&#20869;&#65292;&#36319;&#36827;&#35813;&#20989;&#25968;&#25105;&#20204;&#21487;&#20197;&#20808;&#24573;&#30053;&#20854;&#20182;&#30340;&#19968;&#20123;&#32454;&#33410;&#65292;&#20851;&#27880;&#26368;&#37325;&#35201;&#30340;&#22534;&#26632;&#20999;&#25442;&#37027;&#19968;&#37096;&#20998;&#65292;&#25105;&#20204;&#21487;&#20197;&#28165;&#26224;&#30340;&#30475;&#35265;&#36825;&#37324;&#30340;&#25805;&#20316;&#19982;&#20043;&#21069;&#30340;&#27169;&#25311;&#32447;&#31243;&#20999;&#25442;&#19968;&#26679;&#65292;&#23558;&#24403;&#21069;&#30340;ESP&#23384;&#20837;&#24403;&#21069;&#32447;&#31243;&#30340;&#32467;&#26500;&#20307;&#20013;&#65292;&#24182;&#19988;&#23558;&#35201;&#20999;&#25442;&#32447;&#31243;&#30340;KernelStatck&#25104;&#21592;&#32473;&#21040;&#24403;&#21069;ESP&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_14-55-4.png" alt="images/download/attachments/1703937/image2022-12-7_14-55-4.png" width="600"  />
+    </p>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaAu-e7ky4x">
+        <h3 class="heading "><span>&#24635;&#32467;</span></h3>
+<p   
+>&#20854;&#23454;&#22312;&#20869;&#26680;&#20989;&#25968;&#20013;&#22823;&#22810;&#37117;&#29992;&#21040;&#20102;&#32447;&#31243;&#20999;&#25442;&#65292;&#25105;&#20204;&#21487;&#20197;&#26681;&#25454;IDA&#30340;XREF&#26469;&#30475;&#35843;&#29992;&#38142;&#65292;&#26368;&#32456;&#30475;&#35265;&#26377;&#24456;&#22810;&#20010;&#20869;&#26680;&#20989;&#25968;&#35843;&#29992;&#20102;&#32447;&#31243;&#20999;&#25442;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_15-8-56.png" alt="images/download/attachments/1703937/image2022-12-7_15-8-56.png" width="400"  />
+    </p>
+<p   
+>&#22312;&#32447;&#31243;&#20999;&#25442;&#26102;&#20250;&#27604;&#36739;&#26159;&#21542;&#23646;&#20110;&#21516;&#19968;&#20010;&#36827;&#31243;&#65292;&#22914;&#26524;&#19981;&#26159;&#21516;&#19968;&#20010;&#36827;&#31243;&#65292;&#23601;&#20250;&#20999;&#25442;Cr3&#65292;&#36825;&#26679;&#23545;&#24212;&#36827;&#31243;&#20063;&#23601;&#20999;&#25442;&#20102;&#65292;<strong class=" ">&#22240;&#27492;&#36827;&#31243;&#30340;&#20999;&#25442;&#23454;&#38469;&#19978;&#20063;&#26159;&#32447;&#31243;&#30340;&#20999;&#25442;</strong>&#12290;</p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaXtumSn-S4reaWreWIh-aNog">
+        <h2 class="heading "><span>&#26102;&#38047;&#20013;&#26029;&#20999;&#25442;</span></h2>
+<p   
+>&#20043;&#21069;&#25105;&#20204;&#20102;&#35299;&#21040;&#22823;&#22810;&#25968;&#20869;&#26680;&#20989;&#25968;&#37117;&#26368;&#32456;&#20250;&#35843;&#29992;&#21040;SwapContext&#26469;&#36827;&#34892;&#32447;&#31243;&#20999;&#25442;&#65292;&#20294;&#22914;&#26524;&#26377;&#32447;&#31243;&#27809;&#26377;&#21435;&#35843;&#29992;&#31995;&#32479;API&#26159;&#21542;&#23601;&#19981;&#20250;&#36827;&#34892;&#32447;&#31243;&#20999;&#25442;&#21602;&#65311;&#20854;&#23454;&#19981;&#28982;&#65292;&#26102;&#38047;&#20013;&#26029;&#20063;&#20250;&#23548;&#33268;&#32447;&#31243;&#20999;&#25442;&#12290;</p>
+<p   
+>&#22914;&#19979;&#23601;&#26159;&#31995;&#32479;&#26102;&#38047;&#20013;&#26029;&#23545;&#24212;&#30340;&#20449;&#24687;&#65292;&#22312;Windows&#25805;&#20316;&#31995;&#32479;&#20013;&#65292;&#27599;10~20&#27627;&#31186;&#20415;&#20250;&#35302;&#21457;&#19968;&#27425;&#26102;&#38047;&#20013;&#26029;&#65292;&#35201;&#24819;&#33719;&#21462;&#24403;&#21069;&#29256;&#26412;Windows&#26102;&#38047;&#38388;&#38548;&#20540;&#65292;&#21487;&#20351;&#29992;GetSystemTimeAdjustment&#20989;&#25968;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#65288;IDT&#34920;&#65289;&#20013;&#26029;&#21495;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>IRQ&#21495;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#35828;&#26126;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x30</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IRQ0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#26102;&#38047;&#20013;&#26029;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaJp-ihjOa1geeoiw">
+        <h3 class="heading auto-cursor-target"><span>&#25191;&#34892;&#27969;&#31243;</span></h3>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;IDA&#25171;&#24320;Ntoskrnl.exe&#20869;&#26680;&#27169;&#22359;&#65292;&#25214;&#21040;IDT&#34920;&#20013;0x30&#20013;&#26029;&#21495;&#23545;&#24212;&#30340;&#22788;&#29702;&#20989;&#25968;&#65292;&#20063;&#23601;&#26159;_KiStartUnexpectedRange&#20989;&#25968;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_16-2-17.png" alt="images/download/attachments/1703937/image2022-12-7_16-2-17.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#36319;&#36827;&#36825;&#20010;&#20989;&#25968;&#21457;&#29616;&#26377;&#20004;&#20010;&#36339;&#36716;&#65292;&#20808;&#26159;&#36208;&#21040;_KiEndUnexpectedRange&#20989;&#25968;&#65292;&#26368;&#32456;&#26159;&#36208;&#21040;&#20102;_KiUnexpectedInterruptTail&#20989;&#25968;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_16-6-2.png" alt="images/download/attachments/1703937/image2022-12-7_16-6-2.png" width="600"  />
+    </p>
+<p   
+>&#22312;&#36825;&#20010;&#20989;&#25968;&#37324;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#35265;&#23427;&#22312;&#20989;&#25968;&#20869;&#21448;&#35843;&#29992;&#20102;&#19968;&#20010;&#23548;&#20837;&#34920;&#30340;&#20989;&#25968;HalBeginSystemInterrupt&#21644;HalEndSystemInterrupt&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_16-27-4.png" alt="images/download/attachments/1703937/image2022-12-7_16-27-4.png" width="600"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_16-40-8.png" alt="images/download/attachments/1703937/image2022-12-7_16-40-8.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#22312;IDA&#30340;Imports&#23548;&#20837;&#34920;&#31383;&#21475;&#20013;&#25214;&#21040;&#35813;&#23548;&#20837;&#20989;&#25968;&#23545;&#24212;&#30340;&#27169;&#22359;&#65292;&#20063;&#23601;&#26159;&#22914;&#19979;&#22270;&#25152;&#31034;&#30340;HAL&#27169;&#22359;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_16-28-40.png" alt="images/download/attachments/1703937/image2022-12-7_16-28-40.png" width="600"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_16-36-41.png" alt="images/download/attachments/1703937/image2022-12-7_16-36-41.png" width="600"  />
+    </p>
+<p   
+>&#36319;&#36827;HAL&#27169;&#22359;&#65288;HAL.DLL&#25991;&#20214;&#22312;C:/Windows/System32&#30446;&#24405;&#19979;&#65289;&#22312;HalEndSystemInterrupt&#20989;&#25968;&#20869;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#21040;&#23427;&#21448;&#35843;&#29992;&#20102;KiDispatchInterrupt&#20989;&#25968;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-8_15-23-47.png" alt="images/download/attachments/1703937/image2022-12-8_15-23-47.png" width="400"  />
+    </p>
+<p   
+>&#20877;&#22238;&#21040;Ntoskrnl.exe&#20869;&#26680;&#27169;&#22359;&#65292;&#36319;&#36827;KiDispatchInterrupt&#20989;&#25968;&#20320;&#20250;&#21457;&#29616;&#23427;&#26368;&#32456;&#21448;&#35843;&#29992;&#20102;SwapContext&#20989;&#25968;&#65292;&#22240;&#27492;&#20063;&#23601;&#35777;&#26126;&#20102;&#26102;&#38047;&#20013;&#26029;&#20063;&#20250;&#23548;&#33268;&#32447;&#31243;&#20999;&#25442;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_16-39-27.png" alt="images/download/attachments/1703937/image2022-12-7_16-39-27.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#31616;&#21333;&#26803;&#29702;&#19968;&#19979;&#65292;&#31995;&#32479;&#26102;&#38047;&#20013;&#26029;&#30340;&#25191;&#34892;&#27969;&#31243;&#22270;&#22914;&#19979;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_16-40-37.png" alt="images/download/attachments/1703937/image2022-12-7_16-40-37.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaAu-e7ky4y">
+        <h3 class="heading "><span>&#24635;&#32467;</span></h3>
+<p   
+>&#32447;&#31243;&#20999;&#25442;&#30340;&#20960;&#31181;&#24773;&#20917;&#65306;</p>
+<ol class=" "><li class=" "><p   
+>&#20027;&#21160;&#35843;&#29992;API&#20989;&#25968;&#65288;SwapContext&#65289;</p>
+</li><li class=" "><p   
+>&#26102;&#38047;&#20013;&#26029;</p>
+</li><li class=" "><p   
+>&#24322;&#24120;&#22788;&#29702;&#65288;&#32570;&#39029;&#12289;INT N&#25351;&#20196;&#65289;</p>
+</li></ol><p   
+>&#22914;&#26524;&#19968;&#20010;&#32447;&#31243;&#19981;&#35843;&#29992;API&#65292;&#22312;&#20195;&#30721;&#20013;&#23631;&#34109;&#20013;&#26029;&#65288;CLI&#25351;&#20196;&#65289;&#65292;&#24182;&#19988;&#19981;&#20250;&#20986;&#29616;&#24322;&#24120;&#65292;&#37027;&#20040;&#24403;&#21069;&#32447;&#31243;&#23558;&#27704;&#20037;&#21344;&#26377;CPU&#65292;&#21333;&#26680;&#21344;&#26377;&#29575;100% &#65292;2&#26680;&#23601;&#26159;50%&#12290;</p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaXtumXtOeJh-euoeeQhuS4juWkh-eUqOe6v-eoiw">
+        <h2 class="heading "><span>&#26102;&#38388;&#29255;&#31649;&#29702;&#19982;&#22791;&#29992;&#32447;&#31243;</span></h2>
+<p   
+>&#26102;&#38047;&#20013;&#26029;&#23548;&#33268;&#32447;&#31243;&#36827;&#34892;&#20999;&#25442;&#20063;&#26159;&#26377;&#21069;&#32622;&#26465;&#20214;&#30340;&#65292;<strong class=" ">&#31532;&#19968;&#26159;&#24403;&#21069;&#30340;&#32447;&#31243;CPU&#26102;&#38388;&#29255;&#21040;&#26399;&#65292;&#31532;&#20108;&#26159;&#26377;&#22791;&#29992;&#30340;&#32447;&#31243;&#65288;&#21363;_KPCR.PrcbData.NextThread&#23384;&#20648;&#20102;&#21478;&#22806;&#30340;&#32447;&#31243;&#22320;&#22336;&#65289;</strong>&#65292;&#20197;&#19978;&#20004;&#31181;&#24773;&#20917;&#26102;&#20505;&#21457;&#29983;&#30340;&#26102;&#38388;&#20013;&#26029;&#25165;&#20250;&#36827;&#34892;&#32447;&#31243;&#20999;&#25442;&#12290;</p>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLUNQVeaXtumXtOeJh-WIsOacnw">
+        <h3 class="heading "><span>CPU&#26102;&#38388;&#29255;&#21040;&#26399;</span></h3>
+<p   
+>&#26102;&#38388;&#29255;&#23601;&#26159;CPU&#20998;&#37197;&#32473;&#21508;&#20010;&#31243;&#24207;&#30340;&#26102;&#38388;&#65292;&#27599;&#20010;&#36827;&#31243;&#34987;&#20998;&#37197;&#19968;&#20010;&#26102;&#38388;&#27573;&#65292;&#31216;&#20316;&#23427;&#30340;&#26102;&#38388;&#29255;&#65292;&#34920;&#31034;&#35813;&#36827;&#31243;&#20801;&#35768;&#36816;&#34892;&#30340;&#26102;&#38388;&#65292;&#20351;&#21508;&#20010;&#31243;&#24207;&#20174;&#34920;&#38754;&#19978;&#30475;&#26159;&#21516;&#26102;&#36827;&#34892;&#30340;&#12290; &#22914;&#26524;&#22312;&#26102;&#38388;&#29255;&#32467;&#26463;&#26102;&#36827;&#31243;&#36824;&#22312;&#36816;&#34892;&#65292;&#21017;CPU&#23558;&#34987;&#21093;&#22842;&#24182;&#20998;&#37197;&#32473;&#21478;&#19968;&#20010;&#36827;&#31243;&#12290;&#22914;&#26524;&#36827;&#31243;&#22312;&#26102;&#38388;&#29255;&#32467;&#26463;&#21069;&#38459;&#22622;&#25110;&#32467;&#26463;&#65292;&#21017;CPU&#24403;&#21363;&#36827;&#34892;&#20999;&#25442;&#65292;&#36825;&#26679;&#23601;&#19981;&#20250;&#36896;&#25104;CPU&#36164;&#28304;&#28010;&#36153;&#12290;</p>
+<p   
+>&#24403;&#19968;&#20010;&#26032;&#30340;&#32447;&#31243;&#24320;&#22987;&#25191;&#34892;&#65292;&#21021;&#22987;&#21270;&#31243;&#24207;&#20250;&#32473;_KTHREAD&#32467;&#26500;&#20307;&#30340;Quantum&#25104;&#21592;&#36171;&#20104;&#21021;&#22987;&#20540;&#65292;&#35813;&#20540;&#30340;&#22823;&#23567;&#30001;_KPROCESS&#32467;&#26500;&#20307;&#30340;ThreadQuantum&#25104;&#21592;&#20915;&#23450;&#12290;&#22914;&#19979;&#22270;&#25152;&#31034;&#25105;&#20204;&#25214;&#19968;&#20010;&#36827;&#31243;&#26469;&#30475;&#19979;&#32467;&#26500;&#20307;&#30340;ThreadQuantum&#25104;&#21592;&#65292;&#23427;&#30340;&#20540;&#20026;6&#65292;&#20063;&#23601;&#34920;&#31034;&#24403;&#35813;&#36827;&#31243;&#30340;&#32447;&#31243;&#24320;&#22987;&#25191;&#34892;&#65292;&#21021;&#22987;&#21270;&#31243;&#24207;&#20250;&#23558;&#35813;&#20540;&#36171;&#20104;_KTHREAD&#32467;&#26500;&#20307;&#30340;Quantum&#25104;&#21592;&#65292;&#35813;&#20540;&#23601;&#34920;&#31034;&#24403;&#21069;&#32447;&#31243;&#26102;&#38388;&#29255;&#30340;&#22823;&#23567;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_16-55-53.png" alt="images/download/attachments/1703937/image2022-12-7_16-55-53.png"  height="250" />
+    </p>
+<p   
+>&#27599;&#27425;&#26102;&#38047;&#20013;&#26029;&#20250;&#35843;&#29992;KeUpdateRunTime&#20989;&#25968;&#65292;&#35813;&#20989;&#25968;&#27599;&#27425;&#25191;&#34892;&#23601;&#20250;&#23558;&#24403;&#21069;&#32447;&#31243;&#32467;&#26500;&#20307;&#25104;&#21592;Quantum&#30340;&#20540;&#20943;&#23569;3&#20010;&#21333;&#20301;&#65292;&#22914;&#26524;&#20943;&#21040;0&#21017;&#23558;_KPCR.PrcbData.QuantumEnd&#30340;&#20540;&#35774;&#32622;&#20026;&#38750;0&#26469;&#34920;&#31034;&#24403;&#21069;&#26102;&#38388;&#29255;&#24050;&#32463;&#21040;&#26399;&#20102;&#65292;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;IDA&#26469;&#30475;&#21040;&#36825;&#19968;&#36807;&#31243;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-7_17-14-58.png" alt="images/download/attachments/1703937/image2022-12-7_17-14-58.png" width="600"  />
+    </p>
+<p   
+>&#31995;&#32479;&#26102;&#38047;&#25191;&#34892;&#23436;&#27605;&#20043;&#21518;&#37117;&#20250;&#21435;&#35843;&#29992;KiDispatchInterrupt&#20989;&#25968;&#65292;&#36825;&#20010;&#20989;&#25968;&#29992;&#20110;&#21028;&#26029;&#24403;&#21069;&#32447;&#31243;&#30340;&#26102;&#38388;&#29255;&#26159;&#21542;&#21040;&#26399;&#65292;&#25105;&#20204;&#21487;&#20197;&#26469;&#30475;&#19968;&#19979;&#35813;&#20989;&#25968;&#30340;&#25191;&#34892;&#27969;&#31243;&#65292;&#20808;&#21028;&#26029;_KPCR.PrcbData.QuantumEnd&#30340;&#20540;&#65292;&#24403;&#20540;&#20026;&#38750;0&#26102;&#36827;&#34892;&#36339;&#36716;&#65292;&#25509;&#30528;&#20462;&#25913;&#35813;&#20540;&#20026;0&#32487;&#32780;&#35843;&#29992;_KiQuantumEnd&#20989;&#25968;&#65292;&#22312;&#36825;&#20010;&#20989;&#25968;&#37324;&#23601;&#26159;&#37325;&#26032;&#35774;&#32622;_KTHREAD&#32467;&#26500;&#20307;&#30340;Quantum&#25104;&#21592;&#20026;6&#65292;&#28982;&#21518;&#36827;&#20837;&#21040;KiFindReadThread&#20989;&#25968;&#23547;&#25214;&#19979;&#19968;&#20010;&#23601;&#32490;&#29366;&#24577;&#30340;&#32447;&#31243;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-8_15-0-1.png" alt="images/download/attachments/1703937/image2022-12-8_15-0-1.png" width="600"  />
+    </p>
+<p   
+>&#20197;&#19978;&#27969;&#31243;&#32467;&#26463;&#20043;&#21518;&#23601;&#36820;&#22238;&#21040;KiDispatchInterrupt&#20989;&#25968;&#20102;&#65292;&#25509;&#30528;&#36319;&#36827;&#21457;&#29616;&#23558;_KPCR.PrcbData.CurrentThread&#35774;&#20026;&#19979;&#19968;&#20010;&#23601;&#32490;&#29366;&#24577;&#30340;&#32447;&#31243;&#65292;&#24182;&#19988;&#25226;&#24403;&#21069;&#32447;&#31243;&#25346;&#21040;&#35843;&#24230;&#38142;&#34920;&#20013;&#65292;&#26368;&#32456;&#36827;&#34892;&#22534;&#26632;&#30340;&#20999;&#25442;&#65288;&#32447;&#31243;&#20999;&#25442;&#65289;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-8_15-38-34.png" alt="images/download/attachments/1703937/image2022-12-8_15-38-34.png" width="600"  />
+    </p>
+<p   
+>&#20197;&#19978;&#23601;&#26159;&#22823;&#33268;&#30340;CPU&#26102;&#38388;&#29255;&#21040;&#26399;&#30340;&#25191;&#34892;&#27969;&#31243;&#12290;</p>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeWkh-eUqOe6v-eoiw">
+        <h3 class="heading "><span>&#22791;&#29992;&#32447;&#31243;</span></h3>
+<p   
+>&#38500;&#20102;CPU&#26102;&#38388;&#29255;&#21040;&#26399;&#30340;&#24773;&#20917;&#65292;&#36824;&#26377;&#23384;&#22312;&#22791;&#29992;&#32447;&#31243;&#30340;&#24773;&#20917;&#20063;&#20250;&#36827;&#34892;&#32447;&#31243;&#20999;&#25442;&#65292;&#25105;&#20204;&#21487;&#20197;&#32487;&#32493;&#20998;&#26512;KiDispatchInterrupt&#36825;&#20010;&#20989;&#25968;&#65292;&#22238;&#21040;&#26368;&#24320;&#22987;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#21040;&#21363;&#20351;&#20320;&#30340;CPU&#26102;&#38388;&#29255;&#27809;&#26377;&#36807;&#26399;&#65292;&#20294;&#22914;&#26524;_KPCR.PrcbData.NextThread&#19981;&#20026;0&#65292;&#20063;&#23601;&#26159;&#23384;&#22312;&#22791;&#29992;&#32447;&#31243;&#65292;&#20063;&#20250;&#36827;&#34892;&#32447;&#31243;&#20999;&#25442;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-8_15-55-7.png" alt="images/download/attachments/1703937/image2022-12-8_15-55-7.png" width="600"  />
+    </p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLee6v-eoi-WIh-aNouS4jlRTU-eahOWFs-ezuw">
+        <h2 class="heading "><span>&#32447;&#31243;&#20999;&#25442;&#19982;TSS&#30340;&#20851;&#31995;</span></h2>
+<p   
+>SwapContext&#36825;&#20010;&#20989;&#25968;&#26159;Windows&#32447;&#31243;&#20999;&#25442;&#30340;&#26680;&#24515;&#65292;&#26080;&#35770;&#26159;&#20027;&#21160;&#20999;&#25442;&#36824;&#26159;&#31995;&#32479;&#26102;&#38047;&#23548;&#33268;&#30340;&#32447;&#31243;&#20999;&#25442;&#65292;&#26368;&#32456;&#37117;&#20250;&#35843;&#29992;&#36825;&#20010;&#20989;&#25968;&#12290;&#22312;&#36825;&#20010;&#20989;&#25968;&#20013;&#38500;&#20102;&#20999;&#25442;&#22534;&#26632;&#20197;&#22806;&#65292;&#36824;&#20570;&#20102;&#24456;&#22810;&#20854;&#20182;&#30340;&#20107;&#24773;&#65292;&#20102;&#35299;&#36825;&#20123;&#32454;&#33410;&#23545;&#25105;&#20204;&#23398;&#20064;&#25805;&#20316;&#31995;&#32479;&#33267;&#20851;&#37325;&#35201;&#12290;&#36825;&#33410;&#35838;&#25105;&#20204;&#35762;&#19968;&#19979;&#32447;&#31243;&#20999;&#25442;&#19982;TSS&#30340;&#20851;&#31995;&#12290;</p>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeWGheaguOWghuagiA">
+        <h3 class="heading "><span>&#20869;&#26680;&#22534;&#26632;</span></h3>
+<p   
+>&#27599;&#19968;&#20010;&#32447;&#31243;&#37117;&#26377;&#19968;&#20010;&#20869;&#26680;&#22534;&#26632;&#65292;&#22312;&#31995;&#32479;&#35843;&#29992;&#31456;&#33410;&#26102;&#25105;&#20204;&#20102;&#35299;&#21040;&#20351;&#29992;API&#20174;3&#29615;&#36827;0&#29615;&#37117;&#35201;&#36827;&#34892;&#19968;&#20010;&#22534;&#26632;&#30340;&#20999;&#25442;&#65292;&#36827;0&#29615;&#25152;&#20999;&#25442;&#30340;&#22534;&#26632;&#23601;&#26159;&#20869;&#26680;&#22534;&#26632;&#12290;&#22312;&#32447;&#31243;&#32467;&#26500;&#20307;_KTHREAD&#20013;&#26377;&#20851;&#20110;&#20869;&#26680;&#22534;&#26632;&#30340;&#30456;&#20851;&#20449;&#24687;&#65288;&#26632;&#39030;&#12289;&#26632;&#24213;&#12289;&#26632;&#36793;&#30028;&#65289;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-8_16-2-45.png" alt="images/download/attachments/1703937/image2022-12-8_16-2-45.png" width="400"  />
+    </p>
+<p   
+>&#20869;&#26680;&#22534;&#26632;&#30340;&#32467;&#26500;&#22823;&#33268;&#20998;&#20026;&#20004;&#20010;&#37096;&#20998;&#12290;&#31532;&#19968;&#37096;&#20998;&#23601;&#26159;&#20174;InitialStack&#24320;&#22987;&#19968;&#20849;0x210&#20010;&#23383;&#33410;&#65292;&#23384;&#20648;&#30340;&#23601;&#26159;&#28014;&#28857;&#23492;&#23384;&#22120;&#30340;&#20540;&#65307;&#21097;&#19979;&#30340;&#31532;&#20108;&#37096;&#20998;&#23601;&#26159;&#25105;&#20204;&#20043;&#21069;&#20102;&#35299;&#36807;&#30340;_Trap_Frame&#32467;&#26500;&#20307;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-9_10-45-44.png" alt="images/download/attachments/1703937/image2022-12-9_10-45-44.png" width="400"  />
+    </p>
+<p   
+>_Trap_Frame&#32467;&#26500;&#20307;&#22312;&#31995;&#32479;&#35843;&#29992;&#31456;&#33410;&#24050;&#32463;&#23398;&#36807;&#20102;&#65292;&#23427;&#30340;&#32467;&#26500;&#25104;&#21592;&#22914;&#19979;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-9_10-48-44.png" alt="images/download/attachments/1703937/image2022-12-9_10-48-44.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeiwg-eUqEFQSei_mzDnjq8">
+        <h3 class="heading "><span>&#35843;&#29992;API&#36827;0&#29615;</span></h3>
+<p   
+>API&#36827;0&#29615;&#26377;&#20004;&#31181;&#26041;&#24335;&#65292;&#20998;&#21035;&#20026;&#26222;&#36890;&#35843;&#29992;&#21644;&#24555;&#36895;&#35843;&#29992;&#12290;&#26222;&#36890;&#35843;&#29992;&#36890;&#36807;API&#36827;0&#29615;&#21518;&#20250;&#20174;TSS&#30340;ESP0&#24471;&#21040;0&#29615;&#30340;&#22534;&#26632;&#65307;&#24555;&#36895;&#35843;&#29992;&#21017;&#26159;&#20808;&#20174;MSR&#24471;&#21040;&#19968;&#20010;&#20020;&#26102;&#30340;0&#29615;&#26632;&#26469;&#25552;&#20379;&#20195;&#30721;&#25191;&#34892;&#30340;&#29615;&#22659;&#65292;&#20294;&#26159;&#36825;&#27573;&#20195;&#30721;&#30340;&#25191;&#34892;&#23454;&#38469;&#19978;&#23601;&#26159;&#20174;TSS&#30340;ESP0&#24471;&#21040;0&#29615;&#30340;&#22534;&#26632;&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;IDA&#26469;&#30475;&#19968;&#19979;_KiFastCallEntry&#20989;&#25968;&#65292;&#23427;&#20808;&#36890;&#36807;_KPCR&#25214;&#21040;TSS&#65292;&#32780;&#21518;&#36890;&#36807;TSS&#30340;ESP0&#24471;&#21040;0&#29615;&#30340;&#22534;&#26632;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-9_11-25-34.png" alt="images/download/attachments/1703937/image2022-12-9_11-25-34.png" width="600"  />
+    </p>
+<p   
+>&#25152;&#20197;&#25105;&#20204;&#38656;&#35201;&#26126;&#30333;&#19968;&#20010;&#20107;&#24773;&#65292;&#26080;&#35770;&#26159;&#20160;&#20040;&#35843;&#29992;&#26041;&#24335;&#36827;&#20837;0&#29615;&#37117;&#26159;&#35201;&#36890;&#36807;TSS&#26469;&#20999;&#25442;&#22534;&#26632;&#30340;&#12290;</p>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLVRTUw">
+        <h3 class="heading "><span>TSS</span></h3>
+<p   
+>Intel&#35774;&#35745;TSS&#30340;&#30446;&#30340;&#26159;&#20026;&#20102;&#20219;&#21153;&#20999;&#25442;&#65288;&#32447;&#31243;&#20999;&#25442;&#65289;&#65292;&#20294;&#26159;Windows&#21644;Linux&#37117;&#27809;&#26377;&#20351;&#29992;&#65292;&#32780;&#26159;&#37319;&#29992;&#22534;&#26632;&#26469;&#20445;&#25252;&#32447;&#31243;&#30340;&#21508;&#31181;&#23492;&#23384;&#22120;&#12290;</p>
+<p   
+>&#19968;&#20010;CPU&#21482;&#26377;&#19968;&#20010;TSS&#65292;&#20294;&#26159;&#32447;&#31243;&#26159;&#26377;&#24456;&#22810;&#20010;&#30340;&#65292;&#27599;&#20010;&#32447;&#31243;&#22312;0&#29615;&#23545;&#24212;&#30340;&#22534;&#26632;&#26159;&#19981;&#19968;&#26679;&#30340;&#65292;&#37027;&#20040;&#21040;&#24213;&#26159;&#20160;&#20040;&#26679;&#30340;&#26041;&#24335;&#33021;&#35753;&#19968;&#20010;TSS&#26469;&#20445;&#23384;&#25152;&#26377;&#32447;&#31243;&#30340;ESP0&#21602;&#65311;&#36825;&#37324;&#30340;&#32454;&#33410;&#22312;&#32447;&#31243;&#20999;&#25442;&#20013;&#65292;&#22240;&#27492;&#25105;&#20204;&#38656;&#35201;&#20998;&#26512;SwapContext&#20989;&#25968;&#12290;</p>
+    </div>
+    <div class="section section-3" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLVN3YXBDb250ZXh05YiG5p6Q">
+        <h3 class="heading "><span>SwapContext&#20998;&#26512;</span></h3>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;IDA&#26469;&#20998;&#26512;&#19968;&#19979;SwapContext&#20989;&#25968;&#65292;&#37325;&#28857;&#20851;&#27880;TSS&#37096;&#20998;&#65292;&#39318;&#20808;&#26159;&#21462;&#20986;TSS&#28982;&#21518;&#23558;EAX&#32473;&#21040;TSS&#30340;ESP0&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-9_16-21-39.png" alt="images/download/attachments/1703937/image2022-12-9_16-21-39.png" width="600"  />
+    </p>
+<p   
+>&#37027;&#20040;&#36825;&#20010;EAX&#21448;&#26159;&#20174;&#20309;&#32780;&#26469;&#21602;&#65292;&#25105;&#20204;&#21487;&#20197;&#21521;&#19978;&#25214;&#19968;&#19979;&#65292;EAX&#30340;&#20540;&#26159;&#30446;&#26631;&#32447;&#31243;&#30340;&#26632;&#24213;&#65292;&#24182;&#19988;&#23558;&#22534;&#26632;&#20013;&#23384;&#20648;&#30340;&#28014;&#28857;&#23492;&#23384;&#22120;&#21644;_Trap_Frame&#32467;&#26500;&#20307;&#20013;&#29992;&#20110;&#34394;&#25311;8086&#27169;&#24335;&#19979;&#30340;&#25104;&#21592;&#21435;&#38500;&#65292;&#20063;&#23601;&#26159;&#36827;&#34892;&#20559;&#31227;&#20301;&#30340;&#20462;&#27491;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-9_16-26-43.png" alt="images/download/attachments/1703937/image2022-12-9_16-26-43.png" width="600"  />
+    </p>
+<p   
+>&#20174;_Trap_Frame&#32467;&#26500;&#26469;&#30475;&#65292;&#30446;&#26631;&#32447;&#31243;&#30340;&#26632;&#24213;&#65288;EAX&#65289;&#23601;&#25351;&#21521;&#20102;HardwareSegSs&#25104;&#21592;&#30340;&#20301;&#32622;&#65292;&#24403;&#28982;&#36825;&#26159;&#24555;&#36895;&#35843;&#29992;&#26102;&#25152;&#25351;&#21521;&#30340;&#20301;&#32622;&#65292;&#22914;&#26524;&#26159;&#26222;&#36890;&#35843;&#29992;&#65288;&#36890;&#36807;&#20013;&#26029;&#38376;&#30340;&#26041;&#24335;&#65289;&#30001;&#20110;CPU&#20250;&#24110;&#25105;&#20204;&#21387;&#20837;5&#20010;&#23492;&#23384;&#22120;&#20540;&#65292;&#25152;&#20197;&#26632;&#24213;&#26159;&#25351;&#21521;ErrCode&#25104;&#21592;&#30340;&#12290;</p>
+<p   
+>&#38500;&#20102;ESP0&#20043;&#22806;&#65292;&#36824;&#26377;&#20004;&#20010;TSS&#30340;&#25104;&#21592;&#20250;&#34987;&#20351;&#29992;&#21040;&#12290;&#19968;&#20010;&#26159;TSS&#30340;Cr3&#20250;&#34987;&#20462;&#25913;&#20026;&#30446;&#26631;&#36827;&#31243;&#30340;Cr3&#65307;&#21478;&#22806;&#19968;&#20010;&#26159;&#20043;&#21069;&#23398;&#20064;&#20013;&#27809;&#26377;&#25552;&#21040;&#30340;IO&#26435;&#38480;&#20301;&#22270;&#65292;&#26159;&#23558;&#24403;&#21069;&#32447;&#31243;&#30340;IO&#26435;&#38480;&#20301;&#22270;&#23384;&#21040;TSS&#30340;0x66&#20559;&#31227;&#20301;&#25104;&#21592;&#65292;&#20294;&#26159;&#36825;&#20010;&#22312;Windows2000&#20197;&#21518;&#24050;&#32463;&#19981;&#20877;&#20351;&#29992;&#20102;&#12290;&#65288;<strong class=" ">&#33258;&#34892;&#20102;&#35299;IO&#26435;&#38480;&#20301;&#22270;</strong>&#65289;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-9_16-36-15.png" alt="images/download/attachments/1703937/image2022-12-9_16-36-15.png" width="600"  />
+    </p>
+<p   
+>&#37027;&#20040;&#36890;&#36807;&#20197;&#19978;&#30340;&#20998;&#26512;&#65292;&#25105;&#20204;&#21457;&#29616;&#34429;&#28982;Intel&#30340;&#21021;&#34935;&#26159;&#24076;&#26395;&#25805;&#20316;&#31995;&#32479;&#29992;TSS&#21435;&#23384;&#20648;&#26356;&#22810;&#20869;&#23481;&#65292;&#20294;&#26159;&#22312;Windows&#30340;&#23454;&#38469;&#23454;&#29616;&#20013;&#21482;&#29992;&#21040;&#20102;TSS&#30340;ESP0&#12289;Cr3&#12289;IO&#26435;&#38480;&#20301;&#22270;&#36825;3&#20010;&#25104;&#21592;&#65288;&#23454;&#38469;&#23545;&#20110;&#24403;&#21069;&#30340;Windows&#31995;&#32479;&#26469;&#35828;&#21482;&#26377;2&#20010;&#65289;&#26469;&#36827;&#34892;&#32447;&#31243;&#20999;&#25442;&#12290;</p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLee6v-eoi-WIh-aNouS4jkZT5a-E5a2Y5Zmo55qE5YWz57O7">
+        <h2 class="heading "><span>&#32447;&#31243;&#20999;&#25442;&#19982;FS&#23492;&#23384;&#22120;&#30340;&#20851;&#31995;</span></h2>
+<p   
+>&#25105;&#20204;&#30693;&#36947;&#22312;3&#29615;&#19979;FS:[0]&#25351;&#21521;&#30340;&#26159;TEB&#65292;&#32780;&#22312;0&#29615;&#19979;FS:[0]&#25351;&#21521;&#30340;&#26159;_KPCR&#12290;<strong class=" ">&#22312;&#31995;&#32479;&#20013;&#21516;&#26102;&#20250;&#26377;&#24456;&#22810;&#20010;&#32447;&#31243;&#36816;&#34892;&#65292;&#36825;&#23601;&#24847;&#21619;&#30528;FS:[0]&#38656;&#35201;&#23384;&#20648;&#30340;&#19981;&#21516;&#32447;&#31243;&#30340;&#30456;&#20851;&#20449;&#24687;&#65292;&#20294;&#26159;&#22312;&#23454;&#38469;&#30340;&#20351;&#29992;&#20013;&#21457;&#29616;3&#29615;&#19979;&#19981;&#21516;&#32447;&#31243;&#30340;FS&#23492;&#23384;&#22120;&#65288;&#27573;&#36873;&#25321;&#23376;&#65289;&#37117;&#26159;&#19968;&#26679;&#30340;&#20540;&#65292;&#37027;&#20040;&#21040;&#24213;&#26159;&#20160;&#20040;&#26679;&#30340;&#19968;&#20010;&#23454;&#29616;&#33021;&#35753;&#21516;&#19968;&#20010;&#23492;&#23384;&#22120;&#25351;&#21521;&#22810;&#20010;&#19981;&#21516;&#30340;TEB&#21602;</strong>&#65292;&#35201;&#20102;&#35299;&#20854;&#20013;&#30340;&#32454;&#33410;&#25105;&#20204;&#36824;&#26159;&#38656;&#35201;&#26469;&#20998;&#26512;SwapContext&#36825;&#20010;&#20989;&#25968;&#30340;&#20195;&#30721;&#12290;</p>
+<p   
+>&#22914;&#19979;&#25105;&#20204;&#25214;&#21040;&#19982;FS&#23492;&#23384;&#22120;&#26377;&#20851;&#31995;&#30340;&#20195;&#30721;&#27573;&#65292;&#21487;&#20197;&#30475;&#20986;&#23427;&#26174;&#31034;&#21462;&#20986;&#30446;&#26631;&#32447;&#31243;&#30340;TEB&#22320;&#22336;&#65292;&#25509;&#30528;&#21462;&#20986;GDT&#34920;&#65292;&#24182;&#19988;&#21521;&#34920;&#20013;&#30340;&#25104;&#21592;&#20889;&#20837;&#20540;&#12290;&#25105;&#20204;&#30693;&#36947;FS&#22312;Windows XP&#19979;&#30340;&#27573;&#36873;&#25321;&#23376;&#26159;0x3B&#65292;&#20063;&#23601;&#34920;&#31034;&#23427;&#30340;&#27573;&#25551;&#36848;&#31526;&#26159;&#22312;GDT&#34920;&#30340;&#31532;7&#20010;&#65292;&#21363;0x38&#20559;&#31227;&#20301;&#65292;&#20877;&#32467;&#21512;&#22914;&#19979;&#30340;&#20195;&#30721;&#65292;&#25105;&#20204;&#21487;&#20197;&#26681;&#25454;&#27573;&#36873;&#25321;&#23376;&#30340;&#32467;&#26500;&#20307;&#65292;<strong class=" ">&#21457;&#29616;&#23427;&#23454;&#38469;&#19978;&#23601;&#26159;&#23558;&#30446;&#26631;&#32447;&#31243;&#30340;TEB&#22320;&#22336;&#20889;&#20837;&#21040;FS&#27573;&#25551;&#36848;&#31526;&#30340;Base Address&#25104;&#21592;&#20301;&#20013;</strong>&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-12_16-35-40.png" alt="images/download/attachments/1703937/image2022-12-12_16-35-40.png" width="600"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-6-15_15-14-33.png" alt="images/download/attachments/1703937/image2022-6-15_15-14-33.png" width="600"  />
+    </p>
+<p   
+>&#32508;&#19978;&#25152;&#31034;&#65292;&#20063;&#23601;&#35299;&#31572;&#20102;&#25105;&#20204;&#30340;&#22256;&#24785;&#65292;&#22312;&#22810;&#20010;&#32447;&#31243;&#20013;&#65292;FS&#36873;&#25321;&#23376;&#19981;&#21464;&#65292;&#20381;&#26087;&#21487;&#20197;&#33719;&#21462;&#23545;&#24212;&#32447;&#31243;&#30340;&#20449;&#24687;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLee6v-eoi-S8mOWFiOe6pw">
+        <h2 class="heading "><span>&#32447;&#31243;&#20248;&#20808;&#32423;</span></h2>
+<p   
+>&#25105;&#20204;&#21457;&#29616;&#22312;&#20027;&#21160;&#35843;&#29992;&#12289;&#26102;&#38388;&#29255;&#21040;&#26399;&#30340;&#24773;&#20917;&#19979;&#23548;&#33268;&#30340;&#32447;&#31243;&#20999;&#25442;&#65292;&#23427;&#20204;&#25152;&#29992;&#21040;&#30340;API&#37117;&#20250;&#36890;&#36807;KiFindReadyThread&#20989;&#25968;&#26469;&#25214;&#21040;&#19979;&#19968;&#20010;&#35201;&#20999;&#25442;&#30340;&#32447;&#31243;&#65292;&#37027;&#20040;&#36825;&#26102;&#20505;&#23601;&#25243;&#20986;&#20102;&#19968;&#20010;&#38382;&#39064;&#65306;&#35813;&#20989;&#25968;&#26159;&#26681;&#25454;&#20160;&#20040;&#26679;&#30340;&#26465;&#20214;&#21462;&#23547;&#25214;&#19979;&#19968;&#20010;&#20999;&#25442;&#30340;&#32447;&#31243;&#21602;&#65311;</p>
+<p   
+>KiFindReadyThread&#23601;&#26159;&#26681;&#25454;&#35843;&#24230;&#38142;&#34920;&#21435;&#26597;&#35810;&#30340;&#32447;&#31243;&#65292;<strong class=" ">&#23427;&#30340;&#26597;&#35810;&#20248;&#20808;&#32423;&#23601;&#26159;&#26681;&#25454;&#35843;&#24230;&#38142;&#34920;&#30340;&#32423;&#21035;&#65288;32&#20010;&#35843;&#24230;&#38142;&#34920;&#65289;&#65292;&#25353;&#32447;&#31243;&#32423;&#21035;&#22823;&#23567;&#20174;&#39640;&#21040;&#20302;&#26597;&#25214;&#65306;31&#12289;30&#12289;29&#12289;28...</strong>&#65292;&#22914;&#26524;&#22312;&#32447;&#31243;&#32423;&#21035;31&#30340;&#38142;&#34920;&#20013;&#25214;&#21040;&#20102;&#32447;&#31243;&#65292;&#37027;&#20040;&#26597;&#25214;&#23601;&#32467;&#26463;&#20102;&#12290;</p>
+<p   
+>&#20294;&#26159;&#22914;&#26524;&#27599;&#27425;&#37117;&#26159;&#25353;&#29031;&#36825;&#20010;&#20174;&#39640;&#21040;&#20302;&#30340;&#20248;&#20808;&#32423;&#23547;&#25214;&#65292;&#20174;&#25928;&#29575;&#21644;&#24615;&#33021;&#26469;&#30475;&#26159;&#24456;&#24046;&#30340;&#65292;&#25152;&#20197;Windows&#23601;&#36890;&#36807;&#19968;&#20010;DWORD&#31867;&#22411;&#30340;&#21464;&#37327;&#65288;_KiReadySummary&#65289;&#26469;&#35760;&#24405;&#65292;&#24403;&#21521;&#35843;&#24230;&#38142;&#34920;&#20013;&#25346;&#20837;&#25110;&#21462;&#20986;&#26576;&#20010;&#32447;&#31243;&#26102;&#65292;&#20250;&#20808;&#21028;&#26029;&#24403;&#21069;&#32423;&#21035;&#30340;&#38142;&#34920;&#26159;&#21542;&#20026;&#31354;&#65292;&#20026;&#31354;&#21017;&#22312;DWORD&#21464;&#37327;&#30340;&#23545;&#24212;&#20559;&#31227;&#20301;&#30340;&#20540;&#35774;&#20026;0&#65292;&#21453;&#20043;&#19981;&#20026;&#31354;&#23601;&#35774;&#20026;1&#12290;</p>
+<p   
+>&#22914;&#19979;&#22270;&#25152;&#31034;&#65292;&#23601;&#24847;&#21619;&#30528;&#32447;&#31243;&#32423;&#21035;&#20026;30&#12289;29&#30340;&#38142;&#34920;&#20013;&#26159;&#26377;&#32447;&#31243;&#30340;&#65292;&#20854;&#20182;&#38142;&#34920;&#20013;&#27809;&#26377;&#32447;&#31243;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-12_16-57-39.png" alt="images/download/attachments/1703937/image2022-12-12_16-57-39.png" width="400"  />
+    </p>
+<p   
+>&#21028;&#26029;&#38142;&#34920;&#26159;&#21542;&#20026;&#31354;&#21487;&#20197;&#36890;&#36807;KiDispatcherReadyListHead&#20840;&#23616;&#21464;&#37327;&#25214;&#21040;&#35843;&#24230;&#38142;&#34920;&#65292;&#28982;&#21518;&#26681;&#25454;&#23427;&#30340;&#38142;&#34920;&#25104;&#21592;&#21028;&#26029;&#26159;&#21542;&#21069;&#21518;&#25351;&#21521;&#30340;&#22320;&#22336;&#37117;&#26159;&#21516;&#19968;&#20010;&#65292;&#19988;&#35813;&#22320;&#22336;&#19982;&#38142;&#34920;&#30340;&#25104;&#21592;&#22320;&#22336;&#19968;&#33268;&#65292;&#22914;&#26524;&#37117;&#26159;&#19968;&#33268;&#30340;&#21017;&#34920;&#31034;&#35813;&#38142;&#34920;&#20026;&#31354;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-12_17-8-57.png" alt="images/download/attachments/1703937/image2022-12-12_17-8-57.png" width="400"  />
+    </p>
+<p   
+>&#20551;&#35774;&#35843;&#24230;&#38142;&#34920;&#20013;&#37117;&#27809;&#26377;&#23601;&#32490;&#29366;&#24577;&#30340;&#32447;&#31243;&#20102;&#65292;CPU&#23601;&#20250;&#21462;_KPCR.PrcbData.IdleThread&#21363;&#31354;&#38386;&#32447;&#31243;&#21435;&#36816;&#34892;&#65292;&#36825;&#19968;&#28857;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;IDA&#26469;&#30475;&#19968;&#19979;KSwapThread&#35843;&#29992;KiFindReadyThread&#30340;&#21069;&#21518;&#20195;&#30721;&#26469;&#35770;&#35777;&#12290;</p>
+<p   
+>&#20808;&#26159;&#32473;&#20102;ESI&#19968;&#20010;_KPRCB&#30340;&#22320;&#22336;&#65292;&#25509;&#30528;&#35843;&#29992;KiFindReadyThread&#65292;&#27604;&#36739;&#36820;&#22238;&#32467;&#26524;&#26159;&#21542;&#20026;&#31354;&#65292;&#22914;&#26524;&#20026;&#31354;&#21017;&#36827;&#34892;&#36339;&#36716;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-12_17-27-57.png" alt="images/download/attachments/1703937/image2022-12-12_17-27-57.png" width="600"  />
+    </p>
+<p   
+>&#36319;&#36827;&#36339;&#36716;&#25105;&#20204;&#23601;&#33021;&#30475;&#35265;&#23558;&#31354;&#38386;&#32447;&#31243;&#30340;&#20540;&#23601;&#36171;&#20540;&#32473;&#20102;EAX&#65292;&#28982;&#21518;&#36339;&#22238;&#20043;&#21069;&#30340;&#20301;&#32622;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-12_17-32-3.png" alt="images/download/attachments/1703937/image2022-12-12_17-32-3.png" width="600"  />
+    </p>
+<p   
+><br/></p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLei_m-eoi-aMgumdoA">
+        <h1 class="heading "><span>&#36827;&#31243;&#25346;&#38752;</span></h1>
+<p   
+>&#36827;&#31243;&#20026;&#32447;&#31243;&#25552;&#20379;&#36164;&#28304;&#65292;&#20063;&#23601;&#26159;&#25552;&#20379;Cr3&#30340;&#20540;&#65292;Cr3&#20013;&#23384;&#20648;&#30340;&#23601;&#26159;&#39029;&#30446;&#24405;&#34920;&#30340;&#22522;&#22336;&#65292;&#25105;&#20204;&#26377;&#20102;Cr3&#20063;&#23601;&#34920;&#31034;&#30693;&#36947;&#20102;&#32447;&#31243;&#33021;&#35775;&#38382;&#30340;&#20869;&#23384;&#12290;</p>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLei_m-eoi-S4jue6v-eoi-eahOWFs-ezuw">
+        <h2 class="heading "><span>&#36827;&#31243;&#19982;&#32447;&#31243;&#30340;&#20851;&#31995;</span></h2>
+<p   
+>&#22312;Win32&#30340;&#35838;&#31243;&#23398;&#20064;&#20013;&#65292;&#25105;&#20204;&#20102;&#35299;&#20102;&#36827;&#31243;&#30340;&#21019;&#24314;&#65292;&#30693;&#36947;&#30495;&#27491;&#36816;&#34892;&#20195;&#30721;&#30340;&#23454;&#38469;&#19978;&#26159;&#32447;&#31243;&#32780;&#19981;&#26159;&#36827;&#31243;&#12290;&#22914;&#19979;&#36825;&#20010;&#27719;&#32534;&#25351;&#20196;&#23601;&#26159;&#32447;&#31243;&#36816;&#34892;&#30340;&#65292;&#24403;&#36816;&#34892;&#36825;&#27573;&#20195;&#30721;&#26102;CPU&#26159;&#22914;&#20309;&#35299;&#26512;0x12345678&#36825;&#20010;&#22320;&#22336;&#30340;&#21602;&#65311;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">MOV EAX, DWORD PTR DS:[</code><code class="value">0x12345678</code><code class="plain">]</code></div>
+</div>
+    </div>
+<p   
+>0x12345678&#26159;&#19968;&#20010;&#32447;&#24615;&#22320;&#22336;&#65292;CPU&#35201;&#35299;&#26512;&#36825;&#20010;&#32447;&#24615;&#22320;&#22336;&#23601;&#38656;&#35201;&#36890;&#36807;&#39029;&#30446;&#24405;&#34920;&#25214;&#21040;&#23545;&#24212;&#30340;&#29289;&#29702;&#39029;&#12290;<strong class=" ">&#32780;&#35201;&#25214;&#21040;&#39029;&#30446;&#24405;&#34920;&#23601;&#38656;&#35201;&#36890;&#39029;&#30446;&#24405;&#34920;&#22522;&#22336;&#65292;&#20063;&#23601;&#34920;&#31034;&#25105;&#20204;&#38656;&#35201;Cr3&#23492;&#23384;&#22120;</strong>&#65292;Cr3&#23492;&#23384;&#22120;&#20540;&#26469;&#28304;&#20110;&#24403;&#21069;&#30340;&#36827;&#31243;&#32467;&#26500;&#20307;&#65288;_KPROCESS.DirectoryTableBase&#65289;&#12290;<strong class=" ">&#22240;&#27492;&#25105;&#20204;&#21487;&#20197;&#29702;&#35299;&#20026;&#36827;&#31243;&#25552;&#20379;&#32473;&#32447;&#31243;&#36816;&#34892;&#30340;&#31354;&#38388;&#29615;&#22659;&#65288;&#30028;&#23450;&#20102;&#21738;&#20123;&#20869;&#23384;&#21487;&#20197;&#35775;&#38382;&#65289;&#12290;</strong></p>
+<p   
+>&#26082;&#28982;&#36827;&#31243;&#32473;&#32447;&#31243;&#25552;&#20379;&#20102;&#29615;&#22659;&#20449;&#24687;&#65292;&#32447;&#31243;&#20063;&#35201;&#33021;&#25214;&#21040;&#36827;&#31243;&#25165;&#33021;&#30693;&#36947;&#36825;&#20123;&#20449;&#24687;&#65292;&#22240;&#27492;&#22312;&#32447;&#31243;&#32467;&#26500;&#20307;&#20013;&#23454;&#38469;&#19978;&#20063;&#26377;&#25104;&#21592;&#26159;&#25351;&#21521;&#20102;&#36827;&#31243;&#32467;&#26500;&#20307;&#30340;&#12290;</p>
+<p   
+>&#22312;_ETHREAD&#32467;&#26500;&#20307;&#20013;&#26377;&#20004;&#22788;&#20301;&#32622;&#37117;&#25351;&#21521;&#20102;&#36827;&#31243;&#32467;&#26500;&#20307;&#65292;&#20998;&#21035;&#26159;_ETHREAD.ThreadsProcess&#65288;0x220&#20559;&#31227;&#20301;&#65289;&#21644;_ETHREAD.Tcb.ApcState.Process&#65288;0x44&#20559;&#31227;&#20301;&#65289;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-13_10-29-25.png" alt="images/download/attachments/1703937/image2022-12-13_10-29-25.png" width="600"  />
+    </p>
+<p   
+>&#37027;&#20040;&#22312;&#23454;&#38469;&#30340;&#32447;&#31243;&#20999;&#25442;&#24403;&#20013;&#29992;&#21040;&#30340;&#21040;&#24213;&#26159;0x220&#20559;&#31227;&#20301;&#25104;&#21592;&#36824;&#26159;0x44&#20559;&#31227;&#20301;&#25104;&#21592;&#21602;&#65292;&#25105;&#20204;&#21487;&#20197;&#26469;&#30475;&#19968;&#19979;SwapContext&#20989;&#25968;&#30340;&#23454;&#29616;&#12290;</p>
+<p   
+>&#20174;&#23454;&#29616;&#26469;&#30475;SwapContext&#20351;&#29992;&#30340;&#26159;0x44&#20559;&#31227;&#20301;&#25104;&#21592;&#65292;&#21363;_ETHREAD.Tcb.ApcState.Process&#26469;&#36827;&#34892;&#32447;&#31243;&#38388;&#30340;&#25152;&#23646;&#36827;&#31243;&#27604;&#23545;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-13_13-51-3.png" alt="images/download/attachments/1703937/image2022-12-13_13-51-3.png" width="600"  />
+    </p>
+<p   
+>&#22914;&#26524;&#25152;&#23646;&#36827;&#31243;&#19981;&#26159;&#21516;&#19968;&#20010;&#65292;&#21017;&#20250;&#20174;&#36827;&#31243;&#32467;&#26500;&#20307;&#20013;&#25214;&#21040;Cr3&#21462;&#20986;&#65292;&#26368;&#21518;&#36827;&#34892;Cr3&#20999;&#25442;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-13_13-57-31.png" alt="images/download/attachments/1703937/image2022-12-13_13-57-31.png" width="600"  />
+    </p>
+<p   
+>&#32508;&#19978;&#25152;&#36848;&#65292;&#25105;&#20204;&#23601;&#30693;&#36947;&#32447;&#31243;&#25152;&#38656;&#35201;&#30340;Cr3&#23492;&#23384;&#22120;&#20540;&#26159;&#26469;&#28304;&#20110;_ETHREAD&#32447;&#31243;&#32467;&#26500;&#20307;0x44&#20559;&#31227;&#20301;&#30340;&#25104;&#21592;&#12290;&#37027;&#20040;&#26159;&#21542;&#23601;&#34920;&#31034;0x220&#26159;&#22810;&#20313;&#30340;&#21602;&#65292;&#20854;&#23454;&#19981;&#28982;&#65292;<strong class=" ">0x220&#20559;&#31227;&#20301;&#25104;&#21592;&#29992;&#20110;&#34920;&#31034;&#30340;&#26159;&#24403;&#21069;&#32447;&#31243;&#26159;&#21738;&#20010;&#36827;&#31243;&#25152;&#21019;&#24314;&#65292;&#32780;0x44&#20559;&#31227;&#20301;&#25104;&#21592;&#29992;&#20110;&#34920;&#31034;&#24403;&#21069;&#32447;&#31243;&#30340;&#36164;&#28304;&#65288;Cr3&#65289;&#26159;&#21738;&#20010;&#36827;&#31243;&#25152;&#25552;&#20379;</strong>&#65292;&#22312;&#19968;&#33324;&#24773;&#20917;&#19979;&#36825;&#20004;&#20010;&#20559;&#31227;&#20301;&#25104;&#21592;&#37117;&#25351;&#21521;&#21516;&#19968;&#20010;&#36827;&#31243;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLUNyM-eahOS_ruaUuQ">
+        <h2 class="heading "><span>Cr3&#30340;&#20462;&#25913;</span></h2>
+<p   
+>&#27491;&#24120;&#24773;&#20917;&#19979;&#65292;Cr3&#30340;&#20540;&#26159;&#30001;_ETHREAD.Tcb.ApcState.Process&#25552;&#20379;&#65292;<strong class=" ">&#20294;Cr3&#30340;&#20540;&#20063;&#21487;&#20197;&#25913;&#25104;&#21644;&#24403;&#21069;&#32447;&#31243;&#27627;&#19981;&#30456;&#24178;&#30340;&#20854;&#20182;&#36827;&#31243;&#30340;DirectoryTableBase&#65292;&#36825;&#26679;&#30340;&#25163;&#27861;&#25105;&#20204;&#31216;&#20043;&#20026;&#36827;&#31243;&#25346;&#38752;</strong>&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;&#22914;&#19979;&#27719;&#32534;&#25351;&#20196;&#26469;&#20462;&#25913;Cr3&#23492;&#23384;&#22120;&#30340;&#20540;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">mov cr3, A.DirectoryTableBase</code></div>
+<div class="line"><code class="plain">mov eax, dword ptr ds:[</code><code class="value">0x12345678</code><code class="plain">] </code><code class="comments">// A进程的0x12345678内存</code></div>
+<div class="line"><code class="plain">mov cr3, B.DirectoryTableBase</code></div>
+<div class="line"><code class="plain">mov eax, dword ptr ds:[</code><code class="value">0x12345678</code><code class="plain">] </code><code class="comments">// B进程的0x12345678内存</code></div>
+<div class="line"><code class="plain">mov cr3, C.DirectoryTableBase</code></div>
+<div class="line"><code class="plain">mov eax, dword ptr ds:[</code><code class="value">0x12345678</code><code class="plain">] </code><code class="comments">// C进程的0x12345678内存</code></div>
+</div>
+    </div>
+<p   
+>&#36827;&#31243;&#25346;&#38752;&#30340;&#30446;&#30340;&#23601;&#26159;&#35753;&#24403;&#21069;&#32447;&#31243;&#21487;&#20197;&#35775;&#38382;&#20854;&#20182;&#36827;&#31243;&#30340;&#20869;&#23384;&#31354;&#38388;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLU50UmVhZFZpcnR1YWxNZW1vcnnlh73mlbDliIbmnpA">
+        <h2 class="heading "><span>NtReadVirtualMemory&#20989;&#25968;&#20998;&#26512;</span></h2>
+<p   
+>&#30452;&#25509;&#20462;&#25913;Cr3&#30340;&#26041;&#27861;&#22914;&#26524;&#36935;&#21040;&#20102;&#32447;&#31243;&#20999;&#25442;&#23601;&#20250;&#21464;&#22238;&#21435;&#65292;&#25105;&#20204;&#21487;&#20197;&#26469;&#30475;&#19968;&#19979;Windows&#19979;&#30340;&#20989;&#25968;NtReadVirtualMemory&#65292;&#35813;&#20989;&#25968;&#30340;&#20316;&#29992;&#23601;&#26159;&#35835;&#21462;&#20854;&#20182;&#36827;&#31243;&#30340;&#20869;&#23384;&#65292;&#25105;&#20204;&#30475;&#19968;&#19979;&#23427;&#26159;&#22914;&#20309;&#23454;&#29616;&#30340;&#12290;</p>
+<p   
+>&#36825;&#20010;&#20989;&#25968;&#24456;&#22797;&#26434;&#65292;&#25105;&#20204;&#21482;&#38656;&#35201;&#25214;&#20851;&#38190;&#30340;&#37096;&#20998;&#65292;&#20063;&#23601;&#26159;&#20999;&#25442;Cr3&#30340;&#37027;&#19968;&#27493;&#65292;&#36861;&#36394;&#23427;&#30340;&#35843;&#29992;&#20851;&#31995;&#65292;&#26368;&#32456;&#22312;_KiSwapProcess&#20989;&#25968;&#25214;&#21040;&#20102;&#20851;&#38190;&#37096;&#20998;&#65292;&#35843;&#29992;&#38142;&#22914;&#19979;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">_MmCopyVirtualMemory -&gt; _MiDoPoolCopy -&gt; _KeStackAttachProcess -&gt; _KiAttachProcess -&gt; _KiSwapProcess</code></div>
+</div>
+    </div>
+<p   
+>&#22312;_KiSwapProcess&#20989;&#25968;&#20013;&#65292;&#25105;&#20204;&#21457;&#29616;&#23427;&#23601;&#26159;&#23558;Cr3&#20462;&#25913;&#20026;&#30446;&#26631;&#36827;&#31243;&#30340;DirectoryTableBase&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-13_14-59-23.png" alt="images/download/attachments/1703937/image2022-12-13_14-59-23.png" width="600"  />
+    </p>
+<p   
+>&#20294;&#26159;&#22312;&#36825;&#20010;&#20989;&#25968;&#35843;&#29992;&#20043;&#21069;&#65292;&#21448;&#23558;_ETHREAD.Tcb.ApcState.Process&#30340;&#20540;&#20462;&#25913;&#20026;&#35201;&#35835;&#21462;&#30340;&#36827;&#31243;&#32467;&#26500;&#20307;_KPROCESS&#22320;&#22336;&#65292;&#36825;&#26679;&#23601;&#36991;&#20813;&#20102;&#32447;&#31243;&#20999;&#25442;&#26102;&#23548;&#33268;&#30340;Cr3&#20540;&#36824;&#21407;&#22238;&#21435;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-13_15-4-40.png" alt="images/download/attachments/1703937/image2022-12-13_15-4-40.png" width="600"  />
+    </p>
+<p   
+>&#22914;&#26524;&#20320;&#19981;&#24819;&#35201;&#20351;&#29992;&#36825;&#20010;&#20989;&#25968;&#26469;&#36328;&#36827;&#31243;&#35835;&#21462;&#20869;&#23384;&#65292;&#33258;&#24049;&#23454;&#29616;&#30340;&#35805;&#23601;&#38656;&#35201;&#20999;&#25442;Cr3&#21518;&#26469;&#20851;&#38381;&#20013;&#26029;&#65292;&#24182;&#19988;&#22312;&#31243;&#24207;&#20013;&#19981;&#20877;&#20351;&#29992;&#23548;&#33268;&#32447;&#31243;&#20999;&#25442;&#30340;Windows API&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLeaAu-e7ky4z">
+        <h2 class="heading "><span>&#24635;&#32467;</span></h2>
+<p   
+>&#27491;&#24120;&#24773;&#20917;&#19979;&#65292;&#24403;&#21069;&#32447;&#31243;&#20351;&#29992;&#30340;Cr3&#26159;&#30001;&#20854;&#25152;&#23646;&#36827;&#31243;&#25552;&#20379;&#30340;&#65288;_ETHREAD&#65292;0x44&#20559;&#31227;&#20301;&#25351;&#23450;&#30340;_EPROCESS&#65289;&#65292;&#27491;&#26159;&#22240;&#20026;&#22914;&#27492;&#65292;A&#36827;&#31243;&#20013;&#30340;&#32447;&#31243;&#21482;&#33021;&#35775;&#38382;A&#30340;&#20869;&#23384;&#12290;&#22914;&#26524;&#35201;&#35753;A&#36827;&#31243;&#20013;&#30340;&#32447;&#31243;&#33021;&#22815;&#35775;&#38382;B&#36827;&#31243;&#30340;&#20869;&#23384;&#65292;&#23601;&#24517;&#39035;&#35201;&#20462;&#25913;Cr3&#30340;&#20540;&#20026;B&#36827;&#31243;&#30340;&#39029;&#30446;&#24405;&#34920;&#22522;&#22336;&#65288;B.DirectoryTableBase&#65289;&#65292;&#36825;&#23601;&#26159;&#25152;&#35859;&#30340;&#36827;&#31243;&#25346;&#38752;&#12290;</p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1703937_safe-id-aWQt6L-b56iL5LiO57q_56iLLei3qOi_m-eoi-ivu-WGmQ">
+        <h1 class="heading "><span>&#36328;&#36827;&#31243;&#35835;&#20889;</span></h1>
+<p   
+>&#22914;&#19979;&#36825;&#27573;&#27719;&#32534;&#25351;&#20196;&#26159;&#21521;&#36890;&#36807;A&#36827;&#31243;&#30340;&#32447;&#31243;&#25191;&#34892;&#65292;&#33719;&#21462;B&#36827;&#31243;&#30340;0x12345678&#30340;&#20540;&#20877;&#23384;&#20837;&#21040;0x00401234&#65292;&#36825;&#26679;&#25805;&#20316;&#24456;&#26126;&#26174;&#26159;&#26080;&#24847;&#20041;&#30340;&#65292;&#22240;&#20026;&#20320;&#25805;&#20316;&#20102;&#21322;&#22825;&#37117;&#21482;&#26159;&#23558;&#25968;&#25454;&#23384;&#20837;&#21040;&#20102;B&#36827;&#31243;&#30340;0x00401234&#65292;&#32780;A&#36827;&#31243;&#30340;0x00401234&#23545;&#24212;&#20540;&#24182;&#27809;&#26377;&#25968;&#25454;&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">mov cr3, B.DirectoryTableBase </code><code class="comments">// 切换Cr3的值为B进程</code></div>
+<div class="line"><code class="plain">mov eax, dword ptr ds:[</code><code class="value">0x12345678</code><code class="plain">] </code><code class="comments">// 将B进程0x12345678的值存的eax中</code></div>
+<div class="line"><code class="plain">mov dword ptr ds:[</code><code class="value">0x00401234</code><code class="plain">], eax </code><code class="comments">// 将数据存储到0x00401234中</code></div>
+<div class="line"><code class="plain">mov cr3, A.DirectoryTableBase </code><code class="comments">// 切换回Cr3的值</code></div>
+</div>
+    </div>
+<p   
+>&#22914;&#26524;&#20320;&#36824;&#28165;&#26224;&#30340;&#35760;&#24471;&#20445;&#25252;&#27169;&#24335;&#30456;&#20851;&#30340;&#20869;&#23481;&#23601;&#20250;&#24819;&#21040;&#19968;&#20010;&#36827;&#31243;&#26377;4GB&#20869;&#23384;&#31354;&#38388;&#65292;&#20302;2G&#26159;&#33258;&#24049;&#30340;&#65292;&#39640;2G&#26159;&#20849;&#20139;&#30340;&#65292;&#23601;&#21487;&#20197;&#21033;&#29992;&#39640;2G&#30340;&#20869;&#23384;&#31354;&#38388;&#26469;&#23384;&#20648;&#25968;&#25454;&#12290;</p>
+<p   
+>&#22312;Windows&#19979;&#30340;NtReadVirtualMemory&#12289;NtWriteVirtualMemory&#20989;&#25968;&#26469;&#36328;&#36827;&#31243;&#35835;&#20889;&#23601;&#26159;&#21033;&#29992;&#30340;&#39640;2G&#20869;&#23384;&#31354;&#38388;&#26469;&#36827;&#34892;&#35835;&#20889;&#65292;&#20855;&#20307;&#27969;&#31243;&#22914;&#19979;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-13_15-20-5.png" alt="images/download/attachments/1703937/image2022-12-13_15-20-5.png" width="600"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1703937/image2022-12-13_15-20-44.png" alt="images/download/attachments/1703937/image2022-12-13_15-20-44.png" width="600"  />
+    </p>
+    </div>
+        </div>
+
+    </article>
+
+
+            <nav id="ht-post-nav">
+                <a href="%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8.html" class="ht-post-nav-prev">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-prev" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-45.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>&#31995;&#32479;&#35843;&#29992;</span>
+        </a>
+                <a href="%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91.html" class="ht-post-nav-next">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-next" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-225.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>&#39537;&#21160;&#24320;&#21457;</span>
+        </a>
+    </nav>    
+            
+    <footer id="ht-footer">
+    <a href="#" id="ht-jump-top" class="sp-aui-icon-small sp-aui-iconfont-arrows-up"></a>
+</footer></div>
+
+<div>
+    <div id="ht-mq-detect"></div>
+</div>
+
+    <script src="js/lunr.js"></script>
+    <script src="js/lunr-extras.js"></script>
+    <script src="assets/js/scroll-search.js"></script>
+
+    <script src="assets/js/expand-macro.js"></script>
+</body>
+</html>

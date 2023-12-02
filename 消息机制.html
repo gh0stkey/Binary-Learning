@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>&#28040;&#24687;&#26426;&#21046; - &#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</title>
+
+    
+    <link rel="stylesheet" href="assets/css/expand-macro.css">
+
+            <meta name="scroll-content-language-key" content="">
+    
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/translate.js"></script>
+
+<script type="text/javascript" src="assets/js/theme.main.js"></script>
+
+    <script type="text/javascript" src="assets/js/iframeResizer.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/content-style.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+
+<link rel="stylesheet" href="assets/css/theme.main.css">
+<link rel="stylesheet" href="assets/css/theme.colors.css">
+
+            <!-- ES5 support for older browsers, needed by lunr -->
+        <script src="js/augment.js"></script>
+        <script id="worker" type="javascript/worker">
+
+        startIndex = function() {
+            idx = lunr.Index.load(lunrIndex);
+            idx.pipeline.remove(lunr.stopWordFilter);
+            postMessage({type: "setup-complete"});
+        }
+
+        onmessage = function (event) {
+            var message = event.data;
+
+            if ((message.type === 'setup') && message.baseUrl) {
+                var url = message.baseUrl;
+                importScripts(url + 'js/lunr.js');
+                importScripts(url + 'js/lunr-extras.js');
+                importScripts(url + 'js/lunr-index.js');
+                importScripts(url + 'js/lunr-data.js');
+                startIndex();
+            }
+
+            if (idx && (message.type === 'search-request') && message.query) {
+                var searchWord = message.query;
+                var results = idx.search(searchWord).map(function (result) {
+                    return lunrData.filter(function (d) {
+                        return d.id === parseInt(result.ref, 10)
+                    })[0]
+                });
+                postMessage({type: 'search-results', results: results, query: searchWord, queryId: message.queryId});
+            }
+        }
+
+    </script>
+    </head>
+
+<body pageid="1015827">
+
+<div id="ht-loader">
+    <noscript>
+        <p style="width: 100%; text-align:center; position: absolute; margin-top: 200px;">This content cannot be displayed without JavaScript.<br>Please enable JavaScript and reload the page.</p>
+    </noscript>
+</div>
+
+<div>
+   	<header id="ht-headerbar">
+    <div class="ht-headerbar-left">
+        <a href="" id="ht-menu-toggle" class="sp-aui-icon-small sp-aui-iconfont-appswitcher"></a>
+    </div>
+    <div class="ht-headerbar-right">
+            <div class="sp-aui-icon-small ht-search-index-loader ht-header-icon"></div>
+
+        <div id="ht-search">
+            <div class="ht-search-input" style="display: none;">
+              	<a href="#" class="sp-aui-icon-small sp-aui-iconfont-remove ht-search-clear"></a>
+
+                <form action="#" method="GET" id="search">
+                    <input class="search-input" type="text" placeholder="Search" tabindex="-1" autocomplete="off" name="q" value="">
+                    <input type="hidden" name="max" value="15" />
+                    <input type="submit" style="display:none" tabindex="-4"/>
+                </form>
+
+                <a href="#" id="ht-search-button" class="ht-header-icon ht-header-icon-svg">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path d="M29.572,28.802 L28.801,29.571 C28.515,29.857 28.187,30 27.816,30 C27.445,30 27.116,29.857 26.831,29.571 L21.392,24.134 C20.193,24.762 18.908,25.076 17.538,25.076 C15.396,25.076 13.605,24.348 12.163,22.892 C10.721,21.436 10,19.651 10,17.538 C10,15.397 10.721,13.605 12.163,12.163 C13.605,10.721 15.396,10 17.538,10 C19.651,10 21.434,10.721 22.89,12.163 C24.347,13.605 25.075,15.397 25.075,17.538 C25.075,18.937 24.761,20.222 24.132,21.393 L29.572,26.832 C29.857,27.118 30,27.446 30,27.817 C30,28.188 29.857,28.517 29.572,28.802 L29.572,28.802 Z M13.662,21.414 C14.732,22.485 16.024,23.02 17.538,23.02 C19.051,23.02 20.343,22.485 21.413,21.414 C22.484,20.344 23.019,19.052 23.019,17.538 C23.019,16.025 22.484,14.733 21.413,13.662 C20.343,12.592 19.051,12.056 17.538,12.056 C16.024,12.056 14.732,12.592 13.662,13.662 C12.591,14.733 12.056,16.025 12.056,17.538 C12.056,19.052 12.591,20.344 13.662,21.414 L13.662,21.414 Z"></path>
+                        </g>
+                    </svg>
+              	</a>
+
+                <div class="ht-search-dropdown ht-dropdown">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>   	<aside id="ht-sidebar">
+    <div class="ht-sidebar-content">
+        <div class="ht-sidebar-content-scroll-container">
+            <header class="ht-sidebar-header">
+                <h1 class="ht-logo">
+                    <span class="ht-logo-label">BinaryLearning</span>
+                    <img class="space-logo" src="global.logo" />
+                </h1>
+                <a href="Binary-Learning.html" class="ht-space-link">
+                    <h2>&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</h2>
+                </a>
+                <p><br><a href="https://github.com/gh0stkey/Binary-Learning" target="_blank">ᴀᴜᴛʜᴏʀ: ᴋᴇʏ</a><br><br>不积跬步，无以至千里；<br>不积小流，无以成江海。</p>
+            </header>
+                            <iframe id="ht-nav" src="toc.html?pageId=3440655"></iframe>
+                <script>
+                    $('iframe#ht-nav').iFrameResize(
+                            { 'log': true, 'autoResize': true, 'heightCalculationMethod': 'lowestElement', 'checkOrigin': false });
+                </script>
+                    </div>
+    </div>
+
+</aside></div>
+
+<div id="ht-wrap-container">
+
+            
+    <div id="ht-sidebar-dragbar">
+    <div class="ht-sidebar-drag-handle">
+        <span class="drag-handle-1"></span>
+        <span class="drag-handle-2"></span>
+        <span class="drag-handle-3"></span>
+    </div>
+</div>
+    <article id="ht-content" class="ht-content">
+        <header class="ht-content-header">
+            <div id="ht-breadcrumb">
+    <ul>
+        <li><a href="Binary-Learning.html">&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</a></li>
+                                                                                     <li><a href="%E4%B8%AD%E7%BA%A7%E7%AF%87.html">&#20013;&#32423;&#31687;</a></li>
+                                                            </ul>
+</div>            <h1 id="src-3440655"> <span>&#28040;&#24687;&#26426;&#21046;</span></h1>
+        </header>
+
+        <div id="main-content" class="wiki-content sp-grid-section" data-index-for-search="true">
+
+<p   
+>&#25105;&#20204;&#22312;&#21021;&#32423;&#29677;&#23545;&#20110;Win32 API&#30340;&#23398;&#20064;&#20013;&#65292;&#30693;&#36947;&#21487;&#20197;&#36890;&#36807;&#21521;&#31383;&#21475;&#21457;&#36865;&#28040;&#24687;&#23454;&#29616;&#20132;&#20114;&#65292;&#20294;&#26159;&#25105;&#20204;&#22987;&#32456;&#27809;&#26377;&#20174;&#26412;&#36136;&#19978;&#20102;&#35299;&#20160;&#20040;&#26159;&#28040;&#24687;&#26426;&#21046;&#65292;&#20174;&#32780;&#20063;&#23601;&#26080;&#27861;&#22238;&#31572;&#22914;&#19979;&#36825;&#20123;&#38382;&#39064;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-9-18_10-55-18.png" alt="images/download/attachments/3440655/image2023-9-18_10-55-18.png" width="600"  />
+    </p>
+<p   
+>&#22240;&#27492;&#20026;&#20102;&#24324;&#28165;&#26970;&#36825;&#20123;&#38382;&#39064;&#65292;&#25105;&#20204;&#23601;&#24517;&#39035;&#36827;&#20837;0&#29615;&#65292;&#20174;&#24213;&#23618;&#29702;&#35299;&#28040;&#24687;&#26426;&#21046;&#30340;&#26412;&#36136;&#12290;</p>
+    <div class="section section-1" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lea2iOaBr-mYn-WIlw">
+        <h1 class="heading "><span>&#28040;&#24687;&#38431;&#21015;</span></h1>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2LeS7gOS5iOaYr-a2iOaBr-mYn-WIlw">
+        <h2 class="heading "><span>&#20160;&#20040;&#26159;&#28040;&#24687;&#38431;&#21015;</span></h2>
+<p   
+>&#39318;&#20808;&#25105;&#20204;&#35201;&#29702;&#35299;&#20160;&#20040;&#26159;&#28040;&#24687;&#38431;&#21015;&#65292;&#25105;&#20204;&#21487;&#20197;&#32534;&#20889;&#36816;&#34892;&#22914;&#19979;&#20195;&#30721;&#65292;&#22312;&#26700;&#38754;&#30340;&#24038;&#19978;&#35282;&#30011;&#19978;&#19968;&#20010;&#31383;&#21475;&#65292;&#25509;&#30528;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;&#21457;&#36865;&#28040;&#24687;&#26469;&#19982;&#31383;&#21475;&#36827;&#34892;&#20114;&#21160;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;Windows.h&gt;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">typedef struct _Color</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DWORD red;</code></div>
+<div class="line"><code class="plain">    DWORD green;</code></div>
+<div class="line"><code class="plain">    DWORD blue;</code></div>
+<div class="line"><code class="plain">} Color;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">typedef struct _WindowClass</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DWORD x;</code></div>
+<div class="line"><code class="plain">    DWORD y;</code></div>
+<div class="line"><code class="plain">    DWORD width;</code></div>
+<div class="line"><code class="plain">    DWORD height;</code></div>
+<div class="line"><code class="plain">    Color color;</code></div>
+<div class="line"><code class="plain">} WindowClass;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="keyword">void</code><code class="plain"> PaintWindow(HDC hdc, WindowClass* window)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    HBRUSH hBrush = (HBRUSH)GetStockObject(DC_BRUSH);</code></div>
+<div class="line"><code class="plain">    SelectObject(hdc, hBrush);</code></div>
+<div class="line"><code class="plain">    SetDCBrushColor(hdc, RGB(window-&gt;color.red, window-&gt;color.green, window-&gt;color.blue));</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    MoveToEx(hdc, window-&gt;x, window-&gt;y, NULL);</code></div>
+<div class="line"><code class="plain">    LineTo(hdc, window-&gt;x + window-&gt;width, window-&gt;y);</code></div>
+<div class="line"><code class="plain">    LineTo(hdc, window-&gt;x + window-&gt;width, window-&gt;y + window-&gt;height);</code></div>
+<div class="line"><code class="plain">    LineTo(hdc, window-&gt;x, window-&gt;y + window-&gt;height);</code></div>
+<div class="line"><code class="plain">    LineTo(hdc, window-&gt;x, window-&gt;y);</code></div>
+<div class="line"><code class="plain">    Rectangle(hdc, window-&gt;x, window-&gt;y, window-&gt;x + window-&gt;width, window-&gt;y + window-&gt;height + </code><code class="value">1</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    DeleteObject(hBrush);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="keyword">int</code><code class="plain"> main()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">char</code><code class="plain"> cMessage;</code></div>
+<div class="line"><code class="plain">    HWND hwnd;</code></div>
+<div class="line"><code class="plain">    HDC hdc;</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    WindowClass windowClass;</code></div>
+<div class="line"><code class="plain">    windowClass.x = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    windowClass.y = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    windowClass.width = </code><code class="value">800</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    windowClass.height = </code><code class="value">400</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    windowClass.color.red = </code><code class="value">0xEF</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    windowClass.color.green = </code><code class="value">0xEB</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    windowClass.color.blue = </code><code class="value">0xDE</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    hwnd = GetDesktopWindow();</code></div>
+<div class="line"><code class="plain">    hdc = GetWindowDC(hwnd);</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">for</code><code class="plain"> (;;)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        PaintWindow(hdc, &amp;windowClass);</code></div>
+<div class="line"><code class="plain">        </code></div>
+<div class="line"><code class="plain">        cMessage = getchar();</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">switch</code><code class="plain"> (cMessage)</code></div>
+<div class="line"><code class="plain">        {</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">case</code><code class="plain"> </code><code class="string">'a'</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">            windowClass.color.red += </code><code class="value">0x10</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">            windowClass.color.green += </code><code class="value">0x10</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">            windowClass.color.blue += </code><code class="value">0x10</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">            </code><code class="keyword">break</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">            </code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">case</code><code class="plain"> </code><code class="string">'b'</code><code class="plain">:</code></div>
+<div class="line"><code class="plain">            windowClass.color.red -= </code><code class="value">0x10</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">            windowClass.color.green -= </code><code class="value">0x10</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">            windowClass.color.blue -= </code><code class="value">0x10</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">            </code><code class="keyword">break</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">        }</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    getchar();</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#32534;&#35793;&#36816;&#34892;&#36825;&#27573;&#20195;&#30721;&#65292;&#25105;&#20204;&#36755;&#20837;a&#25110;&#32773;b&#36827;&#34892;&#22238;&#36710;&#65292;&#19968;&#24320;&#22987;&#21019;&#24314;&#30340;&#31383;&#21475;&#23601;&#20250;&#38543;&#30528;&#19981;&#21516;&#30340;&#25351;&#20196;&#36827;&#34892;&#39068;&#33394;&#30340;&#20999;&#25442;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-8_20-30-43.png" alt="images/download/attachments/3440655/image2023-10-8_20-30-43.png" width="600"  />
+    </p>
+<p   
+>&#36825;&#27573;&#20195;&#30721;&#26159;&#19968;&#20010;&#31616;&#21333;&#30340;&#20132;&#20114;&#31243;&#24207;&#65292;&#23427;&#36890;&#36807;&#25509;&#25910;&#38190;&#30424;&#28040;&#24687;&#19982;&#31383;&#21475;&#36827;&#34892;&#20132;&#20114;&#12290;&#28982;&#32780;&#65292;&#23427;&#26377;&#19968;&#20010;&#38480;&#21046;&#65292;&#21363;&#21482;&#33021;&#22788;&#29702;&#38190;&#30424;&#28040;&#24687;&#65292;&#32780;&#26080;&#27861;&#22788;&#29702;&#40736;&#26631;&#25110;&#20854;&#20182;&#36827;&#31243;&#21457;&#26469;&#30340;&#28040;&#24687;&#12290;</p>
+<p   
+>&#22240;&#27492;&#25105;&#20204;&#24076;&#26395;&#25509;&#25910;&#24182;&#22788;&#29702;&#25152;&#26377;&#31867;&#22411;&#30340;&#28040;&#24687;&#65292;<strong class=" ">&#23601;&#38656;&#35201;&#25552;&#20379;&#19968;&#20010;&#23481;&#22120;&#65292;&#21363;&#28040;&#24687;&#38431;&#21015;</strong>&#12290;&#23558;&#25152;&#26377;&#28040;&#24687;&#37117;&#23384;&#25918;&#22312;&#28040;&#24687;&#38431;&#21015;&#20013;&#65292;&#36827;&#31243;&#20877;&#20174;&#28040;&#24687;&#38431;&#21015;&#20013;&#33719;&#21462;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-8_20-45-1.png" alt="images/download/attachments/3440655/image2023-10-8_20-45-1.png" width="600"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lea2iOaBr-mYn-WIl-WtmOaUvuS9jee9rg">
+        <h2 class="heading "><span>&#28040;&#24687;&#38431;&#21015;&#23384;&#25918;&#20301;&#32622;</span></h2>
+    <div class="section section-3" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2LeeUqOaIt-epuumXtA">
+        <h3 class="heading "><span>&#29992;&#25143;&#31354;&#38388;</span></h3>
+<p   
+>&#22914;&#26524;&#28040;&#24687;&#38431;&#21015;&#23384;&#22312;&#20110;&#29992;&#25143;&#31354;&#38388;&#65292;&#20063;&#23601;&#34920;&#31034;&#27599;&#20010;&#36827;&#31243;&#26377;&#19968;&#20010;&#29420;&#23646;&#20110;&#33258;&#24049;&#30340;&#28040;&#24687;&#38431;&#21015;&#65292;&#37027;&#20040;&#23601;&#38656;&#35201;&#26377;&#19968;&#20010;&#19987;&#29992;&#36827;&#31243;&#26469;&#23545;&#19981;&#21516;&#31867;&#22411;&#30340;&#28040;&#24687;&#36827;&#34892;&#20998;&#21457;&#12290;</p>
+<p   
+>Linux&#25805;&#20316;&#31995;&#32479;&#23601;&#37319;&#29992;&#20102;&#19968;&#31181;&#31867;&#20284;&#30340;&#26426;&#21046;&#65292;&#36890;&#36807;&#21333;&#29420;&#30340;&#36827;&#31243;&#19987;&#38376;&#36127;&#36131;&#25509;&#25910;&#28040;&#24687;&#65292;&#24182;&#23558;&#28040;&#24687;&#21457;&#36865;&#32473;&#19981;&#21516;&#30340;&#36827;&#31243;&#36827;&#34892;&#22788;&#29702;&#12290;&#20294;&#36825;&#31181;&#26041;&#27861;&#38656;&#35201;&#36827;&#34892;&#39057;&#32321;&#30340;&#36328;&#36827;&#31243;&#36890;&#20449;&#65292;&#21487;&#33021;&#23548;&#33268;&#25928;&#29575;&#19979;&#38477;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-8_20-56-46.png" alt="images/download/attachments/3440655/image2023-10-8_20-56-46.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-3" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2LeWGheaguOepuumXtA">
+        <h3 class="heading "><span>&#20869;&#26680;&#31354;&#38388;</span></h3>
+<p   
+>&#22312;Windows&#25805;&#20316;&#31995;&#32479;&#19978;&#24494;&#36719;&#37319;&#29992;&#20102;&#19968;&#31181;&#19981;&#21516;&#30340;&#31574;&#30053;&#12290;&#30001;&#20110;&#22312;0&#29615;&#65288;&#20869;&#26680;&#31354;&#38388;&#65289;&#20013;&#65292;&#19981;&#21516;&#36827;&#31243;&#30340;&#22320;&#22336;&#31354;&#38388;&#24448;&#24448;&#26159;&#30456;&#21516;&#30340;&#65288;&#21363;&#25105;&#20204;&#24120;&#35828;&#30340;&#39640;2G&#20026;&#20849;&#20139;&#20869;&#23384;&#65289;&#65292;&#22240;&#27492;&#21487;&#20197;&#23558;<strong class=" ">&#28040;&#24687;&#38431;&#21015;&#23384;&#20648;&#22312;&#20869;&#26680;&#31354;&#38388;</strong>&#12290;</p>
+<p   
+>&#22312;&#32447;&#31243;&#32467;&#26500;&#20307;&#30340;0x130&#20559;&#31227;&#20301;&#26377;&#20010;&#25104;&#21592;Win32Thread&#65292;&#35813;&#25104;&#21592;&#22312;&#32447;&#31243;&#35843;&#29992;&#22270;&#24418;&#30028;&#38754;&#30456;&#20851;&#20989;&#25968;&#26102;&#65292;&#20250;&#25351;&#21521;&#19968;&#20010;&#21517;&#20026;_THREADINFO&#30340;&#32467;&#26500;&#20307;&#65292;&#35813;&#32467;&#26500;&#20307;&#20013;&#21253;&#21547;&#20102;&#28040;&#24687;&#38431;&#21015;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-8_21-5-37.png" alt="images/download/attachments/3440655/image2023-10-8_21-5-37.png" width="400"  />
+    </p>
+<p   
+>&#30001;&#20110;&#35813;&#32467;&#26500;&#20307;&#26159;&#26410;&#20844;&#24320;&#30340;&#65292;&#25152;&#20197;&#25105;&#20204;&#20063;&#21482;&#33021;&#22312;ReactOS&#20195;&#30721;&#65288;<a  class="external-link" href="https://sourceforge.net/projects/reactos/">https://sourceforge.net/projects/reactos/</a>&#65289;&#20013;&#25214;&#21040;&#65292;&#22914;&#19979;&#20195;&#30721;&#20013;&#30340;&#25104;&#21592;MessageQueue&#23601;&#26159;&#28040;&#24687;&#38431;&#21015;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#ifdef __cplusplus</code></div>
+<div class="line"><code class="plain">typedef struct _THREADINFO : _W32THREAD</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">#</code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">typedef struct _THREADINFO</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    W32THREAD;</code></div>
+<div class="line"><code class="plain">#endif</code></div>
+<div class="line"><code class="plain">    PTL                 ptl;</code></div>
+<div class="line"><code class="plain">    PPROCESSINFO        ppi;</code></div>
+<div class="line"><code class="plain">    struct _USER_MESSAGE_QUEUE* MessageQueue;</code></div>
+<div class="line"><code class="plain">    struct tagKL*       KeyboardLayout;</code></div>
+<div class="line"><code class="plain">    struct _CLIENTTHREADINFO  * pcti;</code></div>
+<div class="line"><code class="plain">    struct _DESKTOP*    rpdesk;</code></div>
+<div class="line"><code class="plain">    struct _DESKTOPINFO  *  pDeskInfo;</code></div>
+<div class="line"><code class="plain">    struct _CLIENTINFO * pClientInfo;</code></div>
+<div class="line"><code class="plain">    FLONG               TIF_flags;</code></div>
+<div class="line"><code class="plain">    PUNICODE_STRING     pstrAppName;</code></div>
+<div class="line"><code class="plain">    struct _USER_SENT_MESSAGE *pusmSent;</code></div>
+<div class="line"><code class="plain">    struct _USER_SENT_MESSAGE *pusmCurrent;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">/* Queue of messages sent to the queue. */</code></div>
+<div class="line"><code class="plain">    LIST_ENTRY          SentMessagesListHead;    </code><code class="comments">// psmsReceiveList</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">/* Last message time and ID */</code></div>
+<div class="line"><code class="plain">    LONG                timeLast;</code></div>
+<div class="line"><code class="plain">    ULONG_PTR           idLast;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">/* True if a WM_QUIT message is pending. */</code></div>
+<div class="line"><code class="plain">    BOOLEAN             QuitPosted;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">/* The quit exit code. */</code></div>
+<div class="line"><code class="plain">    INT                 exitCode;</code></div>
+<div class="line"><code class="plain">    HDESK               hdesk;</code></div>
+<div class="line"><code class="plain">    UINT                cPaintsReady; </code><code class="comments">/* Count of paints pending. */</code></div>
+<div class="line"><code class="plain">    UINT                cTimersReady; </code><code class="comments">/* Count of timers pending. */</code></div>
+<div class="line"><code class="plain">    struct tagMENUSTATE* pMenuState;</code></div>
+<div class="line"><code class="plain">    DWORD               dwExpWinVer;</code></div>
+<div class="line"><code class="plain">    DWORD               dwCompatFlags;</code></div>
+<div class="line"><code class="plain">    DWORD               dwCompatFlags2;</code></div>
+<div class="line"><code class="plain">    struct _USER_MESSAGE_QUEUE* pqAttach;</code></div>
+<div class="line"><code class="plain">    PTHREADINFO         ptiSibling;</code></div>
+<div class="line"><code class="plain">    ULONG               fsHooks;</code></div>
+<div class="line"><code class="plain">    struct tagHOOK *    sphkCurrent;</code></div>
+<div class="line"><code class="plain">    LPARAM              lParamHkCurrent;</code></div>
+<div class="line"><code class="plain">    WPARAM              wParamHkCurrent;</code></div>
+<div class="line"><code class="plain">    struct tagSBTRACK*  pSBTrack;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">/* Set if there are new messages specified by WakeMask in any of the queues. */</code></div>
+<div class="line"><code class="plain">    HANDLE              hEventQueueClient;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">/* Handle for the above event (in the context of the process owning the queue). */</code></div>
+<div class="line"><code class="plain">    PKEVENT             pEventQueueServer;</code></div>
+<div class="line"><code class="plain">    LIST_ENTRY          PtiLink;</code></div>
+<div class="line"><code class="plain">    INT                 iCursorLevel;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">/* Last message cursor position */</code></div>
+<div class="line"><code class="plain">    POINT               ptLast;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    INT                 cEnterCount;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">/* Queue of messages posted to the queue. */</code></div>
+<div class="line"><code class="plain">    LIST_ENTRY          PostedMessagesListHead; </code><code class="comments">// mlPost</code></div>
+<div class="line"><code class="plain">    WORD                fsChangeBitsRemoved;</code></div>
+<div class="line"><code class="plain">    WCHAR               wchInjected;</code></div>
+<div class="line"><code class="plain">    UINT                cWindows;</code></div>
+<div class="line"><code class="plain">    UINT                cVisWindows;</code></div>
+<div class="line"><code class="plain">#ifndef __cplusplus </code><code class="comments">/// FIXME!</code></div>
+<div class="line"><code class="plain">    LIST_ENTRY          aphkStart[NB_HOOKS];</code></div>
+<div class="line"><code class="plain">    CLIENTTHREADINFO    cti;  </code><code class="comments">// Used only when no Desktop or pcti NULL.</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">/* ReactOS */</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">/* Thread Queue state tracking */</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// Send list QS_SENDMESSAGE</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// Post list QS_POSTMESSAGE|QS_HOTKEY|QS_PAINT|QS_TIMER|QS_KEY</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// Hard list QS_MOUSE|QS_KEY only</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// Accounting of queue bit sets, the rest are flags. QS_TIMER QS_PAINT counts are handled in thread information.</code></div>
+<div class="line"><code class="plain">    DWORD nCntsQBits[QSIDCOUNTS]; </code><code class="comments">// QS_KEY QS_MOUSEMOVE QS_MOUSEBUTTON QS_POSTMESSAGE QS_SENDMESSAGE QS_HOTKEY</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    LIST_ENTRY WindowListHead;</code></div>
+<div class="line"><code class="plain">    LIST_ENTRY W32CallbackListHead;</code></div>
+<div class="line"><code class="plain">    SINGLE_LIST_ENTRY  ReferencesList;</code></div>
+<div class="line"><code class="plain">    ULONG cExclusiveLocks;</code></div>
+<div class="line"><code class="plain">#</code><code class="keyword">if</code><code class="plain"> DBG</code></div>
+<div class="line"><code class="plain">    USHORT acExclusiveLockCount[GDIObjTypeTotal + </code><code class="value">1</code><code class="plain">];</code></div>
+<div class="line"><code class="plain">#endif</code></div>
+<div class="line"><code class="plain">#endif </code><code class="comments">// __cplusplus</code></div>
+<div class="line"><code class="plain">} THREADINFO;</code></div>
+</div>
+    </div>
+<p   
+>&#22312;&#25152;&#26377;&#32447;&#31243;&#21018;&#21019;&#24314;&#26102;&#65292;&#23427;&#20204;&#37117;&#26159;&#26222;&#36890;&#32447;&#31243;&#65292;&#21487;&#20197;&#36890;&#36807;&#20351;&#29992;_KTHREAD.ServiceTable&#65292;&#21487;&#20197;&#25214;&#21040;&#19968;&#24352;&#34920;KeServiceDescriptorTable&#12290;&#28982;&#32780;&#65292;&#24403;&#32447;&#31243;&#39318;&#27425;&#35843;&#29992;Win32k.sys&#65288;&#22312;0&#29615;&#20013;&#23454;&#29616;&#22270;&#24418;&#30028;&#38754;API&#65289;&#26102;&#65292;&#23558;&#35843;&#29992;PsConvertToGuiThread&#20989;&#25968;&#65292;&#35813;&#20989;&#25968;&#25191;&#34892;&#20197;&#19979;&#20960;&#20010;&#20027;&#35201;&#27493;&#39588;&#65306;</p>
+<ol class=" "><li class=" "><p   
+>&#25193;&#23637;&#20869;&#26680;&#26632;&#22823;&#23567;&#20026;64KB&#65292;&#22240;&#20026;&#26222;&#36890;&#20869;&#26680;&#26632;&#21482;&#26377;12KB&#22823;&#23567;&#65307;</p>
+</li><li class=" "><p   
+>&#21019;&#24314;&#19968;&#20010;&#24102;&#26377;&#28040;&#24687;&#38431;&#21015;&#30340;&#32467;&#26500;&#20307;&#65292;&#24182;&#23558;&#20854;&#25346;&#25509;&#21040;_KTHREAD&#32467;&#26500;&#20307;Win32Thread&#25104;&#21592;&#19978;&#65307;</p>
+</li><li class=" "><p   
+>&#23558;Thread.ServiceTable&#25351;&#21521;KeServiceDescriptorTableShadow&#65292;&#27492;&#26102;&#20004;&#20010;&#34920;&#37117;&#21487;&#35265;&#65307;</p>
+</li><li class=" "><p   
+>&#23558;&#25152;&#38656;&#30340;&#20869;&#23384;&#25968;&#25454;&#26144;&#23556;&#21040;&#24403;&#21069;&#36827;&#31243;&#30340;&#22320;&#22336;&#31354;&#38388;&#20013;&#12290;</p>
+</li></ol>    </div>
+    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2LeaAu-e7kw">
+        <h2 class="heading "><span>&#24635;&#32467;</span></h2>
+<ol class=" "><li class=" "><p   
+>&#22312;Windows&#25805;&#20316;&#31995;&#32479;&#20013;&#65292;&#28040;&#24687;&#38431;&#21015;&#23384;&#20648;&#22312;0&#29615;&#65288;&#20869;&#26680;&#31354;&#38388;&#65289;&#20013;&#65292;&#24182;&#21487;&#20197;&#36890;&#36807;KTHREAD.Win32Thread&#25214;&#21040;&#12290;</p>
+</li><li class=" "><p   
+>&#24182;&#38750;&#25152;&#26377;&#32447;&#31243;&#37117;&#38656;&#35201;&#28040;&#24687;&#38431;&#21015;&#65292;&#21482;&#26377;GUI&#32447;&#31243;&#25165;&#20250;&#25317;&#26377;&#28040;&#24687;&#38431;&#21015;&#12290;</p>
+</li><li class=" "><p   
+>&#27599;&#20010;GUI&#32447;&#31243;&#26377;&#19988;&#21482;&#26377;&#19968;&#20010;&#28040;&#24687;&#38431;&#21015;&#12290;</p>
+</li></ol>    </div>
+    </div>
+    <div class="section section-1" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Leeql-WPo-S4jue6v-eoiw">
+        <h1 class="heading "><span>&#31383;&#21475;&#19982;&#32447;&#31243;</span></h1>
+<p   
+>&#20102;&#35299;&#28040;&#24687;&#38431;&#21015;&#19982;&#32447;&#31243;&#20851;&#31995;&#21518;&#65292;&#25105;&#20204;&#38656;&#35201;&#30693;&#36947;<strong class=" ">&#28040;&#24687;&#26159;&#20174;&#21738;&#37324;&#26469;&#65292;&#21448;&#21040;&#21738;&#37324;&#21435;&#65292;&#26159;&#35841;&#26469;&#20570;&#36825;&#20123;&#28040;&#24687;&#20256;&#36882;&#30340;</strong>&#12290;</p>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lea2iOaBr-adpea6kA">
+        <h2 class="heading "><span>&#28040;&#24687;&#26469;&#28304;</span></h2>
+<p   
+>&#22914;&#19979;&#22270;&#25152;&#31034;&#65292;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;VC++6.0&#30340;&#24037;&#20855;Spy++&#29992;&#20110;&#25429;&#25417;&#31383;&#21475;&#25509;&#25910;&#21040;&#30340;&#28040;&#24687;&#12290;&#24403;&#40736;&#26631;&#22312;&#31383;&#21475;&#19978;&#31227;&#21160;&#12289;&#28857;&#20987;&#25110;&#38190;&#30424;&#25970;&#20987;&#26102;&#65292;&#23601;&#20250;&#20135;&#29983;&#28040;&#24687;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_9-48-4.png" alt="images/download/attachments/3440655/image2023-10-9_9-48-4.png" width="600"  />
+    </p>
+<p   
+>&#38500;&#20102;&#38190;&#30424;&#12289;&#40736;&#26631;&#22806;&#65292;&#28040;&#24687;&#36824;&#26469;&#33258;&#20110;&#20854;&#20182;&#36827;&#31243;&#65292;&#20551;&#35774;A&#36827;&#31243;&#20351;&#29992;&#20102;CreateWindow&#21019;&#24314;&#31383;&#21475;&#65292;&#23601;&#20250;&#33719;&#24471;&#19968;&#20010;&#31383;&#21475;&#21477;&#26564;&#65292;&#31383;&#21475;&#21477;&#26564;&#20855;&#26377;&#20840;&#23616;&#29305;&#24615;&#65288;&#25152;&#26377;&#31383;&#21475;&#23545;&#35937;&#37117;&#23384;&#22312;&#19968;&#24352;&#20844;&#20849;&#34920;&#20013;&#65289;&#65292;&#36825;&#24847;&#21619;&#30528;&#19968;&#26086;&#20854;&#20182;&#36827;&#31243;&#33719;&#21462;&#21040;&#31383;&#21475;&#21477;&#26564;&#65292;&#37117;&#21487;&#20197;&#21033;&#29992;SendMessage&#25110;PostMessage&#20989;&#25968;&#21521;A&#36827;&#31243;&#21019;&#24314;&#30340;&#31383;&#21475;&#21457;&#36865;&#28040;&#24687;&#20197;&#36827;&#34892;&#20132;&#20114;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lea2iOaBr-WOu-WkhA">
+        <h2 class="heading "><span>&#28040;&#24687;&#21435;&#22788;</span></h2>
+<p   
+>&#24403;&#19968;&#20010;&#28040;&#24687;&#20135;&#29983;&#26102;&#65292;&#32943;&#23450;&#26159;&#38656;&#35201;&#36890;&#36807;&#28040;&#24687;&#30417;&#25511;&#26469;&#30693;&#36947;&#30001;&#28040;&#24687;&#20135;&#29983;&#20102;&#65292;&#28982;&#21518;&#20877;&#30001;&#30417;&#25511;&#30340;&#31243;&#24207;&#23384;&#20648;&#21040;&#31383;&#21475;&#23545;&#24212;&#32447;&#31243;&#30340;&#28040;&#24687;&#38431;&#21015;&#20013;&#12290;</p>
+<p   
+>&#22312;Windows&#19978;0&#29615;&#65288;&#20869;&#26680;&#31354;&#38388;&#65289;Win32k.sys&#30340;2&#20010;&#32447;&#31243;&#20998;&#21035;&#23545;&#40736;&#26631;&#12289;&#38190;&#30424;&#36827;&#34892;&#28040;&#24687;&#30340;&#30417;&#25511;&#65292;&#20855;&#20307;&#30340;&#25105;&#20204;&#21487;&#20197;&#30475;&#19979;&#22914;&#19979;&#36825;&#20010;&#20989;&#25968;InitInputImpl&#65292;&#22312;&#21021;&#22987;&#21270;Win32k.sys&#30340;&#26381;&#21153;&#26102;&#65292;&#20250;&#35843;&#29992;&#23427;&#26469;&#21019;&#24314;2&#20010;&#32447;&#31243;&#65306;KeyboardThreadMain&#12289;MouseThreadMain&#65292;&#20063;&#23601;&#26159;&#40736;&#26631;&#12289;&#38190;&#30424;&#30340;&#30417;&#25511;&#32447;&#31243;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_10-25-34.png" alt="images/download/attachments/3440655/image2023-10-9_10-25-34.png" width="400"  />
+    </p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">NTSTATUS FASTCALL InitInputImpl(VOID)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">   NTSTATUS Status;</code></div>
+<div class="line"><code class="plain">   KeInitializeEvent(&amp;InputThreadsStart, NotificationEvent, FALSE);</code></div>
+<div class="line"><code class="plain">   MasterTimer = ExAllocatePoolWithTag(NonPagedPool, sizeof(KTIMER), TAG_INPUT);</code></div>
+<div class="line"><code class="plain">   KeInitializeTimer(MasterTimer);</code></div>
+<div class="line"><code class="plain">   Status = PsCreateSystemThread(&amp;RawInputThreadHandle,THREAD_ALL_ACCESS,NULL,NULL,</code></div>
+<div class="line"><code class="plain">                                 &amp;RawInputThreadId,RawInputThreadMain,NULL);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">   </code><code class="comments">// 键盘输入线程：KeyboardThreadMain</code></div>
+<div class="line"><code class="plain">   Status = PsCreateSystemThread(&amp;KeyboardThreadHandle,THREAD_ALL_ACCESS,NULL,NULL,</code></div>
+<div class="line"><code class="plain">                                 &amp;KeyboardThreadId,KeyboardThreadMain,NULL);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">   </code><code class="comments">// 鼠标输入线程：MouseThreadMain</code></div>
+<div class="line"><code class="plain">   Status = PsCreateSystemThread(&amp;MouseThreadHandle,THREAD_ALL_ACCESS,NULL,NULL,</code></div>
+<div class="line"><code class="plain">                                 &amp;MouseThreadId,MouseThreadMain,NULL);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">   InputThreadsRunning = TRUE; </code><code class="comments">// TRUE表示现在可以开始读取键盘鼠标输入</code></div>
+<div class="line"><code class="plain">   KeSetEvent(&amp;InputThreadsStart, IO_NO_INCREMENT, FALSE);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">   </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#22914;&#19978;&#20195;&#30721;&#20063;&#23601;&#35299;&#37322;&#20102;&#20026;&#20160;&#20040;&#26377;&#30340;&#26102;&#20505;&#31243;&#24207;&#21345;&#27515;&#65292;&#20294;&#40736;&#26631;&#20173;&#28982;&#21487;&#20197;&#31227;&#21160;&#65292;&#36825;&#26159;&#22240;&#20026;&#40736;&#26631;&#25805;&#20316;&#36816;&#34892;&#22312;&#29420;&#31435;&#30340;&#32447;&#31243;&#20013;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lea2iOaBr-mYn-WIl-eahOWvu-aJvg">
+        <h2 class="heading "><span>&#28040;&#24687;&#38431;&#21015;&#30340;&#23547;&#25214;</span></h2>
+<p   
+>&#22914;&#19979;&#22270;&#25152;&#31034;&#65292;&#22312;&#25171;&#24320;&#20102;&#19977;&#20010;&#31383;&#21475;&#30340;&#24773;&#20917;&#19979;&#65292;&#24403;&#40736;&#26631;&#36827;&#34892;&#28857;&#20987;&#21644;&#31227;&#21160;&#25805;&#20316;&#26102;&#65292;&#25805;&#20316;&#31995;&#32479;&#26159;&#22914;&#20309;&#20934;&#30830;&#22320;&#23558;&#28040;&#24687;&#21457;&#36865;&#32473;&#19981;&#21516;&#31383;&#21475;&#25152;&#23545;&#24212;&#30340;&#28040;&#24687;&#38431;&#21015;&#21602;&#65311;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/Picture1.png" alt="images/download/attachments/3440655/Picture1.png" width="600"  />
+    </p>
+<p   
+>&#39318;&#20808;&#65292;&#22270;&#20013;&#19981;&#20165;&#26377;&#19977;&#20010;&#31383;&#21475;&#65292;&#27599;&#20010;&#36827;&#31243;&#30340;&#31383;&#21475;&#20869;&#37096;&#30340;&#25353;&#38062;&#12289;&#34920;&#26684;&#31561;&#20063;&#37117;&#26159;&#31383;&#21475;&#30340;&#19968;&#37096;&#20998;&#12290;&#22240;&#27492;&#65292;<strong class=" ">&#19968;&#20010;&#36827;&#31243;&#21487;&#20197;&#25317;&#26377;&#22810;&#20010;&#31383;&#21475;&#65292;&#20294;&#36825;&#20123;&#31383;&#21475;&#21482;&#33021;&#23646;&#20110;&#21516;&#19968;&#20010;&#36827;&#31243;</strong>&#12290;</p>
+<p   
+>&#25509;&#30528;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#19968;&#19979;&#21019;&#24314;&#31383;&#21475;&#30340;API&#21040;&#24213;&#26159;&#24590;&#20040;&#35843;&#29992;&#30340;&#65306;CreateWindow - CreateWindowA/W - CreateWindowEx - _VerNtUserCreateWindowEx - _NtUserCreateWindow - _NtUserCreateWindow&#12290;</p>
+<p   
+>&#25105;&#20204;&#20250;&#21457;&#29616;&#21019;&#24314;&#31383;&#21475;&#26368;&#32456;&#36824;&#26159;&#20250;&#36890;&#36807;&#31995;&#32479;&#35843;&#29992;&#21040;0&#29615;&#21435;&#65292;&#26681;&#25454;&#31995;&#32479;&#35843;&#29992;&#21495;&#65288;&#20174;0&#20301;&#24320;&#22987;&#65292;&#31532;12&#20301;&#20026;1&#65289;&#25105;&#20204;&#23601;&#30693;&#36947;&#23427;&#26368;&#32456;&#35843;&#29992;&#30340;&#23601;&#26159;Win32k.sys&#25552;&#20379;&#30340;&#26381;&#21153;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_10-40-45.png" alt="images/download/attachments/3440655/image2023-10-9_10-40-45.png" width="600"  />
+    </p>
+<p   
+>&#22240;&#27492;&#65292;&#31383;&#21475;&#23601;&#20687;&#36827;&#31243;&#21644;&#32447;&#31243;&#19968;&#26679;&#65292;&#23454;&#38469;&#19978;&#26159;&#19968;&#20010;&#22788;&#20110;0&#29615;&#30340;&#32467;&#26500;&#12290;&#31383;&#21475;&#20063;&#26377;&#19982;&#20043;&#23545;&#24212;&#30340;&#20869;&#26680;&#32467;&#26500;&#20307;&#65292;&#21363;<strong class=" ">_WINDOW_OBJECT</strong>&#12290;&#65288;&#35813;&#32467;&#26500;&#20307;&#27809;&#26377;&#36890;&#36807;&#31526;&#21495;&#34920;&#23548;&#20986;&#65292;&#21487;&#20197;&#26597;&#30475;ReactOS&#30340;&#20195;&#30721;&#26469;&#26597;&#30475;&#35813;&#32467;&#26500;&#20307;&#65289;</p>
+<p   
+>&#22312;&#31383;&#21475;&#23545;&#35937;_WINDOW_OBJECT&#20013;&#65292;&#23384;&#22312;&#19968;&#20010;&#21517;&#20026;pti&#30340;&#25104;&#21592;&#65292;&#20854;&#31867;&#22411;&#20026;_PTHREADINFO&#65292;&#25351;&#21521;_THREADINFO&#32467;&#26500;&#20307;&#12290;&#36825;&#20010;THREADINFO&#32467;&#26500;&#20307;&#27491;&#26159;&#21069;&#25991;&#25552;&#21040;&#30340;_KTHREAD.Win32Thread&#30456;&#20851;&#32852;&#30340;&#32467;&#26500;&#20307;&#12290;<strong class=" ">&#36890;&#36807;&#36825;&#31181;&#26041;&#24335;&#65292;&#23601;&#21487;&#20197;&#23558;&#32447;&#31243;&#19982;&#31383;&#21475;&#32852;&#31995;&#22312;&#19968;&#36215;</strong>&#12290;</p>
+<p   
+>&#22312;&#21021;&#22987;&#29366;&#24577;&#19979;&#65292;_HREAD.Win32Thread&#25351;&#21521;&#30340;&#20540;&#20026;&#31354;&#12290;&#28982;&#32780;&#65292;&#24403;&#32447;&#31243;&#35843;&#29992;Win32k.sys&#20013;&#30340;&#20989;&#25968;&#21019;&#24314;&#19968;&#20010;&#31383;&#21475;&#26102;&#65292;_KTHREAD.Win32Thread&#23558;&#25351;&#21521;_THREADINFO&#32467;&#26500;&#20307;&#65292;&#20174;&#32780;&#23558;&#35813;&#32447;&#31243;&#30001;&#26222;&#36890;&#32447;&#31243;&#36716;&#21464;&#20026;GUI&#32447;&#31243;&#12290;&#27492;&#26102;&#65292;&#31383;&#21475;&#23545;&#35937;&#23545;&#24212;&#30340;&#20869;&#26680;&#32467;&#26500;&#20307;WINDOW_OBJECT&#20013;&#30340;pti&#25104;&#21592;&#20063;&#20250;&#25351;&#21521;&#36825;&#20010;_THREADINFO&#32467;&#26500;&#20307;&#12290;<strong class=" ">&#32780;&#28040;&#24687;&#38431;&#21015;&#21017;&#20301;&#20110;THREADINFO&#32467;&#26500;&#20307;&#20013;&#65292;&#36825;&#23601;&#20351;&#24471;&#31383;&#21475;&#21487;&#20197;&#35775;&#38382;&#25152;&#23646;&#32447;&#31243;&#30340;&#28040;&#24687;&#38431;&#21015;</strong>&#12290;</p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lea2iOaBr-eahOaOpeaUtg">
+        <h1 class="heading "><span>&#28040;&#24687;&#30340;&#25509;&#25910;</span></h1>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Leeql-WPo-eahOWIm-W7uui_h-eoiw">
+        <h2 class="heading "><span>&#31383;&#21475;&#30340;&#21019;&#24314;&#36807;&#31243;</span></h2>
+<p   
+>&#22312;3&#29615;&#21019;&#24314;&#31383;&#21475;&#26102;&#65292;&#39318;&#20808;&#38656;&#35201;&#21019;&#24314;&#21644;&#27880;&#20876;&#19968;&#20010;&#31383;&#21475;&#31867;&#23545;&#35937;&#65292;&#24182;&#27880;&#20876;&#21644;&#35774;&#32622;&#31383;&#21475;&#30340;&#26679;&#24335;&#21644;&#36807;&#31243;&#20989;&#25968;&#12290;&#28982;&#21518;&#65292;&#36890;&#36807;&#35843;&#29992;CreateWindow&#20989;&#25968;&#26469;&#21019;&#24314;&#31383;&#21475;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_20-48-14.png" alt="images/download/attachments/3440655/image2023-10-9_20-48-14.png" width="600"  />
+    </p>
+<p   
+>&#23454;&#36136;&#19978;&#65292;CreateWindow&#21482;&#26159;&#19968;&#20010;3&#29615;&#30340;&#25509;&#21475;&#65292;&#26368;&#32456;&#35843;&#29992;&#30340;&#26159;&#20301;&#20110;Win32k.sys&#20013;&#30340;0&#29615;&#20989;&#25968;&#12290;&#22312;0&#29615;&#20013;&#65292;&#20250;&#20026;&#31383;&#21475;&#21019;&#24314;&#19968;&#20010;&#21517;&#20026;_WINDOW_OBJECT&#30340;&#32467;&#26500;&#20307;&#65292;&#27599;&#20010;&#31383;&#21475;&#37117;&#26377;&#19968;&#20010;&#36825;&#26679;&#30340;&#32467;&#26500;&#20307;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lea2iOaBr-mYn-WIl-eahOe7k-aehA">
+        <h2 class="heading "><span>&#28040;&#24687;&#38431;&#21015;&#30340;&#32467;&#26500;</span></h2>
+<p   
+>&#24403;&#32447;&#31243;&#35843;&#29992;Win32k.sys&#25552;&#20379;&#30340;&#22270;&#24418;&#30028;&#38754;&#20989;&#25968;&#26102;&#65292;&#32447;&#31243;&#32467;&#26500;&#20307;_KTHREAD&#20013;&#30340;&#25104;&#21592;Win32Thread&#20250;&#25351;&#21521;&#19968;&#20010;&#21517;&#20026;_THREADINFO&#30340;&#32467;&#26500;&#20307;&#12290;&#22312;&#35813;&#32467;&#26500;&#20307;&#20013;&#26377;&#19968;&#20010;&#25104;&#21592;MessageQueue&#65292;&#21363;&#28040;&#24687;&#38431;&#21015;&#65292;&#20854;&#20013;&#21253;&#21547;7&#32452;&#38431;&#21015;&#65288;&#20165;&#36866;&#29992;&#20110;&#26087;&#29256;ReactOS&#65289;&#65292;&#29992;&#20110;&#22788;&#29702;&#19981;&#21516;&#31867;&#22411;&#30340;&#28040;&#24687;&#12290;&#22914;&#19979;3&#20010;&#26159;&#27604;&#36739;&#24120;&#35265;&#30340;&#28040;&#24687;&#38431;&#21015;&#65306;</p>
+<ol class=" "><li class=" "><p   
+>SentMessagesListHead&#65306;&#25509;&#21040;SendMessage&#21457;&#26469;&#30340;&#28040;&#24687;&#12290;</p>
+</li><li class=" "><p   
+>PostedMessagesListHead&#65306;&#25509;&#21040;PostMessage&#21457;&#26469;&#30340;&#28040;&#24687;&#12290;</p>
+</li><li class=" "><p   
+>HardwareMessagesListHead&#65306;&#25509;&#21040;&#40736;&#26631;&#12289;&#38190;&#30424;&#30340;&#28040;&#24687;&#12290;</p>
+</li></ol>    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2LUdldE1lc3NhZ2U">
+        <h2 class="heading "><span>GetMessage</span></h2>
+<p   
+>&#25105;&#20204;&#22312;&#31383;&#21475;&#21019;&#24314;&#21518;&#38656;&#35201;&#20351;&#29992;GetMessage&#12289;TranslateMessage&#21644;DispatchMessage&#26469;&#33719;&#21462;&#12289;&#36716;&#25442;&#21644;&#20998;&#21457;&#28040;&#24687;&#12290;&#22914;&#19979;&#20195;&#30721;&#25152;&#31034;&#65292;&#25105;&#20204;&#36890;&#24120;&#20250;&#36825;&#26679;&#21435;&#20889;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">MSG msg;</code></div>
+<div class="line"><code class="plain">BOOL bRet;</code></div>
+<div class="line"><code class="keyword">while</code><code class="plain">( (bRet = GetMessage( &amp;msg, NULL, </code><code class="value">0</code><code class="plain">, </code><code class="value">0</code><code class="plain"> )) != </code><code class="value">0</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (bRet == -</code><code class="value">1</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// handle the error and possibly exit</code></div>
+<div class="line"><code class="plain">        sprintf(szOutBuff, </code><code class="string">"Error: %d"</code><code class="plain">, GetLastError());</code></div>
+<div class="line"><code class="plain">        OutputDebugString(szOutBuff);</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 转换消息</code></div>
+<div class="line"><code class="plain">        TranslateMessage(&amp;msg);</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 分发消息：就是给系统调用窗口处理函数</code></div>
+<div class="line"><code class="plain">        DispatchMessage(&amp;msg);</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>GetMessage&#34920;&#38754;&#19978;&#30340;&#24847;&#24605;&#26159;&#33719;&#21462;&#28040;&#24687;&#65292;&#20294;&#23454;&#38469;&#21151;&#33021;&#19981;&#20165;&#38480;&#20110;&#27492;&#65292;&#25105;&#20204;&#39318;&#20808;&#26469;&#30475;&#19979;&#35813;&#20989;&#25968;&#30340;&#35821;&#27861;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">BOOL GetMessage(</code></div>
+<div class="line"><code class="plain">  LPMSG lpMsg,         </code><code class="comments">// 返回从队列中获取的消息</code></div>
+<div class="line"><code class="plain">  HWND hWnd,           </code><code class="comments">// 过滤条件：指定接收消息的窗口</code></div>
+<div class="line"><code class="plain">  UINT wMsgFilterMin,  </code><code class="comments">// 过滤条件</code></div>
+<div class="line"><code class="plain">  UINT wMsgFilterMax   </code><code class="comments">// 过滤条件</code></div>
+<div class="line"><code class="plain">);</code></div>
+</div>
+    </div>
+<p   
+>GetMessage&#20989;&#25968;&#26377;4&#20010;&#21442;&#25968;&#65292;&#20854;&#21518;3&#20010;&#21442;&#25968;&#26159;&#36807;&#28388;&#26465;&#20214;&#65292;&#31532;&#19968;&#20010;&#26465;&#20214;&#26159;&#29992;&#20110;&#25351;&#23450;&#25509;&#25910;&#28040;&#24687;&#30340;&#31383;&#21475;&#12290;&#32780;&#31532;&#19968;&#20010;&#21442;&#25968;&#21017;&#26159;&#20174;&#28040;&#24687;&#38431;&#21015;&#20013;&#33719;&#21462;&#30340;&#28040;&#24687;&#12290;</p>
+<p   
+>GetMessage&#20989;&#25968;&#36890;&#36807;&#24490;&#29615;&#21028;&#26029;&#26159;&#21542;&#23384;&#22312;&#35813;&#31383;&#21475;&#30340;&#28040;&#24687;&#65292;&#22914;&#26524;&#26377;&#65292;&#23558;&#28040;&#24687;&#23384;&#20648;&#21040;MSG&#32467;&#26500;&#20307;&#20013;&#65292;&#24182;&#20174;&#21407;&#22987;&#28040;&#24687;&#38431;&#21015;&#20013;&#21024;&#38500;&#35813;&#28040;&#24687;&#12290;&#28982;&#21518;&#65292;&#23558;&#28040;&#24687;&#20256;&#36882;&#32473;TranslateMessage&#21644;DispatchMessage&#20989;&#25968;&#36827;&#34892;&#22788;&#29702;&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#22312;&#20195;&#30721;&#20013;&#65292;&#23558;TranslateMessage&#21644;DispatchMessage&#27880;&#37322;&#25481;&#65292;&#26469;&#30475;&#19968;&#19979;&#27809;&#26377;&#36825;&#20010;&#20004;&#20010;&#20989;&#25968;&#36827;&#34892;&#28040;&#24687;&#30340;&#36716;&#25442;&#21644;&#20998;&#21457;&#65292;&#25105;&#20204;&#30340;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;WindowProc&#26159;&#21542;&#20173;&#28982;&#21487;&#20197;&#25191;&#34892;&#65292;&#25509;&#30528;&#21478;&#22806;&#19968;&#20010;&#31243;&#24207;&#21457;&#36865;&#28040;&#24687;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_21-49-46.png" alt="images/download/attachments/3440655/image2023-10-9_21-49-46.png" width="600"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_21-50-14.png" alt="images/download/attachments/3440655/image2023-10-9_21-50-14.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#36816;&#34892;&#36825;&#20010;&#31383;&#21475;&#31243;&#24207;&#21518;&#20877;&#36816;&#34892;&#21457;&#36865;&#28040;&#24687;&#30340;&#31243;&#24207;&#65292;&#20250;&#21457;&#29616;&#31383;&#21475;&#25104;&#21151;&#25509;&#25910;&#21040;&#20102;&#28040;&#24687;&#65292;&#24182;&#25191;&#34892;&#20102;&#23545;&#24212;&#30340;&#22788;&#29702;&#20989;&#25968;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_21-51-53.png" alt="images/download/attachments/3440655/image2023-10-9_21-51-53.png" width="600"  />
+    </p>
+<p   
+>DispatchMessage&#20989;&#25968;&#29992;&#20110;&#23558;&#28040;&#24687;&#36716;&#21457;&#21040;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#65292;&#20197;&#35302;&#21457;&#30456;&#24212;&#30340;&#22788;&#29702;&#36923;&#36753;&#12290;&#20294;&#26159;&#22312;&#36825;&#37324;&#25105;&#20204;&#36890;&#36807;&#23454;&#39564;&#21457;&#29616;<strong class=" ">GetMessage&#20989;&#25968;&#20063;&#20250;&#23545;&#28040;&#24687;&#36827;&#34892;&#22788;&#29702;</strong>&#12290;</p>
+<p   
+>GetMessage&#20989;&#25968;&#35843;&#29992;&#30340;&#26159;Win32k.sys&#20013;&#30340;NtUserGetMessage&#20989;&#25968;&#65292;&#22312;&#35813;&#20989;&#25968;&#20869;&#37096;&#26377;&#22914;&#19979;&#30340;&#22823;&#33268;&#36923;&#36753;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="keyword">do</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 先判断SentMessagesListHead是否有消息，如果有就处理掉</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">do</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        ....</code></div>
+<div class="line"><code class="plain">        KeUserModeCallback(USER32_CALLBACK_WINDOWPROC,</code></div>
+<div class="line"><code class="plain">                               Arguments,</code></div>
+<div class="line"><code class="plain">                               ArgumentLength,</code></div>
+<div class="line"><code class="plain">                               &amp;ResultPointer,</code></div>
+<div class="line"><code class="plain">                               &amp;ResultLength);</code></div>
+<div class="line"><code class="plain">        ....</code></div>
+<div class="line"><code class="plain">    } </code><code class="keyword">while</code><code class="plain"> (SentMessagesListHead != NULL)</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 依次判断其他的6个队列，里面如果有消息就返回，没有则继续</code></div>
+<div class="line"><code class="plain">} </code><code class="keyword">while</code><code class="plain">(其他队列 != NULL)</code></div>
+</div>
+    </div>
+<p   
+>&#22312;&#19968;&#20010;&#20869;&#37096;&#30340;do...while&#24490;&#29615;&#20013;&#65292;NtUserGetMessage&#39318;&#20808;&#20250;&#21028;&#26029;SentMessagesListHead&#20013;&#26159;&#21542;&#23384;&#22312;&#28040;&#24687;&#65292;&#22914;&#26524;&#26377;&#65292;&#21017;&#35843;&#29992;&#31383;&#21475;&#22238;&#35843;&#20989;&#25968;&#22788;&#29702;&#23427;&#12290;&#28982;&#21518;&#65292;&#22312;&#22788;&#29702;&#23436;SentMessagesListHead&#20013;&#30340;&#25152;&#26377;&#28040;&#24687;&#20043;&#21518;&#65292;&#25165;&#20250;&#32771;&#34385;&#20854;&#20182;&#20845;&#20010;&#38431;&#21015;&#20013;&#30340;&#28040;&#24687;&#12290;&#22312;&#36825;&#31181;&#24773;&#20917;&#19979;&#65292;&#23558;&#19981;&#20250;&#22788;&#29702;&#36825;&#20123;&#28040;&#24687;&#65292;&#32780;&#26159;&#30452;&#25509;&#23558;&#23427;&#20204;&#36820;&#22238;&#12290;&#22240;&#27492;&#65292;<strong class=" ">GetMessage&#20063;&#20250;&#23545;&#28040;&#24687;&#36827;&#34892;&#22788;&#29702;&#65292;&#20294;&#21482;&#20250;&#22788;&#29702;SentMessagesListHead&#20013;&#30340;&#28040;&#24687;</strong>&#12290;</p>
+<p   
+>&#37027;&#20040;&#20063;&#23601;&#34920;&#31034;&#22914;&#26524;&#25105;&#20204;&#21018;&#21018;&#21457;&#36865;&#28040;&#24687;&#30340;&#20195;&#30721;&#20351;&#29992;&#30340;&#20989;&#25968;&#20174;SendMessage&#21464;&#25104;PostMessage&#65292;&#22312;&#27809;&#26377;TranslateMessage&#21644;DispatchMessage&#20989;&#25968;&#30340;&#24773;&#20917;&#19979;&#65292;GetMessage&#20989;&#25968;&#24182;&#19981;&#20250;&#22788;&#29702;&#36825;&#20010;&#28040;&#24687;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2LVNlbmRNZXNzYWdl5LiOUG9zdE1lc3NhZ2U">
+        <h2 class="heading "><span>SendMessage&#19982;PostMessage</span></h2>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#26469;&#30475;&#19968;&#19979;&#36825;&#20004;&#20010;&#20989;&#25968;&#65306;SendMessage&#19982;PostMessage&#65292;&#36825;&#20004;&#32773;&#37117;&#26159;&#29992;&#20110;&#21457;&#36865;&#28040;&#24687;&#30340;&#65292;&#20294;&#19981;&#21516;&#20043;&#22788;&#22312;&#20110;&#21069;&#32773;&#26159;&#21516;&#27493;&#21457;&#36865;&#28040;&#24687;&#65292;&#21518;&#32773;&#26159;&#24322;&#27493;&#21457;&#36865;&#28040;&#24687;&#12290;</p>
+<p   
+>&#20351;&#29992;SendMessage&#20989;&#25968;&#21457;&#36865;&#28040;&#24687;&#65292;&#24403;GetMessage&#20989;&#25968;&#25509;&#25910;&#28040;&#24687;&#26102;&#65292;&#23427;&#20250;&#36827;&#20837;0&#29615;&#36941;&#21382;SentMessagesListHead&#28040;&#24687;&#38431;&#21015;&#20197;&#26816;&#26597;&#26159;&#21542;&#26377;&#28040;&#24687;&#12290;&#22914;&#26524;&#26377;&#28040;&#24687;&#65292;&#21017;&#20250;&#36827;&#34892;&#22788;&#29702;&#65307;&#22914;&#26524;&#27809;&#26377;&#28040;&#24687;&#65292;&#21017;&#20250;&#31435;&#21363;&#36820;&#22238;&#12290;&#22312;&#26377;&#28040;&#24687;&#30340;&#24773;&#20917;&#19979;&#65292;&#24517;&#39035;&#23436;&#20840;&#22788;&#29702;&#23436;&#28040;&#24687;&#25165;&#33021;&#36820;&#22238;&#65292;&#21542;&#21017;SendMessage&#20989;&#25968;&#20250;&#19968;&#30452;&#38459;&#22622;&#22312;&#36825;&#37324;&#65292;&#30452;&#21040;&#25509;&#25910;&#21040;&#23545;&#26041;&#30340;&#25191;&#34892;&#32467;&#26524;&#24182;&#36820;&#22238;&#12290;</p>
+<p   
+>&#22914;&#19979;&#22270;&#25152;&#31034;&#65292;&#25105;&#20204;&#30340;&#28040;&#24687;&#21457;&#36865;&#31243;&#24207;&#20351;&#29992;SendMessage&#20989;&#25968;&#21457;&#36865;&#28040;&#24687;&#65292;&#24403;&#31383;&#21475;&#31243;&#24207;&#30340;&#22788;&#29702;&#27809;&#26377;&#32467;&#26463;&#65292;&#21363;&#24377;&#31383;&#27809;&#26377;&#20851;&#38381;&#65292;&#21017;&#28040;&#24687;&#21457;&#36865;&#31243;&#24207;&#19968;&#30452;&#20572;&#30041;&#22312;&#21738;&#37324;&#65292;&#20063;&#19981;&#20250;&#20851;&#38381;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_21-51-53.png" alt="images/download/attachments/3440655/image2023-10-9_21-51-53.png" width="600"  />
+    </p>
+<p   
+>&#30456;&#27604;&#20043;&#19979;&#65292;&#24403;&#25105;&#20204;&#20351;&#29992;PostMessage&#20989;&#25968;&#21457;&#36865;&#28040;&#24687;&#26102;&#65292;GetMessage&#20989;&#25968;&#21482;&#26159;&#25509;&#25910;&#35813;&#28040;&#24687;&#65292;&#32780;&#19981;&#20250;&#36827;&#34892;&#22788;&#29702;&#12290;&#28040;&#24687;&#30340;&#22788;&#29702;&#30001;TranslateMessage&#21644;DispatchMessage&#20989;&#25968;&#36127;&#36131;&#12290;<strong class=" ">PostMessage&#20989;&#25968;&#19981;&#20250;&#31561;&#24453;&#23545;&#26041;&#36820;&#22238;&#22788;&#29702;&#32467;&#26524;&#65292;&#19968;&#26086;&#21457;&#36865;&#23436;&#25104;&#23601;&#31435;&#21363;&#32467;&#26463;&#33258;&#36523;&#31243;&#24207;</strong>&#12290;</p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lea2iOaBr-eahOi9rOaNog">
+        <h1 class="heading "><span>&#28040;&#24687;&#30340;&#36716;&#25442;</span></h1>
+<p   
+>&#25105;&#20204;&#20877;&#26469;&#30475;&#19968;&#19979;&#28040;&#24687;&#30340;&#36716;&#25442;&#65292;&#21363;TranslateMessage&#20989;&#25968;&#65292;&#35813;&#20989;&#25968;&#26159;&#38024;&#23545;&#38190;&#30424;&#31867;&#28040;&#24687;&#30340;&#19968;&#31181;&#20248;&#21270;&#12290;&#22914;&#26524;&#27809;&#26377;&#20351;&#29992;&#23427;&#65292;&#38190;&#30424;&#28040;&#24687;&#23558;&#23646;&#20110;WM_KEYDOWN&#31867;&#22411;&#65292;&#24182;&#20197;ASCII&#23545;&#24212;&#30340;&#21313;&#36827;&#21046;&#20540;&#25171;&#21360;&#20986;&#26469;&#12290;&#20294;&#26159;&#65292;&#36890;&#36807;&#20351;&#29992;&#23427;&#65292;&#38190;&#30424;&#28040;&#24687;&#23558;&#34987;&#36716;&#25442;&#20026;WM_CHAR&#31867;&#22411;&#65292;&#24182;&#25171;&#21360;&#20986;&#25353;&#19979;&#30340;&#38190;&#30424;&#31526;&#21495;&#12290;&#22240;&#27492;&#65292;TranslateMessage&#20989;&#25968;&#30340;&#20351;&#29992;&#19982;&#21542;&#23545;&#32467;&#26524;&#24433;&#21709;&#19981;&#22823;&#65292;&#23427;&#21482;&#26159;&#23545;&#28040;&#24687;&#31867;&#22411;&#36827;&#34892;&#36716;&#25442;&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#28155;&#21152;&#23545;WM_KEYDOWN&#12289;WM_CHAR&#28040;&#24687;&#30340;&#22788;&#29702;&#65292;&#24182;&#19988;&#27880;&#37322;&#25481;TranslateMessage&#20989;&#25968;&#21644;&#19981;&#27880;&#37322;&#25481;&#36827;&#34892;&#23545;&#27604;&#65292;&#23601;&#20250;&#21457;&#29616;&#36825;&#19968;&#29305;&#24449;&#65292;&#38656;&#35201;&#20027;&#35201;&#30340;&#26159;&#22312;&#23454;&#38469;&#20351;&#29992;&#36807;&#31243;&#20013;<strong class=" ">&#22914;&#26524;&#20320;&#20351;&#29992;&#20102;TranslateMessage&#20989;&#25968;&#23601;&#21482;&#38656;&#35201;&#28155;&#21152;&#23545;WM_KEYDOWN&#28040;&#24687;&#30340;&#22788;&#29702;</strong>&#65292;&#19981;&#38656;&#35201;&#20877;&#23545;WM_CHAR&#28040;&#24687;&#36827;&#34892;&#22788;&#29702;&#65292;&#21542;&#21017;&#23601;&#20250;&#36896;&#25104;&#37325;&#22797;&#22788;&#29702;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_23-47-22.png" alt="images/download/attachments/3440655/image2023-10-9_23-47-22.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-1" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lea2iOaBr-eahOWIhuWPkQ">
+        <h1 class="heading "><span>&#28040;&#24687;&#30340;&#20998;&#21457;</span></h1>
+<p   
+>&#25152;&#35859;&#28040;&#24687;&#30340;&#20998;&#21457;&#65292;&#26680;&#24515;&#28857;&#22312;&#20110;DispatchMessage&#20989;&#25968;&#65292;&#23427;&#20250;&#26681;&#25454;&#31383;&#21475;&#21477;&#26564;&#35843;&#29992;&#30456;&#20851;&#30340;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#12290;&#22312;&#19978;&#19968;&#33410;&#30340;&#23398;&#20064;&#20013;&#25105;&#20204;&#20102;&#35299;&#21040;GetMessage&#20989;&#25968;&#38500;&#20102;&#25509;&#25910;&#28040;&#24687;&#36824;&#20250;&#22788;&#29702;SendMessage&#21457;&#36865;&#36807;&#26469;&#30340;&#28040;&#24687;&#65292;&#20063;&#23601;&#26159;SentMessagesListHead&#28040;&#24687;&#38431;&#21015;&#20013;&#30340;&#28040;&#24687;&#12290;</p>
+<p   
+>&#20063;&#23601;&#34920;&#31034;&#20854;&#20182;&#28040;&#24687;&#26159;&#20132;&#30001;DispatchMessage&#20989;&#25968;&#26469;&#22788;&#29702;&#30340;&#65292;DispatchMessage&#20989;&#25968;&#26368;&#32456;&#35843;&#29992;&#30340;&#26159;Win32k.sys&#20013;&#30340;NtUserDispatchMessage&#20989;&#25968;&#12290;&#35813;&#20989;&#25968;&#20027;&#35201;&#20570;&#20102;&#20197;&#19979;&#20004;&#20214;&#20107;&#24773;&#65306;</p>
+<ol class=" "><li class=" "><p   
+>&#26681;&#25454;&#31383;&#21475;&#21477;&#26564;&#25214;&#21040;&#31383;&#21475;&#23545;&#35937;_WINDOW_OBJECT&#65307;&#65288;UserGetWindowObject&#20989;&#25968;&#65289;</p>
+</li><li class=" "><p   
+>&#26681;&#25454;<strong class=" ">&#31383;&#21475;&#23545;&#35937;&#33719;&#21462;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;</strong>&#65292;&#24182;&#36890;&#36807;0&#29615;&#21457;&#36215;&#35843;&#29992;&#12290;</p>
+</li></ol><p   
+>&#22914;&#19979;&#22270;&#25152;&#31034;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#35265;DispatchMessage&#20989;&#25968;&#19982;GetMessage&#20989;&#25968;&#65288;NtUserGetMessage&#20989;&#25968;&#65289;&#19968;&#26679;&#65292;&#26368;&#32456;&#37117;&#26159;&#35843;&#29992;KeUserModeCallback&#30340;&#22238;&#35843;&#20989;&#25968;&#36827;&#20837;3&#29615;&#65292;&#20877;&#21435;&#35843;&#29992;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_23-21-19.png" alt="images/download/attachments/3440655/image2023-10-9_23-21-19.png" width="600"  />
+    </p>
+<p   
+>&#24182;&#19988;&#25105;&#20204;&#20250;&#21457;&#29616;&#21363;&#20351;DispatchMessage&#20989;&#25968;&#30340;&#21807;&#19968;&#21442;&#25968;MSG&#32467;&#26500;&#20307;&#65292;&#21457;&#25381;&#20102;&#24040;&#22823;&#30340;&#20316;&#29992;&#65292;&#35813;&#32467;&#26500;&#20307;&#37324;&#26377;&#31383;&#21475;&#21477;&#26564;&#12289;&#28040;&#24687;&#31867;&#22411;&#12289;&#28040;&#24687;&#21442;&#25968;&#31561;&#20869;&#23481;&#65292;&#20855;&#20307;&#30340;&#25105;&#20204;&#30475;&#22914;&#19979;&#23450;&#20041;&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">typedef struct tagMSG {</code></div>
+<div class="line"><code class="plain">    HWND        hwnd;    </code><code class="comments">// 窗口句柄</code></div>
+<div class="line"><code class="plain">    UINT        message; </code><code class="comments">// 消息类型</code></div>
+<div class="line"><code class="plain">    WPARAM      wParam;  </code><code class="comments">// 消息参数</code></div>
+<div class="line"><code class="plain">    LPARAM      lParam;  </code><code class="comments">// 消息参数</code></div>
+<div class="line"><code class="plain">    DWORD       time;    </code><code class="comments">// 消息时间戳</code></div>
+<div class="line"><code class="plain">    POINT       pt;      </code><code class="comments">// 鼠标坐标</code></div>
+<div class="line"><code class="plain">#ifdef _MAC</code></div>
+<div class="line"><code class="plain">    DWORD       lPrivate;</code></div>
+<div class="line"><code class="plain">#endif</code></div>
+<div class="line"><code class="plain">} MSG, *PMSG, NEAR *NPMSG, FAR *LPMSG;</code></div>
+</div>
+    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Lem7mOiupOeahOa2iOaBr-WkhOeQhuWHveaVsA">
+        <h2 class="heading "><span>&#40664;&#35748;&#30340;&#28040;&#24687;&#22788;&#29702;&#20989;&#25968;</span></h2>
+<p   
+>&#28040;&#24687;&#26080;&#26102;&#19981;&#21051;&#37117;&#22312;&#20135;&#29983;&#65292;&#25105;&#20204;&#22312;&#33258;&#23450;&#20041;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#26102;&#20505;&#21482;&#38656;&#35201;&#23545;&#20851;&#27880;&#30340;&#28040;&#24687;&#36827;&#34892;&#22788;&#29702;&#65292;&#20854;&#20182;&#30340;&#25105;&#20204;&#37117;&#21487;&#20197;&#20132;&#32473;&#40664;&#35748;&#30340;&#28040;&#24687;&#22788;&#29702;&#20989;&#25968;&#65292;&#21363;DefWindowProc&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 调用一个默认的消息处理函数，关闭、最小化、最大化都是由默认消息处理函数处理的</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> DefWindowProc(hwnd, uMsg, wParam, lParam);</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2LeWGheaguOWbnuiwg-acuuWItg">
+        <h1 class="heading "><span>&#20869;&#26680;&#22238;&#35843;&#26426;&#21046;</span></h1>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2Leeql-WPo-i_h-eoi-eahOiwg-eUqOiAhQ">
+        <h2 class="heading "><span>&#31383;&#21475;&#36807;&#31243;&#30340;&#35843;&#29992;&#32773;</span></h2>
+<p   
+>&#25105;&#20204;&#30693;&#36947;GetMessage&#20989;&#25968;&#20877;&#22788;&#29702;SentMessagesListHead&#28040;&#24687;&#38431;&#21015;&#20013;&#30340;&#28040;&#24687;&#26102;&#65292;&#20197;&#21450;DispatchMessage&#22312;&#22788;&#29702;&#20854;&#20182;&#28040;&#24687;&#38431;&#21015;&#20013;&#30340;&#28040;&#24687;&#26102;&#65292;&#37117;&#20250;&#35843;&#29992;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#12290;<strong class=" ">&#38500;&#27492;&#20043;&#22806;&#20869;&#26680;&#20195;&#30721;&#20063;&#20250;&#35843;&#29992;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;</strong>&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#27880;&#37322;&#22914;&#19979;&#22270;&#25152;&#31034;&#30340;&#20195;&#30721;&#65292;&#24182;&#19988;&#22312;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#20013;&#21152;&#20837;&#19968;&#20010;&#36755;&#20986;&#65292;&#20877;&#32534;&#35793;&#36816;&#34892;&#31383;&#21475;&#20250;&#21457;&#29616;&#65292;&#21363;&#20351;&#27809;&#26377;GetMessage&#12289;DispatchMessage&#20989;&#25968;&#65292;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#20173;&#28982;&#20250;&#34987;&#25191;&#34892;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-10_9-50-36.png" alt="images/download/attachments/3440655/image2023-10-10_9-50-36.png" width="600"  />
+    </p>
+<p   
+>&#37027;&#20040;&#20026;&#20160;&#20040;&#20869;&#26680;&#20195;&#30721;&#38656;&#35201;&#35843;&#29992;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#21602;&#65311;&#20551;&#35774;&#26377;&#19968;&#20010;&#38656;&#27714;&#65292;&#24403;&#25105;&#20204;&#24819;&#35201;&#22312;&#31383;&#21475;&#21019;&#24314;&#26102;&#21435;&#20570;&#19968;&#20123;&#20107;&#24773;&#26102;&#65292;&#30001;&#20110;&#31383;&#21475;&#21019;&#24314;&#26102;&#26159;&#32943;&#23450;&#27809;&#26377;&#28040;&#24687;&#30340;&#65292;<strong class=" ">&#22240;&#27492;GetMessage&#20989;&#25968;&#20063;&#27809;&#27861;&#33719;&#21462;&#21040;&#28040;&#24687;&#65292;DispatchMessage&#20989;&#25968;&#33258;&#28982;&#20063;&#23601;&#26080;&#27861;&#20998;&#21457;&#28040;&#24687;</strong>&#12290;</p>
+<p   
+>&#25152;&#20197;&#21482;&#33021;&#20511;&#21161;&#20110;&#20869;&#26680;&#20195;&#30721;&#26469;&#35843;&#29992;&#22238;&#35843;&#20989;&#25968;&#65292;&#36825;&#37324;&#23454;&#38469;&#19978;&#23601;&#26159;CreateWindow&#21457;&#25381;&#30340;&#20316;&#29992;&#65292;&#20854;&#36827;&#20837;0&#29615;&#35843;&#29992;&#30340;NtUserCreateWindowEx&#20989;&#25968;&#65292;&#35813;&#20989;&#25968;&#22312;&#31383;&#21475;&#21019;&#24314;&#20043;&#21069;&#36890;&#36807;&#35843;&#29992;&#20869;&#26680;&#22238;&#35843;&#20989;&#25968;&#21521;&#31383;&#21475;&#21457;&#36865;&#28040;&#24687;&#65292;&#36825;&#20123;&#28040;&#24687;&#19981;&#20250;&#36827;&#20837;&#28040;&#24687;&#38431;&#21015;&#65292;&#32780;&#26159;&#30452;&#25509;&#21457;&#36865;&#32473;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#65292;<strong class=" ">&#28040;&#24687;&#31867;&#22411;&#20026;WM_CREATE</strong>&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2LTDliLAz6Leo546v6LCD55So">
+        <h2 class="heading "><span>0&#21040;3&#36328;&#29615;&#35843;&#29992;</span></h2>
+<p   
+>&#20174;0&#29615;&#35843;&#29992;3&#29615;&#20989;&#25968;&#30340;&#26377;&#19977;&#31181;&#26041;&#27861;&#65306;</p>
+<p   
+><strong class=" ">&#29992;&#25143;APC&#30340;&#25191;&#34892;</strong>&#65306;&#29992;&#25143;APC&#65288;Asynchronous Procedure Call&#65289;&#26159;&#19968;&#31181;&#29992;&#20110;&#24322;&#27493;&#25191;&#34892;&#29992;&#25143;&#27169;&#24335;&#20195;&#30721;&#30340;&#26426;&#21046;&#12290;&#22312;&#36825;&#31181;&#24773;&#20917;&#19979;&#65292;&#20869;&#26680;&#21487;&#20197;&#23558;&#29992;&#25143;&#27169;&#24335;&#20989;&#25968;&#20316;&#20026;&#19968;&#20010;APC&#35831;&#27714;&#25552;&#20132;&#32473;&#30446;&#26631;&#32447;&#31243;&#65292;&#24182;&#22312;&#30446;&#26631;&#32447;&#31243;&#22788;&#20110;&#29992;&#25143;&#27169;&#24335;&#25191;&#34892;&#26102;&#65292;&#23558;&#35813;&#20989;&#25968;&#25554;&#20837;&#21040;&#30446;&#26631;&#32447;&#31243;&#30340;&#25191;&#34892;&#27969;&#20013;&#12290;</p>
+<p   
+><strong class=" ">&#29992;&#25143;&#24322;&#24120;&#30340;&#22788;&#29702;</strong>&#65306;&#24403;&#20869;&#26680;&#35843;&#35797;&#22120;&#21644;&#29992;&#25143;&#35843;&#35797;&#22120;&#22343;&#19981;&#23384;&#22312;&#25110;&#19981;&#22788;&#29702;&#26102;&#65292;&#22914;&#26524;&#21457;&#29983;&#29992;&#25143;&#27169;&#24335;&#24322;&#24120;&#65292;&#22788;&#29702;&#27969;&#31243;&#23558;&#20174;Ring 0&#65288;&#20869;&#26680;&#27169;&#24335;&#65289;&#36716;&#31227;&#21040;Ring 3&#65288;&#29992;&#25143;&#27169;&#24335;&#65289;&#12290;&#22312;&#36825;&#31181;&#24773;&#20917;&#19979;&#65292;&#25805;&#20316;&#31995;&#32479;&#20250;&#23558;&#24322;&#24120;&#20256;&#36882;&#32473;&#30446;&#26631;&#36827;&#31243;&#30340;&#24322;&#24120;&#22788;&#29702;&#31243;&#24207;&#65292;&#30001;&#29992;&#25143;&#27169;&#24335;&#20195;&#30721;&#22788;&#29702;&#35813;&#24322;&#24120;&#12290;</p>
+<p   
+><strong class=" ">&#20869;&#26680;&#22238;&#35843;</strong>&#65306;&#20869;&#26680;&#22238;&#35843;&#26159;&#25351;&#22312;Ring 0&#30340;&#20195;&#30721;&#20013;&#35843;&#29992;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#12290;&#36825;&#31181;&#35843;&#29992;&#26159;&#36890;&#36807;&#20869;&#26680;&#25552;&#20379;&#30340;&#26426;&#21046;&#23454;&#29616;&#30340;&#65292;&#20801;&#35768;Ring 0&#30340;&#20195;&#30721;&#21521;&#29305;&#23450;&#31383;&#21475;&#30340;&#36807;&#31243;&#20989;&#25968;&#21457;&#36865;&#28040;&#24687;&#12290;&#36890;&#36807;&#36825;&#31181;&#26041;&#24335;&#65292;Ring 0&#30340;&#20195;&#30721;&#21487;&#20197;&#19982;&#29992;&#25143;&#27169;&#24335;&#30340;&#31383;&#21475;&#36807;&#31243;&#36827;&#34892;&#20132;&#20114;&#65292;&#20197;&#23454;&#29616;&#29305;&#23450;&#30340;&#21151;&#33021;&#25110;&#22788;&#29702;&#29305;&#23450;&#20107;&#20214;&#12290;&#36825;&#31181;&#26426;&#21046;&#36890;&#24120;&#30001;&#25805;&#20316;&#31995;&#32479;&#25552;&#20379;&#65292;&#22914;SendMessage&#25110;PostMessage&#20989;&#25968;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-3440655_safe-id-aWQt5raI5oGv5py65Yi2LUtlVXNlck1vZGVDYWxsYmFjaw">
+        <h2 class="heading "><span>KeUserModeCallback</span></h2>
+<p   
+>&#20869;&#26680;&#22238;&#35843;&#26426;&#21046;&#20013;&#65292;0&#29615;&#26159;&#36890;&#36807;KeUserModeCallback&#20989;&#25968;&#26469;&#35843;&#29992;3&#29615;&#20989;&#25968;&#30340;&#12290;&#22312;&#20043;&#21069;&#25105;&#20204;&#30340;&#20998;&#26512;NtUserDispatchMessage&#20989;&#25968;&#30340;&#35843;&#29992;&#26102;&#65288;NtUserDispatchMessage-&gt;IntDispatchMessage-&gt;co_IntCallWindowProc-&gt;KeUserModeCallback&#65289;&#20063;&#30693;&#36947;&#23427;&#20250;&#21435;&#35843;&#29992;KeUserModeCallback&#20989;&#25968;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-9_23-21-19.png" alt="images/download/attachments/3440655/image2023-10-9_23-21-19.png" width="600"  />
+    </p>
+<p   
+>KeUserModeCallback&#20989;&#25968;&#30340;&#35821;&#27861;&#26684;&#24335;&#22914;&#19979;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">NTSTATUS NTAPI KeUserModeCallback(    </code></div>
+<div class="line"><code class="plain">    IN ULONG     RoutineIndex,</code></div>
+<div class="line"><code class="plain">    IN PVOID     Argument,</code></div>
+<div class="line"><code class="plain">    IN ULONG     ArgumentLength,</code></div>
+<div class="line"><code class="plain">    OUT PVOID *     Result,</code></div>
+<div class="line"><code class="plain">    OUT PULONG     ResultLength </code></div>
+<div class="line"><code class="plain">)</code></div>
+</div>
+    </div>
+<p   
+>&#20854;&#26377;5&#20010;&#21442;&#25968;&#65292;&#20854;&#20013;Argument&#26159;&#25552;&#20379;&#21442;&#25968;&#30340;&#65292;&#20854;&#20013;&#21253;&#21547;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#12289;&#31383;&#21475;&#21477;&#26564;&#12289;&#28040;&#24687;&#31867;&#22411;&#12289;&#28040;&#24687;&#21442;&#25968;&#31561;&#31561;&#20869;&#23481;&#65292;<strong class=" ">&#36825;&#20123;&#21442;&#25968;&#20063;&#23601;&#23545;&#19978;&#22312;3&#29615;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#25152;&#38656;&#35201;&#30340;&#21442;&#25968;&#20102;</strong>&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-10_10-20-41.png" alt="images/download/attachments/3440655/image2023-10-10_10-20-41.png" width="400"  />
+    </p>
+<p   
+>RoutineIndex&#21442;&#25968;&#26159;&#19968;&#20010;&#32034;&#24341;&#65292;&#23427;&#19982;&#22238;&#21040;3&#29615;&#30340;&#33853;&#33050;&#28857;&#26377;&#20851;&#65292;&#22312;&#24403;&#21069;&#20195;&#30721;&#37324;&#23427;&#26159;&#19968;&#20010;&#23439;&#65292;&#28857;&#36827;&#21435;&#26597;&#30475;&#23601;&#20250;&#21457;&#29616;&#23454;&#38469;&#19978;&#26159;&#19968;&#20010;&#25968;&#23383;&#65292;&#36824;&#26377;&#20854;&#20182;&#35768;&#22810;&#21035;&#30340;&#32034;&#24341;&#20540;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-10_10-27-33.png" alt="images/download/attachments/3440655/image2023-10-10_10-27-33.png"  height="189" />
+    </p>
+<p   
+>&#26082;&#28982;&#26377;&#32034;&#24341;&#65292;&#20063;&#23601;&#34920;&#31034;&#32943;&#23450;&#26377;&#24352;&#34920;&#65292;&#21487;&#20197;&#36890;&#36807;&#32034;&#24341;&#22312;&#34920;&#20013;&#25214;&#21040;&#22238;&#21040;3&#29615;&#30340;&#33853;&#33050;&#28857;&#12290;<strong class=" ">&#36825;&#24352;&#34920;&#23601;&#21483;&#20570;&#22238;&#35843;&#20989;&#25968;&#34920;</strong>&#65292;&#20854;&#21253;&#21547;&#22810;&#20010;&#22238;&#35843;&#20989;&#25968;&#65292;&#26681;&#25454;&#19981;&#21516;&#30340;&#32034;&#24341;&#20540;RoutineIndex&#65292;KeUserModeCallback&#23601;&#21487;&#20197;&#35843;&#29992;&#34920;&#20869;&#19981;&#21516;&#30340;&#22238;&#35843;&#20989;&#25968;&#12290;</p>
+<p   
+>&#36825;&#20123;&#22238;&#35843;&#20989;&#25968;&#22343;&#30001;USER32.dll&#25552;&#20379;&#65292;&#22238;&#35843;&#20989;&#25968;&#34920;&#25105;&#20204;&#21487;&#20197;&#36825;&#26679;&#21435;&#23547;&#25214;&#65306;FS:[0]-&gt;TEB&rarr;TEB.PEB(0x30&#20559;&#31227;&#20301;)&rarr;PEB.KernelCallbackTable(0x2C&#20559;&#31227;&#20301;)&#65292;&#20854;&#23454;&#20063;&#23601;&#26159;PEB&#32467;&#26500;&#20307;&#20013;&#30340;&#25104;&#21592;KernelCallbackTable&#12290;</p>
+<p   
+>&#22914;&#19979;&#22270;&#25152;&#31034;&#38543;&#20415;&#25214;&#20010;&#31243;&#24207;&#25918;&#22823;OD&#37324;&#37117;&#21487;&#20197;&#25214;&#21040;&#22238;&#35843;&#20989;&#25968;&#34920;&#65292;&#22238;&#35843;&#20989;&#25968;&#23454;&#29616;&#30340;&#21151;&#33021;&#25105;&#20204;&#20063;&#21487;&#20197;&#25512;&#27979;&#20986;&#20010;&#22823;&#27010;&#65292;<strong class=" ">&#20174;Argument&#20013;&#21462;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;&#22320;&#22336;&#65292;&#20877;&#23558;&#20854;&#20182;&#20960;&#20010;&#21442;&#25968;&#20316;&#20026;&#20256;&#21442;&#35843;&#29992;&#31383;&#21475;&#36807;&#31243;&#20989;&#25968;</strong>&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/3440655/image2023-10-10_10-53-31.png" alt="images/download/attachments/3440655/image2023-10-10_10-53-31.png" width="600"  />
+    </p>
+    </div>
+    </div>
+        </div>
+
+    </article>
+
+
+            <nav id="ht-post-nav">
+                <a href="%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.html" class="ht-post-nav-prev">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-prev" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-45.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>&#20869;&#23384;&#31649;&#29702;</span>
+        </a>
+                <a href="%E8%BD%AF%E4%BB%B6%E8%B0%83%E8%AF%95.html" class="ht-post-nav-next">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-next" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-225.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>&#36719;&#20214;&#35843;&#35797;</span>
+        </a>
+    </nav>    
+            
+    <footer id="ht-footer">
+    <a href="#" id="ht-jump-top" class="sp-aui-icon-small sp-aui-iconfont-arrows-up"></a>
+</footer></div>
+
+<div>
+    <div id="ht-mq-detect"></div>
+</div>
+
+    <script src="js/lunr.js"></script>
+    <script src="js/lunr-extras.js"></script>
+    <script src="assets/js/scroll-search.js"></script>
+
+    <script src="assets/js/expand-macro.js"></script>
+</body>
+</html>

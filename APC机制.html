@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>APC&#26426;&#21046; - &#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</title>
+
+    
+    <link rel="stylesheet" href="assets/css/expand-macro.css">
+
+            <meta name="scroll-content-language-key" content="">
+    
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/translate.js"></script>
+
+<script type="text/javascript" src="assets/js/theme.main.js"></script>
+
+    <script type="text/javascript" src="assets/js/iframeResizer.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/content-style.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+
+<link rel="stylesheet" href="assets/css/theme.main.css">
+<link rel="stylesheet" href="assets/css/theme.colors.css">
+
+            <!-- ES5 support for older browsers, needed by lunr -->
+        <script src="js/augment.js"></script>
+        <script id="worker" type="javascript/worker">
+
+        startIndex = function() {
+            idx = lunr.Index.load(lunrIndex);
+            idx.pipeline.remove(lunr.stopWordFilter);
+            postMessage({type: "setup-complete"});
+        }
+
+        onmessage = function (event) {
+            var message = event.data;
+
+            if ((message.type === 'setup') && message.baseUrl) {
+                var url = message.baseUrl;
+                importScripts(url + 'js/lunr.js');
+                importScripts(url + 'js/lunr-extras.js');
+                importScripts(url + 'js/lunr-index.js');
+                importScripts(url + 'js/lunr-data.js');
+                startIndex();
+            }
+
+            if (idx && (message.type === 'search-request') && message.query) {
+                var searchWord = message.query;
+                var results = idx.search(searchWord).map(function (result) {
+                    return lunrData.filter(function (d) {
+                        return d.id === parseInt(result.ref, 10)
+                    })[0]
+                });
+                postMessage({type: 'search-results', results: results, query: searchWord, queryId: message.queryId});
+            }
+        }
+
+    </script>
+    </head>
+
+<body pageid="1015827">
+
+<div id="ht-loader">
+    <noscript>
+        <p style="width: 100%; text-align:center; position: absolute; margin-top: 200px;">This content cannot be displayed without JavaScript.<br>Please enable JavaScript and reload the page.</p>
+    </noscript>
+</div>
+
+<div>
+   	<header id="ht-headerbar">
+    <div class="ht-headerbar-left">
+        <a href="" id="ht-menu-toggle" class="sp-aui-icon-small sp-aui-iconfont-appswitcher"></a>
+    </div>
+    <div class="ht-headerbar-right">
+            <div class="sp-aui-icon-small ht-search-index-loader ht-header-icon"></div>
+
+        <div id="ht-search">
+            <div class="ht-search-input" style="display: none;">
+              	<a href="#" class="sp-aui-icon-small sp-aui-iconfont-remove ht-search-clear"></a>
+
+                <form action="#" method="GET" id="search">
+                    <input class="search-input" type="text" placeholder="Search" tabindex="-1" autocomplete="off" name="q" value="">
+                    <input type="hidden" name="max" value="15" />
+                    <input type="submit" style="display:none" tabindex="-4"/>
+                </form>
+
+                <a href="#" id="ht-search-button" class="ht-header-icon ht-header-icon-svg">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path d="M29.572,28.802 L28.801,29.571 C28.515,29.857 28.187,30 27.816,30 C27.445,30 27.116,29.857 26.831,29.571 L21.392,24.134 C20.193,24.762 18.908,25.076 17.538,25.076 C15.396,25.076 13.605,24.348 12.163,22.892 C10.721,21.436 10,19.651 10,17.538 C10,15.397 10.721,13.605 12.163,12.163 C13.605,10.721 15.396,10 17.538,10 C19.651,10 21.434,10.721 22.89,12.163 C24.347,13.605 25.075,15.397 25.075,17.538 C25.075,18.937 24.761,20.222 24.132,21.393 L29.572,26.832 C29.857,27.118 30,27.446 30,27.817 C30,28.188 29.857,28.517 29.572,28.802 L29.572,28.802 Z M13.662,21.414 C14.732,22.485 16.024,23.02 17.538,23.02 C19.051,23.02 20.343,22.485 21.413,21.414 C22.484,20.344 23.019,19.052 23.019,17.538 C23.019,16.025 22.484,14.733 21.413,13.662 C20.343,12.592 19.051,12.056 17.538,12.056 C16.024,12.056 14.732,12.592 13.662,13.662 C12.591,14.733 12.056,16.025 12.056,17.538 C12.056,19.052 12.591,20.344 13.662,21.414 L13.662,21.414 Z"></path>
+                        </g>
+                    </svg>
+              	</a>
+
+                <div class="ht-search-dropdown ht-dropdown">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>   	<aside id="ht-sidebar">
+    <div class="ht-sidebar-content">
+        <div class="ht-sidebar-content-scroll-container">
+            <header class="ht-sidebar-header">
+                <h1 class="ht-logo">
+                    <span class="ht-logo-label">BinaryLearning</span>
+                    <img class="space-logo" src="global.logo" />
+                </h1>
+                <a href="Binary-Learning.html" class="ht-space-link">
+                    <h2>&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</h2>
+                </a>
+                <p><br><a href="https://github.com/gh0stkey/Binary-Learning" target="_blank">ᴀᴜᴛʜᴏʀ: ᴋᴇʏ</a><br><br>不积跬步，无以至千里；<br>不积小流，无以成江海。</p>
+            </header>
+                            <iframe id="ht-nav" src="toc.html?pageId=2424869"></iframe>
+                <script>
+                    $('iframe#ht-nav').iFrameResize(
+                            { 'log': true, 'autoResize': true, 'heightCalculationMethod': 'lowestElement', 'checkOrigin': false });
+                </script>
+                    </div>
+    </div>
+
+</aside></div>
+
+<div id="ht-wrap-container">
+
+            
+    <div id="ht-sidebar-dragbar">
+    <div class="ht-sidebar-drag-handle">
+        <span class="drag-handle-1"></span>
+        <span class="drag-handle-2"></span>
+        <span class="drag-handle-3"></span>
+    </div>
+</div>
+    <article id="ht-content" class="ht-content">
+        <header class="ht-content-header">
+            <div id="ht-breadcrumb">
+    <ul>
+        <li><a href="Binary-Learning.html">&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</a></li>
+                                                                                     <li><a href="%E4%B8%AD%E7%BA%A7%E7%AF%87.html">&#20013;&#32423;&#31687;</a></li>
+                                                            </ul>
+</div>            <h1 id="src-2424869"> <span>APC&#26426;&#21046;</span></h1>
+        </header>
+
+        <div id="main-content" class="wiki-content sp-grid-section" data-index-for-search="true">
+
+    <div class="section section-1" id="src-2424869_safe-id-QVBD5py65Yi2LUFQQ-eahOacrOi0qA">
+        <h1 class="heading "><span>APC&#30340;&#26412;&#36136;</span></h1>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LeS6huino0FQQw">
+        <h2 class="heading "><span>&#20102;&#35299;APC</span></h2>
+<p   
+>&#32447;&#31243;&#26159;&#19981;&#33021;&#34987;&#32467;&#26463;&#12289;&#26242;&#20572;&#12289;&#24674;&#22797;&#30340;&#65292;&#32447;&#31243;&#22312;&#25191;&#34892;&#30340;&#26102;&#20505;&#33258;&#24049;&#21344;&#25454;&#30528;CPU&#12290;&#35774;&#24819;&#19968;&#31181;&#26497;&#31471;&#30340;&#20363;&#23376;&#65306;&#22914;&#26524;&#19981;&#35843;&#29992;API&#12289;&#23631;&#34109;&#20013;&#26029;&#65292;&#24182;&#20445;&#35777;&#20195;&#30721;&#19981;&#20986;&#29616;&#24322;&#24120;&#65292;&#32447;&#31243;&#23558;&#27704;&#20037;&#21344;&#29992;CPU&#65292;&#32447;&#31243;&#21482;&#26377;&#33258;&#24049;&#25191;&#34892;&#20195;&#30721;&#23558;&#33258;&#24049;&#32467;&#26463;&#12290;</p>
+<p   
+>&#22914;&#26524;&#25105;&#20204;&#24819;&#35201;&#25511;&#21046;&#32447;&#31243;&#30340;&#34892;&#20026;&#65292;&#23601;&#38656;&#35201;&#25552;&#20379;&#32473;&#23427;&#19968;&#20010;&#20989;&#25968;&#65292;&#35753;&#23427;&#33258;&#24049;&#21435;&#35843;&#29992;&#65292;<strong class=" ">&#36825;&#20010;&#20989;&#25968;&#23601;&#26159;APC&#65288;Asyncroneus Procedure Call&#65292;&#21363;&#24322;&#27493;&#36807;&#31243;&#35843;&#29992;&#65289;</strong>&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUFQQ-mYn-WIlw">
+        <h2 class="heading "><span>APC&#38431;&#21015;</span></h2>
+<p   
+>&#32447;&#31243;&#32467;&#26500;&#20307;0x34&#20559;&#31227;&#20301;&#25104;&#21592;&#25351;&#21521;&#20102;&#19968;&#20010;&#32467;&#26500;&#20307;_KAPC_STATE&#65292;&#35813;&#32467;&#26500;&#20307;&#26377;5&#20010;&#25104;&#21592;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="value">0</code><code class="plain">: kd&gt; dt _KAPC_STATE</code></div>
+<div class="line"><code class="plain">nt!_KAPC_STATE</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x000</code><code class="plain"> ApcListHead      : [</code><code class="value">2</code><code class="plain">] _LIST_ENTRY </code><code class="comments">// 2个APC队列（2个双向链表，单表占用8字节，4字节指向链表头，4字节指向链表尾），分别是用户APC、内核APC</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x010</code><code class="plain"> Process          : Ptr32 _KPROCESS </code><code class="comments">// 线程所属或者所挂靠的进程</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x014</code><code class="plain"> KernelApcInProgress : UChar </code><code class="comments">// 内核APC是否正在执行</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x015</code><code class="plain"> KernelApcPending : UChar </code><code class="comments">// 是否有正在等待执行的内核APC</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x016</code><code class="plain"> UserApcPending   : UChar </code><code class="comments">// 是否有正在等待执行的用户APC</code></div>
+</div>
+    </div>
+<p   
+>&#25104;&#21592;ApcListHead&#26377;2&#20010;APC&#38431;&#21015;&#65292;&#26412;&#36136;&#19978;&#23601;&#26159;&#21452;&#21521;&#38142;&#34920;&#65292;<strong class=" ">&#22312;&#21452;&#21521;&#38142;&#34920;&#20869;&#23384;&#20648;&#30340;&#23601;&#26159;&#32473;&#32447;&#31243;&#25552;&#20379;&#30340;APC&#20989;&#25968;</strong>&#65292;&#20320;&#24819;&#35753;&#32447;&#31243;&#20570;&#20160;&#20040;&#20107;&#24773;&#65292;&#23601;&#32473;&#32473;&#23427;&#25552;&#20379;&#19968;&#20010;APC&#20989;&#25968;&#25346;&#36827;&#36825;&#20010;&#21452;&#21521;&#38142;&#34920;&#20869;&#65292;&#25346;&#36827;&#21435;&#20043;&#21518;<strong class=" ">&#32447;&#31243;&#22312;&#26576;&#19968;&#26102;&#21051;&#20250;&#21435;&#26816;&#26597;&#36825;&#20010;&#38142;&#34920;</strong>&#65292;&#24403;&#21457;&#29616;&#38142;&#34920;&#20869;&#26377;&#20989;&#25968;&#23601;&#20250;&#21435;&#35843;&#29992;&#65292;&#22240;&#27492;&#20320;&#21487;&#20197;&#22312;&#25552;&#20379;&#30340;APC&#20989;&#25968;&#20013;&#26469;&#25511;&#21046;&#32447;&#31243;&#30340;&#34892;&#20026;&#65292;&#24403;&#32447;&#31243;&#21435;&#26816;&#26597;&#21015;&#34920;&#19988;&#25191;&#34892;&#23601;&#20250;&#36827;&#34892;&#35774;&#23450;&#30340;&#34892;&#20026;&#12290;</p>
+<p   
+>&#25104;&#21592;Process&#34920;&#31034;&#24403;&#21069;&#32447;&#31243;&#25152;&#23646;&#25110;&#32773;&#25152;&#25346;&#38752;&#30340;&#36827;&#31243;&#65292;&#22914;&#26524;&#24403;&#21069;&#32447;&#31243;&#27809;&#26377;&#25152;&#25346;&#38752;&#30340;&#36827;&#31243;&#65292;&#37027;&#20040;&#35813;&#25104;&#21592;&#30340;&#20540;&#19982;ETHREAD&#32467;&#26500;&#20307;0x220&#20559;&#31227;&#20301;&#25104;&#21592;&#30340;&#20540;&#19968;&#33268;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-7_11-7-6.png" alt="images/download/attachments/2424869/image2023-4-7_11-7-6.png" width="600"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUFQQ-e7k-aehA">
+        <h2 class="heading "><span>APC&#32467;&#26500;</span></h2>
+<p   
+>&#25105;&#20204;&#21521;APC&#38431;&#21015;&#20013;&#25346;&#20837;&#30340;&#20989;&#25968;&#65292;&#20934;&#30830;&#26469;&#35828;&#19981;&#33021;&#31216;&#20043;&#20026;&#20989;&#25968;&#65292;<strong class=" ">&#32780;&#26159;&#19968;&#20010;APC&#32467;&#26500;&#20307;</strong>&#12290;&#36825;&#20010;&#32467;&#26500;&#30475;&#30528;&#26377;&#20123;&#22797;&#26434;&#65292;&#22312;&#26412;&#31456;&#33410;&#25105;&#20204;&#21482;&#38656;&#35201;&#30693;&#36947;0x1c&#20559;&#31227;&#20301;&#25104;&#21592;NormalRoutine&#65292;<strong class=" ">&#35813;&#25104;&#21592;&#30340;&#20316;&#29992;&#23601;&#26159;&#21487;&#20197;&#24110;&#21161;&#25105;&#20204;&#25214;&#21040;&#25552;&#20379;&#30340;APC&#20989;&#25968;&#22320;&#22336;</strong>&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-7_11-41-43.png" alt="images/download/attachments/2424869/image2023-4-7_11-41-43.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUFQQ-aJp-ihjA">
+        <h2 class="heading "><span>APC&#25191;&#34892;</span></h2>
+<p   
+>KiServiceExit&#20989;&#25968;&#26159;<strong class=" ">&#31995;&#32479;&#35843;&#29992;&#12289;&#24322;&#24120;&#25110;&#20013;&#26029;</strong>&#36820;&#22238;&#29992;&#25143;&#31354;&#38388;&#30340;&#24517;&#32463;&#20043;&#36335;&#65292;&#22240;&#27492;&#24403;&#32447;&#31243;&#35843;&#29992;API&#12289;&#31243;&#24207;&#20986;&#29616;&#24322;&#24120;&#25110;&#20013;&#26029;&#26102;&#23601;&#20250;<strong class=" ">&#35843;&#29992;KiServiceExit&#20989;&#25968;</strong>&#65292;&#35813;&#20989;&#25968;&#20250;&#26816;&#26597;&#24403;&#21069;KTHREAD.KAPC_STATE.UserApcPending&#26159;&#21542;&#20026;0&#65292;&#21363;&#34920;&#31034;&#26159;&#21542;&#26377;&#29992;&#25143;&#31354;&#38388;&#30340;APC&#35831;&#27714;&#65292;&#22914;&#26524;&#26377;&#30340;&#35805;&#23601;&#20250;&#21521;&#19979;&#32487;&#32493;&#36208;&#65292;<strong class=" ">&#26368;&#21518;KiDeliverApc&#20989;&#25968;&#19987;&#38376;&#29992;&#20110;&#22788;&#29702;APC</strong>&#12290;&#65288;&#21482;&#21028;&#26029;&#29992;&#25143;&#31354;&#38388;&#30340;APC&#35831;&#27714;&#26159;&#22240;&#20026;&#22312;KiDeliverApc&#20989;&#25968;&#20013;&#20250;&#20248;&#20808;&#22788;&#29702;&#20869;&#26680;&#31354;&#38388;&#30340;APC&#28982;&#21518;&#22788;&#29702;&#29992;&#25143;&#31354;&#38388;&#30340;APC&#65292;&#22240;&#27492;&#25105;&#20204;&#19981;&#38656;&#35201;&#20877;&#22810;&#20313;&#36827;&#34892;&#21028;&#26029;&#65289;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-8_18-48-34.png" alt="images/download/attachments/2424869/image2023-4-8_18-48-34.png" width="600"  />
+    </p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-2424869_safe-id-QVBD5py65Yi2LeWkh-eUqEFQQ-mYn-WIlw">
+        <h1 class="heading "><span>&#22791;&#29992;APC&#38431;&#21015;</span></h1>
+<p   
+>&#22312;&#19978;&#19968;&#31456;&#33410;&#30340;&#23398;&#20064;&#20013;&#65292;&#25105;&#20204;&#30693;&#36947;&#22914;&#26524;&#24819;&#25511;&#21046;&#32447;&#31243;&#30340;&#34892;&#20026;&#65292;&#23601;&#38656;&#35201;&#32473;&#23427;&#30340;APC&#38431;&#21015;&#37324;&#38754;&#25346;&#19968;&#20010;APC&#65292;&#20063;&#23601;&#26159;&#22312;&#32447;&#31243;&#32467;&#26500;&#20307;0x34&#20559;&#31227;&#20301;&#25104;&#21592;ApcState&#30340;&#25104;&#21592;ApcListHead&#20854;&#20013;&#19968;&#20010;&#38142;&#34920;&#20013;&#25346;&#20837;&#65292;&#38500;&#20102;ApcState&#25104;&#21592;&#20197;&#22806;&#65292;&#22312;&#32447;&#31243;&#32467;&#26500;&#20307;KTHREAD&#20013;&#23384;&#30528;&#19982;APC&#26377;&#20851;&#30340;&#23383;&#27573;&#19981;&#27490;&#36825;&#19968;&#22788;&#12290;</p>
+<p   
+>&#22914;&#19979;&#25152;&#31034;KTHREAD&#32467;&#26500;&#20307;&#20013;&#65292;&#38500;&#20102;ApcState&#65292;&#36824;&#26377;4&#22788;&#19982;APC&#26377;&#20851;&#30340;&#25104;&#21592;&#65292;&#26412;&#31456;&#23558;&#20250;&#20381;&#27425;&#20171;&#32461;&#36825;&#20960;&#20010;&#23383;&#27573;&#30340;&#21547;&#20041;&#65292;&#24182;&#23398;&#20064;&#19968;&#20010;&#26032;&#30340;&#30693;&#35782;&#65292;&#21363;&#22791;&#29992;APC&#38431;&#21015;&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="value">0</code><code class="plain">: kd&gt; dt _KTHREAD</code></div>
+<div class="line"><code class="plain">nt!_KTHREAD</code></div>
+<div class="line"><code class="plain">   ...</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x034</code><code class="plain"> ApcState         : _KAPC_STATE</code></div>
+<div class="line"><code class="plain">   ...</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x138</code><code class="plain"> ApcStatePointer  : [</code><code class="value">2</code><code class="plain">] Ptr32 _KAPC_STATE</code></div>
+<div class="line"><code class="plain">   ...</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x14c</code><code class="plain"> SavedApcState    : _KAPC_STATE</code></div>
+<div class="line"><code class="plain">   ...</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x165</code><code class="plain"> ApcStateIndex    : UChar</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x166</code><code class="plain"> ApcQueueable     : UChar</code></div>
+<div class="line"><code class="plain">   ...</code></div>
+</div>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LVNhdmVkQXBjU3RhdGU">
+        <h2 class="heading "><span>SavedApcState</span></h2>
+<p   
+>&#32447;&#31243;APC&#38431;&#21015;&#20013;&#30340;APC&#20989;&#25968;&#37117;&#26159;&#19982;&#36827;&#31243;&#30456;&#20851;&#32852;&#30340;&#65292;&#22914;A&#36827;&#31243;&#30340;1&#32447;&#31243;&#20013;&#30340;&#25152;&#26377;APC&#20989;&#25968;&#35201;&#35775;&#38382;&#30340;&#20869;&#23384;&#22320;&#22336;&#37117;&#26159;A&#36827;&#31243;&#30340;&#12290;&#20294;&#32447;&#31243;&#26159;&#21487;&#20197;&#25346;&#38752;&#21040;&#20854;&#20182;&#30340;&#36827;&#31243;&#65292;<strong class=" ">&#22914;A&#36827;&#31243;&#30340;&#32447;&#31243;1&#36890;&#36807;&#20462;&#25913;Cr3&#65292;&#21363;&#25913;&#20026;B&#36827;&#31243;&#30340;&#39029;&#30446;&#24405;&#22522;&#22336;&#65292;&#23601;&#21487;&#20197;&#35775;&#38382;B&#36827;&#31243;&#22320;&#22336;&#31354;&#38388;&#65292;&#21363;&#25152;&#35859;&#30340;&#36827;&#31243;&#25346;&#38752;</strong>&#12290;</p>
+<p   
+>&#24403;A&#36827;&#31243;&#30340;1&#32447;&#31243;&#25346;&#38752;B&#36827;&#31243;&#21518;&#65292;APC&#38431;&#21015;&#20013;&#23384;&#20648;&#30340;&#21364;&#20173;&#28982;&#26159;&#21407;&#26469;&#30340;APC&#65292;&#37027;&#20040;&#22914;&#26524;&#26576;&#20010;APC&#20989;&#25968;&#35201;&#35835;&#21462;&#19968;&#20010;&#22320;&#22336;&#20026;0x12345678&#30340;&#25968;&#25454;&#65292;&#35835;&#21040;&#30340;&#23558;&#26159;B&#36827;&#31243;&#30340;&#22320;&#22336;&#31354;&#38388;&#65292;&#36825;&#26679;&#36923;&#36753;&#23601;&#38169;&#35823;&#20102;&#12290;</p>
+<p   
+>&#20026;&#20102;<strong class=" ">&#36991;&#20813;&#28151;&#20081;</strong>&#65292;<strong class=" ">&#22312;1&#32447;&#31243;&#25346;&#38752;B&#36827;&#31243;&#26102;&#65292;&#20250;&#23558;ApcState&#20013;&#30340;&#20540;&#26242;&#26102;&#23384;&#20648;&#21040;SavedApcState&#20013;</strong>&#65292;&#31561;&#22238;&#21040;&#21407;&#36827;&#31243;A&#26102;&#65292;&#20877;&#23558;APC&#38431;&#21015;&#24674;&#22797;&#12290;&#25152;&#20197;&#65292;<strong class=" ">SavedApcState&#21448;&#31216;&#20026;&#22791;&#29992;APC&#38431;&#21015;</strong>&#12290;</p>
+<p   
+>&#37027;&#20040;&#22312;&#36825;&#31181;&#36827;&#31243;&#25346;&#38752;&#30340;&#22330;&#26223;&#19979;&#65292;&#20063;&#26159;&#21487;&#20197;&#21521;&#32447;&#31243;APC&#38431;&#21015;&#20013;&#25554;&#20837;APC&#30340;&#65292;ApcState&#20869;&#25152;&#23384;&#20648;&#30340;&#23601;&#26159;B&#36827;&#31243;&#30456;&#20851;&#30340;APC&#20449;&#24687;&#65288;<strong class=" ">&#25346;&#38752;&#36827;&#31243;</strong>&#65289;&#65292;&#32780;SavedApcState&#25152;&#23384;&#20648;&#30340;&#23601;&#26159;A&#36827;&#31243;&#30456;&#20851;&#30340;APC&#20449;&#24687;&#65288;<strong class=" ">&#25152;&#23646;&#36827;&#31243;</strong>&#65289;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUFwY1N0YXRlUG9pbnRlcg">
+        <h2 class="heading "><span>ApcStatePointer</span></h2>
+<p   
+>&#20026;&#20102;&#26041;&#20415;&#23547;&#22336;&#65292;&#22312;KTHREAD&#32467;&#26500;&#20307;&#20013;&#23450;&#20041;&#20102;&#19968;&#20010;&#25351;&#38024;&#25968;&#32452;ApcStatePointer &#65292;&#25968;&#32452;&#20869;&#26377;&#20004;&#20010;&#25104;&#21592;&#12290;</p>
+<p   
+>&#35813;&#25104;&#21592;&#23384;&#20648;&#30340;&#20449;&#24687;&#20063;&#20998;&#20026;&#20004;&#31181;&#22330;&#26223;&#65292;&#20998;&#21035;&#26159;&#27491;&#24120;&#22330;&#26223;&#21644;&#25346;&#38752;&#22330;&#26223;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 正常场景</code></div>
+<div class="line"><code class="plain">ApcStatePointer[</code><code class="value">0</code><code class="plain">] </code><code class="comments">// 指向 ApcState    </code></div>
+<div class="line"><code class="plain">ApcStatePointer[</code><code class="value">1</code><code class="plain">] </code><code class="comments">// 指向 SavedApcState</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 挂靠场景</code></div>
+<div class="line"><code class="plain">ApcStatePointer[</code><code class="value">0</code><code class="plain">] </code><code class="comments">// 指向 SavedApcState</code></div>
+<div class="line"><code class="plain">ApcStatePointer[</code><code class="value">1</code><code class="plain">] </code><code class="comments">// 指向 ApcState</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUFwY1N0YXRlSW5kZXg">
+        <h2 class="heading "><span>ApcStateIndex</span></h2>
+<p   
+>ApcStateIndex&#29992;&#26469;&#26631;&#35782;&#24403;&#21069;&#32447;&#31243;&#22788;&#20110;&#20160;&#20040;&#29366;&#24577;&#65292;<strong class=" ">&#27491;&#24120;&#29366;&#24577;&#19979;&#35813;&#20540;&#20026;0&#65292;&#25346;&#38752;&#29366;&#24577;&#19979;&#35813;&#20540;&#20026;1</strong>&#12290;&#37027;&#20040;&#25105;&#20204;&#23558;&#35813;&#25104;&#21592;&#32467;&#21512;ApcStatePointer&#65292;&#23601;&#20250;&#21457;&#29616;&#19968;&#20010;&#35774;&#35745;&#32454;&#33410;&#30340;&#22320;&#26041;&#12290;</p>
+<p   
+>&#26080;&#35770;&#26159;&#27491;&#24120;&#22330;&#26223;&#65292;&#36824;&#26159;&#25346;&#38752;&#22330;&#26223;&#65292;&#25105;&#20204;&#20351;&#29992;<strong class=" ">ApcStatePointer[ApcStateIndex]</strong>&#30340;&#32452;&#21512;&#26041;&#24335;&#65292;&#37117;&#21487;&#20197;&#33719;&#21462;&#21040;ApcState&#65292;&#21363;&#32447;&#31243;&#24403;&#21069;&#20351;&#29992;&#30340;APC&#20449;&#24687;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUFwY1F1ZXVlYWJsZQ">
+        <h2 class="heading "><span>ApcQueueable</span></h2>
+<p   
+>ApcQueueable&#29992;&#20110;&#34920;&#31034;<strong class=" ">&#26159;&#21542;&#21487;&#20197;&#21521;&#32447;&#31243;&#30340;APC&#38431;&#21015;&#20013;&#25346;&#20837;APC</strong>&#12290;&#24403;&#32447;&#31243;&#27491;&#22312;&#25191;&#34892;&#36864;&#20986;&#30340;&#20195;&#30721;&#26102;&#65292;&#20250;&#23558;&#36825;&#20010;&#20540;&#35774;&#32622;&#20026;0 &#65292;&#22914;&#26524;&#27492;&#26102;&#25191;&#34892;&#25554;&#20837;APC&#30340;&#20195;&#30721;&#65288;&#22312;&#20869;&#26680;&#20013;&#20250;&#20351;&#29992;KeInsertQueueApc&#25554;&#20837;APC&#65289;&#65292;&#22312;&#25554;&#20837;&#20989;&#25968;&#20013;&#20250;&#21028;&#26029;&#36825;&#20010;&#20540;&#30340;&#29366;&#24577;&#65292;&#22914;&#26524;&#20026;0&#21017;&#25554;&#20837;&#22833;&#36133;&#12290;</p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-2424869_safe-id-QVBD5py65Yi2LUFQQ-aMguWFpei_h-eoiw">
+        <h1 class="heading "><span>APC&#25346;&#20837;&#36807;&#31243;</span></h1>
+<p   
+>&#26080;&#35770;&#26159;&#27491;&#24120;&#29366;&#24577;&#36824;&#26159;&#25346;&#38752;&#29366;&#24577;&#65292;&#37117;&#26377;&#20004;&#20010;APC&#38431;&#21015;&#65292;&#19968;&#20010;&#26159;&#20869;&#26680;&#38431;&#21015;&#65292;&#19968;&#20010;&#26159;&#29992;&#25143;&#38431;&#21015;&#12290;&#27599;&#24403;&#35201;&#25346;&#20837;&#19968;&#20010;APC&#26102;&#65292;&#19981;&#31649;&#26159;&#20869;&#26680;&#31354;&#38388;&#36824;&#26159;&#29992;&#25143;&#31354;&#38388;&#30340;&#20989;&#25968;&#65292;&#20869;&#26680;&#37117;&#35201;&#20934;&#22791;&#19968;&#20010;KAPC&#30340;&#25968;&#25454;&#32467;&#26500;&#65292;&#24182;&#23558;&#36825;&#20010;&#32467;&#26500;&#25346;&#21040;&#30456;&#24212;&#30340;APC&#38431;&#21015;&#20013;&#12290;</p>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUtBUEPnu5PmnoTkvZM">
+        <h2 class="heading "><span>KAPC&#32467;&#26500;&#20307;</span></h2>
+<p   
+>&#25105;&#20204;&#35201;&#20102;&#35299;APC&#25346;&#20837;&#36807;&#31243;&#65292;&#20808;&#35201;&#20102;&#35299;KAPC&#36825;&#20010;&#25968;&#25454;&#32467;&#26500;&#65292;&#30693;&#36947;&#23427;&#27599;&#20010;&#25104;&#21592;&#30340;&#20316;&#29992;&#12290;&#22914;&#19979;&#25152;&#31034;&#65292;&#25105;&#20204;&#21487;&#20197;&#20174;&#27880;&#37322;&#20013;&#20102;&#35299;&#27599;&#20010;&#25104;&#21592;&#30340;&#20316;&#29992;&#21644;&#21547;&#20041;&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="value">0</code><code class="plain">: kd&gt; dt _KAPC</code></div>
+<div class="line"><code class="plain">nt!_KAPC</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x000</code><code class="plain"> Type             : Int2B            </code><code class="comments">// APC的类型：0x12</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x002</code><code class="plain"> Size             : Int2B            </code><code class="comments">// 当前结构体的大小：0x30</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x004</code><code class="plain"> Spare0           : Uint4B           </code><code class="comments">// 该成员未使用</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x008</code><code class="plain"> Thread           : Ptr32 _KTHREAD   </code><code class="comments">// APC所属的线程</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x00c</code><code class="plain"> ApcListEntry     : _LIST_ENTRY      </code><code class="comments">// APC所挂入的队列，存放的是双向链表，2个前后成员的地址</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x014</code><code class="plain"> KernelRoutine    : Ptr32     </code><code class="keyword">void</code><code class="plain">   </code><code class="comments">// 指向一个函数，在对应函数内调用了ExFreePoolWithTag来释放APC，当APC执行完毕之后，内核程序就会调用该成员指定的函数进行释放</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x018</code><code class="plain"> RundownRoutine   : Ptr32     </code><code class="keyword">void</code><code class="plain">   </code><code class="comments">// 该成员未使用</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x01c</code><code class="plain"> NormalRoutine    : Ptr32     </code><code class="keyword">void</code><code class="plain">   </code><code class="comments">// 如果当前APC为用户空间的，则为用户APC的总入口，反之为真正的内核APC函数，因此通过它可以帮助我们找到提供的APC函数地址</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x020</code><code class="plain"> NormalContext    : Ptr32 Void       </code><code class="comments">// 如果当前APC为内核APC，则该值没有意义，如果为用户APC，则该值为真正的APC函数</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x024</code><code class="plain"> SystemArgument1  : Ptr32 Void       </code><code class="comments">// APC函数的参数</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x028</code><code class="plain"> SystemArgument2  : Ptr32 Void       </code><code class="comments">// APC函数的参数</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x02c</code><code class="plain"> ApcStateIndex    : Char             </code><code class="comments">// 这个值与KTHREAD结构体的0x165偏移位成员一样，但不同的是这里的这个成员有4个值：0、1、2、3</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x02d</code><code class="plain"> ApcMode          : Char             </code><code class="comments">// 当前APC的模式：内核、用户</code></div>
+<div class="line"><code class="plain">   +</code><code class="value">0x02e</code><code class="plain"> Inserted         : UChar            </code><code class="comments">// 表示本APC是否已挂入队列，挂入前：0，挂入后：1</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LeaMguWFpea1geeoiw">
+        <h2 class="heading "><span>&#25346;&#20837;&#27969;&#31243;</span></h2>
+<p   
+>APC&#25346;&#20837;&#27969;&#31243;&#22823;&#33268;&#22914;&#19979;&#65292;&#22914;&#26524;&#26159;&#29992;&#25143;&#23618;&#30340;&#35805;&#20250;&#20808;&#36890;&#36807;QueueUserAPC&rarr;NtQueueApcThread&#65292;&#28982;&#21518;&#21040;&#20869;&#26680;&#23618;KeInitializeApc&rarr;KeInsertQueueApc&rarr;KiInsertQueueApc&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-9_18-42-9.png" alt="images/download/attachments/2424869/image2023-4-9_18-42-9.png" width="600"  />
+    </p>
+<p   
+>&#20294;&#20063;&#19981;&#23436;&#20840;&#22914;&#27492;&#65292;&#24456;&#22810;&#20869;&#26680;&#20989;&#25968;&#35843;&#29992;&#26102;&#20250;&#30452;&#25509;&#30340;&#21435;&#20351;&#29992;KeInitializeApc&#12289;KiInsertQueueApc&#65292;&#20063;&#23601;&#19981;&#23436;&#20840;&#26159;&#36825;&#20040;&#19968;&#20010;&#25346;&#20837;&#27969;&#31243;&#20102;&#65292;&#22240;&#27492;&#25105;&#20204;&#24819;&#35201;&#30495;&#27491;&#20102;&#35299;&#25346;&#20837;&#27969;&#31243;&#65292;&#23601;&#38656;&#35201;&#20102;&#35299;&#36825;&#20004;&#20010;&#20989;&#25968;&#12290;</p>
+    <div class="section section-3" id="src-2424869_safe-id-QVBD5py65Yi2LUtlSW5pdGlhbGl6ZUFwYw">
+        <h3 class="heading "><span>KeInitializeApc</span></h3>
+<p   
+>KeInitializeApc&#20989;&#25968;&#30340;&#20351;&#29992;&#26684;&#24335;&#22914;&#19979;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#35265;&#20256;&#36882;&#30340;&#27599;&#20010;&#21442;&#25968;&#37117;&#26159;&#29992;&#26469;&#32473;KAPC&#32467;&#26500;&#20307;&#25104;&#21592;&#36171;&#20540;&#29992;&#30340;&#65292;&#20063;&#23601;&#34920;&#31034;KeInitializeApc&#20989;&#25968;&#23601;&#26159;&#29992;&#20110;&#21019;&#24314;&#24182;&#21021;&#22987;&#21270;&#19968;&#20010;APC&#30340;&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">VOID KeInitializeApc(</code></div>
+<div class="line"><code class="plain">    IN PRKAPC Apc,                                </code><code class="comments">// KAPC结构体指针</code></div>
+<div class="line"><code class="plain">    IN PKTHREAD Thread,                           </code><code class="comments">// 目标线程，对应KAPC.Thread</code></div>
+<div class="line"><code class="plain">    IN KAPC_ENVIRONMENT Environment,              </code><code class="comments">// 四种状态，对应KAPC.ApcStateIndex</code></div>
+<div class="line"><code class="plain">    IN PKKERNEL_ROUTINE KernelRoutine,            </code><code class="comments">// 销毁KAPC的函数地址，对应KAPC.KernelRoutine</code></div>
+<div class="line"><code class="plain">    IN PKRUNDOWN_ROUTINE RundownRoutine OPTIONAL, </code><code class="comments">// 未使用</code></div>
+<div class="line"><code class="plain">    IN PKNORMAL_ROUTINE NormalRoutine,            </code><code class="comments">// 对应KAPC.NormalRoutine</code></div>
+<div class="line"><code class="plain">    IN KPROCESSOR_MODE ApcMode,                   </code><code class="comments">// 挂入的APC模式：内核、用户，对应KAPC.ApcMode</code></div>
+<div class="line"><code class="plain">    IN PVOID NormalContext                        </code><code class="comments">// 对应KAPC.NormalContext</code></div>
+<div class="line"><code class="plain">)</code></div>
+</div>
+    </div>
+<p   
+>KeInitializeApc&#26412;&#36523;&#30340;&#21151;&#33021;&#24456;&#31616;&#21333;&#65292;&#20294;&#26159;&#23545;Kapc.ApcStateIndex&#30340;&#36171;&#20540;&#65292;&#25105;&#20204;&#38656;&#35201;&#20102;&#35299;&#19968;&#19979;&#65292;&#34429;&#28982;&#23427;&#19982;KTHREAD.ApcStateIndex&#21516;&#21517;&#65292;&#20294;&#21547;&#20041;&#19981;&#23436;&#20840;&#19968;&#26679;&#65292;&#22240;&#20026;&#24403;&#21069;&#35813;&#25104;&#21592;&#26377;4&#20010;&#20540;&#65306;0&#12289;1&#12289;2&#12289;3&#65292;&#23427;&#20204;&#30340;&#21547;&#20041;&#22914;&#19979;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="value">0</code><code class="plain">: 原始环境</code></div>
+<div class="line"><code class="value">1</code><code class="plain">: 挂靠环境</code></div>
+<div class="line"><code class="value">2</code><code class="plain">: 当前环境</code></div>
+<div class="line"><code class="value">3</code><code class="plain">: 插入APC时的当前环境</code></div>
+</div>
+    </div>
+<p   
+>&#20540;&#20026;0&#21644;1&#25105;&#20204;&#22909;&#29702;&#35299;&#65292;&#20294;&#26159;2&#21644;3&#25105;&#20204;&#23601;&#38656;&#35201;&#26469;&#20855;&#20307;&#20998;&#26512;&#20195;&#30721;&#20102;&#65292;&#22914;&#19979;&#22270;&#25152;&#31034;&#22240;&#20026;&#19981;&#30830;&#23450;&#27492;&#26102;&#30340;&#29615;&#22659;&#21644;&#20808;&#21069;&#30340;&#29615;&#22659;&#26159;&#21542;&#19968;&#33268;&#65288;&#21487;&#33021;&#21457;&#29983;&#25346;&#38752;&#65289;&#65292;&#25152;&#20197;&#36825;&#37324;&#20250;&#36827;&#34892;&#21028;&#26029;&#65292;&#22914;&#26524;Environment&#20540;&#20026;2&#23601;&#20250;&#36339;&#36716;&#21040;&#19968;&#22788;&#20195;&#30721;&#65292;&#23558;&#24403;&#21069;&#32447;&#31243;&#30340;ApcStateIndex&#36171;&#20540;&#32473;DL&#23492;&#23384;&#22120;&#65292;&#24182;&#36339;&#22238;&#21435;&#20043;&#21518;&#23558;DL&#23492;&#23384;&#22120;&#30340;&#20540;&#36171;&#32473;KAPC.ApcStateIndex&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-9_19-57-5.png" alt="images/download/attachments/2424869/image2023-4-9_19-57-5.png" width="800"  />
+    </p>
+<p   
+>&#36825;&#37324;&#23601;&#26159;&#30830;&#20445;&#22312;&#21021;&#22987;&#21270;APC&#26102;&#65292;<strong class=" ">&#25346;&#20837;&#30340;APC&#38431;&#21015;&#19968;&#23450;&#26159;&#32447;&#31243;&#24403;&#21069;&#29615;&#22659;&#23545;&#24212;&#30340;</strong>&#12290;</p>
+    </div>
+    <div class="section section-3" id="src-2424869_safe-id-QVBD5py65Yi2LUtpSW5zZXJ0UXVldWVBcGM">
+        <h3 class="heading "><span>KiInsertQueueApc</span></h3>
+<p   
+>&#25105;&#20204;&#30693;&#36947;&#20102;Environment&#20540;&#20026;2&#26102;&#30340;&#20316;&#29992;&#65292;&#24403;&#35813;&#20540;&#20026;3&#34920;&#31034;&#25554;&#20837;APC&#26102;&#30340;&#24403;&#21069;&#29615;&#22659;&#65292;&#25105;&#20204;&#23601;&#38656;&#35201;&#26469;&#20998;&#26512;&#25554;&#20837;APC&#30340;&#20989;&#25968;&#65292;&#21363;KiInsertQueueApc&#12290;&#35813;&#20989;&#25968;&#20351;&#29992;&#26041;&#27861;&#24456;&#31616;&#21333;&#65292;&#21482;&#26377;2&#20010;&#21442;&#25968;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">VOID FASTCALL KiInsertQueueApc</code></div>
+<div class="line"><code class="plain">(</code></div>
+<div class="line"><code class="plain">    IN PKAPC Apc,                   </code><code class="comments">// KAPC指针（指向一个已经初始化完成的APC）</code></div>
+<div class="line"><code class="plain">    IN KPRIORITY PriorityBoost</code></div>
+<div class="line"><code class="plain">)</code></div>
+</div>
+    </div>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;IDA&#26469;&#30475;&#19968;&#19979;&#65292;&#35813;&#20989;&#25968;&#26368;&#24320;&#22987;&#26377;&#20004;&#20010;&#21028;&#26029;&#65292;&#31532;&#19968;&#20010;&#21028;&#26029;&#26159;KAPC.Inserted&#30340;&#20540;&#26159;&#21542;&#20026;0&#65292;&#22914;&#26524;&#19981;&#20026;0&#23601;&#35828;&#26126;&#24050;&#32463;&#25346;&#20837;&#21040;&#38431;&#21015;&#20013;&#65292;&#37027;&#23601;&#36827;&#34892;&#36339;&#36716;&#65292;&#26368;&#32456;RET&#65307;&#31532;&#20108;&#20010;&#21028;&#26029;&#26159;KAPC.ApcStateIndex&#30340;&#20540;&#26159;&#21542;&#20026;3&#65292;&#22914;&#26524;&#20026;3&#21017;&#34920;&#31034;&#24403;&#21069;&#22312;&#25554;&#20837;APC&#26102;&#30340;&#29615;&#22659;&#65288;&#20063;&#23601;&#26159;&#25191;&#34892;KiInsertQueueApc&#26102;&#30340;&#29615;&#22659;&#65289;&#65292;&#23601;&#20250;&#36339;&#36716;&#36827;&#19968;&#22359;&#20195;&#30721;&#65292;&#23558;&#24403;&#21069;&#32447;&#31243;&#30340;ApcStateIndex&#36171;&#20540;&#32473;DL&#65292;&#28982;&#21518;&#20877;&#36890;&#36807;DL&#36171;&#20540;&#32473;KAPC.ApcStateIndex&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-9_22-48-18.png" alt="images/download/attachments/2424869/image2023-4-9_22-48-18.png" width="800"  />
+    </p>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#21521;&#19979;&#30475;&#20195;&#30721;&#27969;&#31243;&#65292;&#39318;&#20808;&#26159;&#21028;&#26029;KAPC.NormalRoutine&#26159;&#20026;0&#65292;&#19981;&#20026;0&#21017;&#36339;&#36716;&#65292;&#36339;&#36716;&#20043;&#21518;&#21448;&#20570;&#20102;&#19968;&#20010;&#21028;&#26029;&#65292;&#21028;&#26029;DL&#30340;&#20540;&#65292;&#20063;&#23601;KAPC.ApcNode&#30340;&#20540;&#26159;&#21542;&#20026;0&#65292;&#22914;&#26524;&#20026;0&#20063;&#23601;&#34920;&#31034;&#24403;&#21069;&#35201;&#25554;&#20837;&#30340;&#20026;&#20869;&#26680;APC&#65292;&#28982;&#21518;&#36827;&#34892;&#36339;&#36716;&#65292;&#23558;APC&#25554;&#20837;&#21040;&#23545;&#24212;&#30340;&#20869;&#26680;APC&#38431;&#21015;&#20013;&#65292;&#26368;&#21518;&#36339;&#22238;&#20027;&#20195;&#30721;&#65307;</p>
+<p   
+>&#22914;&#26524;DL&#30340;&#20540;&#19981;&#20026;0&#65292;&#21017;&#20250;&#21028;&#26029;&#35813;KAPC.KernelRoutine&#26159;&#19981;&#26159;PsExitSpecialApc&#65292;<strong class=" ">&#22914;&#26524;&#26159;&#65292;&#21017;&#20250;&#25226;&#23545;&#24212;&#30340;APC&#25346;&#20837;&#21040;&#38431;&#21015;&#20013;&#65292;&#20043;&#21518;&#36339;&#22238;&#20027;&#20195;&#20195;&#30721;&#65292;&#36825;&#37324;&#26377;&#20010;&#32454;&#33410;&#38656;&#35201;&#27880;&#24847;&#65292;&#20877;&#25346;&#20837;&#38431;&#21015;&#20043;&#21069;&#20250;&#23558;UserApcPending&#30340;&#20540;&#35774;&#20026;1</strong>&#65307;<strong class=" ">&#22914;&#26524;&#19981;&#26159;&#65292;&#37027;&#20040;&#20063;&#20250;&#36208;&#19979;&#38754;&#30340;&#20195;&#30721;&#65292;&#23558;&#29992;&#25143;APC&#25554;&#20837;&#24102;&#23545;&#24212;&#30340;&#29992;&#25143;APC&#38431;&#21015;&#20013;</strong>&#65292;&#26368;&#21518;&#36339;&#22238;&#20027;&#20195;&#30721;&#12290;</p>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#30475;Kapc.NormalRoutine&#30340;&#20540;&#20026;0&#65292;&#20197;&#21450;&#38142;&#34920;&#20026;&#31354;&#30340;&#24773;&#20917;&#19979;&#30340;&#24773;&#20917;&#65292;&#21521;&#19979;&#36208;&#23601;&#30452;&#25509;&#23558;&#24403;&#21069;APC&#25346;&#20837;&#21040;&#23545;&#24212;&#30340;&#38431;&#21015;&#20013;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_0-7-54.png" alt="images/download/attachments/2424869/image2023-4-10_0-7-54.png" width="800"  />
+    </p>
+<p   
+>&#32487;&#32493;&#21521;&#19979;&#36319;&#36827;&#20195;&#30721;&#65292;&#25105;&#20204;&#21457;&#29616;&#26080;&#35770;&#26159;&#29992;&#25143;&#25110;&#32773;&#20869;&#26680;APC&#25554;&#20837;&#38431;&#21015;&#20043;&#21518;&#65292;&#26368;&#32456;&#37117;&#20250;&#36208;&#21040;&#36825;&#37324;&#65292;&#23427;&#30340;&#31532;&#19968;&#27493;&#23601;&#26159;&#23558;KAPC.Inserted&#35774;&#20026;1&#65292;&#34920;&#31034;&#24403;&#21069;APC&#24050;&#32463;&#25554;&#20837;&#21040;&#38431;&#21015;&#20013;&#65307;&#28982;&#21518;&#36825;&#37324;&#20250;&#26377;&#19968;&#20010;&#21028;&#26029;&#65292;&#21028;&#26029;KAPC.ApcStateIndex&#30340;&#20540;&#19982;KTHREAD.ApcStateIndex&#30340;&#20540;&#26159;&#21542;&#30456;&#21516;&#65307;&#33509;&#19981;&#21516;&#65292;&#35828;&#26126;&#25346;&#20837;APC&#26102;&#20986;&#29616;&#38382;&#39064;&#65292;&#32473;AL&#35774;&#20026;1&#21518;&#65292;&#21363;&#34920;&#31034;&#23558;KAPC&#32467;&#26500;&#20307;&#35774;&#20026;1&#65292;&#32467;&#26500;&#20307;&#23601;&#27809;&#20102;&#65292;&#28982;&#21518;&#20989;&#25968;&#30452;&#25509;&#36820;&#22238;&#12290;</p>
+<p   
+>&#22914;&#26524;&#30456;&#21516;&#65292;&#20250;&#20808;&#26681;&#25454;KAPC.ApcMode&#30340;&#20540;&#21028;&#26029;&#35813;APC&#20026;&#29992;&#25143;APC&#36824;&#26159;&#20869;&#26680;APC&#65307;&#33509;&#26159;&#29992;&#25143;APC&#65292;&#21017;&#20250;&#36339;&#36716;&#24182;&#20381;&#27425;&#21028;&#26029;KTHREAD.State&#65292;KTHREAD.WaitMode&#21644;KTHREAD.Alertable&#30340;&#20540;&#65292;&#20854;&#21547;&#20041;&#20998;&#21035;&#20026;<strong class=" ">&#21028;&#26029;&#32447;&#31243;&#29366;&#24577;&#26159;&#21542;&#20026;&#31561;&#24453;&#12289;&#21028;&#26029;&#26159;&#21542;&#26159;&#29992;&#25143;&#23548;&#33268;&#30340;&#31561;&#24453;&#20197;&#21450;&#21028;&#26029;&#26159;&#21542;&#21487;&#20197;&#21796;&#37266;&#32447;&#31243;&#12290;</strong></p>
+<p   
+>&#33509;&#20197;&#19978;&#26465;&#20214;&#22343;&#28385;&#36275;&#65292;<strong class=" ">&#21017;&#20250;&#25191;&#34892;KiUnwaitThread&#20989;&#25968;&#65292;&#23558;&#24403;&#21069;&#32447;&#31243;&#20174;&#31561;&#24453;&#38142;&#34920;&#37324;&#21462;&#20986;&#65292;&#25346;&#21040;&#23601;&#32490;&#38142;&#34920;&#20013;&#65292;&#20063;&#23601;&#26159;&#25226;&#24403;&#21069;&#32447;&#31243;&#21796;&#37266;</strong>&#65292;&#25165;&#26377;&#26426;&#20250;&#25191;&#34892;APC&#20989;&#25968;&#65307;&#33509;&#26465;&#20214;&#19981;&#28385;&#36275;&#65292;&#37027;&#20040;APC&#20989;&#25968;&#23601;&#26080;&#27861;&#24471;&#21040;&#25191;&#34892;&#65292;&#24403;&#28982;&#36824;&#26377;&#19968;&#31181;&#24773;&#20917;&#65292;&#22914;&#26524;&#24403;&#21069;APC&#22240;&#26465;&#20214;&#19981;&#28385;&#36275;&#32780;&#27809;&#27861;&#25191;&#34892;&#65292;&#20294;&#26159;&#23427;&#24050;&#32463;&#20301;&#20110;APC&#38431;&#21015;&#20013;&#65292;&#22914;&#26524;&#19979;&#19968;&#20010;APC&#25554;&#20837;&#26102;&#65292;&#28385;&#36275;&#21796;&#37266;&#32447;&#31243;&#30340;&#26465;&#20214;&#65292;&#23601;&#26377;&#21487;&#33021;&#20250;&#20986;&#29616;&#20004;&#20010;APC&#20381;&#27425;&#25191;&#34892;&#30340;&#24773;&#20917;&#12290;</p>
+<p   
+>&#20869;&#26680;APC&#19982;&#29992;&#25143;APC&#31867;&#20284;&#65292;&#20294;&#26159;&#19981;&#38656;&#35201;&#21028;&#26029;&#36825;&#20040;&#22810;&#65292;&#24182;&#19988;&#20869;&#26680;APC&#22312;&#25191;&#34892;&#21069;&#20250;&#20808;&#23558;ApcState.KernelApcPending&#35774;&#20026;1&#65292;&#34920;&#31034;&#26377;&#31561;&#24453;&#25191;&#34892;&#30340;&#20869;&#26680;APC&#65292;&#24182;&#35843;&#29992;KiUnwaitThread&#20989;&#25968;&#21796;&#37266;&#32447;&#31243;&#65292;&#29992;&#25143;APC&#21482;&#26377;&#22312;&#28385;&#36275;3&#20010;&#25191;&#34892;&#26465;&#20214;&#21518;&#65292;&#25165;&#20250;&#20462;&#25913;ApcState.UserApcPending&#20540;&#20026;1&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_0-25-49.png" alt="images/download/attachments/2424869/image2023-4-10_0-25-49.png" width="800"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_0-45-23.png" alt="images/download/attachments/2424869/image2023-4-10_0-45-23.png" width="600"  />
+    </p>
+<p   
+>&#36825;&#37324;&#25105;&#20204;&#25552;&#21040;&#20102;&#20197;&#21518;&#26032;&#30340;&#19996;&#35199;&#65292;&#21363;KTHREAD.Alertable&#65292;&#35813;&#25104;&#21592;&#34920;&#31034;&#24403;&#21069;&#32447;&#31243;&#26159;&#21542;&#21487;&#20197;&#34987;&#21796;&#37266;&#65292;&#36825;&#20010;&#20540;&#21487;&#20197;&#34987;Sleep<strong class=" ">Ex</strong>&#12289;WaitForSingleObject<strong class=" ">Ex</strong>&#31561;&#33021;&#35753;&#32447;&#31243;&#36827;&#20837;&#31561;&#24453;&#29366;&#24577;&#30340;&#20989;&#25968;&#20462;&#25913;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_0-39-25.png" alt="images/download/attachments/2424869/image2023-4-10_0-39-25.png" width="400"  />
+    </p>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-2424869_safe-id-QVBD5py65Yi2LeWGheaguEFQQ-aJp-ihjOi_h-eoiw">
+        <h1 class="heading "><span>&#20869;&#26680;APC&#25191;&#34892;&#36807;&#31243;</span></h1>
+<p   
+>APC&#20989;&#25968;&#30340;&#25191;&#34892;&#19982;&#25554;&#20837;&#24182;&#19981;&#26159;&#21516;&#19968;&#20010;&#32447;&#31243;&#65292;&#22312;A&#32447;&#31243;&#20013;&#21521;B&#32447;&#31243;&#25554;&#20837;&#19968;&#20010;APC&#65292;&#25554;&#20837;&#30340;&#21160;&#20316;&#26159;&#22312;A&#32447;&#31243;&#20013;&#23436;&#25104;&#30340;&#65292;&#20294;&#20160;&#20040;&#26102;&#20505;&#25191;&#34892;&#21017;&#30001;B&#32447;&#31243;&#20915;&#23450;&#65292;&#25152;&#20197;&#31216;&#20043;&#20026;<strong class=" ">&#24322;&#27493;&#36807;&#31243;&#35843;&#29992;</strong>&#12290;&#20869;&#26680;APC&#20989;&#25968;&#19982;&#29992;&#25143;APC&#20989;&#25968;&#30340;&#25191;&#34892;&#26102;&#38388;&#21644;&#25191;&#34892;&#26041;&#24335;&#20063;&#26377;&#21306;&#21035;&#65292;&#25105;&#20204;&#26412;&#31456;&#33410;&#20027;&#35201;&#23398;&#20064;&#20869;&#26680;APC&#30340;&#25191;&#34892;&#36807;&#31243;&#12290;</p>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LeaJp-ihjOeCuQ">
+        <h2 class="heading "><span>&#25191;&#34892;&#28857;</span></h2>
+    <div class="section section-3" id="src-2424869_safe-id-QVBD5py65Yi2Lee6v-eoi-WIh-aNog">
+        <h3 class="heading "><span>&#32447;&#31243;&#20999;&#25442;</span></h3>
+<p   
+>&#25105;&#20204;&#35201;&#30693;&#36947;&#20869;&#26680;APC&#20989;&#25968;&#22312;&#21738;&#20010;&#25191;&#34892;&#28857;&#25191;&#34892;&#65292;<strong class=" ">&#31532;&#19968;&#20010;&#25191;&#34892;&#28857;&#23601;&#26159;&#32447;&#31243;&#20999;&#25442;</strong>&#65292;&#22312;SwapContext&#20989;&#25968;&#20869;&#21028;&#26029;&#26159;&#21542;&#26377;&#20869;&#26680;APC&#65292;&#22312;KiDeliverApc&#20989;&#25968;&#20869;&#25191;&#34892;&#20869;&#26680;APC&#20989;&#25968;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_16-28-24.png" alt="images/download/attachments/2424869/image2023-4-10_16-28-24.png" width="400"  />
+    </p>
+<p   
+>&#39318;&#20808;&#25105;&#20204;&#26469;&#30475;&#19968;&#19979;SwapContext&#65292;&#22312;&#35813;&#20989;&#25968;&#20869;&#26377;&#19968;&#22788;&#21028;&#26029;&#65292;&#21028;&#26029;ESI+0x49&#65288;&#21363;KTHREAD.ApcState.KernelApcPending&#65289;&#26159;&#21542;&#20026;0&#65292;&#20063;&#23601;&#34920;&#31034;&#21028;&#26029;&#24403;&#21069;&#20869;&#26680;APC&#38431;&#21015;&#26159;&#21542;&#26377;&#31561;&#24453;&#25191;&#34892;&#30340;APC&#20989;&#25968;&#65292;&#22914;&#26524;&#19981;&#20026;0&#30340;&#24773;&#20917;&#19979;&#23601;&#36827;&#34892;&#36339;&#36716;&#65292;&#26368;&#32456;RET&#12290;&#25105;&#20204;&#21487;&#20197;&#30475;&#35265;&#25972;&#20010;&#38142;&#26159;SwapContext&larr;KiSwapContext&larr;KiSwapThread &#12290;&#22312;SwapContext&#20989;&#25968;&#20869;&#65292;&#23454;&#38469;&#19978;&#26159;&#23558;&#21028;&#26029;&#30340;&#32467;&#26524;&#32473;&#21040;&#20102;AL&#65292;&#32780;&#21518;&#22312;KiSwapThread&#35843;&#29992;&#23436;KiSwapContext&#20043;&#21518;&#65292;&#23558;AL&#20540;&#36827;&#34892;&#20102;&#27604;&#36739;&#65292;&#24403;AL&#30340;&#20540;&#19981;&#20026;0&#26102;&#21017;&#36827;&#34892;&#36339;&#36716;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_17-0-22.png" alt="images/download/attachments/2424869/image2023-4-10_17-0-22.png" width="600"  />
+    </p>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#21521;&#19979;&#30475;&#24403;AL&#20540;&#20026;1&#65292;&#36319;&#38543;&#36339;&#36716;&#65292;&#23601;&#20250;&#21435;&#23558;eax&#30340;&#20540;&#28165;0&#65292;&#28982;&#21518;&#20256;&#36882;&#32473;KiDeliverApc&#20989;&#25968;&#65292;&#35813;&#20989;&#25968;&#30340;&#20316;&#29992;&#23601;&#26159;&#26681;&#25454;&#21442;&#25968;1&#30340;&#20540;&#65292;&#26469;&#21028;&#26029;&#25191;&#34892;&#21738;&#20010;&#31354;&#38388;&#30340;APC&#20989;&#25968;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_17-14-24.png" alt="images/download/attachments/2424869/image2023-4-10_17-14-24.png" width="600"  />
+    </p>
+    </div>
+    <div class="section section-3" id="src-2424869_safe-id-QVBD5py65Yi2Leezu-e7n-iwg-eUqOOAgeS4reaWreaIluiAheW8guW4uA">
+        <h3 class="heading "><span>&#31995;&#32479;&#35843;&#29992;&#12289;&#20013;&#26029;&#25110;&#32773;&#24322;&#24120;</span></h3>
+<p   
+>&#31532;&#20108;&#20010;&#25191;&#34892;&#28857;&#26159;&#31995;&#32479;&#35843;&#29992;&#12289;&#20013;&#26029;&#25110;&#32773;&#24322;&#24120;&#65292;&#22240;&#27492;&#24403;&#32447;&#31243;&#35843;&#29992;API&#12289;&#31243;&#24207;&#20986;&#29616;&#24322;&#24120;&#25110;&#20013;&#26029;&#26102;&#36820;&#22238;&#29992;&#25143;&#31354;&#38388;<strong class=" ">&#35843;&#29992;KiServiceExit&#20989;&#25968;</strong>&#65292;&#35813;&#20989;&#25968;&#20250;&#26816;&#26597;&#24403;&#21069;KTHREAD.ApcState.UserApcPending&#26159;&#21542;&#20026;0&#65292;&#21363;&#34920;&#31034;&#26159;&#21542;&#26377;&#29992;&#25143;&#31354;&#38388;&#30340;APC&#35831;&#27714;&#65292;&#22914;&#26524;&#26377;&#30340;&#35805;&#23601;&#20250;&#21521;&#19979;&#32487;&#32493;&#36208;&#65292;&#36890;&#36807;<strong class=" ">KiDeliverApc&#20989;&#25968;&#25191;&#34892;APC&#65292;&#22240;&#20026;&#31532;&#19968;&#20010;&#21442;&#25968;&#20026;1&#65292;&#25152;&#20197;&#20250;&#20808;&#25191;&#34892;&#20869;&#26680;APC&#65292;&#28982;&#21518;&#25191;&#34892;&#29992;&#25143;APC</strong>&#12290;&#22240;&#27492;&#25105;&#20204;&#20063;&#30693;&#36947;&#22312;&#27492;&#22788;&#22914;&#26524;&#27809;&#26377;&#29992;&#25143;APC&#65292;&#20063;&#23601;&#19981;&#20250;&#25191;&#34892;&#20869;&#26680;APC&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-8_18-48-34.png" alt="images/download/attachments/2424869/image2023-4-8_18-48-34.png" width="600"  />
+    </p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUtpRGVsaXZlckFwY-WHveaVsA">
+        <h2 class="heading "><span>KiDeliverApc&#20989;&#25968;</span></h2>
+<p   
+>&#25105;&#20204;&#30693;&#36947;&#20102;&#26080;&#35770;&#20160;&#20040;&#28857;&#35302;&#21457;APC&#30340;&#25191;&#34892;&#65292;&#26368;&#32456;&#37117;&#20250;&#36890;&#36807;KiDeliverApc&#20989;&#25968;&#26469;&#25191;&#34892;APC&#65292;&#22240;&#27492;&#25105;&#20204;&#20998;&#26512;&#35813;&#20989;&#25968;&#23601;&#21487;&#20197;&#20102;&#35299;&#25191;&#34892;&#30340;&#36807;&#31243;&#12290;</p>
+<p   
+>&#36890;&#36807;IDA&#25171;&#24320;&#20869;&#26680;&#25991;&#20214;&#65288;Ntoskrnl.exe&#65289;&#25214;&#21040;KiDeliverApc&#20989;&#25968;&#24320;&#22987;&#20998;&#26512;&#65292;&#39318;&#20808;&#25105;&#20204;&#21487;&#20197;&#30475;&#35265;&#20250;&#23558;KernelApcPending&#35774;&#20026;0&#65292;&#33719;&#21462;&#20869;&#26680;APC&#38431;&#21015;&#22320;&#22336;&#65292;&#25509;&#30528;<strong class=" ">&#21028;&#26029;&#38431;&#21015;&#65288;&#38142;&#34920;&#65289;&#26159;&#21542;&#20026;&#31354;</strong>&#65292;&#22914;&#26524;&#19981;&#20026;&#31354;&#21017;&#34920;&#31034;&#38431;&#21015;&#20013;&#26377;APC&#65292;&#23601;&#20250;&#36827;&#34892;&#36339;&#36716;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_18-59-16.png" alt="images/download/attachments/2424869/image2023-4-10_18-59-16.png" width="600"  />
+    </p>
+<p   
+>&#25509;&#30528;&#36319;&#36827;&#36339;&#36716;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#35265;&#33719;&#21462;&#21040;KAPC&#30340;&#39318;&#22320;&#22336;&#65292;&#23558;&#20960;&#20010;&#25104;&#21592;KernelRoutine&#12289;NormalRoutine&#12289;NormalContext&#12289;SystemArgument1&#12289;SystemArgument1&#21462;&#20986;&#65292;&#20998;&#21035;&#21387;&#20837;&#26632;&#20013;&#65292;&#20415;&#20110;&#21518;&#32493;&#30340;&#20351;&#29992;&#65292;&#22312;&#36825;&#25805;&#20316;&#20043;&#38388;&#26377;&#19968;&#23618;&#21028;&#26029;&#65292;<strong class=" ">&#21028;&#26029;NormalRoutine&#26159;&#21542;&#20026;0</strong>&#65292;&#21363;&#34920;&#31034;&#24403;&#21069;&#20869;&#26680;APC&#20989;&#25968;&#26159;&#21542;&#20026;&#31354;&#65292;&#19981;&#20026;&#31354;&#21017;&#34920;&#31034;&#23384;&#22312;APC&#20989;&#25968;&#65292;&#23601;&#20250;&#36827;&#34892;&#36339;&#36716;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_19-8-10.png" alt="images/download/attachments/2424869/image2023-4-10_19-8-10.png" width="600"  />
+    </p>
+<p   
+>&#32487;&#32493;&#36319;&#36827;&#36339;&#36716;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#35265;&#20250;&#36827;&#34892;&#20004;&#20010;&#21028;&#26029;&#65292;&#21363;&#21028;&#26029;<strong class=" ">&#24403;&#21069;&#26159;&#21542;&#26377;&#20869;&#26680;APC&#27491;&#22312;&#36816;&#34892;</strong>&#20197;&#21450;<strong class=" ">&#24403;&#21069;&#26159;&#21542;&#31105;&#29992;&#20102;&#20869;&#26680;APC</strong>&#65292;&#22914;&#26524;&#37117;&#27809;&#26377;&#30340;&#35805;&#32487;&#32493;&#21521;&#19979;&#36208;&#65292;<strong class=" ">&#23558;&#24403;&#21069;APC&#20174;&#38431;&#21015;&#20013;&#36827;&#34892;&#25688;&#38500;</strong>&#65292;&#35843;&#29992;KernelRoutine&#23545;&#24212;&#30340;&#20989;&#25968;&#65292;&#35813;&#25104;&#21592;&#25351;&#21521;&#30340;&#26159;&#37322;&#25918;APC&#30340;&#20989;&#25968;&#65292;&#25509;&#30528;&#20250;&#20877;&#21028;&#26029;&#19968;&#27425;NormalRoutine&#26159;&#21542;&#20026;0&#65292;&#19981;&#20026;0&#21017;&#20250;&#20808;&#23558;KernelApcInProgress&#35774;&#20026;1&#65292;<strong class=" ">&#28982;&#21518;&#25191;&#34892;NormalRoutine&#23545;&#24212;&#30340;&#20989;&#25968;</strong>&#65292;&#21363;&#20869;&#26680;APC&#20989;&#25968;&#65292;&#24182;&#20256;&#20837;&#19977;&#20010;&#20540;&#65306;NormalContext&#12289;SystemArgument1&#12289;SystemArgument2&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_19-18-20.png" alt="images/download/attachments/2424869/image2023-4-10_19-18-20.png" width="600"  />
+    </p>
+<p   
+>&#24403;&#25191;&#34892;&#23436;&#20869;&#26680;APC&#20989;&#25968;&#26102;&#65292;&#21017;&#20250;&#23558;KernelApcInProgress&#35774;&#20026;0&#65292;&#28982;&#21518;&#20877;&#36827;&#34892;&#21028;&#26029;&#26159;&#21542;&#26377;&#19979;&#19968;&#20010;&#38656;&#35201;&#20869;&#26680;APC&#65292;&#22914;&#26524;&#26377;&#30340;&#35805;&#23601;&#37325;&#22797;&#19978;&#38754;&#30340;&#27493;&#39588;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-10_19-15-25.png" alt="images/download/attachments/2424869/image2023-4-10_19-15-25.png" width="600"  />
+    </p>
+<p   
+>&#26368;&#21518;&#65292;&#25105;&#20204;&#21487;&#20197;&#31616;&#21333;&#24635;&#32467;&#19968;&#19979;&#65306;</p>
+<ol class=" "><li class=" "><p   
+>&#20869;&#26680;APC&#22312;&#32447;&#31243;&#20999;&#25442;&#30340;&#26102;&#20505;&#23601;&#20250;&#25191;&#34892;&#65292;&#36825;&#20063;&#23601;&#24847;&#21619;&#30528;&#65292;&#21482;&#35201;&#25554;&#20837;&#20869;&#26680;APC&#24456;&#24555;&#23601;&#20250;&#25191;&#34892;&#65307;</p>
+</li><li class=" "><p   
+>&#22312;&#25191;&#34892;&#29992;&#25143;APC&#20043;&#21069;&#20250;&#20808;&#25191;&#34892;&#20869;&#26680;APC&#65307;</p>
+</li><li class=" "><p   
+>&#20869;&#26680;APC&#22312;&#20869;&#26680;&#31354;&#38388;&#25191;&#34892;&#65292;&#19981;&#38656;&#35201;&#25442;&#26632;&#65292;&#19968;&#20010;&#24490;&#29615;&#20840;&#37096;&#25191;&#34892;&#23436;&#27605;&#12290;</p>
+</li></ol>    </div>
+    </div>
+    <div class="section section-1" id="src-2424869_safe-id-QVBD5py65Yi2LeeUqOaIt0FQQ-aJp-ihjOi_h-eoiw">
+        <h1 class="heading "><span>&#29992;&#25143;APC&#25191;&#34892;&#36807;&#31243;</span></h1>
+<p   
+>&#22788;&#29702;&#29992;&#25143;APC&#35201;&#27604;&#20869;&#26680;APC&#22797;&#26434;&#30340;&#22810;&#65292;&#22240;&#20026;&#29992;&#25143;APC&#20989;&#25968;&#35201;&#22312;&#29992;&#25143;&#31354;&#38388;&#25191;&#34892;&#30340;&#65292;&#36825;&#37324;&#28041;&#21450;&#21040;&#22823;&#37327;&#26632;&#30340;&#20999;&#25442;&#25805;&#20316;&#65306; &#24403;&#32447;&#31243;&#20174;&#29992;&#25143;&#23618;&#36827;&#20837;&#20869;&#26680;&#23618;&#26102;&#65292;&#35201;&#20445;&#30041;&#21407;&#26469;&#30340;&#36816;&#34892;&#29615;&#22659;&#65292;&#27604;&#22914;&#21508;&#31181;&#23492;&#23384;&#22120;&#65292;&#26632;&#30340;&#20301;&#32622;&#31561;&#31561;&#65288;Trap_Frame&#65289;&#65292;&#28982;&#21518;&#20999;&#25442;&#25104;&#20869;&#26680;&#30340;&#26632;&#65292;&#22914;&#26524;&#27491;&#24120;&#36820;&#22238;&#65292;&#24674;&#22797;&#26632;&#29615;&#22659;&#21363;&#21487;&#12290;</p>
+<p   
+>&#20294;&#22914;&#26524;&#26377;&#29992;&#25143;APC&#35201;&#25191;&#34892;&#30340;&#35805;&#65292;&#23601;&#24847;&#21619;&#30528;&#32447;&#31243;&#35201;<strong class=" ">&#25552;&#21069;&#36820;&#22238;&#21040;&#29992;&#25143;&#31354;&#38388;</strong>&#21435;&#25191;&#34892;&#65292;&#32780;&#19988;&#36820;&#22238;&#30340;&#20301;&#32622;&#19981;&#26159;&#32447;&#31243;&#36827;&#20837;&#20869;&#26680;&#26102;&#30340;&#20301;&#32622;&#65292;&#32780;&#26159;<strong class=" ">&#36820;&#22238;&#21040;&#20854;&#20182;&#30340;&#20301;&#32622;</strong>&#65292;&#27599;&#22788;&#29702;&#19968;&#20010;&#29992;&#25143;APC&#37117;&#20250;&#28041;&#21450;&#21040;&#20869;&#26680;&#31354;&#38388;&#19982;&#29992;&#25143;&#31354;&#38388;&#30340;&#20999;&#25442;&#65292;&#22240;&#27492;&#26632;&#30340;&#25805;&#20316;&#27604;&#36739;&#22797;&#26434;&#65292;&#22914;&#26524;&#25105;&#20204;&#38656;&#35201;&#36275;&#22815;&#20102;&#35299;&#26632;&#30340;&#25805;&#20316;&#32454;&#33410;&#25165;&#33021;&#29702;&#35299;&#29992;&#25143;APC&#26159;&#22914;&#20309;&#25191;&#34892;&#30340;&#12290;</p>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUtpRGVsaXZlckFwY-WHveaVsC4x">
+        <h2 class="heading "><span>KiDeliverApc&#20989;&#25968;</span></h2>
+<p   
+>&#25105;&#20204;&#25509;&#30528;&#26469;&#30475;KiDeliverApc&#20989;&#25968;&#65292;&#35813;&#20989;&#25968;&#22788;&#29702;&#29992;&#25143;APC&#26102;&#65292;&#20250;&#20808;&#22788;&#29702;&#20869;&#26680;APC&#65292;&#28982;&#21518;&#22238;&#26469;&#21462;&#29992;&#25143;APC&#38431;&#21015;&#65292;&#21028;&#26029;&#38431;&#21015;&#26159;&#21542;&#20026;&#31354;&#65292;&#19981;&#20026;&#31354;&#21017;&#36827;&#34892;&#36339;&#36716;&#22788;&#29702;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-11_15-15-24.png" alt="images/download/attachments/2424869/image2023-4-11_15-15-24.png" width="600"  />
+    </p>
+<p   
+>&#36339;&#36716;&#36807;&#26469;&#20043;&#21518;&#65292;&#20250;&#36827;&#34892;&#20004;&#20010;&#21028;&#26029;&#65292;<strong class=" ">&#31532;&#19968;&#20010;&#21028;&#26029;&#26159;KiDeliverApc&#20989;&#25968;&#30340;&#31532;&#19968;&#20010;&#21442;&#25968;&#26159;&#21542;&#20026;1</strong>&#65292;&#20026;1&#21017;&#34920;&#31034;&#35201;&#22788;&#29702;&#29992;&#25143;APC&#65292;&#23601;&#19981;&#20250;&#36339;&#36716;&#32487;&#32493;&#21521;&#19979;&#36208;&#65307;<strong class=" ">&#31532;&#20108;&#20010;&#21028;&#26029;&#26159;UserApcPending&#26159;&#21542;&#20026;0</strong>&#65292;&#19981;&#20026;0&#21017;&#34920;&#31034;&#24403;&#21069;&#26377;&#31561;&#24453;&#25191;&#34892;&#30340;&#29992;&#25143;APC&#65292;&#23601;&#19981;&#20250;&#36339;&#36716;&#32487;&#32493;&#21521;&#19979;&#36208;&#65307;&#23558;UserApcPending&#35774;&#20026;0&#65292;&#28982;&#21518;&#25509;&#19979;&#26469;&#30340;&#25805;&#20316;&#23601;&#36319;&#20869;&#26680;APC&#25191;&#34892;&#36807;&#31243;&#24046;&#19981;&#22810;&#20102;&#65292;<strong class=" ">&#21462;KAPC&#32467;&#26500;&#20307;&#39318;&#22320;&#22336;</strong>&#65292;&#23558;&#20960;&#20010;&#25104;&#21592;&#21387;&#20837;&#26632;&#20869;&#20415;&#20110;&#21518;&#32493;&#20351;&#29992;&#65292;<strong class=" ">&#20877;&#20174;&#38142;&#34920;&#20013;&#23558;&#24403;&#21069;APC&#25688;&#38500;</strong>&#65292;&#25509;&#30528;&#35843;&#29992;KernelRoutine&#26469;<strong class=" ">&#37322;&#25918;&#24403;&#21069;APC&#25152;&#21344;&#29992;&#30340;&#20869;&#23384;&#31354;&#38388;</strong>&#65307;&#22312;&#36825;&#20043;&#21518;&#23601;&#19982;&#20869;&#26680;APC&#25191;&#34892;&#36807;&#31243;&#19981;&#19968;&#26679;&#20102;&#65292;&#20808;&#21028;&#26029;NormalRoutine&#26159;&#21542;&#20026;0&#65292;&#19981;&#20026;0&#21017;&#34920;&#31034;&#29992;&#25143;APC&#30340;&#24635;&#20837;&#21475;&#26159;&#23384;&#22312;&#30340;&#65292;&#28982;&#21518;&#23558;SystemArgument2&#12289;SystemArgument1&#12289;NormalContext&#12289;NormalRoutine&#20998;&#21035;&#21387;&#20837;&#26632;&#20869;&#21387;&#20837;&#26632;&#20869;&#65292;<strong class=" ">&#29992;&#20110;&#21518;&#32493;&#30340;KiInitializeUserApc&#20989;&#25968;&#30340;&#25191;&#34892;</strong>&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-11_15-40-31.png" alt="images/download/attachments/2424869/image2023-4-11_15-40-31.png" width="600"  />
+    </p>
+<p   
+>&#22240;&#27492;&#22312;&#36825;&#37324;NormalRoutine&#24182;&#19981;&#26159;&#29992;&#25143;APC&#30340;&#25191;&#34892;&#20989;&#25968;&#65292;&#20063;&#27809;&#27861;&#30452;&#25509;&#21435;&#25191;&#34892;&#65292;&#22240;&#20026;&#24403;&#21069;&#29615;&#22659;&#22312;&#20869;&#26680;&#31354;&#38388;&#65292;&#22914;&#26524;&#30452;&#25509;&#25191;&#34892;&#20102;&#29992;&#25143;&#31354;&#38388;&#30340;APC&#20989;&#25968;&#65292;&#23601;&#21487;&#33021;&#23384;&#22312;&#23433;&#20840;&#38382;&#39064;&#65292;&#22240;&#27492;&#38656;&#35201;&#36890;&#36807;KiInitializeUserApc&#20989;&#25968;&#26469;&#36820;&#22238;&#29992;&#25143;&#31354;&#38388;&#25191;&#34892;&#65292;&#25105;&#20204;&#21487;&#20197;&#26469;&#20998;&#26512;&#19968;&#19979;&#36825;&#20010;&#20989;&#25968;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUtpSW5pdGlhbGl6ZVVzZXJBcGPlh73mlbA">
+        <h2 class="heading "><span>KiInitializeUserApc&#20989;&#25968;</span></h2>
+<p   
+>&#32447;&#31243;&#36827;0&#29615;&#26102;&#65292;&#21407;&#26469;&#30340;&#36816;&#34892;&#29615;&#22659;&#65288;&#23492;&#23384;&#22120;&#26632;&#39030;&#31561;&#65289;&#20445;&#23384;&#21040;Trap_Frame&#32467;&#26500;&#20307;&#20013;&#65292;&#22914;&#26524;&#35201;&#25552;&#21069;&#36820;&#22238;3&#29615;&#21435;&#22788;&#29702;&#29992;&#25143;APC&#65292;&#23601;&#24517;&#39035;&#35201;&#20462;&#25913;Trap_Frame&#32467;&#26500;&#20307;&#12290;&#27604;&#22914;&#36827;0&#29615;&#26102;&#30340;&#20301;&#32622;&#23384;&#20648;&#22312;EIP&#20013;&#65292;&#29616;&#22312;&#35201;&#25552;&#21069;&#36820;&#22238;&#65292;&#32780;&#19988;&#36820;&#22238;&#30340;&#24182;&#19981;&#26159;&#21407;&#26469;&#30340;&#20301;&#32622;&#65292;&#37027;&#23601;&#24847;&#21619;&#30528;&#24517;&#39035;&#35201;&#20462;&#25913;EIP&#20026;&#26032;&#30340;&#36820;&#22238;&#20301;&#32622;&#65292;&#36824;&#38656;&#35201;&#20462;&#25913;&#20026;&#22788;&#29702;APC&#26102;&#38656;&#35201;&#30340;&#26632;&#65288;ESP&#65289;&#12290;</p>
+<p   
+>&#37027;&#20040;&#22788;&#29702;&#23436;APC&#21518;&#65292;&#21407;&#26469;&#30340;&#20540;&#35813;&#24590;&#20040;&#21150;&#21602;&#65311;&#23454;&#38469;&#19978;&#22312;KiInitializeUserApc&#20989;&#25968;&#20013;&#65292;&#35201;&#20570;&#30340;&#31532;&#19968;&#20214;&#20107;&#24773;&#23601;&#26159;&#23558;&#21407;&#26469;Trap_Frame&#30340;&#20540;&#22791;&#20221;&#21040;&#19968;&#20010;&#26032;&#30340;&#32467;&#26500;&#20307;&#20013;&#65288;_Context&#65289;&#65292;&#26032;&#30340;&#32467;&#26500;&#20307;&#19982;Trap_Frame&#32467;&#26500;&#20307;&#22823;&#33268;&#19968;&#26679;&#65292;&#25105;&#20204;&#21487;&#20197;&#26469;&#30475;&#19968;&#19979;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-11_17-18-5.png" alt="images/download/attachments/2424869/image2023-4-11_17-18-5.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#26469;&#20998;&#26512;KiInitializeUserApc&#20989;&#25968;&#65292;&#23601;&#20250;&#21457;&#29616;&#22791;&#20221;&#21151;&#33021;&#26159;&#30001;&#20854;&#23376;&#20989;&#25968;KeContextFromKframes&#26469;&#23436;&#25104;&#30340;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-11_16-50-55.png" alt="images/download/attachments/2424869/image2023-4-11_16-50-55.png" width="600"  />
+    </p>
+<p   
+>&#22791;&#20221;&#23436;&#25104;&#20043;&#21518;&#65292;&#25105;&#20204;&#19981;&#21487;&#33021;&#19968;&#30452;&#35753;_Context&#32467;&#26500;&#20307;&#23384;&#20110;&#24403;&#21069;&#30340;&#20869;&#26680;&#31354;&#38388;&#20013;&#65292;&#22914;&#19979;&#22270;&#20195;&#30721;&#25152;&#31034;&#65292;&#20250;&#23558;&#21407;3&#29615;&#30340;ESP&#25353;4&#23383;&#33410;&#23545;&#40784;&#65292;&#28982;&#21518;&#25552;&#21319;&#26632;&#39030;&#65292;<strong class=" ">&#25552;&#21319;&#30340;&#39640;&#24230;&#27491;&#22909;&#26159;_Context&#32467;&#26500;&#20307;&#21152;4&#20010;APC&#25191;&#34892;&#25152;&#38656;&#21442;&#25968;&#30340;&#22823;&#23567;</strong>&#65292;&#25509;&#30528;&#23558;&#25552;&#21319;&#21518;&#30340;ESP&#26242;&#23384;&#33267;&#20869;&#26680;&#31354;&#38388;&#26632;&#20013;&#65292;&#26368;&#21518;<strong class=" ">&#36890;&#36807;&#24490;&#29615;&#25351;&#20196;&#23558;_Context&#32467;&#26500;&#20307;&#25104;&#21592;&#36880;&#20010;&#22797;&#21046;&#21040;3&#29615;&#30340;&#26632;&#20013;</strong>&#12290;&#22788;&#29702;&#22909;_Context&#32467;&#26500;&#20307;&#20043;&#21518;&#65292;&#23601;&#21487;&#20197;&#23545;Trap_Frame&#30340;&#20540;&#36827;&#34892;&#20462;&#25913;&#20102;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-11_17-19-11.png" alt="images/download/attachments/2424869/image2023-4-11_17-19-11.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#25509;&#30528;&#21521;&#19979;&#30475;&#20195;&#30721;&#65292;&#23601;&#20250;&#21457;&#29616;&#23427;&#20250;&#23558;Trap_Frame.Eip&#20462;&#25913;&#20026;KiUserApcDispatcher&#20989;&#25968;&#22320;&#22336;&#65292;&#20063;&#23601;&#26159;&#20462;&#25913;&#20102;&#36820;&#22238;3&#29615;&#26102;&#30340;&#22320;&#22336;&#65292;&#28982;&#21518;&#23558;&#25191;&#34892;APC&#25152;&#38656;&#35201;&#30340;4&#20010;&#21442;&#25968;&#20381;&#27425;&#22635;&#20805;&#21040;3&#29615;&#30340;&#26632;&#20869;&#65292;&#36825;&#37324;&#30340;&#27493;&#39588;&#25105;&#20204;&#23601;&#21487;&#20197;&#29702;&#35299;&#20026;&#19979;&#31227;&#26632;&#39030;&#28982;&#21518;&#22635;&#20837;&#20869;&#23481;&#65292;&#30001;&#20110;&#24403;&#21069;&#26159;&#22312;0&#29615;&#31354;&#38388;&#22240;&#27492;&#21482;&#21487;&#20197;&#20351;&#29992;MOV+ADD&#25351;&#20196;&#26469;&#19979;&#31227;&#26632;&#39030;&#65292;&#20381;&#27425;&#22797;&#21046;&#21040;&#26632;&#20013;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-11_20-12-20.png" alt="images/download/attachments/2424869/image2023-4-11_20-12-20.png" width="600"  />
+    </p>
+<p   
+>&#19978;&#36848;&#25805;&#20316;&#25191;&#34892;&#23436;&#25104;&#20043;&#21518;&#65292;3&#29615;&#30340;&#26632;&#20998;&#24067;&#22823;&#33268;&#22914;&#19979;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-11_20-18-14.png" alt="images/download/attachments/2424869/image2023-4-11_20-18-14.png" width="600"  />
+    </p>
+<p   
+>&#28982;&#21518;&#24403;&#36820;&#22238;3&#29615;&#26102;&#65292;&#23601;&#20250;&#36339;&#36716;&#21040;KiUserApcDispatcher&#20989;&#25968;&#24320;&#22987;&#25191;&#34892;&#65292;&#25105;&#20204;&#30340;&#20256;&#36882;&#30340;4&#20010;&#21442;&#25968;&#20063;&#26159;&#32473;&#23427;&#29992;&#30340;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-2424869_safe-id-QVBD5py65Yi2LUtpVXNlckFwY0Rpc3BhdGNoZXLlh73mlbA">
+        <h2 class="heading "><span>KiUserApcDispatcher&#20989;&#25968;</span></h2>
+<p   
+>KiUserApcDispatcher&#20989;&#25968;&#26159;&#22312;ntdll.dll&#27169;&#22359;&#20013;&#65292;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;IDA&#26469;&#20998;&#26512;&#19968;&#19979;&#23427;&#26159;&#24178;&#21861;&#29992;&#30340;&#12290;&#36825;&#20010;&#20989;&#25968;&#24456;&#31616;&#21333;&#65292;&#39318;&#20808;&#23601;&#26159;&#21462;NormalRoutine&#65292;&#28982;&#21518;&#35843;&#29992;&#23545;&#24212;&#30340;&#20989;&#25968;&#65292;&#25509;&#30528;&#20877;&#21462;_Context&#32467;&#26500;&#20307;&#65292;&#32473;&#21040;ZwContinue&#29992;&#20110;&#39034;&#21033;&#36820;&#22238;0&#29615;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/2424869/image2023-4-11_20-27-44.png" alt="images/download/attachments/2424869/image2023-4-11_20-27-44.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#30693;&#36947;&#29992;&#25143;APC&#26102;NormalRoutine&#34920;&#31034;&#30340;&#26159;&#29992;&#25143;APC&#20989;&#25968;&#30340;&#24635;&#20837;&#21475;&#65292;&#37027;&#20040;&#20026;&#20160;&#20040;&#30452;&#25509;&#35843;&#29992;&#23601;&#21487;&#20197;&#20102;&#21602;&#65292;&#36825;&#26159;&#22240;&#20026;&#24403;&#29992;&#25143;&#22312;3&#29615;&#35843;&#29992;QueueUserApc&#20989;&#25968;&#26469;&#25554;&#20837;APC&#26102;&#65292;&#19981;&#38656;&#35201;&#25552;&#20379;NormalRoutine&#65292;&#36825;&#20010;&#21442;&#25968;&#26159;&#22312;QueueUserApc&#20869;&#37096;&#25351;&#23450;&#30340;BaseDispatchApc&#65292;&#36890;&#36807;&#36825;&#20010;&#20837;&#21475;&#65292;&#20869;&#37096;&#20250;&#35843;&#29992;&#30495;&#27491;&#30340;&#29992;&#25143;APC&#20989;&#25968;&#25191;&#34892;&#65292;<strong class=" ">&#29992;&#25143;&#35843;&#29992;&#26102;&#21482;&#38656;&#35201;&#25552;&#20379;&#20989;&#25968;&#21644;&#21442;&#25968;&#21363;&#21487;</strong>&#12290;</p>
+<p   
+>ZwContinue&#20989;&#25968;&#30340;&#24847;&#20041;&#23601;&#26159;&#36820;&#22238;&#20869;&#26680;&#65292;&#22914;&#26524;&#36824;&#26377;&#29992;&#25143;APC&#65292;&#37325;&#22797;&#19978;&#38754;&#30340;&#25191;&#34892;&#36807;&#31243;&#65307;&#22914;&#26524;&#27809;&#26377;&#38656;&#35201;&#25191;&#34892;&#30340;&#29992;&#25143;APC&#65292;&#20250;&#23558;_Context&#32467;&#26500;&#20307;&#36171;&#20540;&#32473;Trap_Frame&#32467;&#26500;&#20307;&#65292;&#36825;&#26679;&#23601;&#20687;&#20174;&#26469;&#27809;&#26377;&#20462;&#25913;&#36807;&#19968;&#26679;&#65292;ZwContinue&#21518;&#38754;&#30340;&#20195;&#30721;&#19981;&#20250;&#25191;&#34892;&#65292;&#32447;&#31243;&#20174;&#21738;&#37324;&#36827;0&#29615;&#20173;&#28982;&#20250;&#20174;&#21738;&#37324;&#22238;&#21435;&#12290;</p>
+    </div>
+    </div>
+        </div>
+
+    </article>
+
+
+            <nav id="ht-post-nav">
+                <a href="%E5%A4%9A%E6%A0%B8%E5%90%8C%E6%AD%A5.html" class="ht-post-nav-prev">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-prev" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-45.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>&#22810;&#26680;&#21516;&#27493;</span>
+        </a>
+                <a href="%E4%BA%8B%E4%BB%B6%E7%AD%89%E5%BE%85.html" class="ht-post-nav-next">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-next" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-225.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>&#20107;&#20214;&#31561;&#24453;</span>
+        </a>
+    </nav>    
+            
+    <footer id="ht-footer">
+    <a href="#" id="ht-jump-top" class="sp-aui-icon-small sp-aui-iconfont-arrows-up"></a>
+</footer></div>
+
+<div>
+    <div id="ht-mq-detect"></div>
+</div>
+
+    <script src="js/lunr.js"></script>
+    <script src="js/lunr-extras.js"></script>
+    <script src="assets/js/scroll-search.js"></script>
+
+    <script src="assets/js/expand-macro.js"></script>
+</body>
+</html>

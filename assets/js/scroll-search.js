@@ -56,6 +56,11 @@
     };
 
 
+    window.SCROLL_WEBHELP.search.getSearchQueryParametersForContext = function(name, value) {
+        return [];
+    };
+
+
     var displaySearchResultsPage = function(searchResults, query) {
         var container = jQuery('#html-search-results');
 
@@ -69,8 +74,8 @@
         jQuery.each(searchResults, function(index, searchResult) {
             var displayUrl = baseUrl + searchResult.link;
             list.append('<section class="search-result">'
-                +'<header><h2><a href="' + searchResult.link + '">' + SCROLL_WEBHELP.escapeHtml(searchResult.title) + '</a></h2></header>'
-                +'<div class="search-result-content"><p class="search-result-link">' + displayUrl + '</p></div>'
+                +'<header><h2><a href="' + encodeURI(searchResult.link) + '">' + SCROLL_WEBHELP.escapeHtml(searchResult.title) + '</a></h2></header>'
+                +'<div class="search-result-content"><p class="search-result-link">' + SCROLL_WEBHELP.escapeHtml(displayUrl) + '</p></div>'
                 +'<hr>'
                 +'</section>');
         });
@@ -172,7 +177,7 @@
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
         var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
         var results = regex.exec(location.search);
-        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        return results === null ? '' : decodeURIComponent(results[1]);
     };
 
     jQuery(document).ready(function () {

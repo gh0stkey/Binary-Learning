@@ -293,11 +293,21 @@
             input.on('blur', function (e) {
                 searchFieldActive = false;
             });
+
+            // This is needed so that the cql search works for searches < 3 characters or when hitting enter before receiving quick results
+            $('input.search-input').bind('keydown', function (e) {
+                if (e.key === "Enter") {
+                    goToSelectedPageOrSearch();
+                } else {
+                    return;
+                }
+                e.preventDefault();
+            });
         });
 
 
         input.on('input', function(e) {
-            var str = input.val();
+            var str = input.val().trim();
             if (str.length >= 3) {
                 debouncedSearch(str);
             }
@@ -305,6 +315,20 @@
                 $('.ht-search-dropdown').removeClass('open');
             }
         });
+    }
+
+
+    function goToSelectedPageOrSearch() {
+        var selected = $('.ht-search-dropdown a.hover');
+        if (selected.length != 0) {
+            if (selected.is('.search-key-button')) {
+                navigateToSearchResultsPage($('.search-input').val().trim());
+            } else {
+                window.location.href = selected.attr('href');
+            }
+        } else {
+            navigateToSearchResultsPage($('.search-input').val().trim());
+        }
     }
 
     function openSearch() {
@@ -356,7 +380,7 @@
 
             var keybutton = $('<li class="search-key" n="' + searchResults.length + '"><a class="search-key-button" href="#">' + SCROLL_WEBHELP.i18n('searchLabel', {query: '<b>' + SCROLL_WEBHELP.escapeHtml(query) + '</b>'}) + '</a></li>');
             keybutton.bind('click', function(e) {
-                navigateToSearchResultsPage($('.search-input').val());
+                navigateToSearchResultsPage($('.search-input').val().trim());
                 e.preventDefault();
             });
             resultsList.append(keybutton);
@@ -372,16 +396,7 @@
             $(document).bind('keydown', function (e) {
                 switch (e.which) {
                     case 13:
-                        var selected = $('.ht-search-dropdown a.hover');
-                        if (selected.length != 0) {
-                            if (selected.is('.search-key-button')) {
-                                navigateToSearchResultsPage($('.search-input').val());
-                            } else {
-                                window.location.href = selected.attr('href');
-                            }
-                        } else {
-                            navigateToSearchResultsPage($('.search-input').val());
-                        }
+                        goToSelectedPageOrSearch();
                         break;
 
                     case 38:
@@ -455,7 +470,9 @@
     function setDropdown(select) {
         var container = select.parent();
         var svg = '<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g class="ht-select-button-icon"><path d="M2,3 L8,3 L5,7 L2,3 Z"></path></g></svg>';
-        var toggle = $('<a class="ht-select-button"><span>' + createOptionText(select.find('option:selected')) + '</span>' + svg + '</a>');
+        var toggle = $('<a class="ht-select-button"><span></span></a>');
+        toggle.find('span').text(select.find('option:selected').text());
+        toggle.append(svg);
         container.append(toggle);
 
         var label = container.parent().find('label').remove();
@@ -465,9 +482,19 @@
         container.append(dropdown);
 
         var allAccessible = allEntriesAccessible(select);
-        $.each(select.find('option'), function (index, val) {
-            var item = $('<li n="' + index + '"><a data-scroll-integration-name="' + select.attr('name') + '" data-scroll-integration-title="' + $(this).text() + '" data-scroll-integration-value="' + $(this).attr('value') + '">' + createOptionText($(this), !allAccessible) + '</li>');
-            dropdown.find('ul').append(item);
+        $.each(select.find('option'), function(index, val) {
+            var li = $('<li/>');
+            li.attr('n', index);
+            var a = $('<a/>');
+            a.attr('data-scroll-integration-name', select.attr('name'));
+            a.attr('data-scroll-integration-title', $(this).text());
+            a.attr('data-scroll-integration-value', $(this).attr('value'));
+            a.text($(this).text());
+            li.append(a);
+            if (!allAccessible) {
+                li.append(versionAccessibilitySpan($(this)));
+            }
+            dropdown.find('ul').append(li);
         });
 
         select.on('change', function () {
@@ -481,16 +508,16 @@
 
 
             if ($(this).hasClass('active')) {
-                toogleDropdown(container, false);
+                toggleDropdown(container, false);
                 $(this).removeClass('active');
             } else {
                 $.each($('.' + container.attr('class')), function (index, val) {
                     if ($(this).find('.ht-select-button').hasClass('active')) {
-                        toogleDropdown($(this), false);
+                        toggleDropdown($(this), false);
                     }
                 });
 
-                toogleDropdown(container, true);
+                toggleDropdown(container, true);
                 $(this).addClass('active');
             }
 
@@ -509,31 +536,26 @@
         return allAccessible;
     }
 
-    /** Create the text for the drop-down entries (version entries may contain some extra info other than the property name). */
-    function createOptionText(option, showVersionAccessibility) {
-        var optionText = option.text();
-        if (showVersionAccessibility) {
-            var versionAccessible = option.attr('data-version-accessible');
-            if (versionAccessible) {
-                optionText += '</a><span';
-                if (versionAccessible === 'true') {
-                    optionText += ' style="visibility: hidden;"';
-                }
-                optionText += ' class="versions-select-item-restriction">Authors only</span>';
+    /** Returns a span containing Authors only if the option i.e. version/variant is only visible to authors. */
+    function versionAccessibilitySpan(option) {
+        var versionAccessible = option.attr('data-version-accessible');
+        if (versionAccessible) {
+            var span = $('<span/>');
+            if (versionAccessible === 'true') {
+                span.css('visibility', 'hidden');
             }
-            else {
-                optionText += '</a>';
-            }
+            span.addClass('versions-select-item-restriction');
+            span.text('Authors only');
+            return span;
         }
-        return optionText;
     }
 
-    function toogleDropdown(container, open) {
+    function toggleDropdown(container, open) {
         if (open) {
             $('body').bind('click', function (e) {
                 e.preventDefault();
                 if ($(e.target).is(container.find('*')))return;
-                toogleDropdown(container, !open);
+                toggleDropdown(container, !open);
             });
 
         } else {
@@ -564,20 +586,10 @@
 
                     var target;
                     if (isSearch){
-                        var query = window.location.search.split('&');
-                        var index = -1;
-                        query.some(function(el, i) {
-                            if (el.indexOf(encodeURI(name)) !== -1) {
-                                index = i;
-                                return true;
-                            }
+                        target = updateQueryStringParameter(window.location.href, name, value);
+                        getSearchQueryParametersForContext(name, value).forEach(function(param) {
+                            target = updateQueryStringParameter(target, param.key, param.value);
                         });
-                        if (index !== -1) {
-                            query[index] = encodeURI(name + '=' + value);
-                        } else {
-                            query.push(encodeURI(name + '=' + value));
-                        }
-                        target = window.location.pathname + query.join('&');
                     } else {
                         target = window.location.pathname + '?' + encodeURI(name + '=' + value);
                     }
@@ -592,6 +604,27 @@
         } else {
             toggle.removeClass('active');
             dropdown.removeClass('open');
+        }
+    }
+
+
+    // taken from https://stackoverflow.com/questions/5999118/how-can-i-add-or-update-a-query-string-parameter
+    function updateQueryStringParameter(uri, key, value) {
+        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+        if (uri.match(re)) {
+            return uri.replace(re, '$1' + key + "=" + encodeURIComponent(value) + '$2');
+        } else {
+            return uri + separator + key + "=" + encodeURIComponent(value);
+        }
+    }
+
+
+    function getSearchQueryParametersForContext(name, value) {
+        if (window.SCROLL_WEBHELP && window.SCROLL_WEBHELP.search) {
+            return window.SCROLL_WEBHELP.search.getSearchQueryParametersForContext(name, value);
+        } else {
+            return [];
         }
     }
 

@@ -116,7 +116,7 @@ img {
 }
 
 .sp-aui-iconfont-close-dialog:before {
-  content: "";
+  content: "\f11b";
 }
 
 .sp-aui-icon-small:before {
@@ -145,7 +145,7 @@ img {
 }
 
 .sp-aui-iconfont-arrows-up:before {
-  content: "";
+  content: "\f109";
 }
 
 .sp-aui-icon-small, .sp-aui-icon-large {
@@ -155,40 +155,40 @@ img {
 }
 
 .sp-aui-iconfont-delete:before {
-  content: "";
+  content: "\f122";
 }
 
 .sp-aui-iconfont-confluence:before {
-  content: "";
+  content: "\f11f";
   font-size: 18px;
 }
 
 .sp-aui-iconfont-approve:before {
-  content: "";
+  content: "\f104";
 }
 
 .sp-aui-iconfont-remove:before {
-  content: "";
+  content: "\f188";
 }
 
 .sp-aui-iconfont-appswitcher:before {
-  content: "";
+  content: "\f105";
 }
 
 .sp-aui-iconfont-group:before {
-  content: "";
+  content: "\f167";
 }
 
 .sp-aui-iconfont-editor-mention:before {
-  content: "";
+  content: "\f152";
 }
 
 .sp-aui-iconfont-user:before {
-  content: "";
+  content: "\f1ad";
 }
 
 .sp-aui-iconfont-flag:before {
-  content: "";
+  content: "\f165";
 }
 
 /* secondary color; used for links, svg-icons … */
@@ -217,14 +217,14 @@ body {
 }
 .ht-pages-nav ul .ht-pages-nav-toggle:before {
   line-height: 22px;
-  content: "";
+  content: "\f11c";
 }
 .ht-pages-nav ul .open > ul {
   max-height: 9000px;
 }
 .ht-pages-nav ul .open > .ht-pages-nav-toggle:before {
   line-height: 18px;
-  content: "";
+  content: "\f15b";
 }
 .ht-pages-nav ul li {
   line-height: 1.25rem;

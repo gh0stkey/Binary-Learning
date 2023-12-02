@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>&#39537;&#21160;&#24320;&#21457; - &#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</title>
+
+    
+    <link rel="stylesheet" href="assets/css/expand-macro.css">
+
+            <meta name="scroll-content-language-key" content="">
+    
+    <meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+<script type="text/javascript" src="assets/js/translate.js"></script>
+
+<script type="text/javascript" src="assets/js/theme.main.js"></script>
+
+    <script type="text/javascript" src="assets/js/iframeResizer.min.js"></script>
+
+<link rel="stylesheet" href="assets/css/content-style.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+
+<link rel="stylesheet" href="assets/css/theme.main.css">
+<link rel="stylesheet" href="assets/css/theme.colors.css">
+
+            <!-- ES5 support for older browsers, needed by lunr -->
+        <script src="js/augment.js"></script>
+        <script id="worker" type="javascript/worker">
+
+        startIndex = function() {
+            idx = lunr.Index.load(lunrIndex);
+            idx.pipeline.remove(lunr.stopWordFilter);
+            postMessage({type: "setup-complete"});
+        }
+
+        onmessage = function (event) {
+            var message = event.data;
+
+            if ((message.type === 'setup') && message.baseUrl) {
+                var url = message.baseUrl;
+                importScripts(url + 'js/lunr.js');
+                importScripts(url + 'js/lunr-extras.js');
+                importScripts(url + 'js/lunr-index.js');
+                importScripts(url + 'js/lunr-data.js');
+                startIndex();
+            }
+
+            if (idx && (message.type === 'search-request') && message.query) {
+                var searchWord = message.query;
+                var results = idx.search(searchWord).map(function (result) {
+                    return lunrData.filter(function (d) {
+                        return d.id === parseInt(result.ref, 10)
+                    })[0]
+                });
+                postMessage({type: 'search-results', results: results, query: searchWord, queryId: message.queryId});
+            }
+        }
+
+    </script>
+    </head>
+
+<body pageid="1015827">
+
+<div id="ht-loader">
+    <noscript>
+        <p style="width: 100%; text-align:center; position: absolute; margin-top: 200px;">This content cannot be displayed without JavaScript.<br>Please enable JavaScript and reload the page.</p>
+    </noscript>
+</div>
+
+<div>
+   	<header id="ht-headerbar">
+    <div class="ht-headerbar-left">
+        <a href="" id="ht-menu-toggle" class="sp-aui-icon-small sp-aui-iconfont-appswitcher"></a>
+    </div>
+    <div class="ht-headerbar-right">
+            <div class="sp-aui-icon-small ht-search-index-loader ht-header-icon"></div>
+
+        <div id="ht-search">
+            <div class="ht-search-input" style="display: none;">
+              	<a href="#" class="sp-aui-icon-small sp-aui-iconfont-remove ht-search-clear"></a>
+
+                <form action="#" method="GET" id="search">
+                    <input class="search-input" type="text" placeholder="Search" tabindex="-1" autocomplete="off" name="q" value="">
+                    <input type="hidden" name="max" value="15" />
+                    <input type="submit" style="display:none" tabindex="-4"/>
+                </form>
+
+                <a href="#" id="ht-search-button" class="ht-header-icon ht-header-icon-svg">
+                                        <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path d="M29.572,28.802 L28.801,29.571 C28.515,29.857 28.187,30 27.816,30 C27.445,30 27.116,29.857 26.831,29.571 L21.392,24.134 C20.193,24.762 18.908,25.076 17.538,25.076 C15.396,25.076 13.605,24.348 12.163,22.892 C10.721,21.436 10,19.651 10,17.538 C10,15.397 10.721,13.605 12.163,12.163 C13.605,10.721 15.396,10 17.538,10 C19.651,10 21.434,10.721 22.89,12.163 C24.347,13.605 25.075,15.397 25.075,17.538 C25.075,18.937 24.761,20.222 24.132,21.393 L29.572,26.832 C29.857,27.118 30,27.446 30,27.817 C30,28.188 29.857,28.517 29.572,28.802 L29.572,28.802 Z M13.662,21.414 C14.732,22.485 16.024,23.02 17.538,23.02 C19.051,23.02 20.343,22.485 21.413,21.414 C22.484,20.344 23.019,19.052 23.019,17.538 C23.019,16.025 22.484,14.733 21.413,13.662 C20.343,12.592 19.051,12.056 17.538,12.056 C16.024,12.056 14.732,12.592 13.662,13.662 C12.591,14.733 12.056,16.025 12.056,17.538 C12.056,19.052 12.591,20.344 13.662,21.414 L13.662,21.414 Z"></path>
+                        </g>
+                    </svg>
+              	</a>
+
+                <div class="ht-search-dropdown ht-dropdown">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>   	<aside id="ht-sidebar">
+    <div class="ht-sidebar-content">
+        <div class="ht-sidebar-content-scroll-container">
+            <header class="ht-sidebar-header">
+                <h1 class="ht-logo">
+                    <span class="ht-logo-label">BinaryLearning</span>
+                    <img class="space-logo" src="global.logo" />
+                </h1>
+                <a href="Binary-Learning.html" class="ht-space-link">
+                    <h2>&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</h2>
+                </a>
+                <p><br><a href="https://github.com/gh0stkey/Binary-Learning" target="_blank">ᴀᴜᴛʜᴏʀ: ᴋᴇʏ</a><br><br>不积跬步，无以至千里；<br>不积小流，无以成江海。</p>
+            </header>
+                            <iframe id="ht-nav" src="toc.html?pageId=1015847"></iframe>
+                <script>
+                    $('iframe#ht-nav').iFrameResize(
+                            { 'log': true, 'autoResize': true, 'heightCalculationMethod': 'lowestElement', 'checkOrigin': false });
+                </script>
+                    </div>
+    </div>
+
+</aside></div>
+
+<div id="ht-wrap-container">
+
+            
+    <div id="ht-sidebar-dragbar">
+    <div class="ht-sidebar-drag-handle">
+        <span class="drag-handle-1"></span>
+        <span class="drag-handle-2"></span>
+        <span class="drag-handle-3"></span>
+    </div>
+</div>
+    <article id="ht-content" class="ht-content">
+        <header class="ht-content-header">
+            <div id="ht-breadcrumb">
+    <ul>
+        <li><a href="Binary-Learning.html">&#28404;&#27700;&#36870;&#21521;&#35838;&#31243;&#31508;&#35760;</a></li>
+                                                                                     <li><a href="%E4%B8%AD%E7%BA%A7%E7%AF%87.html">&#20013;&#32423;&#31687;</a></li>
+                                                            </ul>
+</div>            <h1 id="src-1015847"> <span>&#39537;&#21160;&#24320;&#21457;</span></h1>
+        </header>
+
+        <div id="main-content" class="wiki-content sp-grid-section" data-index-for-search="true">
+
+    <div class="section section-1" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeeOr-Wig-mFjee9rg">
+        <h1 class="heading "><span>&#29615;&#22659;&#37197;&#32622;</span></h1>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeW8gOWPkeeOr-Wigw">
+        <h2 class="heading "><span>&#24320;&#21457;&#29615;&#22659;</span></h2>
+<p   
+>&#22312;&#24320;&#21457;&#39537;&#21160;&#31243;&#24207;&#20043;&#21069;&#65292;&#25105;&#20204;&#38656;&#35201;&#37197;&#32622;&#22909;&#24320;&#21457;&#29615;&#22659;&#65292; &#39318;&#20808;&#23433;&#35013;&#22909;VS IDE&#65288;&#36825;&#37324;&#33258;&#24049;&#36873;&#25321;&#29256;&#26412;&#65289;&#65292;&#20854;&#27425;&#22240;&#20026;&#25105;&#20204;&#38656;&#35201;&#24320;&#21457;&#39537;&#21160;&#31243;&#24207;&#25152;&#20197;&#38656;&#35201;&#23433;&#35013;WDK&#65288;WDK&#19979;&#36733;&#22320;&#22336;&#65306;<a  class="external-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/other-wdk-downloads">https://docs.microsoft.com/zh-cn/windows-hardware/drivers/other-wdk-downloads</a>&#65289;&#65292;&#22312;&#25105;&#20204;&#23433;&#35013;WDK&#26102;&#20505;&#38656;&#35201;&#27880;&#24847;&#20854;&#29256;&#26412;&#24212;&#19982;SDK&#30340;&#29256;&#26412;&#19968;&#33268;&#12290;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;&#25511;&#21046;&#38754;&#26495;-&#31243;&#24207;&#21368;&#36733;&#65292;&#25214;&#21040;&#24403;&#21069;VS IDE&#23433;&#35013;&#30340;SDK&#29256;&#26412;&#65292;&#22914;&#19979;&#25152;&#31034;&#65292;&#25105;&#30340;&#31995;&#32479;&#19978;SDK&#30340;&#29256;&#26412;&#26159;17763&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_10-43-35.png" alt="images/download/attachments/1015847/image2022-9-1_10-43-35.png" width="600"  />
+    </p>
+<p   
+>&#25509;&#30528;&#20320;&#38656;&#35201;&#22312;WDK&#30340;&#19979;&#36733;&#22320;&#22336;&#20013;&#36873;&#25321;&#23545;&#24212;&#31995;&#32479;&#30340;&#23433;&#35013;&#21253;&#65292;&#30001;&#20110;&#25105;&#24403;&#21069;&#26159;Windows 10 21H2&#29256;&#26412;&#65292;&#20294;&#26159;&#39029;&#38754;&#20013;&#24182;&#27809;&#26377;&#23545;&#24212;&#30340;&#29256;&#26412;&#36873;&#25321;&#65292;&#25152;&#20197;&#25105;&#25226;&#25152;&#26377;Windows10&#30340;WDK&#23433;&#35013;&#21253;&#37117;&#19979;&#36733;&#19979;&#26469;&#20102;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_10-45-40.png" alt="images/download/attachments/1015847/image2022-9-1_10-45-40.png" width="400"  />
+    </p>
+<p   
+>&#23433;&#35013;&#21253;&#20381;&#27425;&#25171;&#24320;&#65292;&#23601;&#25214;&#21040;&#20102;&#19982;SDK&#23545;&#24212;&#29256;&#26412;&#30340;WDK&#23433;&#35013;&#21253;&#65292;&#25509;&#30528;&#25353;&#27493;&#39588;&#23433;&#35013;&#21363;&#21487;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_10-47-28.png" alt="images/download/attachments/1015847/image2022-9-1_10-47-28.png" width="600"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLemhueebrumFjee9rg">
+        <h2 class="heading "><span>&#39033;&#30446;&#37197;&#32622;</span></h2>
+<p   
+>&#23433;&#35013;&#22909;&#24320;&#21457;&#29615;&#22659;&#20043;&#21518;&#25105;&#20204;&#25171;&#24320;VS2017&#65292;&#26032;&#24314;&#39033;&#30446;&#24182;&#36873;&#25321;VC++&#19979;&#30340;Wimdows Drivers&#65292;&#21019;&#24314;Empty WDM Driver&#39033;&#30446;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_15-13-20.png" alt="images/download/attachments/1015847/image2022-9-1_15-13-20.png" width="600"  />
+    </p>
+<p   
+>&#21019;&#24314;&#23436;&#39033;&#30446;&#20043;&#21518;&#65292;&#36827;&#20837;&#21040;&#39033;&#30446;&#23646;&#24615;&#65292;&#25353;&#22914;&#19979;&#22270;&#25152;&#31034;&#36827;&#34892;&#37197;&#32622;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_15-19-12.png" alt="images/download/attachments/1015847/image2022-9-1_15-19-12.png" width="600"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_15-19-26.png" alt="images/download/attachments/1015847/image2022-9-1_15-19-26.png" width="600"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_15-19-42.png" alt="images/download/attachments/1015847/image2022-9-1_15-19-42.png" width="600"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_15-19-51.png" alt="images/download/attachments/1015847/image2022-9-1_15-19-51.png" width="600"  />
+    </p>
+<p   
+>&#33267;&#27492;&#65292;&#25105;&#20204;&#25152;&#26377;&#30340;&#37197;&#32622;&#24037;&#20316;&#23601;&#25630;&#23450;&#20102;&#12290;</p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLUhlbGxvRHJpdmVy">
+        <h1 class="heading "><span>Hello Driver</span></h1>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLempseWKqOeoi-W6j-S7o-eggQ">
+        <h2 class="heading "><span>&#39537;&#21160;&#31243;&#24207;&#20195;&#30721;</span></h2>
+<p   
+>&#24403;&#25105;&#20204;&#37197;&#32622;&#22909;&#39537;&#21160;&#24320;&#21457;&#29615;&#22659;&#21450;&#39033;&#30446;&#20043;&#21518;&#65292;&#21487;&#20197;&#21019;&#24314;&#20195;&#30721;&#25991;&#20214;&#65292;&#20294;&#38656;&#35201;&#27880;&#24847;&#30340;&#26159;&#25105;&#20204;&#22312;&#23398;&#20064;&#38454;&#27573;&#26102;&#20505;&#24314;&#35758;&#20195;&#30721;&#25991;&#20214;&#20351;&#29992;C&#35821;&#35328;&#65292;&#36825;&#26679;&#32534;&#35793;&#22120;&#23601;&#19981;&#20250;&#36827;&#34892;&#22826;&#22810;&#30340;&#20248;&#21270;&#65292;&#20063;&#20415;&#20110;&#25105;&#20204;&#35843;&#35797;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_15-22-35.png" alt="images/download/attachments/1015847/image2022-9-1_15-22-35.png" width="600"  />
+    </p>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#23558;&#39033;&#30446;&#20195;&#30721;&#30340;&#35686;&#21578;&#37197;&#32622;&#20462;&#25913;&#19968;&#19979;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_15-31-11.png" alt="images/download/attachments/1015847/image2022-9-1_15-31-11.png" width="600"  />
+    </p>
+<p   
+>&#28982;&#21518;&#25105;&#20204;&#24320;&#22987;&#20889;&#33258;&#24049;&#30340;&#31532;&#19968;&#20010;&#39537;&#21160;&#31243;&#24207;&#20195;&#30721;&#65292;&#26368;&#22522;&#26412;&#30340;&#26684;&#24335;&#23601;&#26159;&#21253;&#21547;ntddk.h&#22836;&#25991;&#20214;&#65292;&#20197;&#21450;&#20889;&#22909;&#39537;&#21160;&#31243;&#24207;&#20837;&#21475;&#20989;&#25968;DriverEntry&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;ntddk.h&gt; </code><code class="comments">// 必须要包含的头文件</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 自定义的驱动程序卸载函数</code></div>
+<div class="line"><code class="plain">VOID DriverUnload(PDRIVER_OBJECT DriverObject)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"Bye. \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 驱动程序入口函数</code></div>
+<div class="line"><code class="plain">NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"Hello Driver. \n"</code><code class="plain">);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置一个卸载函数，当驱动停止时触发</code></div>
+<div class="line"><code class="plain">    DriverObject-&gt;DriverUnload = DriverUnload;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#26368;&#21518;&#25105;&#20204;&#32534;&#35793;&#20195;&#30721;&#65292;&#22312;&#39033;&#30446;&#30340;Debug&#30446;&#24405;&#19979;&#25214;&#21040;.sys&#25991;&#20214;&#65292;&#36825;&#23601;&#26159;&#25105;&#20204;&#32534;&#35793;&#20986;&#26469;&#30340;&#39537;&#21160;&#31243;&#24207;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-1_16-56-23.png" alt="images/download/attachments/1015847/image2022-9-1_16-56-23.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeS9v-eUqOmpseWKqOeoi-W6jw">
+        <h2 class="heading "><span>&#20351;&#29992;&#39537;&#21160;&#31243;&#24207;</span></h2>
+<p   
+>&#23558;&#32534;&#35793;&#22909;&#30340;&#39537;&#21160;&#31243;&#24207;&#12289;KdmManager&#12289;DebugView&#25302;&#21040;XP&#34394;&#25311;&#26426;&#20013;&#65288;&#22312;&#34394;&#25311;&#26426;&#20013;&#21435;&#35843;&#35797;&#39537;&#21160;&#27604;&#23454;&#20307;&#26426;&#20013;&#26041;&#20415;&#65289;&#65292;&#20351;&#29992;KdmManager&#21152;&#36733;&#39537;&#21160;&#65292;&#25353;&#19979;&#22270;&#25152;&#31034;&#27493;&#39588;&#20381;&#27425;&#36827;&#34892;&#65292;&#20110;&#27492;&#21516;&#26102;&#20063;&#35201;&#25171;&#24320;DebugView&#65292;&#21516;&#26102;&#24320;&#21551;&#30417;&#21548;&#20869;&#26680;&#30340;&#36873;&#39033;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-2_10-51-43.png" alt="images/download/attachments/1015847/image2022-9-2_10-51-43.png" width="400"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-2_10-52-52.png" alt="images/download/attachments/1015847/image2022-9-2_10-52-52.png" width="400"  />
+    </p>
+<p   
+>&#24403;&#25105;&#20204;&#20381;&#27425;&#36827;&#34892;&#27880;&#20876;&#12289;&#36816;&#34892;&#12289;&#20572;&#27490;&#12289;&#21368;&#36733;&#65292;&#21487;&#20197;&#28165;&#26224;&#30340;&#22312;DebugView&#20013;&#35266;&#23519;&#21040;&#25105;&#20204;&#39537;&#21160;&#31243;&#24207;&#25152;&#36755;&#20986;&#30340;&#20869;&#23481;&#65292;<strong class=" ">&#24182;&#19988;&#25105;&#20204;&#20063;&#30693;&#36947;&#20102;&#20989;&#25968;&#25191;&#34892;&#30340;&#27969;&#31243;</strong>&#65306;&#24403;&#28857;&#20987;Run&#25353;&#38062;&#26102;&#36827;&#20837;&#39537;&#21160;&#31243;&#24207;&#20837;&#21475;&#20989;&#25968;&#65292;&#24403;&#28857;&#20987;Stop&#25353;&#38062;&#26102;&#36827;&#20837;&#33258;&#23450;&#20041;&#30340;&#39537;&#21160;&#31243;&#24207;&#21368;&#36733;&#20989;&#25968;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-2_10-54-23.png" alt="images/download/attachments/1015847/image2022-9-2_10-54-23.png" width="600"  />
+    </p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeiwg-ivlempseWKqOeoi-W6jw">
+        <h1 class="heading "><span>&#35843;&#35797;&#39537;&#21160;&#31243;&#24207;</span></h1>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeiwg-ivleeOr-Wigw">
+        <h2 class="heading "><span>&#35843;&#35797;&#29615;&#22659;</span></h2>
+<p   
+>&#35843;&#24335;&#39537;&#21160;&#31243;&#24207;&#19981;&#20687;&#24212;&#29992;&#31243;&#24207;&#19968;&#26679;&#31616;&#21333;&#65288;&#30452;&#25509;&#22312;OD&#20043;&#31867;&#30340;&#35843;&#35797;&#24037;&#20855;&#20013;&#19979;&#26029;&#28857;&#65289;&#65292;&#35201;&#24819;&#35843;&#35797;&#39537;&#21160;&#31243;&#24207;&#23601;&#38656;&#35201;&#20351;&#29992;&#21452;&#26426;&#35843;&#35797;&#65292;&#22312;&#34394;&#25311;&#26426;&#20013;&#36816;&#34892;&#39537;&#21160;&#31243;&#24207;&#65292;&#22312;&#23454;&#20307;&#26426;&#19978;&#20351;&#29992;0&#29615;&#35843;&#35797;&#22120;&#65288;&#20063;&#23601;&#26159;WinDbg&#65289;&#36827;&#34892;&#35843;&#35797;&#12290;</p>
+<p   
+>&#20043;&#21069;&#25105;&#20204;&#36827;&#34892;&#21452;&#26426;&#35843;&#35797;&#37197;&#32622;&#26102;&#65292;&#38656;&#35201;&#25163;&#21160;&#20462;&#25913;&#25991;&#20214;&#28982;&#21518;&#37325;&#21551;&#65292;&#36825;&#20010;&#27493;&#39588;&#30456;&#23545;&#26469;&#35828;&#27604;&#36739;&#32321;&#29712;&#65292;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;VirtualKD&#65288;&#24320;&#28304;&#39033;&#30446;&#22320;&#22336;&#65306;<a  class="external-link" href="https://github.com/4d61726b/VirtualKD-Redux">https://github.com/4d61726b/VirtualKD-Redux</a>&#65289;&#31243;&#24207;&#26469;&#31616;&#21270;&#25972;&#20010;&#27493;&#39588;&#12290;</p>
+<p   
+>&#22914;&#19979;&#22270;&#25152;&#31034;&#23601;&#25972;&#20010;&#31243;&#24207;&#30340;&#30446;&#24405;&#32467;&#26500;&#65292;target32/64&#30446;&#24405;&#19979;&#30340;&#25991;&#20214;&#23601;&#26159;&#26681;&#25454;&#34394;&#25311;&#26426;&#25805;&#20316;&#31995;&#32479;&#30340;&#31867;&#22411;&#36873;&#25321;&#24182;&#22797;&#21046;&#36827;&#34394;&#25311;&#26426;&#30340;&#65292;vmmon64.exe&#23601;&#26159;&#20027;&#31243;&#24207;&#65292;&#30452;&#25509;&#23454;&#20307;&#26426;&#25171;&#24320;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-2_13-51-56.png" alt="images/download/attachments/1015847/image2022-9-2_13-51-56.png" width="400"  />
+    </p>
+<p   
+>&#25105;&#30340;&#34394;&#25311;&#26426;&#31995;&#32479;&#26159;Windows XP 32&#20301;&#65292;&#25152;&#20197;&#25105;&#23558;target32&#30446;&#24405;&#25918;&#20837;&#34394;&#25311;&#26426;&#20013;&#65292;&#24182;&#19988;&#25353;&#22914;&#19979;&#27493;&#39588;&#25805;&#20316;&#65306;</p>
+<p   
+>&#21452;&#20987;&#36816;&#34892;vminstall.exe-&#28857;&#20987;Install&#25353;&#38062;-&#28857;&#20987;&ldquo;&#26159;&rdquo;-&#31995;&#32479;&#37325;&#21551;-&#36873;&#25321;VKD-Redux&#21551;&#21160;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-2_13-56-23.png" alt="images/download/attachments/1015847/image2022-9-2_13-56-23.png" width="600"  />
+    </p>
+<p   
+>&#20110;&#27492;&#21516;&#26102;&#25171;&#24320;vmmon64.exe&#65292;&#36873;&#25321;&#22909;&#23545;&#24212;&#30340;Windbg&#31243;&#24207;&#36335;&#24452;&#65288;&#19968;&#33324;&#24773;&#20917;&#19979;&#31243;&#24207;&#20250;&#23547;&#25214;&#40664;&#35748;Windbg&#31243;&#24207;&#36335;&#24452;&#65289;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-2_13-59-16.png" alt="images/download/attachments/1015847/image2022-9-2_13-59-16.png" width="600"  />
+    </p>
+<p   
+>&#26368;&#21518;&#36827;&#20837;&#35843;&#35797;&#27169;&#24335;&#65292;&#31649;&#36947;&#36830;&#25509;&#19978;&#20250;&#33258;&#21160;&#25171;&#24320;Windbg&#31243;&#24207;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-2_14-0-32.png" alt="images/download/attachments/1015847/image2022-9-2_14-0-32.png" width="600"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLVBEQuaWh-S7tg">
+        <h2 class="heading "><span>PDB&#25991;&#20214;</span></h2>
+<p   
+>&#26080;&#35770;&#26159;OD&#36824;&#26159;Windbg&#65292;&#37117;&#38656;&#35201;&#31526;&#21495;&#25991;&#20214;&#30340;&#21152;&#25345;&#25165;&#33021;&#22312;&#36870;&#21521;&#26102;&#33719;&#24471;&#21040;&#26356;&#22810;&#30340;&#20449;&#24687;&#65292;&#20363;&#22914;&#20320;&#29992;OD&#21435;&#35843;&#35797;&#31243;&#24207;&#26102;&#32463;&#24120;&#21487;&#20197;&#30475;&#21040;&#19968;&#20123;Windows API&#26159;&#20197;&#20989;&#25968;&#21517;&#31216;&#30340;&#24418;&#24335;&#23384;&#22312;&#20110;&#21453;&#27719;&#32534;&#37324;&#30340;&#65292;&#36825;&#23601;&#26159;&#31526;&#21495;&#25991;&#20214;&#36215;&#30340;&#20316;&#29992;&#12290;</p>
+<p   
+>PDB&#25991;&#20214;&#20063;&#23601;&#26159;&#31526;&#21495;&#25991;&#20214;&#65292;&#25105;&#20204;&#22312;&#32534;&#35793;&#31243;&#24207;&#26102;&#20505;&#65292;&#21482;&#35201;&#19981;&#21462;&#28040;&#35843;&#35797;&#20449;&#24687;&#30340;&#36755;&#20986;&#65292;&#40664;&#35748;&#24773;&#20917;&#19979;&#26159;&#21487;&#20197;&#22312;&#32534;&#35793;&#36755;&#20986;&#30340;&#30446;&#24405;&#20013;&#25214;&#21040;&#25152;&#32534;&#35793;&#31243;&#24207;&#30340;PDB&#25991;&#20214;&#30340;&#65292;&#20363;&#22914;&#25105;&#20204;&#19978;&#25991;&#20013;&#32534;&#35793;&#30340;&#39537;&#21160;&#31243;&#24207;&#30340;&#36755;&#20986;&#30446;&#24405;&#19979;&#23601;&#26377;&#23545;&#24212;&#30340;PDB&#25991;&#20214;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-6_22-37-49.png" alt="images/download/attachments/1015847/image2022-9-6_22-37-49.png" width="400"  />
+    </p>
+<p   
+>&#25105;&#20204;&#35201;&#24819;&#22312;Windbg&#20013;&#35843;&#35797;&#39537;&#21160;&#31243;&#24207;&#23601;&#38656;&#35201;&#36825;&#20010;PDB&#25991;&#20214;&#65292;&#20294;&#26159;&#22312;&#36825;&#20043;&#21069;&#25105;&#20204;&#38656;&#35201;&#20808;&#22312;&#39537;&#21160;&#20195;&#30721;&#20869;&#20889;&#19978;&#20869;&#32852;&#27719;&#32534;&#65292;&#29992;&#20110;&#26029;&#28857;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-6_22-42-50.png" alt="images/download/attachments/1015847/image2022-9-6_22-42-50.png" width="600"  />
+    </p>
+<p   
+>&#32534;&#35793;&#20043;&#21518;&#23558;&#25991;&#20214;&#25918;&#20837;&#34394;&#25311;&#26426;&#65292;&#20197;&#21450;&#22312;Windbg&#37325;&#36733;&#31526;&#21495;&#25991;&#20214;&#65292;&#25353;&#22914;&#19979;&#22270;&#25805;&#20316;&#22635;&#20837;PDB&#25991;&#20214;&#25152;&#22312;&#36335;&#24452;&#21363;&#21487;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-6_22-58-51.png" alt="images/download/attachments/1015847/image2022-9-6_22-58-51.png" width="600"  />
+    </p>
+<p   
+>&#25509;&#30528;&#22312;&#34394;&#25311;&#26426;&#20013;&#29992;KdmManager&#21152;&#36733;&#24182;&#36816;&#34892;&#39537;&#21160;&#31243;&#24207;&#65292;&#36816;&#34892;&#26102;&#65288;KdmManager&#36719;&#20214;&#20013;&#28857;&#20987;Run&#25353;&#38062;&#65289;&#23601;&#20250;&#22312;Windbg&#20013;&#26029;&#19979;&#26469;&#65292;&#22914;&#19979;&#22270;&#22312;Windbg&#20013;&#26032;&#24314;&#20102;&#19968;&#20010;&#31383;&#21475;&#65288;&#24038;&#36793;&#30340;&#31383;&#21475;&#65289;&#23637;&#31034;&#24403;&#21069;&#39537;&#21160;&#31243;&#24207;&#26029;&#28857;&#30340;&#20301;&#32622;&#65292;&#24182;&#19988;&#37117;&#26159;&#20197;&#28304;&#20195;&#30721;&#24418;&#24335;&#23637;&#31034;&#32473;&#25105;&#20204;&#30340;&#65292;&#36825;&#31181;&#25928;&#26524;&#19982;&#25105;&#20204;&#22312;&#35843;&#35797;&#24212;&#29992;&#31243;&#24207;&#26102;&#29992;VS&#26159;&#19968;&#26679;&#30340;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-6_22-45-35.png" alt="images/download/attachments/1015847/image2022-9-6_22-45-35.png" width="600"  />
+    </p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWfuuehgOWGheWuuQ">
+        <h1 class="heading "><span>&#22522;&#30784;&#20869;&#23481;</span></h1>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWGheaguEFQSeeahOS9v-eUqA">
+        <h2 class="heading "><span>&#20869;&#26680;API&#30340;&#20351;&#29992;</span></h2>
+<p   
+>&#22312;&#24212;&#29992;&#23618;&#32534;&#31243;&#26102;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;&#21253;&#21547;Windows.h&#36825;&#20010;&#22836;&#25991;&#20214;&#26469;&#20351;&#29992;Windows&#25552;&#20379;&#30340;API&#65292;&#20294;&#26159;&#22312;&#20869;&#26680;&#32534;&#31243;&#26102;&#25105;&#20204;&#19981;&#21487;&#20197;&#20351;&#29992;&#24212;&#29992;&#23618;&#30340;API&#65292;&#32780;&#35201;&#20351;&#29992;&#20869;&#26680;&#19987;&#29992;&#30340;API&#65292;&#25152;&#20197;&#25105;&#20204;&#38656;&#35201;&#21253;&#21547;&#30340;&#22836;&#25991;&#20214;&#23601;&#21464;&#25104;&#20102;ntddk.h&#65288;&#38656;&#35201;&#23433;&#35013;&#22909;WDK&#65289;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-7_15-38-23.png" alt="images/download/attachments/1015847/image2022-9-7_15-38-23.png" width="400"  />
+    </p>
+<p   
+>&#19982;&#24212;&#29992;&#31243;&#24207;&#24320;&#21457;&#19968;&#26679;&#65292;&#25105;&#20204;&#24819;&#35201;&#21435;&#20102;&#35299;&#26576;&#20010;&#20869;&#26680;API&#30340;&#20449;&#24687;&#65292;&#20063;&#38656;&#35201;&#26597;&#38405;&#25991;&#26723;&#65292;&#32769;&#29256;&#26412;&#30340;WDK&#23433;&#35013;&#20043;&#21518;&#20250;&#33258;&#24102;&#25991;&#26723;&#20449;&#24687;&#65292;&#36739;&#26032;&#19968;&#28857;&#30340;WDK&#19981;&#20250;&#33258;&#24102;&#65292;&#25105;&#20204;&#38656;&#35201;&#21435;&#23448;&#32593;&#26597;&#30475;&#65306;<a  class="external-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/ddi/">https://docs.microsoft.com/zh-cn/windows-hardware/drivers/ddi/</a></p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-7_15-48-5.png" alt="images/download/attachments/1015847/image2022-9-7_15-48-5.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeacquWvvOWHuuWHveaVsOeahOS9v-eUqA">
+        <h2 class="heading "><span>&#26410;&#23548;&#20986;&#20989;&#25968;&#30340;&#20351;&#29992;</span></h2>
+<p   
+>WDK&#25991;&#26723;&#37324;&#21482;&#21253;&#21547;&#20102;&#23548;&#20986;&#30340;&#20989;&#25968;&#20449;&#24687;&#65292;&#23545;&#20110;&#26410;&#23548;&#20986;&#30340;&#20989;&#25968;&#26159;&#26597;&#38405;&#19981;&#21040;&#30456;&#20851;&#36164;&#26009;&#30340;&#65288;&#25105;&#20204;&#20063;&#21487;&#20197;&#23558;&#20854;&#31216;&#20043;&#20026;&#26410;&#25991;&#26723;&#21270;&#20989;&#25968;&#65289;&#12290;&#22914;&#26524;&#25105;&#20204;&#24819;&#20351;&#29992;&#26410;&#23548;&#20986;&#30340;&#20989;&#25968;&#65292;&#38656;&#35201;&#23450;&#20041;&#19968;&#20010;&#20989;&#25968;&#25351;&#38024;&#65292;&#24182;&#19988;&#20026;&#20989;&#25968;&#25351;&#38024;&#25552;&#20379;&#27491;&#30830;&#30340;&#20989;&#25968;&#22320;&#22336;&#23601;&#21487;&#20197;&#20351;&#29992;&#20102;&#12290;&#26410;&#23548;&#20986;&#20989;&#25968;&#30340;&#22320;&#22336;&#21487;&#20197;&#36890;&#36807;<strong class=" ">&#29305;&#24449;&#30721;&#25628;&#32034;&#12289;&#35299;&#26512;&#20869;&#26680;&#30340;PDB&#25991;&#20214;</strong>&#26469;&#25214;&#21040;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWfuuacrOaVsOaNruexu-Wei-eahOS9v-eUqA">
+        <h2 class="heading "><span>&#22522;&#26412;&#25968;&#25454;&#31867;&#22411;&#30340;&#20351;&#29992;</span></h2>
+<p   
+>&#22312;&#20869;&#26680;&#32534;&#31243;&#30340;&#26102;&#20505;&#65292;&#24517;&#39035;&#35201;&#36981;&#23432;WDK&#30340;&#32534;&#30721;&#20064;&#24815;&#65292;&#20363;&#22914;&#26080;&#31526;&#21495;&#31867;&#22411;&#19981;&#35201;&#22312;&#31867;&#22411;&#21069;&#21152;&#19978;&#20851;&#38190;&#35789;unsigned&#65292;&#32780;&#26159;&#35201;&#36981;&#24490;WDK&#33258;&#24049;&#30340;&#31867;&#22411;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>WDK&#30340;&#20889;&#27861;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#34920;&#36798;&#30340;&#24847;&#24605;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ULONG</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>unsigned long</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>UCHAR</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>unsigned char</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>UINT</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>unsigned int</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>VOID</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>void</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PULONG</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>unsigned long *</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUCHAR</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>unsigned char *</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PUNIT</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>unsigned int *</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>PVOID</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>void *</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>&#22914;&#26524;&#20320;&#25353;&#21518;&#32773;&#21435;&#20889;&#65292;<strong class=" ">&#22312;&#19981;&#21516;&#30340;&#24179;&#21488;&#19978;&#31227;&#26893;&#20195;&#30721;&#21487;&#33021;&#20250;&#23548;&#33268;&#25968;&#25454;&#23485;&#24230;&#19981;&#21516;</strong>&#65292;&#35201;&#20462;&#25913;&#21040;&#30456;&#21516;&#23485;&#24230;&#23601;&#38656;&#35201;&#20462;&#25913;&#20195;&#30721;&#65292;&#32780;&#25353;WDK&#30340;&#20889;&#27861;&#23601;&#21487;&#20197;&#20943;&#23569;&#36825;&#31181;&#19981;&#24517;&#35201;&#30340;&#24773;&#20917;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLei_lOWbnuWAvA">
+        <h2 class="heading "><span>&#36820;&#22238;&#20540;</span></h2>
+<p   
+>&#22823;&#37096;&#20998;&#20869;&#26680;&#20989;&#25968;&#30340;&#36820;&#22238;&#20540;&#37117;&#26159;NTSTATUS&#31867;&#22411;&#65292;&#23427;&#26412;&#36136;&#26159;&#19968;&#20010;&#23439;&#65292;&#37324;&#38754;&#21253;&#21547;&#30340;&#31867;&#22411;&#26377;&#24456;&#22810;&#65292;&#22914;&#19979;&#19977;&#20010;&#23601;&#26159;&#24120;&#35265;&#30340;&#36820;&#22238;&#20540;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="relative-table wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#23439;&#21517;&#31216;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#23454;&#38469;&#20540;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#21547;&#20041;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>STATUS_SUCCESS</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x00000000</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#25104;&#21151;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>STATUS_INVALID_PARAMETER</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0xC000000D</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#21442;&#25968;&#26080;&#25928;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>STATUS_BUFFER_OVERFLOW</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0x80000005</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#32531;&#20914;&#21306;&#38271;&#24230;&#19981;&#22815;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p   
+>&#24403;&#20320;&#35843;&#29992;&#30340;&#20869;&#26680;&#20989;&#25968;&#36820;&#22238;&#32467;&#26524;&#19981;&#26159;STATUS_SUCCESS&#65292;&#37027;&#23601;&#35828;&#26126;&#20989;&#25968;&#22312;&#25191;&#34892;&#26102;&#36935;&#21040;&#20102;&#38382;&#39064;&#65292;&#20855;&#20307;&#30340;&#38382;&#39064;&#21487;&#20197;&#26681;&#25454;&#36820;&#22238;&#20540;&#22312;ntstatus.h&#22836;&#25991;&#20214;&#20013;&#21435;&#23547;&#25214;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-7_16-7-36.png" alt="images/download/attachments/1015847/image2022-9-7_16-7-36.png" width="600"  />
+    </p>
+<p   
+>&#36890;&#36807;&#23439;&#30340;&#21517;&#31216;&#20063;&#33021;&#30693;&#36947;&#20010;&#22823;&#27010;&#65292;&#22914;&#26524;&#20173;&#28982;&#19981;&#30693;&#36947;&#38382;&#39064;&#30340;&#21547;&#20041;&#65292;&#21487;&#20197;&#22312;&#24494;&#36719;&#30340;WDK&#25991;&#26723;&#20013;&#21435;&#25628;&#32034;&#30456;&#20851;&#23439;&#21517;&#31216;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWGheaguOS4reeahOW8guW4uOWkhOeQhg">
+        <h2 class="heading "><span>&#20869;&#26680;&#20013;&#30340;&#24322;&#24120;&#22788;&#29702;</span></h2>
+<p   
+>&#22312;&#20869;&#26680;&#20013;&#19968;&#20010;&#23567;&#23567;&#30340;&#38169;&#35823;&#23601;&#21487;&#33021;&#23548;&#33268;&#34013;&#23631;&#65292;&#20363;&#22914;&#25105;&#20204;&#21435;&#35835;&#20889;&#19968;&#20010;&#26080;&#25928;&#30340;&#20869;&#23384;&#22320;&#22336;&#12290;&#20026;&#20102;&#35753;&#33258;&#24049;&#30340;&#20869;&#26680;&#31243;&#24207;&#26356;&#21152;&#20581;&#22766;&#65292;&#22312;&#32534;&#20889;&#20869;&#26680;&#31243;&#24207;&#26102;&#35201;&#20351;&#29992;&#21040;&#24322;&#24120;&#22788;&#29702;&#12290;</p>
+<p   
+>&#22312;Windows&#19979;&#25552;&#20379;&#20102;&#32467;&#26500;&#21270;&#24322;&#24120;&#22788;&#29702;&#26426;&#21046;&#65292;&#32534;&#35793;&#22120;&#26222;&#36941;&#37117;&#25903;&#25345;&#65292;&#22914;&#19979;&#23601;&#26159;&#20195;&#30721;&#20351;&#29992;&#26041;&#27861;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">__try</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 填入可能要出错的代码</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"><code class="plain">__except (filter_value)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 填入出错后要执行的代码</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#22914;&#19978;&#31034;&#20363;&#20013;&#30340;filter_value&#65292;&#23601;&#26159;&#24403;&#20869;&#26680;&#31243;&#24207;&#20986;&#29616;&#24322;&#24120;&#26102;&#20915;&#23450;&#31243;&#24207;&#22914;&#20309;&#25191;&#34892;&#30340;&#65292;&#19968;&#33324;&#26377;&#36825;&#19977;&#31181;&#24773;&#20917;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#23439;&#21517;&#31216;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#23454;&#38469;&#20540;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#21547;&#20041;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>EXCEPTION_EXECUTE_HANDLER</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#36827;&#20837;except&#20195;&#30721;&#22359;&#25191;&#34892;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>EXCEPTION_CONTINUE_SEARCH</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>0</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#19981;&#22788;&#29702;&#24322;&#24120;&#65292;&#30001;&#19978;&#19968;&#23618;&#35843;&#29992;&#20989;&#25968;&#22788;&#29702;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>EXCEPTION_CONTINUE_EXECUTION</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>-1</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#32487;&#32493;&#25191;&#34892;&#38169;&#35823;&#22788;&#30340;&#20195;&#30721;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeW4uOeUqOeahOWGheaguOWGheWtmOWHveaVsA">
+        <h2 class="heading "><span>&#24120;&#29992;&#30340;&#20869;&#26680;&#20869;&#23384;&#20989;&#25968;</span></h2>
+<p   
+>&#32534;&#20889;&#20869;&#26680;&#31243;&#24207;&#26159;&#26080;&#27861;&#36991;&#20813;&#21435;&#25805;&#20316;&#20869;&#23384;&#30340;&#65292;&#23545;&#20869;&#23384;&#30340;&#20351;&#29992;&#20027;&#35201;&#23601;&#26159;&#30003;&#35831;&#12289;&#35774;&#32622;&#12289;&#25335;&#36125;&#12289;&#37322;&#25918;&#65292;&#24120;&#29992;&#30340;&#20869;&#26680;&#20989;&#25968;&#22914;&#19979;&#65288;&#24212;&#29992;&#23618;&#19982;&#20869;&#26680;&#23618;&#30340;&#23545;&#27604;&#65289;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#24212;&#29992;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20869;&#26680;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>malloc</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ExAllocatePool</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>memset</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlFillMemory</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>memcpy</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlMoveMemory</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>free</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ExFreePool</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWGheaguOWtl-espuS4suenjeexuw">
+        <h2 class="heading "><span>&#20869;&#26680;&#23383;&#31526;&#20018;&#31181;&#31867;</span></h2>
+<p   
+>&#22312;&#20869;&#26680;&#20013;&#25105;&#20204;&#30340;&#23383;&#31526;&#20018;&#31181;&#31867;&#21464;&#22810;&#20102;&#65292;&#26377;CHAR&#12289;WCHAR&#12289;ANSI_STRING&#12289;UNICODE_STRING&#12290;&#21069;&#20004;&#20010;&#23601;&#26159;char&#21644;wchar_t&#22312;&#20869;&#26680;&#30340;&#20889;&#27861;&#65292;&#20294;&#26159;&#19968;&#33324;&#19981;&#24314;&#35758;&#20351;&#29992;&#36825;&#31181;&#20889;&#27861;&#32780;&#20351;&#29992;&#21518;&#20004;&#20010;&#65288;&#21518;&#20004;&#20010;&#21363;&#21069;&#20004;&#20010;&#30340;&#21319;&#32423;&#29256;&#65289;&#65292;&#22240;&#20026;&#22312;&#20869;&#26680;&#20013;&#20351;&#29992;&#20869;&#23384;&#26159;&#35201;&#38750;&#24120;&#23567;&#24515;&#30340;&#65292;&#22914;&#26524;&#20351;&#29992;&#21069;&#20004;&#20010;&#31867;&#22411;&#23383;&#31526;&#20018;&#26159;&#27809;&#26377;&#25511;&#21046;&#38271;&#24230;&#30340;&#65292;&#21363;&#23383;&#31526;&#20018;&#21040;0x0&#25110;&#20004;&#20010;0x0&#23601;&#25130;&#27490;&#65292;&#20294;&#22914;&#26524;&#35835;&#20889;&#23383;&#31526;&#20018;&#26102;&#27809;&#26377;&#36981;&#24490;&#36825;&#20010;&#35268;&#21017;&#35835;&#21462;&#36234;&#30028;&#20102;&#23601;&#20250;&#23548;&#33268;&#34013;&#23631;&#12290;</p>
+<p   
+>ANSI_STRING&#23383;&#31526;&#20018;&#30340;&#23450;&#20041;&#22914;&#19979;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">typedef struct _STRING {</code></div>
+<div class="line"><code class="plain">    USHORT Length;</code></div>
+<div class="line"><code class="plain">    USHORT MaximumLength;</code></div>
+<div class="line"><code class="plain">#ifdef MIDL_PASS</code></div>
+<div class="line"><code class="plain">    [size_is(MaximumLength), length_is(Length) ]</code></div>
+<div class="line"><code class="plain">#endif </code><code class="comments">// MIDL_PASS</code></div>
+<div class="line"><code class="plain">    _Field_size_bytes_part_opt_(MaximumLength, Length) PCHAR Buffer;</code></div>
+<div class="line"><code class="plain">} STRING;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">typedef STRING ANSI_STRING;</code></div>
+</div>
+    </div>
+<p   
+>UNICODE_STRING&#23383;&#31526;&#20018;&#30340;&#23450;&#20041;&#22914;&#19979;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">typedef struct _UNICODE_STRING {</code></div>
+<div class="line"><code class="plain">    USHORT Length;</code></div>
+<div class="line"><code class="plain">    USHORT MaximumLength;</code></div>
+<div class="line"><code class="plain">#ifdef MIDL_PASS</code></div>
+<div class="line"><code class="plain">    [size_is(MaximumLength / </code><code class="value">2</code><code class="plain">), length_is((Length) / </code><code class="value">2</code><code class="plain">) ] USHORT * Buffer;</code></div>
+<div class="line"><code class="plain">#</code><code class="keyword">else</code><code class="plain"> </code><code class="comments">// MIDL_PASS</code></div>
+<div class="line"><code class="plain">    _Field_size_bytes_part_opt_(MaximumLength, Length) PWCH   Buffer;</code></div>
+<div class="line"><code class="plain">#endif </code><code class="comments">// MIDL_PASS</code></div>
+<div class="line"><code class="plain">} UNICODE_STRING;</code></div>
+</div>
+    </div>
+<p   
+>&#25105;&#20204;&#20174;&#36825;&#20004;&#20010;&#32467;&#26500;&#20307;&#30340;&#23450;&#20041;&#23601;&#21487;&#20197;&#30475;&#21040;&#20182;&#20204;&#30340;&#32467;&#26500;&#26159;&#19968;&#26679;&#30340;&#65292;&#25105;&#20204;&#21435;&#35835;&#20889;&#23383;&#31526;&#20018;&#26102;&#23601;&#21487;&#20197;&#26681;&#25454;Buffer+Length&#36825;&#20004;&#20010;&#25104;&#21592;&#31934;&#30830;&#30340;&#35835;&#21462;&#23383;&#31526;&#20018;&#65292;&#36991;&#20813;&#20986;&#29616;&#35835;&#21462;&#36234;&#30028;&#23548;&#33268;&#34013;&#23631;&#30340;&#38382;&#39064;&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWGheaguOWtl-espuS4suW4uOeUqOWHveaVsA">
+        <h2 class="heading "><span>&#20869;&#26680;&#23383;&#31526;&#20018;&#24120;&#29992;&#20989;&#25968;</span></h2>
+<p   
+>&#23383;&#31526;&#20018;&#30340;&#25805;&#20316;&#23601;&#26159;&#21019;&#24314;&#12289;&#22797;&#21046;&#12289;&#27604;&#36739;&#12289;&#36716;&#25442;&#65292;&#20294;&#30001;&#20110;&#32534;&#30721;&#38382;&#39064;&#22312;&#20869;&#26680;&#20013;&#20063;&#26377;&#19981;&#21516;&#30340;&#20989;&#25968;&#34920;&#36798;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>ANSI_STRING&#23383;&#31526;&#20018;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>UNICODE_STRING&#23383;&#31526;&#20018;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#21547;&#20041;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlInitAnsiString</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlInitUnicodeString</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#21019;&#24314;&#23383;&#31526;&#20018;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlCopyString</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlCopyUnicodeString</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#23383;&#31526;&#20018;&#22797;&#21046;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlCompareString</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlCompareUnicoodeString</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#23383;&#31526;&#20018;&#27604;&#36739;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlAnsiStringToUnicodeString</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>RtlUnicodeStringToAnsiString</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#32534;&#30721;&#36716;&#25442;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWGheaguOepuumXtOS4juaooeWdlw">
+        <h1 class="heading "><span>&#20869;&#26680;&#31354;&#38388;&#19982;&#27169;&#22359;</span></h1>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWGheaguOepuumXtA">
+        <h2 class="heading "><span>&#20869;&#26680;&#31354;&#38388;</span></h2>
+<p   
+>&#22312;&#20043;&#21069;&#30340;&#23398;&#20064;&#20013;&#25105;&#20204;&#21453;&#22797;&#25552;&#21040;&#19968;&#20010;&#36827;&#31243;&#26377;4GB&#22823;&#23567;&#30340;&#20869;&#23384;&#31354;&#38388;&#65292;&#20302;2G&#26159;&#31243;&#24207;&#33258;&#24049;&#30340;&#65292;&#39640;2G&#26159;&#20849;&#20139;&#30340;&#65292;&#20063;&#23601;&#26159;&#20869;&#26680;&#31354;&#38388;&#12290;&#29616;&#22312;&#25105;&#20204;&#24050;&#32463;&#30693;&#36947;&#19968;&#20010;&#31616;&#21333;&#30340;&#39537;&#21160;&#31243;&#24207;&#20174;&#24320;&#21457;&#21040;&#36816;&#34892;&#30340;&#27969;&#31243;&#65292;&#21487;&#20197;&#20570;&#19968;&#20010;&#23454;&#39564;&#26469;&#35770;&#35777;&ldquo;&#39640;2G&#26159;&#20849;&#20139;&#30340;&rdquo;&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#20808;&#32534;&#20889;&#19968;&#20010;&#39537;&#21160;&#31243;&#24207;&#65292;&#20027;&#35201;&#20316;&#29992;&#26159;&#23450;&#20041;&#19968;&#20010;&#20840;&#23616;&#21464;&#37327;&#65292;&#28982;&#21518;&#36816;&#34892;&#26102;&#36755;&#20986;&#20854;&#22320;&#22336;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-7_21-37-9.png" alt="images/download/attachments/1015847/image2022-9-7_21-37-9.png" width="600"  />
+    </p>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#22312;&#34394;&#25311;&#26426;&#20013;&#36816;&#34892;&#35813;&#39537;&#21160;&#31243;&#24207;&#33719;&#21462;&#20840;&#23616;&#21464;&#37327;&#30340;&#22320;&#22336;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-7_22-13-38.png" alt="images/download/attachments/1015847/image2022-9-7_22-13-38.png" width="600"  />
+    </p>
+<p   
+>&#24471;&#21040;&#22320;&#22336;&#20026;0xBAB63000&#65292;&#28982;&#21518;&#22312;Windbg&#20013;&#20351;&#29992;!process 0 0&#38543;&#20415;&#25214;&#20010;&#31243;&#24207;&#65292;&#36827;&#20837;&#23427;&#30340;&#20869;&#23384;&#31354;&#38388;&#65292;&#26597;&#30475;&#35813;&#20869;&#23384;&#31354;&#38388;&#20013;&#30340;&#22320;&#22336;0xBAB63000&#20869;&#23481;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-7_22-17-12.png" alt="images/download/attachments/1015847/image2022-9-7_22-17-12.png" width="400"  />
+    </p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-7_22-17-26.png" alt="images/download/attachments/1015847/image2022-9-7_22-17-26.png" width="400"  />
+    </p>
+<p   
+>&#26368;&#32456;&#32467;&#26524;&#22914;&#19978;&#25152;&#31034;&#65292;&#25105;&#20204;&#30475;&#21040;&#22312;Dbgview.exe&#36827;&#31243;&#30340;&#20869;&#23384;&#31354;&#38388;&#20013;&#65292;&#20854;&#22320;&#22336;0xBAB63000&#20869;&#23481;&#23384;&#20648;&#30528;&#25105;&#20204;&#39537;&#21160;&#31243;&#24207;&#23450;&#20041;&#30340;&#20869;&#23481;&#65292;<strong class=" ">&#20063;&#23601;&#35777;&#23454;&#20102;4GB&#31354;&#38388;&#20013;&#39640;2G&#26159;&#20849;&#20139;&#30340;&#65292;&#36825;&#39640;2G&#30340;&#31354;&#38388;&#23601;&#26159;&#30340;&#20869;&#26680;&#31354;&#38388;</strong>&#12290;</p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWGheaguOaooeWdlw">
+        <h2 class="heading "><span>&#20869;&#26680;&#27169;&#22359;</span></h2>
+<p   
+>&#30001;&#20110;&#30828;&#20214;&#30340;&#31181;&#31867;&#24456;&#22810;&#65292;&#23548;&#33268;&#31995;&#32479;&#20869;&#26680;&#26080;&#27861;&#23436;&#20840;&#20860;&#23481;&#25152;&#26377;&#30340;&#36814;&#25509;&#65292;&#25152;&#20197;&#24494;&#36719;&#25552;&#20379;&#20102;&#25509;&#21475;&#65292;&#35753;&#24320;&#21457;&#20154;&#21592;&#25353;&#35268;&#23450;&#26684;&#24335;&#32534;&#20889;&#39537;&#21160;&#31243;&#24207;&#26469;&#25903;&#25345;&#33258;&#24049;&#30340;&#30828;&#20214;&#65307;<strong class=" ">&#36825;&#20123;&#39537;&#21160;&#31243;&#24207;&#27599;&#19968;&#20010;&#25105;&#20204;&#37117;&#21487;&#20197;&#24403;&#20316;&#26159;&#19968;&#20010;&#27169;&#22359;&#65292;&#20063;&#23601;&#21487;&#20197;&#31216;&#20043;&#20026;&#20869;&#26680;&#27169;&#22359;</strong>&#65292;&#23427;&#20204;&#36981;&#24490;PE&#32467;&#26500;&#65292;&#24182;&#19988;&#21487;&#20197;&#21152;&#36733;&#21040;&#20869;&#26680;&#20013;&#12290;</p>
+<p   
+>&#25105;&#20204;&#20043;&#21069;&#32534;&#20889;&#39537;&#21160;&#31243;&#24207;&#30340;&#26102;&#20505;&#24517;&#39035;&#35201;&#20889;&#22909;&#20004;&#20010;&#20989;&#25968;&#65292;&#19968;&#20010;&#26159;&#20837;&#21475;&#20989;&#25968;&#65292;&#19968;&#20010;&#26159;&#21368;&#36733;&#20989;&#25968;&#12290;&#22312;&#20837;&#21475;&#20989;&#25968;&#20013;&#65292;&#26377;&#20004;&#20010;&#24418;&#21442;&#65292;&#20998;&#21035;&#26159;PDRIVER_OBJECT&#12289;PUNICODE_STRING&#12290;</p>
+<p   
+>&#25105;&#20204;&#26469;&#30475;&#19968;&#19979;PDRIVER_OBJECT&#65292;&#23427;&#26159;&#19968;&#20010;&#32467;&#26500;&#20307;&#65292;&#25105;&#20204;&#31216;&#20043;&#20026;&#39537;&#21160;&#23545;&#35937;&#65292;&#21487;&#20197;&#36890;&#36807;VS&#25110;&#32773;Windbg&#21435;&#26597;&#30475;&#36825;&#20010;&#32467;&#26500;&#20307;&#30340;&#25104;&#21592;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-9_14-47-22.png" alt="images/download/attachments/1015847/image2022-9-9_14-47-22.png" width="400"  />
+    </p>
+<p   
+>&#36825;&#20010;&#32467;&#26500;&#20307;&#37324;&#20027;&#35201;&#21253;&#21547;&#39537;&#21160;&#31243;&#24207;&#30340;&#19968;&#20123;&#22522;&#30784;&#20449;&#24687;&#65292;&#20855;&#20307;&#30340;&#21487;&#20197;&#30475;&#22914;&#19979;&#20195;&#30721;&#27880;&#37322;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">typedef struct _DRIVER_OBJECT {</code></div>
+<div class="line"><code class="plain">    CSHORT Type;</code></div>
+<div class="line"><code class="plain">    CSHORT Size;</code></div>
+<div class="line"><code class="plain">    PDEVICE_OBJECT DeviceObject;</code></div>
+<div class="line"><code class="plain">    ULONG Flags;</code></div>
+<div class="line"><code class="plain">    PVOID DriverStart; </code><code class="comments">// 结构体对应的驱动程序在内核空间的位置</code></div>
+<div class="line"><code class="plain">    ULONG DriverSize; </code><code class="comments">// 结构体对应的驱动程序的大小</code></div>
+<div class="line"><code class="plain">    PVOID DriverSection; </code><code class="comments">// 指针，指向_LDR_DATA_TABLE_ENTRY结构体</code></div>
+<div class="line"><code class="plain">    PDRIVER_EXTENSION DriverExtension;</code></div>
+<div class="line"><code class="plain">    UNICODE_STRING DriverName; </code><code class="comments">// 结构体对应的驱动程序的名字</code></div>
+<div class="line"><code class="plain">    PUNICODE_STRING HardwareDatabase;</code></div>
+<div class="line"><code class="plain">    PFAST_IO_DISPATCH FastIoDispatch;</code></div>
+<div class="line"><code class="plain">    PDRIVER_INITIALIZE DriverInit;</code></div>
+<div class="line"><code class="plain">    PDRIVER_STARTIO DriverStartIo;</code></div>
+<div class="line"><code class="plain">    PDRIVER_UNLOAD DriverUnload; </code><code class="comments">// 定义驱动程序卸载函数的地址</code></div>
+<div class="line"><code class="plain">    PDRIVER_DISPATCH MajorFunction[IRP_MJ_MAXIMUM_FUNCTION + </code><code class="value">1</code><code class="plain">];</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">} DRIVER_OBJECT;</code></div>
+<div class="line"><code class="plain">typedef struct _DRIVER_OBJECT *PDRIVER_OBJECT; </code></div>
+</div>
+    </div>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#32534;&#20889;&#19968;&#20010;&#39537;&#21160;&#31243;&#24207;&#36755;&#20986;&#23545;&#24212;&#39537;&#21160;&#23545;&#35937;&#30340;&#22320;&#22336;&#26469;&#30475;&#19979;&#36825;&#20960;&#20010;&#25104;&#21592;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"%x \n"</code><code class="plain">, DriverObject);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置一个卸载函数，当驱动卸载时触发</code></div>
+<div class="line"><code class="plain">    DriverObject-&gt;DriverUnload = DriverUnload;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-9_17-6-28.png" alt="images/download/attachments/1015847/image2022-9-9_17-6-28.png" width="600"  />
+    </p>
+<p   
+>&#22312;Windbg&#20013;&#20351;&#29992;&#22914;&#19979;&#26684;&#24335;&#21629;&#20196;&#21487;&#20197;&#24456;&#30452;&#35266;&#30340;&#30475;&#21040;&#32467;&#26500;&#20307;&#20013;&#27599;&#20010;&#25104;&#21592;&#23545;&#24212;&#30340;&#20869;&#23481;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">dt _DRIVER_OBJECT 驱动对象地址</code></div>
+</div>
+    </div>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-9_17-8-31.png" alt="images/download/attachments/1015847/image2022-9-9_17-8-31.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#20063;&#21487;&#20197;&#21033;&#29992;DriverSection&#25351;&#21521;&#30340;&#32467;&#26500;&#20307;&#33719;&#21462;&#20854;&#20182;&#20869;&#26680;&#27169;&#22359;&#30340;&#20449;&#24687;&#65292;&#22240;&#20026;&#23427;&#25351;&#21521;&#30340;&#26159;_LDR_DATA_TABLE_ENTRY&#32467;&#26500;&#20307;&#65292;&#22312;&#35813;&#32467;&#26500;&#20307;&#20869;&#26377;&#19968;&#20010;&#25104;&#21592;InLoadOrderLinks&#26159;&#21452;&#38142;&#34920;&#65292;&#23427;&#35760;&#24405;&#30528;&#21069;&#19968;&#20010;&#21644;&#21518;&#19968;&#20010;&#20869;&#26680;&#27169;&#22359;&#30340;_LDR_DATA_TABLE_ENTRY&#32467;&#26500;&#20307;&#22320;&#22336;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-9_17-14-16.png" alt="images/download/attachments/1015847/image2022-9-9_17-14-16.png" width="600"  />
+    </p>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeW6lOeUqOS4jumpseWKqOmAmuS_oQ">
+        <h1 class="heading "><span>&#24212;&#29992;&#19982;&#39537;&#21160;&#36890;&#20449;</span></h1>
+<p   
+>&#26412;&#31456;&#25105;&#20204;&#20027;&#35201;&#20102;&#35299;&#22312;&#27491;&#24120;&#30340;&#24320;&#21457;&#20013;R3&#24212;&#29992;&#26159;&#22914;&#20309;&#19982;R0&#39537;&#21160;&#36827;&#34892;&#36890;&#20449;&#30340;&#65292;&#22312;&#36825;&#20043;&#21069;&#25105;&#20204;&#38656;&#35201;&#20808;&#23398;&#20064;&#19968;&#20123;&#26032;&#30340;&#27010;&#24565;&#26469;&#34917;&#20840;&#21069;&#32622;&#20869;&#23481;&#12290;</p>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeiuvuWkh-WvueixoQ">
+        <h2 class="heading "><span>&#35774;&#22791;&#23545;&#35937;</span></h2>
+<p   
+>&#25105;&#20204;&#22312;&#24320;&#21457;&#31383;&#21475;&#24212;&#29992;&#31243;&#24207;&#26102;&#65292;&#28040;&#24687;&#34987;&#23553;&#35013;&#25104;&#19968;&#20010;&#32467;&#26500;&#20307;MSG&#65292;&#22312;&#24320;&#21457;&#20869;&#26680;&#39537;&#21160;&#31243;&#24207;&#26102;&#65292;&#28040;&#24687;&#34987;&#23553;&#35013;&#25104;&#21478;&#22806;&#19968;&#20010;&#32467;&#26500;&#20307;IRP&#65288;I/O Request Package&#65292;&#36755;&#20837;&#25110;&#36755;&#20986;&#35831;&#27714;&#21253;&#65289;&#12290;</p>
+<p   
+>&#22312;&#31383;&#21475;&#24212;&#29992;&#31243;&#24207;&#20013;&#65292;&#33021;&#22815;&#25509;&#25910;MSG&#28040;&#24687;&#30340;&#21482;&#33021;&#26159;&#31383;&#21475;&#23545;&#35937;&#65292;&#22312;&#20869;&#26680;&#39537;&#21160;&#31243;&#24207;&#20013;&#65292;&#33021;&#22815;&#25509;&#21463;IRP&#28040;&#24687;&#30340;&#21482;&#33021;&#26159;&#35774;&#22791;&#23545;&#35937;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-13_20-11-38.png" alt="images/download/attachments/1015847/image2022-9-13_20-11-38.png" width="400"  />
+    </p>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLemAmuS_oeWunueOsA">
+        <h2 class="heading "><span>&#36890;&#20449;&#23454;&#29616;</span></h2>
+    <div class="section section-3" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWIm-W7uuiuvuWkh-WvueixoQ">
+        <h3 class="heading "><span>&#21019;&#24314;&#35774;&#22791;&#23545;&#35937;</span></h3>
+<p   
+>&#27491;&#24120;&#24773;&#20917;&#19979;&#65292;&#19968;&#20010;&#35774;&#22791;&#23545;&#35937;&#26159;&#23545;&#24212;&#19968;&#20010;&#35774;&#22791;&#30340;&#65292;&#22914;&#65306;&#40736;&#26631;&#12289;&#38190;&#30424;&#12290;&#20294;&#26159;&#35774;&#22791;&#23545;&#35937;&#20063;&#21487;&#20197;&#26159;&#19968;&#20010;&#25277;&#35937;&#30340;&#27010;&#24565;&#65292;&#19981;&#23545;&#24212;&#21040;&#20855;&#20307;&#26576;&#20010;&#30828;&#20214;&#65292;&#20063;&#23601;&#26159;&#25105;&#20204;&#21487;&#20197;&#20351;&#29992;&#22914;&#19979;&#20195;&#30721;&#21435;&#21019;&#24314;&#19968;&#20010;&#35774;&#22791;&#23545;&#35937;&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 创建设备名称</code></div>
+<div class="line"><code class="plain">UNICODE_STRING DeviceName;</code></div>
+<div class="line"><code class="plain">RtlInitUnicodeString(&amp;DeviceName, L</code><code class="string">"\\Device\\MyDevice"</code><code class="plain">); </code><code class="comments">// 设备名称</code></div>
+<div class="line"><code class="plain">PDEVICE_OBJECT pDeviceObj = NULL;</code></div>
+<div class="line"><code class="comments">// 创建设备对象</code></div>
+<div class="line"><code class="plain">NTSTATUS ioCreateDevRet = IoCreateDevice(</code></div>
+<div class="line"><code class="plain">    DriverObject, </code><code class="comments">// 调用方驱动程序对象</code></div>
+<div class="line"><code class="plain">    </code><code class="value">0</code><code class="plain">,</code></div>
+<div class="line"><code class="plain">    &amp;DeviceName, </code><code class="comments">// 设备名称</code></div>
+<div class="line"><code class="plain">    FILE_DEVICE_UNKNOWN, </code><code class="comments">// 设备类型，当前不与某个具体设备挂钩，所以类型为UNKNOWN</code></div>
+<div class="line"><code class="plain">    FILE_DEVICE_SECURE_OPEN, </code><code class="comments">// 设备属性，大多数驱动程序仅指定 FILE_DEVICE_SECURE_OPEN 属性， 这可确保将相同的安全设置应用到设备的命名空间中的任何打开的请求</code></div>
+<div class="line"><code class="plain">    FALSE, </code><code class="comments">// 设备对象是否表示独占设备，如果启用了对设备的独占访问，则一次只能打开设备的一个句柄</code></div>
+<div class="line"><code class="plain">    &amp;pDeviceObj </code><code class="comments">// 创建的设备对象，指向接收指向新创建的 DEVICE_OBJECT 结构的指针的变量的指针</code></div>
+<div class="line"><code class="plain">);</code></div>
+<div class="line"><code class="comments">// 判断IoCreateDevice函数是否执行成功</code></div>
+<div class="line"><code class="keyword">if</code><code class="plain"> (ioCreateDevRet != STATUS_SUCCESS)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"IoCreateDevice Error, code: %s\n"</code><code class="plain">, ioCreateDevRet);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> ioCreateDevRet;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-3" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeaVsOaNruS6pOaNoumFjee9rg">
+        <h3 class="heading "><span>&#25968;&#25454;&#20132;&#25442;&#37197;&#32622;</span></h3>
+<p   
+>&#21019;&#24314;&#22909;&#35774;&#22791;&#23545;&#35937;&#20043;&#21518;&#65292;&#23601;&#38656;&#35201;&#35774;&#32622;0&#29615;&#21644;3&#29615;&#20132;&#25442;&#25968;&#25454;&#30340;&#26041;&#24335;&#65292;&#26377;&#20197;&#19979;&#19977;&#31181;&#65306;</p>
+<ol class=" "><li class=" "><p   
+>&#32531;&#20914;&#21306;&#35835;&#20889;&#65288;DO_BUFFERED_IO&#65289;&#65292;&#25805;&#20316;&#31995;&#32479;&#23558;&#24212;&#29992;&#31243;&#24207;&#25552;&#20379;&#32531;&#20914;&#21306;&#30340;&#25968;&#25454;&#30452;&#25509;&#22797;&#21046;&#21040;&#20869;&#26680;&#27169;&#24335;&#19979;&#30340;&#22320;&#22336;&#20013;&#65307;</p>
+</li><li class=" "><p   
+>&#30452;&#25509;&#35835;&#20889;&#65288;DO_DIRECT_IO&#65289;&#65292;&#25805;&#20316;&#31995;&#32479;&#20250;&#23558;&#29992;&#25143;&#27169;&#24335;&#19979;&#30340;&#32531;&#20914;&#21306;&#38145;&#20303;&#65292;&#28982;&#21518;&#25805;&#20316;&#31995;&#32479;&#23558;&#36825;&#27573;&#32531;&#20914;&#21306;&#22312;&#20869;&#26680;&#27169;&#24335;&#22320;&#22336;&#20877;&#27425;&#26144;&#23556;&#19968;&#36941;&#65292;&#36825;&#26679;&#29992;&#25143;&#27169;&#24335;&#30340;&#32531;&#20914;&#21306;&#21644;&#20869;&#26680;&#27169;&#24335;&#30340;&#32531;&#20914;&#21306;&#25351;&#21521;&#30340;&#26159;&#21516;&#19968;&#21306;&#22495;&#30340;&#29289;&#29702;&#20869;&#23384;&#65292;&#32570;&#28857;&#23601;&#26159;&#35201;&#21333;&#29420;&#21344;&#29992;&#29289;&#29702;&#39029;&#38754;&#65307;</p>
+</li><li class=" "><p   
+>&#20854;&#20182;&#35835;&#20889;&#65292;&#22312;&#35843;&#29992;IoCreateDevice&#20989;&#25968;&#21019;&#24314;&#35774;&#22791;&#21518;&#19981;&#35774;&#32622;&#20132;&#25442;&#25968;&#25454;&#27169;&#24335;&#21363;&#40664;&#35748;&#20026;&#20854;&#20182;&#26041;&#24335;&#35835;&#20889;&#65292;&#22312;&#20351;&#29992;&#20854;&#20182;&#26041;&#24335;&#35835;&#20889;&#35774;&#22791;&#26102;&#65292;&#27966;&#36963;&#20989;&#25968;&#30452;&#25509;&#35835;&#20889;&#24212;&#29992;&#31243;&#24207;&#25552;&#20379;&#30340;&#32531;&#20914;&#21306;&#22320;&#22336;&#12290;&#22312;&#39537;&#21160;&#31243;&#24207;&#20013;&#65292;<strong class=" ">&#30452;&#25509;&#25805;&#20316;&#24212;&#29992;&#31243;&#24207;&#30340;&#32531;&#20914;&#21306;&#22320;&#22336;&#26159;&#24456;&#21361;&#38505;&#30340;&#65288;&#19981;&#24314;&#35758;&#20351;&#29992;&#65289;</strong>&#65292;&#21482;&#26377;&#39537;&#21160;&#31243;&#24207;&#19982;&#24212;&#29992;&#31243;&#24207;&#36816;&#34892;&#22312;&#30456;&#21516;&#32447;&#31243;&#19978;&#19979;&#25991;&#30340;&#24773;&#20917;&#19979;&#65292;&#25165;&#33021;&#20351;&#29992;&#36825;&#31181;&#26041;&#24335;&#12290;</p>
+</li></ol><p   
+>&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;&#35774;&#22791;&#23545;&#35937;&#30340;Flags&#25104;&#21592;&#35774;&#32622;&#20132;&#25442;&#25968;&#25454;&#30340;&#26041;&#24335;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 设置交换数据方式</code></div>
+<div class="line"><code class="plain">pDeviceObj-&gt;Flags |= DO_BUFFERED_IO; </code><code class="comments">// 缓冲区读写</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-3" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeiuvuWkh-espuWPt-mTvuaOpQ">
+        <h3 class="heading "><span>&#35774;&#22791;&#31526;&#21495;&#38142;&#25509;</span></h3>
+<p   
+>&#22312;&#19978;&#36848;&#20195;&#30721;&#20013;&#25105;&#20204;&#21019;&#24314;&#30340;&#35774;&#22791;&#21517;&#31216;&#26159;&#32473;0&#29615;&#20351;&#29992;&#30340;&#65292;&#22914;&#26524;&#35201;&#22312;3&#29615;&#35775;&#38382;&#21040;&#35774;&#22791;&#23601;&#38656;&#35201;&#36890;&#36807;&#31526;&#21495;&#38142;&#25509;&#65292;&#25105;&#20204;&#21487;&#20197;&#29702;&#35299;&#20026;&#23427;&#23601;&#26159;&#19968;&#20010;&#35774;&#22791;&#30340;&#21035;&#21517;&#65292;&#22914;&#26524;&#19981;&#36825;&#26679;&#35774;&#32622;&#21017;&#22312;3&#29615;&#26159;&#26080;&#27861;&#35775;&#38382;&#21040;&#35774;&#22791;&#30340;&#12290;&#25105;&#20204;&#21487;&#20197;&#36890;&#36807;IoCreateSymbolicLink&#20989;&#25968;&#26469;&#21019;&#24314;&#31526;&#21495;&#38142;&#25509;&#65292;&#23427;&#19982;&#35774;&#22791;&#21517;&#31216;&#19968;&#26679;&#65292;&#20256;&#36882;&#30340;&#21517;&#31216;&#38656;&#35201;&#20197;UNICODE&#32534;&#30721;&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 创建符号链接</code></div>
+<div class="line"><code class="plain">UNICODE_STRING SymbolicLinkName;</code></div>
+<div class="line"><code class="plain">RtlInitUnicodeString(&amp;SymbolicLinkName, L</code><code class="string">"\\??\\MyTestDriver"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">IoCreateSymbolicLink(&amp;SymbolicLinkName, &amp;DeviceName);</code></div>
+</div>
+    </div>
+<p   
+>&#38656;&#35201;&#27880;&#24847;&#30340;&#26159;&#65292;<strong class=" ">&#22312;&#20869;&#26680;&#27169;&#24335;&#19979;&#31526;&#21495;&#38142;&#25509;&#30340;&#21517;&#31216;&#26159;&#20197;&ldquo;\??\&rdquo;&#24320;&#22836;&#65292;&#20294;&#26159;&#22312;&#29992;&#25143;&#27169;&#24335;&#19979;&#21017;&#26159;&#20197;&ldquo;\\.\&rdquo;&#24320;&#22836;</strong>&#65292;&#25152;&#20197;&#22312;3&#29615;&#20195;&#30721;&#20013;&#31526;&#21495;&#38142;&#25509;&#21517;&#31216;&#24212;&#20889;&#20026;<strong class=" ">&ldquo;\\.\MyTestDriver&rdquo;</strong>&#12290;&#65288;&#35760;&#24471;&#22312;&#23454;&#38469;&#20195;&#30721;&#20013;&#36716;&#20041;&#29305;&#27530;&#31526;&#21495;&#65289;</p>
+    </div>
+    <div class="section section-3" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLea0vumBo-WHveaVsA">
+        <h3 class="heading "><span>&#27966;&#36963;&#20989;&#25968;</span></h3>
+<p   
+>&#25509;&#19979;&#26469;&#23601;&#26159;&#32534;&#20889;IRP&#31867;&#22411;&#23545;&#24212;&#30340;&#27966;&#36963;&#20989;&#25968;&#20102;&#65292;&#22312;&#36825;&#20043;&#21069;&#25105;&#20204;&#22238;&#39038;&#19968;&#19979;&#31383;&#21475;&#31243;&#24207;&#30340;&#28040;&#24687;&#27969;&#31243;&#65292;&#24403;&#20320;&#21333;&#20987;&#40736;&#26631;&#20250;&#20135;&#29983;MSG&#28040;&#24687;&#65292;&#35813;&#28040;&#24687;&#21457;&#36865;&#32473;&#31383;&#21475;&#23545;&#35937;&#65292;&#22312;&#31383;&#21475;&#23545;&#35937;&#20869;&#20250;&#26681;&#25454;&#28040;&#24687;&#24207;&#21495;&#25214;&#21040;&#23545;&#24212;&#30340;&#22788;&#29702;&#20989;&#25968;&#36827;&#34892;&#22788;&#29702;&#12290;&#21516;&#29702;&#65292;&#22312;&#39537;&#21160;&#31243;&#24207;&#20013;&#65292;&#24403;&#20320;&#22312;3&#29615;&#20351;&#29992;&#20102;&#26576;&#20010;&#20989;&#25968;&#23601;&#20250;&#20135;&#29983;IRP&#28040;&#24687;&#65292;&#35813;&#28040;&#24687;&#21457;&#36865;&#32473;&#35774;&#22791;&#23545;&#35937;&#65292;&#22312;&#35774;&#22791;&#23545;&#35937;&#20869;&#20250;&#26681;&#25454;&#28040;&#24687;&#31867;&#22411;&#36873;&#25321;&#23545;&#24212;&#30340;&#27966;&#36963;&#20989;&#25968;&#22788;&#29702;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-13_22-45-57.png" alt="images/download/attachments/1015847/image2022-9-13_22-45-57.png" width="400"  />
+    </p>
+<p   
+>&#24120;&#35265;&#30340;IRP&#31867;&#22411;&#19982;&#20854;&#23545;&#24212;&#30340;3&#29615;&#19979;&#30340;&#20989;&#25968;&#21450;&#20316;&#29992;&#22914;&#19979;&#25152;&#31034;&#65306;</p>
+    <div  class="tablewrap">
+        <table class="wrapped confluenceTable">
+                    <colgroup>
+                                    <col />
+                                    <col />
+                                    <col />
+                            </colgroup>
+        <thead class=" ">    <tr>
+            <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>IRP&#31867;&#22411;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#26469;&#28304;&#20989;&#25968;</p>
+            </td>
+                <td  class="confluenceTh" rowspan="1" colspan="1">
+    <p   
+>&#20989;&#25968;&#20316;&#29992;</p>
+            </td>
+        </tr>
+</thead><tfoot class=" "></tfoot><tbody class=" ">    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IRP_MJ_CREATE</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>CreateFile</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#25171;&#24320;&#35774;&#22791;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IRP_MJ_READ</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>ReadFile</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#20174;&#35774;&#22791;&#20013;&#35835;&#21462;&#25968;&#25454;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IRP_MJ_WRITE</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>WriteFile</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#20174;&#35774;&#22791;&#20013;&#20889;&#20837;&#25968;&#25454;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IRP_MJ_CLOSE</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>CloseHandle</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#20851;&#38381;&#35774;&#22791;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IRP_MJ_DEVICE_CONTROL</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>DeviceIoControl</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#35774;&#22791;&#25511;&#21046;&#65292;&#27604;&#35835;&#21462;&#12289;&#20889;&#20837;&#25805;&#20316;&#26356;&#21152;&#28789;&#27963;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IRP_MJ_POWER</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>X</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#22312;&#25805;&#20316;&#31995;&#32479;&#22788;&#29702;&#30005;&#28304;&#28040;&#24687;&#26102;&#20135;&#29983;&#35813;&#31867;&#22411;</p>
+            </td>
+        </tr>
+    <tr>
+            <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>IRP_MJ_SHUTDOWN</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>X</p>
+            </td>
+                <td  class="confluenceTd" rowspan="1" colspan="1">
+    <p   
+>&#20851;&#38381;&#31995;&#32479;&#21069;&#20250;&#20135;&#29983;&#35813;&#31867;&#22411;</p>
+            </td>
+        </tr>
+</tbody>        </table>
+            </div>
+<p  class="auto-cursor-target" 
+>&#22312;&#39537;&#21160;&#23545;&#35937;&#20013;&#26377;&#19968;&#20010;&#25104;&#21592;MajorFunction&#65292;&#23427;&#26159;&#19968;&#20010;&#20855;&#26377;28&#20010;&#25104;&#21592;&#30340;&#25968;&#32452;&#65292;&#23545;&#24212;&#30528;&#23601;&#26159;28&#31181;IRP&#31867;&#22411;&#65306;</p>
+<p  class="auto-cursor-target" 
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-13_22-54-57.png" alt="images/download/attachments/1015847/image2022-9-13_22-54-57.png" width="400"  />
+    </p>
+<p  class="auto-cursor-target" 
+>&#25152;&#20197;&#25105;&#20204;&#24819;&#27880;&#20876;&#26576;&#20010;IRP&#31867;&#22411;&#23545;&#24212;&#30340;&#27966;&#36963;&#20989;&#25968;&#26102;&#20505;&#21487;&#20197;&#20351;&#29992;&#22914;&#19979;&#26684;&#24335;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">DriverObject-&gt;MajorFunction[IRP类型] = 派遣函数名;</code></div>
+</div>
+    </div>
+<p  class="auto-cursor-target" 
+>&#27966;&#36963;&#20989;&#25968;&#20063;&#26159;&#26377;&#19968;&#20010;&#22266;&#23450;&#26684;&#24335;&#30340;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">NTSTATUS MyDispatchFunction(PDEVICE_OBJECT pDevObj, PIRP pIrp)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 业务代码</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置返回状态</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Status = STATUS_SUCCESS; </code><code class="comments">// Get'Last()得到的就是这个值</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Information = </code><code class="value">0</code><code class="plain">; </code><code class="comments">// 返回给3环多少数据，没有则填0</code></div>
+<div class="line"><code class="plain">    IoCompleteRequest(pIrp, IO_NO_INCREMENT);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p  class="auto-cursor-target" 
+>&#25105;&#20204;&#21487;&#20197;&#20808;&#23450;&#20041;&#22909;CreateFile&#21644;CloseHandle&#30340;&#27966;&#36963;&#20989;&#25968;&#65288;&#23454;&#38469;&#27979;&#35797;&#21457;&#29616;&#26159;&#24517;&#39035;&#35201;&#23450;&#20041;&#65292;&#21542;&#21017;&#26080;&#27861;&#25171;&#24320;&#35774;&#22791;&#65289;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 注册派遣函数</code></div>
+<div class="line"><code class="plain">DriverObject-&gt;MajorFunction[IRP_MJ_CREATE] = CreateDispatchFunc;</code></div>
+<div class="line"><code class="plain">DriverObject-&gt;MajorFunction[IRP_MJ_CLOSE] = CloseDispatchFunc;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">NTSTATUS CreateDispatchFunc(PDEVICE_OBJECT pDevObj, PIRP pIrp)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"CreateDispatchFunc ... \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置返回状态</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Status = STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Information = </code><code class="value">0</code><code class="plain">; </code><code class="comments">// 返回给3环多少数据，没有则填0</code></div>
+<div class="line"><code class="plain">    IoCompleteRequest(pIrp, IO_NO_INCREMENT);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">NTSTATUS CloseDispatchFunc(PDEVICE_OBJECT pDevObj, PIRP pIrp)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"CloseDispatchFunc ... \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置返回状态</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Status = STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Information = </code><code class="value">0</code><code class="plain">; </code><code class="comments">// 返回给3环多少数据，没有则填0</code></div>
+<div class="line"><code class="plain">    IoCompleteRequest(pIrp, IO_NO_INCREMENT);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-3" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeeBtea0u-mAmuS_oQ">
+        <h3 class="heading auto-cursor-target"><span>&#28789;&#27963;&#36890;&#20449;</span></h3>
+<p  class="auto-cursor-target" 
+>&#20026;&#20102;&#26356;&#28789;&#27963;&#30340;&#36890;&#20449;&#65292;&#25105;&#20204;&#21487;&#20197;&#20351;&#29992;DeviceIoControl&#20989;&#25968;&#65292;&#35813;&#20989;&#25968;&#22312;&#24212;&#29992;&#23618;&#20351;&#29992;&#65292;&#21487;&#20197;&#29992;&#26469;&#19982;&#20869;&#26680;&#23618;&#20256;&#36755;&#25968;&#25454;&#12290;&#25105;&#30340;&#24212;&#29992;&#23618;&#20195;&#30721;&#22914;&#19979;&#65292;&#26681;&#25454;&#20195;&#30721;&#27880;&#37322;&#25105;&#20204;&#30693;&#36947;&#35813;&#20989;&#25968;&#30340;&#21442;&#25968;&#20316;&#29992;&#65292;&#20854;&#20013;&#25805;&#20316;&#30721;&#25105;&#20204;&#20063;&#21487;&#20197;&#29702;&#35299;&#20026;&#26159;&#19968;&#20010;&#23494;&#30721;&#65292;&#20869;&#26680;&#23618;&#20063;&#24212;&#23450;&#20041;&#25805;&#20316;&#30721;&#65292;&#26681;&#25454;&#25805;&#20316;&#30721;&#26469;&#25191;&#34892;&#19981;&#21516;&#30340;&#25351;&#20196;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;windows.h&gt;</code></div>
+<div class="line"><code class="plain">#include &lt;winioctl.h&gt;</code></div>
+<div class="line"><code class="plain">#include &lt;stdio.h&gt;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HANDLE g_hDevice;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="keyword">int</code><code class="plain"> main(</code><code class="keyword">int</code><code class="plain"> argc, </code><code class="keyword">char</code><code class="plain">* argv[])</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 通过符号链接打开设备</code></div>
+<div class="line"><code class="plain">    g_hDevice = ::CreateFile(</code><code class="string">"\\\\.\\MyTestDriver"</code><code class="plain">, GENERIC_WRITE|GENERIC_READ, </code><code class="value">0</code><code class="plain">, </code><code class="value">0</code><code class="plain">, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, </code><code class="value">0</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    DWORD errCode = ::GetLastError();</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (errCode != </code><code class="value">0</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        printf(</code><code class="string">"Error: %d \n"</code><code class="plain">, errCode);</code></div>
+<div class="line"><code class="plain">        exit(</code><code class="value">0</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 与驱动进行通信</code></div>
+<div class="line"><code class="plain">    DWORD dwInBuffer = </code><code class="value">0x11112222</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    DWORD tcOutBuffer = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    DWORD dwLength;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    ::DeviceIoControl(</code></div>
+<div class="line"><code class="plain">        g_hDevice, </code><code class="comments">// 设备句柄</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 操作码</code></div>
+<div class="line"><code class="plain">        CTL_CODE(</code></div>
+<div class="line"><code class="plain">            FILE_DEVICE_UNKNOWN, </code><code class="comments">//  设备类型</code></div>
+<div class="line"><code class="plain">            </code><code class="value">0x800</code><code class="plain">, </code><code class="comments">// 不可以使用0x0-0x7FF这个范围，你可以使用0x800-0xFFF</code></div>
+<div class="line"><code class="plain">            METHOD_BUFFERED, </code><code class="comments">// 数据交换的方式</code></div>
+<div class="line"><code class="plain">            FILE_ANY_ACCESS </code><code class="comments">// 访问模式</code></div>
+<div class="line"><code class="plain">        ),</code></div>
+<div class="line"><code class="plain">        &amp;dwInBuffer, </code><code class="comments">// 输入缓冲区地址</code></div>
+<div class="line"><code class="plain">        </code><code class="value">0x10</code><code class="plain">, </code><code class="comments">// 输入缓冲区长度</code></div>
+<div class="line"><code class="plain">        &amp;tcOutBuffer, </code><code class="comments">// 输出缓冲区地址</code></div>
+<div class="line"><code class="plain">        </code><code class="value">0x10</code><code class="plain">, </code><code class="comments">// 输出缓冲区长度</code></div>
+<div class="line"><code class="plain">        &amp;dwLength, </code><code class="comments">// 实际返回长度</code></div>
+<div class="line"><code class="plain">        NULL </code><code class="comments">// 指向OVERLAPPED, 此处为NULL</code></div>
+<div class="line"><code class="plain">    );</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    printf(</code><code class="string">"%x \n"</code><code class="plain">, tcOutBuffer);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    CloseHandle(g_hDevice);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p  class="auto-cursor-target" 
+>&#20869;&#26680;&#23618;&#20195;&#30721;&#22914;&#19979;&#65292;&#22312;&#27966;&#36963;&#20989;&#25968;DeviceDispatchFunc&#20013;&#65292;&#25105;&#20204;&#36890;&#36807;&#21442;&#25968;pIrp&#33719;&#21462;IRP&#25968;&#25454;&#65292;&#24182;&#26681;&#25454;&#25805;&#20316;&#30721;&#36827;&#20837;&#35835;&#21462;&#25968;&#25454;&#12289;&#20889;&#20837;&#25968;&#25454;&#25351;&#20196;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;ntddk.h&gt; </code><code class="comments">// 必须要包含的头文件</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 操作码定义</code></div>
+<div class="line"><code class="plain">#define OPER CTL_CODE(FILE_DEVICE_UNKNOWN, </code><code class="value">0x800</code><code class="plain">, METHOD_BUFFERED, FILE_ANY_ACCESS)</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 自定义的驱动程序卸载函数</code></div>
+<div class="line"><code class="plain">VOID DriverUnload(PDRIVER_OBJECT DriverObject)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"Bye. \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">NTSTATUS CreateDispatchFunc(PDEVICE_OBJECT pDevObj, PIRP pIrp)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"CreateDispatchFunc ... \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置返回状态</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Status = STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Information = </code><code class="value">0</code><code class="plain">; </code><code class="comments">// 返回给3环多少数据，没有则填0</code></div>
+<div class="line"><code class="plain">    IoCompleteRequest(pIrp, IO_NO_INCREMENT);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">NTSTATUS CloseDispatchFunc(PDEVICE_OBJECT pDevObj, PIRP pIrp)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"CloseDispatchFunc ... \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置返回状态</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Status = STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Information = </code><code class="value">0</code><code class="plain">; </code><code class="comments">// 返回给3环多少数据，没有则填0</code></div>
+<div class="line"><code class="plain">    IoCompleteRequest(pIrp, IO_NO_INCREMENT);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">NTSTATUS DeviceDispatchFunc(PDEVICE_OBJECT pDevObj, PIRP pIrp)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"DeviceDispatchFunc ... \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    ULONG uWrite;</code></div>
+<div class="line"><code class="plain">    ULONG uRead;</code></div>
+<div class="line"><code class="plain">    NTSTATUS retStatus;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">// 获取IRP数据</code></div>
+<div class="line"><code class="plain">    PIO_STACK_LOCATION pIrpStack = IoGetCurrentIrpStackLocation(pIrp);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 获取操作码</code></div>
+<div class="line"><code class="plain">    ULONG uIoControlCode = pIrpStack-&gt;Parameters.DeviceIoControl.IoControlCode;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 获取输入、输出数据的长度</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// ULONG uDataInLength = pIrpStack-&gt;Parameters.DeviceIoControl.InputBufferLength;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// ULONG uDataOutLength = pIrpStack-&gt;Parameters.DeviceIoControl.OutputBufferLength;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 获取缓冲区地址（输入、输出的缓冲区都是一个）</code></div>
+<div class="line"><code class="plain">    PVOID pIoBuffer = pIrp-&gt;AssociatedIrp.SystemBuffer;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">// 判断操作码</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">switch</code><code class="plain"> (uIoControlCode)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">case</code><code class="plain"> OPER:</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// DbgPrint("Size: %d \n", uDataOutLength);</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 从缓冲区读取数据</code></div>
+<div class="line"><code class="plain">        memcpy(&amp;uRead, pIoBuffer, </code><code class="value">4</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"uRead: %x \n"</code><code class="plain">, uRead);</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 写入数据至缓冲区</code></div>
+<div class="line"><code class="plain">        uWrite = </code><code class="value">0x22334455</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">        memcpy(pIoBuffer, &amp;uWrite, </code><code class="value">4</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">        pIrp-&gt;IoStatus.Information = </code><code class="value">4</code><code class="plain">; </code><code class="comments">// 返回给3环多少数据，没有则填0</code></div>
+<div class="line"><code class="plain">        retStatus = STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">break</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置返回状态</code></div>
+<div class="line"><code class="plain">    pIrp-&gt;IoStatus.Status = retStatus == STATUS_SUCCESS ? retStatus : STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">    IoCompleteRequest(pIrp, IO_NO_INCREMENT);</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 驱动程序入口函数</code></div>
+<div class="line"><code class="plain">NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 创建设备名称</code></div>
+<div class="line"><code class="plain">    UNICODE_STRING DeviceName;</code></div>
+<div class="line"><code class="plain">    RtlInitUnicodeString(&amp;DeviceName, L</code><code class="string">"\\Device\\MyDevice"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    PDEVICE_OBJECT pDeviceObj = NULL;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 创建设备对象</code></div>
+<div class="line"><code class="plain">    NTSTATUS ioCreateDevRet = IoCreateDevice(</code></div>
+<div class="line"><code class="plain">        DriverObject, </code><code class="comments">// 调用方驱动程序对象</code></div>
+<div class="line"><code class="plain">        </code><code class="value">0</code><code class="plain">,</code></div>
+<div class="line"><code class="plain">        &amp;DeviceName, </code><code class="comments">// 设备名称</code></div>
+<div class="line"><code class="plain">        FILE_DEVICE_UNKNOWN, </code><code class="comments">// 设备类型，当前不与某个具体设备挂钩，所以类型为UNKNOWN</code></div>
+<div class="line"><code class="plain">        FILE_DEVICE_SECURE_OPEN, </code><code class="comments">// 设备属性，大多数驱动程序仅指定 FILE_DEVICE_SECURE_OPEN 属性， 这可确保将相同的安全设置应用到设备的命名空间中的任何打开的请求</code></div>
+<div class="line"><code class="plain">        FALSE, </code><code class="comments">// 设备对象是否表示独占设备，如果启用了对设备的独占访问，则一次只能打开设备的一个句柄</code></div>
+<div class="line"><code class="plain">        &amp;pDeviceObj </code><code class="comments">// 创建的设备对象，指向接收指向新创建的 DEVICE_OBJECT 结构的指针的变量的指针</code></div>
+<div class="line"><code class="plain">    );</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">// 判断IoCreateDevice函数是否执行成功</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (ioCreateDevRet != STATUS_SUCCESS)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"IoCreateDevice Error, code: %s\n"</code><code class="plain">, ioCreateDevRet);</code></div>
+<div class="line"><code class="plain">        </code><code class="keyword">return</code><code class="plain"> ioCreateDevRet;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置数据交换的方式</code></div>
+<div class="line"><code class="plain">    pDeviceObj-&gt;Flags |= DO_BUFFERED_IO;</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 创建符号链接</code></div>
+<div class="line"><code class="plain">    UNICODE_STRING SymbolicLinkName;</code></div>
+<div class="line"><code class="plain">    RtlInitUnicodeString(&amp;SymbolicLinkName, L</code><code class="string">"\\??\\MyTestDriver"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    IoCreateSymbolicLink(&amp;SymbolicLinkName, &amp;DeviceName);</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 注册派遣函数</code></div>
+<div class="line"><code class="plain">    DriverObject-&gt;MajorFunction[IRP_MJ_CREATE] = CreateDispatchFunc;</code></div>
+<div class="line"><code class="plain">    DriverObject-&gt;MajorFunction[IRP_MJ_CLOSE] = CloseDispatchFunc;</code></div>
+<div class="line"><code class="plain">    DriverObject-&gt;MajorFunction[IRP_MJ_DEVICE_CONTROL] = DeviceDispatchFunc;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置一个卸载函数，当驱动卸载时触发</code></div>
+<div class="line"><code class="plain">    DriverObject-&gt;DriverUnload = DriverUnload;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p  class="auto-cursor-target" 
+>&#23454;&#38469;&#36816;&#34892;&#27979;&#35797;&#65292;&#21457;&#29616;&#25105;&#20204;&#21487;&#20197;&#24456;&#39034;&#30021;&#30340;&#22312;3&#29615;&#19982;0&#29615;&#36827;&#34892;&#36890;&#20449;&#65306;</p>
+<p  class="auto-cursor-target" 
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-9-17_15-15-54.png" alt="images/download/attachments/1015847/image2022-9-17_15-15-54.png" width="600"  />
+    </p>
+    </div>
+    </div>
+    </div>
+    <div class="section section-1" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLUhvb2vmioDmnK8">
+        <h1 class="heading auto-cursor-target"><span>Hook&#25216;&#26415;</span></h1>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLVNTRFRIb29r">
+        <h2 class="heading "><span>SSDT Hook</span></h2>
+<p   
+>SSDT Hook&#23601;&#26159;&#26681;&#25454;SSDT&#65288;&#21363;KeServiceDescriptorTable&#12289;KeServiceDescriptorTableShadow&#65289;&#25214;&#21040;&#31995;&#32479;&#26381;&#21153;&#34920;&#65292;&#24182;&#19988;&#20462;&#25913;&#31995;&#32479;&#26381;&#21153;&#34920;&#30340;&#20989;&#25968;&#22320;&#22336;&#34920;&#30340;&#26576;&#20010;&#20989;&#25968;&#22320;&#22336;&#65292;&#26469;&#36798;&#21040;Hook&#25351;&#23450;&#20989;&#25968;&#30340;&#30446;&#30340;&#12290;&#65288;&#20851;&#20110;SSDT&#30340;&#20869;&#23481;&#25105;&#20204;&#24050;&#32463;&#22312;&#31995;&#32479;&#35843;&#29992;&#30340;&#23398;&#20064;&#20013;&#20102;&#35299;&#20102;&#65289;</p>
+    <div class="section section-3" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeagueaNrlNTRFTojrflj5bns7vnu5_mnI3liqHooag">
+        <h3 class="heading "><span>&#26681;&#25454;SSDT&#33719;&#21462;&#31995;&#32479;&#26381;&#21153;&#34920;</span></h3>
+<p   
+>&#26412;&#27425;&#23454;&#39564;&#25105;&#20204;&#21482;&#23545;&#31532;&#19968;&#24352;&#31995;&#32479;&#26381;&#21153;&#34920;&#30340;&#20989;&#25968;&#36827;&#34892;&#20462;&#25913;&#65292;&#25152;&#20197;&#25105;&#20204;&#21487;&#20197;&#20808;&#26681;&#25454;KeServiceDescriptorTable&#38656;&#35201;&#33719;&#21462;&#31995;&#32479;&#26381;&#21153;&#34920;&#30340;&#22320;&#22336;&#12290;&#22914;&#19979;&#20195;&#30721;&#25152;&#31034;&#65292;&#25105;&#20204;&#25353;&#25104;&#21592;&#32467;&#26500;&#20307;&#23450;&#20041;&#22909;&#31995;&#32479;&#26381;&#21153;&#34920;&#21644;SSDT&#65292;&#24182;&#19988;&#23548;&#20986;KeServiceDescriptorTable&#12290;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 定义系统服务表结构</code></div>
+<div class="line"><code class="plain">typedef struct _KSYSTEM_SERVICE_TABLE</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    PULONG ServiceTableBase;</code></div>
+<div class="line"><code class="plain">    PULONG ServiceCounterTableBase;</code></div>
+<div class="line"><code class="plain">    ULONG NumberOfService;</code></div>
+<div class="line"><code class="plain">    PULONG ParamTableBase;</code></div>
+<div class="line"><code class="plain">} KSYSTEM_SERVICE_TABLE, *PKSYSTEM_SERVICE_TABLE;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 定义SSDT结构</code></div>
+<div class="line"><code class="plain">typedef struct _KSERVICE_TABLE_DESCRIPTOR</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE KrnlFuncTable;</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE Wind32KTable;</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE NotUsedTableA;</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE NotUsedTableB;</code></div>
+<div class="line"><code class="plain">} KSERVICE_TABLE_DESCRIPTOR, *PKSYSTEM_SERVICE_DESCRIPTOR;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 导出由内核模块所导出的SSDT</code></div>
+<div class="line"><code class="plain">extern PKSYSTEM_SERVICE_DESCRIPTOR KeServiceDescriptorTable;</code></div>
+</div>
+    </div>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#21487;&#20197;&#26469;&#39537;&#21160;&#20837;&#21475;&#20989;&#25968;&#36755;&#20986;&#20989;&#25968;&#22320;&#22336;&#34920;&#30340;&#22320;&#22336;&#65292;&#26469;&#21028;&#26029;&#25105;&#20204;&#33719;&#21462;&#30340;&#26159;&#21542;&#27491;&#30830;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">DbgPrint(</code><code class="string">"Address: %x\n"</code><code class="plain">, KeServiceDescriptorTable-&gt;KrnlFuncTable.ServiceTableBase);</code></div>
+</div>
+    </div>
+<p   
+>&#22914;&#19979;&#22270;&#25152;&#31034;&#65292;&#25105;&#20204;&#33719;&#21462;&#30340;&#20989;&#25968;&#22320;&#22336;&#34920;&#22320;&#22336;&#19982;Windbg&#23637;&#31034;&#30340;&#26159;&#19968;&#30452;&#30340;&#65292;&#22240;&#27492;&#36825;&#37324;&#25105;&#20204;&#25104;&#21151;&#36890;&#36807;SSDT&#33719;&#21462;&#20102;&#31995;&#32479;&#26381;&#21153;&#34920;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-10-17_16-18-38.png" alt="images/download/attachments/1015847/image2022-10-17_16-18-38.png" width="600"  />
+    </p>
+    </div>
+    <div class="section section-3" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWHhuWkh-imgeabv-aNoueahOWHveaVsA">
+        <h3 class="heading "><span>&#20934;&#22791;&#35201;&#26367;&#25442;&#30340;&#20989;&#25968;</span></h3>
+<p   
+>&#22312;&#20934;&#22791;&#35201;&#26367;&#25442;&#30340;&#20989;&#25968;&#20043;&#21069;&#65292;&#25105;&#20204;&#35201;&#30830;&#23450;&#26367;&#25442;&#21738;&#20010;&#20989;&#25968;&#65292;&#24182;&#19988;&#25214;&#21040;&#20854;&#22312;&#20989;&#25968;&#22320;&#22336;&#34920;&#30340;&#20301;&#32622;&#65292;&#36825;&#37324;&#25105;&#20204;&#36873;&#25321;&#19968;&#20010;&#20351;&#29992;&#30340;&#27604;&#36739;&#22810;&#30340;&#20989;&#25968;OpenProcess&#65292;&#39318;&#20808;&#25105;&#20204;&#22312;kernel32.dll&#25214;&#21040;&#35813;&#20989;&#25968;&#65292;&#21457;&#29616;&#35813;&#20989;&#25968;&#23454;&#38469;&#26159;&#35843;&#29992;ntdll.dll&#19979;&#30340;NtOpenProcess&#21363;ZwOpenProcess&#65292;&#31995;&#32479;&#35843;&#29992;&#21495;&#20026;0x7A&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-10-17_16-36-37.png" alt="images/download/attachments/1015847/image2022-10-17_16-36-37.png" width="600"  />
+    </p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#22312;&#20989;&#25968;&#22320;&#22336;&#34920;&#20013;&#25214;&#21040;&#23427;&#65292;&#21363;0x805CAC46&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-10-17_16-41-25.png" alt="images/download/attachments/1015847/image2022-10-17_16-41-25.png" width="400"  />
+    </p>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#21487;&#20197;&#22312;Hook&#21069;&#20808;&#20445;&#23384;&#36825;&#20010;&#22320;&#22336;&#65292;&#36825;&#26679;&#24403;&#21368;&#36733;&#39537;&#21160;&#26102;&#20415;&#20110;&#36824;&#21407;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 用于保存被Hook的函数地址</code></div>
+<div class="line"><code class="plain">ULONG OldFuncAddr;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 保存被Hook的函数地址</code></div>
+<div class="line"><code class="plain">OldFuncAddr = KeServiceDescriptorTable-&gt;KrnlFuncTable.ServiceTableBase[</code><code class="value">0x7A</code><code class="plain">];</code></div>
+</div>
+    </div>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#25353;&#24320;&#21457;&#25991;&#26723;&#19978;ZwOpenProcess&#30340;&#26684;&#24335;&#33258;&#23450;&#20041;&#19968;&#20010;&#20989;&#25968;&#65292;&#24182;&#19988;&#23450;&#20041;&#22909;NtOpenProcess&#30340;&#20989;&#25968;&#25351;&#38024;&#22312;&#33258;&#23450;&#20041;&#30340;&#20989;&#25968;&#20869;&#26368;&#32456;&#35843;&#29992;&#21407;&#20989;&#25968;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 声明函数指针</code></div>
+<div class="line"><code class="plain">typedef NTSTATUS(*NTOPENPROCESS)(</code></div>
+<div class="line"><code class="plain">    PHANDLE ProcessHandle,</code></div>
+<div class="line"><code class="plain">    ACCESS_MASK DesiredAccess,</code></div>
+<div class="line"><code class="plain">    POBJECT_ATTRIBUTES ObjectAttributes,</code></div>
+<div class="line"><code class="plain">    PCLIENT_ID ClientId</code></div>
+<div class="line"><code class="plain">);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 准备的函数</code></div>
+<div class="line"><code class="plain">NTSTATUS MyNtOpenProcess(PHANDLE ProcessHandle, ACCESS_MASK DesiredAccess, POBJECT_ATTRIBUTES ObjectAttributes, PCLIENT_ID ClientId)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 自己的代码</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"Hooking... \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 最终还是走向真正的NtOpenProcess</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> ((NTOPENPROCESS)OldFuncAddr)(ProcessHandle, DesiredAccess, ObjectAttributes, ClientId);</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#36825;&#37324;&#32943;&#23450;&#24456;&#22810;&#20154;&#20250;&#34987;NtXXX&#21644;ZwXXX&#25630;&#24471;&#22836;&#26197;&#30446;&#30505;&#65292;&#25105;&#20204;&#31616;&#21333;&#20102;&#35299;&#19979;&#36825;&#20004;&#20010;&#21629;&#21517;&#30340;&#21306;&#21035;&#65306;&#22312;&#29992;&#25143;&#35282;&#24230;&#19979;&#20063;&#23601;&#26159;&#25105;&#20204;&#20043;&#21069;&#22312;ntdll.dll&#20013;&#30475;&#21040;&#30340;NtOpenProcess&#21644;ZwOpenProcess&#23427;&#20204;&#26412;&#36136;&#37117;&#26159;&#19968;&#26679;&#30340;&#65292;ZwOpenProcess&#21482;&#26159;NtOpenProcess&#30340;&#19968;&#20010;&#21035;&#21517;&#65292;&#23427;&#20204;&#26368;&#32456;&#37117;&#25351;&#21521;&#21516;&#19968;&#20010;&#22320;&#22336;&#65307;<strong class=" ">&#22312;&#20869;&#26680;&#35282;&#24230;&#19979;ZwOpenProcess&#19981;&#20165;&#20165;&#26159;NtOpenProcess&#30340;&#21035;&#21517;&#65292;&#25105;&#20204;&#21487;&#20197;&#30475;&#22914;&#19979;&#20195;&#30721;&#65292;ZwOpenProcess&#23454;&#38469;&#19978;&#20063;&#26159;&#19968;&#20010;&#31995;&#32479;&#35843;&#29992;&#30340;&#36807;&#31243;&#36319;&#29992;&#25143;&#20391;&#30340;ZwOpenProcess&#27809;&#20160;&#20040;&#21306;&#21035;&#65292;&#32780;&#20869;&#26680;&#19979;&#30340;NtOpenProcess&#21017;&#26159;&#30495;&#27491;&#26377;&#23454;&#29616;&#30340;&#20989;&#25968;</strong>&#65292;&#25152;&#20197;&#25105;&#20204;&#22312;&#19978;&#38754;&#30340;&#20195;&#30721;&#22768;&#26126;&#20013;&#37117;&#26159;&#20197;NtOpenProcess&#26469;&#21629;&#21517;&#20063;&#26159;&#20026;&#20102;&#35268;&#33539;&#32479;&#19968;&#21270;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-10-17_17-0-27.png" alt="images/download/attachments/1015847/image2022-10-17_17-0-27.png" width="600"  />
+    </p>
+    </div>
+    <div class="section section-3" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeS_ruaUueWHveaVsOWcsOWdgOihqOWcsOWdgA">
+        <h3 class="heading "><span>&#20462;&#25913;&#20989;&#25968;&#22320;&#22336;&#34920;&#22320;&#22336;</span></h3>
+<p   
+>&#25105;&#20204;&#20934;&#22791;&#22909;&#20102;&#35201;&#26367;&#25442;&#30340;&#20989;&#25968;&#65292;&#25509;&#30528;&#23601;&#26159;&#20462;&#25913;&#20989;&#25968;&#22320;&#22336;&#34920;&#30340;&#22320;&#22336;&#65292;<strong class=" ">&#30452;&#25509;&#20462;&#25913;&#26159;&#19981;&#21487;&#34892;&#30340;&#65292;&#22240;&#20026;&#31995;&#32479;&#26381;&#21153;&#34920;&#25152;&#22312;&#30340;&#29289;&#29702;&#39029;&#26159;&#21482;&#35835;&#30340;&#65292;&#22914;&#26524;&#35201;&#20462;&#25913;&#29289;&#29702;&#39029;&#30340;&#20869;&#23481;&#65292;&#23601;&#38656;&#35201;&#20808;&#20462;&#25913;&#39029;&#23646;&#24615;&#20026;&#21487;&#20889;</strong>&#12290;</p>
+<p   
+>&#20462;&#25913;&#29289;&#29702;&#39029;&#35835;&#20889;&#23646;&#24615;&#30340;&#26041;&#24335;&#26377;&#20004;&#31181;&#65292;&#31532;&#19968;&#31181;&#26041;&#27861;&#26159;&#26681;&#25454;&#39029;&#30446;&#24405;&#34920;&#12289;&#39029;&#34920;&#22522;&#22336;&#25214;&#21040;PDE&#12289;PTE&#20462;&#25913;&#20854;R/W&#20301;&#20540;&#20026;1&#65292;&#23601;&#21487;&#20197;&#35753;&#29289;&#29702;&#39029;&#20855;&#26377;&#35835;&#20889;&#23646;&#24615;&#65288;&#20851;&#20110;&#20855;&#20307;&#30340;&#20195;&#30721;&#23454;&#29616;&#21487;&#20197;&#21442;&#32771;&#19981;&#21516;&#20998;&#39029;&#27169;&#24335;&#19979;&#30340;MmIsAddressValid&#20989;&#25968;&#65289;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 修改物理页属性</code></div>
+<div class="line"><code class="plain">NTSTATUS ChangePageAttr(ULONG attrValue)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ULONG RCR4 = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 获得CR4寄存器的值</code></div>
+<div class="line"><code class="plain">    _asm</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        _emit </code><code class="value">0x0F</code></div>
+<div class="line"><code class="plain">        _emit </code><code class="value">0x20</code></div>
+<div class="line"><code class="plain">        _emit </code><code class="value">0xE0</code></div>
+<div class="line"><code class="plain">        mov RCR4, eax</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 根据CR4寄存器的PAE位判断分页模式</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (RCR4 &amp; </code><code class="value">0x00000200</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"2-9-9-12 \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 获取PDE、PTE，并修改R/W</code></div>
+<div class="line"><code class="plain">        *(ULONG64*)(</code><code class="value">0xC0600000</code><code class="plain"> + (((OldFuncAddr &gt;&gt; </code><code class="value">21</code><code class="plain">) &lt;&lt; </code><code class="value">3</code><code class="plain">) &amp; </code><code class="value">0x3FF8</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">        *(ULONG64*)(</code><code class="value">0xC0000000</code><code class="plain"> + (((OldFuncAddr &gt;&gt; </code><code class="value">12</code><code class="plain">) &lt;&lt; </code><code class="value">3</code><code class="plain">) &amp; </code><code class="value">0x7FFFF8</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"10-10-12 \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 获取PDE、PTE，并修改R/W</code></div>
+<div class="line"><code class="plain">        *(ULONG*)(</code><code class="value">0xC0300000</code><code class="plain"> + ((OldFuncAddr &gt;&gt; </code><code class="value">20</code><code class="plain">) &amp; </code><code class="value">0xFFC</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">        *(ULONG*)(</code><code class="value">0xC0000000</code><code class="plain"> + ((OldFuncAddr &gt;&gt; </code><code class="value">10</code><code class="plain">) &amp; </code><code class="value">0x3FFFFC</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">   </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 修改R/W为1</code></div>
+<div class="line"><code class="plain">ChangePageAttr(</code><code class="value">0x2</code><code class="plain">);</code></div>
+<div class="line"><code class="comments">// 修改R/W为0</code></div>
+<div class="line"><code class="plain">ChangePageAttr(</code><code class="value">0x0</code><code class="plain">)</code></div>
+</div>
+    </div>
+<p   
+>&#31532;&#20108;&#31181;&#26041;&#27861;&#23601;&#26159;&#36890;&#36807;&#20462;&#25913;CR0&#23492;&#23384;&#22120;&#30340;WP&#20301;&#65292;&#23558;&#20854;&#35774;&#20026;0&#23601;&#21487;&#20197;&#20851;&#38381;&#20889;&#20445;&#25252;&#26080;&#35270;&#29289;&#29702;&#39029;&#21482;&#35835;&#26435;&#38480;&#36827;&#34892;&#35835;&#20889;&#65292;<strong class=" ">&#36825;&#26679;&#30340;&#26041;&#27861;&#34429;&#28982;&#31616;&#21333;&#20294;&#22312;&#22810;&#26680;&#30340;&#24773;&#20917;&#19979;&#22312;&#20195;&#30721;&#36816;&#34892;&#26102;&#20505;&#26377;&#26680;&#20999;&#25442;&#23601;&#20250;&#23384;&#22312;&#38382;&#39064;&#65292;&#25152;&#20197;&#25512;&#33616;&#20351;&#29992;&#30340;&#26159;&#31532;&#19968;&#31181;&#26041;&#27861;</strong>&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">VOID PageProtectOn()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    __try</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        _asm</code></div>
+<div class="line"><code class="plain">        {</code></div>
+<div class="line"><code class="plain">            mov eax, cr0</code></div>
+<div class="line"><code class="plain">            or eax, 10000h</code></div>
+<div class="line"><code class="plain">            mov cr0, eax</code></div>
+<div class="line"><code class="plain">            sti</code></div>
+<div class="line"><code class="plain">        }</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    __except (</code><code class="value">1</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"PageProtectOn执行失败！"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">VOID PageProtectOff()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    __try</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        _asm</code></div>
+<div class="line"><code class="plain">        {</code></div>
+<div class="line"><code class="plain">            cli</code></div>
+<div class="line"><code class="plain">            mov eax, cr0</code></div>
+<div class="line"><code class="plain">            and eax, not 10000h </code><code class="comments">//and eax,0FFFEFFFFh</code></div>
+<div class="line"><code class="plain">            mov cr0, eax</code></div>
+<div class="line"><code class="plain">        }</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    __except (</code><code class="value">1</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"PageProtectOff执行失败！"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#20351;&#29992;&#19979;&#26631;&#26367;&#25442;&#20989;&#25968;&#22320;&#22336;&#30340;&#20195;&#30721;&#21363;&#21487;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// Hook</code></div>
+<div class="line"><code class="plain">NTSTATUS HookFuncAddr(ULONG FuncAddr)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ChangePageAttr(</code><code class="value">0x2</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    KeServiceDescriptorTable-&gt;KrnlFuncTable.ServiceTableBase[</code><code class="value">0x7A</code><code class="plain">] = FuncAddr;</code></div>
+<div class="line"><code class="plain">    ChangePageAttr(</code><code class="value">0x0</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">   </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">HookFuncAddr((ULONG)MyNtOpenProcess);</code></div>
+</div>
+    </div>
+    </div>
+    <div class="section section-3" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLeWujOaVtOS7o-eggQ">
+        <h3 class="heading "><span>&#23436;&#25972;&#20195;&#30721;</span></h3>
+<p   
+>&#26368;&#32456;&#23558;&#25152;&#26377;&#20195;&#30721;&#35843;&#20248;&#19968;&#19979;&#32454;&#33410;&#21363;&#21487;&#65292;&#23436;&#25972;&#20195;&#30721;&#22914;&#19979;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;ntddk.h&gt; </code><code class="comments">// 必须要包含的头文件</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 定义系统服务表结构</code></div>
+<div class="line"><code class="plain">typedef struct _KSYSTEM_SERVICE_TABLE</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    PULONG ServiceTableBase;</code></div>
+<div class="line"><code class="plain">    PULONG ServiceCounterTableBase;</code></div>
+<div class="line"><code class="plain">    ULONG NumberOfService;</code></div>
+<div class="line"><code class="plain">    PULONG ParamTableBase;</code></div>
+<div class="line"><code class="plain">} KSYSTEM_SERVICE_TABLE, *PKSYSTEM_SERVICE_TABLE;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 定义SSDT结构</code></div>
+<div class="line"><code class="plain">typedef struct _KSERVICE_TABLE_DESCRIPTOR</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE KrnlFuncTable;</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE Wind32KTable;</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE NotUsedTableA;</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE NotUsedTableB;</code></div>
+<div class="line"><code class="plain">} KSERVICE_TABLE_DESCRIPTOR, *PKSYSTEM_SERVICE_DESCRIPTOR;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 导出由内核模块所导出的SSDT</code></div>
+<div class="line"><code class="plain">extern PKSYSTEM_SERVICE_DESCRIPTOR KeServiceDescriptorTable;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 用于保存被Hook的函数地址</code></div>
+<div class="line"><code class="plain">ULONG OldFuncAddr;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 声明函数指针</code></div>
+<div class="line"><code class="plain">typedef NTSTATUS(*NTOPENPROCESS)(</code></div>
+<div class="line"><code class="plain">    PHANDLE ProcessHandle,</code></div>
+<div class="line"><code class="plain">    ACCESS_MASK DesiredAccess,</code></div>
+<div class="line"><code class="plain">    POBJECT_ATTRIBUTES ObjectAttributes,</code></div>
+<div class="line"><code class="plain">    PCLIENT_ID ClientId</code></div>
+<div class="line"><code class="plain">);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 准备的函数</code></div>
+<div class="line"><code class="plain">NTSTATUS MyNtOpenProcess(PHANDLE ProcessHandle, ACCESS_MASK DesiredAccess, POBJECT_ATTRIBUTES ObjectAttributes, PCLIENT_ID ClientId)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 自己的代码</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"Hooking... \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 最终还是走向真正的OpenProcess</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> ((NTOPENPROCESS)OldFuncAddr)(ProcessHandle, DesiredAccess, ObjectAttributes, ClientId);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 修改物理页属性</code></div>
+<div class="line"><code class="plain">NTSTATUS ChangePageAttr(ULONG attrValue)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ULONG RCR4 = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 获得CR4寄存器的值</code></div>
+<div class="line"><code class="plain">    _asm</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        _emit </code><code class="value">0x0F</code></div>
+<div class="line"><code class="plain">        _emit </code><code class="value">0x20</code></div>
+<div class="line"><code class="plain">        _emit </code><code class="value">0xE0</code></div>
+<div class="line"><code class="plain">        mov RCR4, eax</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 根据CR4寄存器的PAE位判断分页模式</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (RCR4 &amp; </code><code class="value">0x00000200</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"2-9-9-12 \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 获取PDE、PTE，并修改R/W</code></div>
+<div class="line"><code class="plain">        *(ULONG64*)(</code><code class="value">0xC0600000</code><code class="plain"> + (((OldFuncAddr &gt;&gt; </code><code class="value">21</code><code class="plain">) &lt;&lt; </code><code class="value">3</code><code class="plain">) &amp; </code><code class="value">0x3FF8</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">        *(ULONG64*)(</code><code class="value">0xC0000000</code><code class="plain"> + (((OldFuncAddr &gt;&gt; </code><code class="value">12</code><code class="plain">) &lt;&lt; </code><code class="value">3</code><code class="plain">) &amp; </code><code class="value">0x7FFFF8</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"10-10-12 \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 获取PDE、PTE，并修改R/W</code></div>
+<div class="line"><code class="plain">        *(ULONG*)(</code><code class="value">0xC0300000</code><code class="plain"> + ((OldFuncAddr &gt;&gt; </code><code class="value">20</code><code class="plain">) &amp; </code><code class="value">0xFFC</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">        *(ULONG*)(</code><code class="value">0xC0000000</code><code class="plain"> + ((OldFuncAddr &gt;&gt; </code><code class="value">10</code><code class="plain">) &amp; </code><code class="value">0x3FFFFC</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// Hook</code></div>
+<div class="line"><code class="plain">NTSTATUS HookFuncAddr(ULONG FuncAddr)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ChangePageAttr(</code><code class="value">0x2</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    KeServiceDescriptorTable-&gt;KrnlFuncTable.ServiceTableBase[</code><code class="value">0x7A</code><code class="plain">] = FuncAddr;</code></div>
+<div class="line"><code class="plain">    ChangePageAttr(</code><code class="value">0x0</code><code class="plain">);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 自定义的驱动程序卸载函数</code></div>
+<div class="line"><code class="plain">VOID DriverUnload(PDRIVER_OBJECT DriverObject)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    HookFuncAddr((ULONG)OldFuncAddr);</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"Bye. \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 驱动程序入口函数</code></div>
+<div class="line"><code class="plain">NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"Address: %x\n"</code><code class="plain">, KeServiceDescriptorTable-&gt;KrnlFuncTable.ServiceTableBase);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 保存被Hook的函数地址</code></div>
+<div class="line"><code class="plain">    OldFuncAddr = KeServiceDescriptorTable-&gt;KrnlFuncTable.ServiceTableBase[</code><code class="value">0x7A</code><code class="plain">];</code></div>
+<div class="line"><code class="plain">    HookFuncAddr((ULONG)MyNtOpenProcess);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置一个卸载函数，当驱动卸载时触发</code></div>
+<div class="line"><code class="plain">    DriverObject-&gt;DriverUnload = DriverUnload;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#32534;&#35793;&#20195;&#30721;&#65292;&#22312;&#31995;&#32479;&#19978;&#36816;&#34892;&#25104;&#21151;&#23454;&#29616;&#20102;Hook&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-10-18_11-22-22.png" alt="images/download/attachments/1015847/image2022-10-18_11-22-22.png" width="600"  />
+    </p>
+    </div>
+    </div>
+    <div class="section section-2" id="src-1015847_safe-id-aWQt6amx5Yqo5byA5Y-RLUlubGluZUhvb2s">
+        <h2 class="heading "><span>Inline Hook</span></h2>
+<p   
+>SSDT Hook&#30340;&#26041;&#24335;&#26159;&#22522;&#20110;&#31995;&#32479;&#26381;&#21153;&#34920;&#30340;&#65292;&#36825;&#31181;&#26041;&#24335;&#24456;&#23481;&#26131;&#34987;&#21457;&#29616;&#24182;&#19988;&#25105;&#20204;&#21482;&#33021;&#21462;Hook&#31995;&#32479;&#26381;&#21153;&#34920;&#20869;&#30340;&#20989;&#25968;&#65292;&#22240;&#27492;&#25105;&#20204;&#21487;&#20197;&#20351;&#29992;Inline Hook&#30340;&#26041;&#24335;&#26469;&#24357;&#34917;&#36825;&#20123;&#32570;&#38519;&#12290;Inline Hook&#21487;&#20197;&#22312;3&#29615;&#12289;0&#29615;&#19979;&#20351;&#29992;&#65292;&#23427;&#30340;&#21407;&#29702;&#23601;&#26159;&#25913;&#21464;&#31243;&#24207;&#30340;&#25191;&#34892;&#27969;&#31243;&#65292;&#20363;&#22914;&#20320;&#21487;&#20197;&#22312;&#26576;&#20010;&#20989;&#25968;&#30340;&#31532;&#19968;&#34892;&#20301;&#32622;&#24320;&#22987;&#26367;&#25442;&#20026;JMP&#25351;&#20196;&#65292;&#36339;&#36716;&#21040;&#33258;&#24049;&#30340;&#20989;&#25968;&#22320;&#22336;&#12290;<strong class=" ">&#38500;&#20102;&#20351;&#29992;JMP&#25351;&#20196;&#25913;&#21464;&#25191;&#34892;&#27969;&#31243;&#65292;&#25105;&#20204;&#36824;&#21487;&#20197;&#20351;&#29992;CALL&#25351;&#20196;&#20197;&#21450;PUSH&#12289;RET&#25351;&#20196;&#30340;&#32452;&#21512;&#12290;JMP&#12289;CALL&#25351;&#20196;&#33267;&#23569;&#21344;&#29992;5&#20010;&#23383;&#33410;&#65292;PUSH&#12289;RET&#25351;&#20196;&#30340;&#32452;&#21512;&#21017;&#38656;&#35201;6&#20010;&#23383;&#33410;&#12290;</strong></p>
+<p   
+>&#20351;&#29992;Inline Hook&#26102;&#38656;&#35201;&#27880;&#24847;&#36991;&#20813;&#26367;&#25442;&#20840;&#23616;&#21464;&#37327;&#30456;&#20851;&#30340;&#30828;&#32534;&#30721;&#65292;&#24182;&#19988;&#38656;&#35201;&#20808;&#23558;&#36890;&#29992;&#23492;&#23384;&#22120;&#21387;&#26632;&#20445;&#23384;&#65292;&#28982;&#21518;&#23558;&#34987;&#26367;&#25442;&#30340;&#25351;&#20196;&#21152;&#20837;&#21040;&#33258;&#24049;&#30340;&#25351;&#20196;&#20013;&#20197;&#20445;&#35777;&#31243;&#24207;&#21487;&#20197;&#23436;&#25972;&#25191;&#34892;&#65292;&#26368;&#32456;&#20877;JMP&#22238;&#34987;&#26367;&#25442;&#25351;&#20196;&#25152;&#22312;&#34892;&#30340;&#19979;&#19968;&#34892;&#22320;&#22336;&#12290;</p>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#20351;&#29992;SSDT Hook&#30340;&#20195;&#30721;&#26469;&#25214;&#21040;&#35201;Hook&#20989;&#25968;&#30340;&#22320;&#22336;&#65292;&#20363;&#22914;&#27492;&#22788;&#25105;&#24819;Hook&#20989;&#25968;NtOpenProcess&#26469;&#30417;&#25511;&#23427;&#30340;&#21442;&#25968;&#65292;&#25105;&#20204;&#19981;&#20877;&#38656;&#35201;&#22768;&#26126;&#20989;&#25968;&#25351;&#38024;&#28982;&#21518;&#20889;&#33258;&#23450;&#20041;&#20989;&#25968;&#65292;&#30452;&#25509;&#20889;&#19968;&#20010;&#33258;&#23450;&#30340;&#20989;&#25968;&#21363;&#21487;&#65292;&#20294;&#20063;&#22240;&#27492;&#25105;&#20204;&#38656;&#35201;&#36890;&#36807;&#20854;&#20182;&#30340;&#26041;&#24335;&#26469;&#33719;&#21462;&#21442;&#25968;&#20540;&#65292;&#25105;&#20204;&#21487;&#20197;&#26469;&#30475;&#19968;&#19979;&#35813;&#20989;&#25968;&#30340;&#23454;&#29616;&#65292;&#20284;&#20046;&#24182;&#27809;&#26377;&#29992;&#21040;&#23492;&#23384;&#22120;&#65292;&#20063;&#23601;&#34920;&#31034;&#22312;&#36825;&#37324;&#19981;&#26159;&#36890;&#36807;&#23492;&#23384;&#22120;&#20256;&#21442;&#65292;&#32780;&#26159;&#36890;&#36807;&#26632;&#20256;&#21442;&#65292;&#37027;&#25105;&#20204;&#23601;&#21487;&#20197;&#20351;&#29992;EBP&#23547;&#22336;&#26469;&#33719;&#21462;&#21442;&#25968;&#12290;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-10-18_20-39-10.png" alt="images/download/attachments/1015847/image2022-10-18_20-39-10.png" width="600"  />
+    </p>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#38656;&#35201;&#25214;&#21040;&#21512;&#36866;&#30340;Hook&#28857;&#65292;&#20063;&#23601;&#26159;&#25105;&#20204;&#20195;&#30721;&#27969;&#31243;&#20999;&#25442;&#25351;&#20196;&#26367;&#25442;&#30340;&#20301;&#32622;&#65292;&#36825;&#37324;&#25105;&#20204;&#36873;&#25321;&#27604;&#36739;&#26041;&#20415;&#30340;PUSH&#12289;RET&#25351;&#20196;&#65292;&#20063;&#23601;&#26159;&#35201;&#25214;&#19968;&#20010;&#38750;&#20840;&#23616;&#21464;&#37327;&#30456;&#20851;&#30340;&#20301;&#32622;&#65292;&#22914;&#19978;&#22270;&#26631;&#32418;&#25152;&#31034;&#21363;&#19968;&#20010;&#27604;&#36739;&#19981;&#38169;&#30340;Hook&#28857;&#65292;&#25509;&#30528;&#25105;&#20204;&#26469;&#32534;&#20889;&#33258;&#23450;&#20041;&#20989;&#25968;&#30340;&#20195;&#30721;&#65292;<strong class=" ">__declspec(naked)&#29992;&#20110;&#34920;&#31034;&#36825;&#26159;&#19968;&#20010;&#35064;&#20989;&#25968;&#36825;&#26679;&#32534;&#35793;&#22120;&#23601;&#19981;&#20250;&#20026;&#35813;&#20989;&#25968;&#30340;&#32467;&#23614;&#21152;&#20837;RET&#25351;&#20196;</strong>&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 准备的函数</code></div>
+<div class="line"><code class="plain">VOID __declspec(naked) MyNtOpenProcess()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    __asm</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 保存寄存器</code></div>
+<div class="line"><code class="plain">        pushad</code></div>
+<div class="line"><code class="plain">        pushfd</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 获取传参数</code></div>
+<div class="line"><code class="plain">        mov eax, [ebp + </code><code class="value">0x8</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        mov ProcessHandle, eax</code></div>
+<div class="line"><code class="plain">        mov eax, [ebp + </code><code class="value">0xC</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        mov DesiredAccess, eax</code></div>
+<div class="line"><code class="plain">        mov eax, [ebp + </code><code class="value">0x10</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        mov ObjectAttributes, eax</code></div>
+<div class="line"><code class="plain">        mov eax, [ebp + </code><code class="value">0x14</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        mov ClientId, eax</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">// 调试输出</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"ProcessHandle: %x, DesiredAccess: %x, ObjectAttributes: %x, ClientId: %x\n"</code><code class="plain">, ProcessHandle, DesiredAccess, ObjectAttributes, ClientId);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    __asm</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 还原寄存器</code></div>
+<div class="line"><code class="plain">        popfd</code></div>
+<div class="line"><code class="plain">        popad</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 执行被替换的指令，保证运行完整</code></div>
+<div class="line"><code class="plain">        xor eax, eax</code></div>
+<div class="line"><code class="plain">        lea edi, [ebp-</code><code class="value">0x28</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        stos dword ptr es:[edi]</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 跳转回原函数被替换指令的下一行地址</code></div>
+<div class="line"><code class="plain">        jmp BackAddress</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#20195;&#30721;&#20013;&#26377;&#24456;&#22810;&#32454;&#33410;&#30340;&#28857;&#65292;&#22914;&#38450;&#27490;&#25105;&#20204;&#30340;&#20195;&#30721;&#20013;&#20250;&#20351;&#29992;&#21040;&#23492;&#23384;&#22120;&#20808;&#21387;&#20837;&#21407;&#26469;&#30340;&#23492;&#23384;&#22120;&#21040;&#26632;&#65292;&#25509;&#30528;&#36824;&#21407;&#65292;&#22312;JMP&#22238;&#21407;&#20989;&#25968;&#34987;&#26367;&#25442;&#25351;&#20196;&#30340;&#19979;&#19968;&#34892;&#22320;&#22336;&#20043;&#21069;&#25105;&#20204;&#38656;&#35201;&#23558;&#34987;&#26367;&#25442;&#30340;&#25351;&#20196;&#25191;&#34892;&#19968;&#19979;&#65292;&#20197;&#20445;&#35777;&#20989;&#25968;&#36816;&#34892;&#30340;&#23436;&#25972;&#24615;&#12290;</p>
+<p   
+>&#25509;&#30528;&#25105;&#20204;&#38656;&#35201;&#26500;&#36896;&#19968;&#19979;&#20462;&#25913;&#30340;&#25351;&#20196;&#65292;&#21363;PUSH&#12289;RET&#25351;&#20196;&#65292;&#30452;&#25509;&#20351;&#29992;&#30828;&#32534;&#30721;&#30340;&#26041;&#24335;&#21363;&#21487;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">UCHAR PushRetCmd[</code><code class="value">6</code><code class="plain">] = { </code><code class="value">0</code><code class="plain"> };</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 硬编码 PUSH 0x12345678</code></div>
+<div class="line"><code class="plain">PushRetCmd[</code><code class="value">0</code><code class="plain">] = </code><code class="value">0x68</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">*(ULONG*)(PushRetCmd + </code><code class="value">1</code><code class="plain">) = (ULONG)MyNtOpenProcess;</code></div>
+<div class="line"><code class="comments">// RET</code></div>
+<div class="line"><code class="plain">PushRetCmd[</code><code class="value">5</code><code class="plain">] = </code><code class="value">0xC3</code><code class="plain">;</code></div>
+</div>
+    </div>
+<p   
+>&#20877;&#20351;&#29992;RtlMoveMemory&#26469;&#26367;&#25442;&#20989;&#25968;&#25351;&#20196;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 修改函数指令</code></div>
+<div class="line"><code class="plain">NTSTATUS ChangeFuncCmd(UCHAR CmdByte[</code><code class="value">6</code><code class="plain">])</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ChangePageAttr(</code><code class="value">0x2</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    RtlMoveMemory((PUCHAR)CmdAddress, CmdByte, </code><code class="value">6</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    ChangePageAttr(</code><code class="value">0x0</code><code class="plain">);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#22312;&#39537;&#21160;&#20837;&#21475;&#22788;&#25105;&#20204;&#23558;&#35813;&#35745;&#31639;&#30340;&#22320;&#22336;&#65292;&#20197;&#21450;&#25351;&#20196;&#37117;&#22635;&#20805;&#22909;&#21363;&#21487;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="comments">// 保存被Hook的函数地址</code></div>
+<div class="line"><code class="plain">FuncAddr = KeServiceDescriptorTable-&gt;KrnlFuncTable.ServiceTableBase[</code><code class="value">0x7A</code><code class="plain">];</code></div>
+<div class="line"><code class="plain">DbgPrint(</code><code class="string">"FuncAddr: %x \n"</code><code class="plain">, FuncAddr);</code></div>
+<div class="line"><code class="comments">// 计算要替换的函数地址和要JMP的返回地址</code></div>
+<div class="line"><code class="plain">CmdAddress = FuncAddr + </code><code class="value">0x14</code><code class="plain">; </code><code class="comments">// 将要替换的指令地址减去函数首地址得出偏移0x144</code></div>
+<div class="line"><code class="plain">DbgPrint(</code><code class="string">"CmdAddress: %x \n"</code><code class="plain">, CmdAddress);</code></div>
+<div class="line"><code class="plain">BackAddress = CmdAddress + </code><code class="value">0x6</code><code class="plain">; </code><code class="comments">// 替换的指令长度为0x6</code></div>
+<div class="line"><code class="plain">DbgPrint(</code><code class="string">"BackAddress: %x \n"</code><code class="plain">, BackAddress);</code></div>
+<div class="line"><code class="comments">// 硬编码 PUSH 0x12345678</code></div>
+<div class="line"><code class="plain">PushRetCmd[</code><code class="value">0</code><code class="plain">] = </code><code class="value">0x68</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">*(ULONG*)(PushRetCmd + </code><code class="value">1</code><code class="plain">) = (ULONG)MyNtOpenProcess;</code></div>
+<div class="line"><code class="comments">// 硬编码 RET</code></div>
+<div class="line"><code class="plain">PushRetCmd[</code><code class="value">5</code><code class="plain">] = </code><code class="value">0xC3</code><code class="plain">;</code></div>
+<div class="line"><code class="comments">// 替换指令</code></div>
+<div class="line"><code class="plain">ChangeFuncCmd(PushRetCmd);</code></div>
+</div>
+    </div>
+<p   
+>&#26368;&#21518;&#21035;&#24536;&#35760;&#22312;&#21368;&#36733;&#20989;&#25968;&#26102;&#36824;&#21407;&#25351;&#20196;&#20197;&#21450;&#19968;&#20123;&#32454;&#33410;&#19978;&#30340;&#35843;&#25972;&#65292;&#26368;&#32456;&#23436;&#25972;&#20195;&#30721;&#22914;&#19979;&#65306;</p>
+    <div  class="confbox programlisting" style="counter-reset: scroll-code-numbering 1">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="defaultnew syntaxhighlighter scroll-html-formatted-code" data-linenumbers="true" data-firstline="1">
+<div class="line"><code class="plain">#include &lt;ntddk.h&gt; </code><code class="comments">// 必须要包含的头文件</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 定义系统服务表结构</code></div>
+<div class="line"><code class="plain">typedef struct _KSYSTEM_SERVICE_TABLE</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    PULONG ServiceTableBase;</code></div>
+<div class="line"><code class="plain">    PULONG ServiceCounterTableBase;</code></div>
+<div class="line"><code class="plain">    ULONG NumberOfService;</code></div>
+<div class="line"><code class="plain">    PULONG ParamTableBase;</code></div>
+<div class="line"><code class="plain">} KSYSTEM_SERVICE_TABLE, *PKSYSTEM_SERVICE_TABLE;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 定义SSDT结构</code></div>
+<div class="line"><code class="plain">typedef struct _KSERVICE_TABLE_DESCRIPTOR</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE KrnlFuncTable;</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE Wind32KTable;</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE NotUsedTableA;</code></div>
+<div class="line"><code class="plain">    KSYSTEM_SERVICE_TABLE NotUsedTableB;</code></div>
+<div class="line"><code class="plain">} KSERVICE_TABLE_DESCRIPTOR, *PKSYSTEM_SERVICE_DESCRIPTOR;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 导出由内核模块所导出的SSDT</code></div>
+<div class="line"><code class="plain">extern PKSYSTEM_SERVICE_DESCRIPTOR KeServiceDescriptorTable;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 用于保存被Hook的函数地址</code></div>
+<div class="line"><code class="plain">ULONG FuncAddr;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 用于保存替换指令的地址和返回地址</code></div>
+<div class="line"><code class="plain">ULONG CmdAddress;</code></div>
+<div class="line"><code class="plain">ULONG BackAddress;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 用于存放修改执行流程的指令</code></div>
+<div class="line"><code class="plain">UCHAR PushRetCmd[</code><code class="value">6</code><code class="plain">] = { </code><code class="value">0</code><code class="plain"> };</code></div>
+<div class="line"><code class="comments">// 用于保存被替换的指令</code></div>
+<div class="line"><code class="plain">UCHAR OriginCmd[</code><code class="value">6</code><code class="plain">] = { </code><code class="value">0x33</code><code class="plain">, </code><code class="value">0xC0</code><code class="plain">, </code><code class="value">0x8D</code><code class="plain">, </code><code class="value">0x7D</code><code class="plain">, </code><code class="value">0xD8</code><code class="plain">, </code><code class="value">0xAB</code><code class="plain"> };</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 用于获取参数的全局变量</code></div>
+<div class="line"><code class="plain">PHANDLE ProcessHandle;</code></div>
+<div class="line"><code class="plain">ACCESS_MASK DesiredAccess;</code></div>
+<div class="line"><code class="plain">POBJECT_ATTRIBUTES ObjectAttributes;</code></div>
+<div class="line"><code class="plain">PCLIENT_ID ClientId;</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 准备的函数</code></div>
+<div class="line"><code class="plain">VOID __declspec(naked) MyNtOpenProcess()</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    __asm</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 保存寄存器</code></div>
+<div class="line"><code class="plain">        pushad</code></div>
+<div class="line"><code class="plain">        pushfd</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 获取传参数</code></div>
+<div class="line"><code class="plain">        mov eax, [ebp + </code><code class="value">0x8</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        mov ProcessHandle, eax</code></div>
+<div class="line"><code class="plain">        mov eax, [ebp + </code><code class="value">0xC</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        mov DesiredAccess, eax</code></div>
+<div class="line"><code class="plain">        mov eax, [ebp + </code><code class="value">0x10</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        mov ObjectAttributes, eax</code></div>
+<div class="line"><code class="plain">        mov eax, [ebp + </code><code class="value">0x14</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        mov ClientId, eax</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="comments">// 调试输出</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"ProcessHandle: %x, DesiredAccess: %x, ObjectAttributes: %x, ClientId: %x\n"</code><code class="plain">, ProcessHandle, DesiredAccess, ObjectAttributes, ClientId);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    __asm</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 还原寄存器</code></div>
+<div class="line"><code class="plain">        popfd</code></div>
+<div class="line"><code class="plain">        popad</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 执行被替换的指令，保证运行完整</code></div>
+<div class="line"><code class="plain">        xor eax, eax</code></div>
+<div class="line"><code class="plain">        lea edi, [ebp-</code><code class="value">0x28</code><code class="plain">]</code></div>
+<div class="line"><code class="plain">        stos dword ptr es:[edi]</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 跳转回原函数被替换指令的下一行地址</code></div>
+<div class="line"><code class="plain">        jmp BackAddress</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 修改物理页属性</code></div>
+<div class="line"><code class="plain">NTSTATUS ChangePageAttr(ULONG attrValue)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ULONG RCR4 = </code><code class="value">0</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 获得CR4寄存器的值</code></div>
+<div class="line"><code class="plain">    _asm</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        _emit </code><code class="value">0x0F</code></div>
+<div class="line"><code class="plain">        _emit </code><code class="value">0x20</code></div>
+<div class="line"><code class="plain">        _emit </code><code class="value">0xE0</code></div>
+<div class="line"><code class="plain">        mov RCR4, eax</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 根据CR4寄存器的PAE位判断分页模式</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">if</code><code class="plain"> (RCR4 &amp; </code><code class="value">0x00000200</code><code class="plain">)</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"2-9-9-12 \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 获取PDE、PTE，并修改R/W</code></div>
+<div class="line"><code class="plain">        *(ULONG64*)(</code><code class="value">0xC0600000</code><code class="plain"> + (((FuncAddr &gt;&gt; </code><code class="value">21</code><code class="plain">) &lt;&lt; </code><code class="value">3</code><code class="plain">) &amp; </code><code class="value">0x3FF8</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">        *(ULONG64*)(</code><code class="value">0xC0000000</code><code class="plain"> + (((FuncAddr &gt;&gt; </code><code class="value">12</code><code class="plain">) &lt;&lt; </code><code class="value">3</code><code class="plain">) &amp; </code><code class="value">0x7FFFF8</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">else</code></div>
+<div class="line"><code class="plain">    {</code></div>
+<div class="line"><code class="plain">        DbgPrint(</code><code class="string">"10-10-12 \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">        </code><code class="comments">// 获取PDE、PTE，并修改R/W</code></div>
+<div class="line"><code class="plain">        *(ULONG*)(</code><code class="value">0xC0300000</code><code class="plain"> + ((FuncAddr &gt;&gt; </code><code class="value">20</code><code class="plain">) &amp; </code><code class="value">0xFFC</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">        *(ULONG*)(</code><code class="value">0xC0000000</code><code class="plain"> + ((FuncAddr &gt;&gt; </code><code class="value">10</code><code class="plain">) &amp; </code><code class="value">0x3FFFFC</code><code class="plain">)) |= attrValue;</code></div>
+<div class="line"><code class="plain">    }</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 修改函数指令</code></div>
+<div class="line"><code class="plain">NTSTATUS ChangeFuncCmd(UCHAR CmdByte[</code><code class="value">6</code><code class="plain">])</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    ChangePageAttr(</code><code class="value">0x2</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    RtlMoveMemory((PUCHAR)CmdAddress, CmdByte, </code><code class="value">6</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">    ChangePageAttr(</code><code class="value">0x0</code><code class="plain">);</code></div>
+<div class="line"> </div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 自定义的驱动程序卸载函数</code></div>
+<div class="line"><code class="plain">VOID DriverUnload(PDRIVER_OBJECT DriverObject)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 还原替换指令</code></div>
+<div class="line"><code class="plain">    ChangeFuncCmd(OriginCmd);</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"Bye. \n"</code><code class="plain">);</code></div>
+<div class="line"><code class="plain">}</code></div>
+<div class="line"> </div>
+<div class="line"><code class="comments">// 驱动程序入口函数</code></div>
+<div class="line"><code class="plain">NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)</code></div>
+<div class="line"><code class="plain">{</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 保存被Hook的函数地址</code></div>
+<div class="line"><code class="plain">    FuncAddr = KeServiceDescriptorTable-&gt;KrnlFuncTable.ServiceTableBase[</code><code class="value">0x7A</code><code class="plain">];</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"FuncAddr: %x \n"</code><code class="plain">, FuncAddr);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 计算要替换的函数地址和要JMP的返回地址</code></div>
+<div class="line"><code class="plain">    CmdAddress = FuncAddr + </code><code class="value">0x14</code><code class="plain">; </code><code class="comments">// 将要替换的指令地址减去函数首地址得出偏移0x144</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"CmdAddress: %x \n"</code><code class="plain">, CmdAddress);</code></div>
+<div class="line"><code class="plain">    BackAddress = CmdAddress + </code><code class="value">0x6</code><code class="plain">; </code><code class="comments">// 替换的指令长度为0x6</code></div>
+<div class="line"><code class="plain">    DbgPrint(</code><code class="string">"BackAddress: %x \n"</code><code class="plain">, BackAddress);</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 硬编码 PUSH 0x12345678</code></div>
+<div class="line"><code class="plain">    PushRetCmd[</code><code class="value">0</code><code class="plain">] = </code><code class="value">0x68</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    *(ULONG*)(PushRetCmd + </code><code class="value">1</code><code class="plain">) = (ULONG)MyNtOpenProcess;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 硬编码 RET</code></div>
+<div class="line"><code class="plain">    PushRetCmd[</code><code class="value">5</code><code class="plain">] = </code><code class="value">0xC3</code><code class="plain">;</code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 替换指令</code></div>
+<div class="line"><code class="plain">    ChangeFuncCmd(PushRetCmd);</code></div>
+<div class="line"><code class="plain">    </code></div>
+<div class="line"><code class="plain">    </code><code class="comments">// 设置一个卸载函数，当驱动卸载时触发</code></div>
+<div class="line"><code class="plain">    DriverObject-&gt;DriverUnload = DriverUnload;</code></div>
+<div class="line"><code class="plain">    </code><code class="keyword">return</code><code class="plain"> STATUS_SUCCESS;</code></div>
+<div class="line"><code class="plain">}</code></div>
+</div>
+    </div>
+<p   
+>&#25105;&#20204;&#21487;&#20197;&#21152;&#36733;&#39537;&#21160;&#65292;&#26469;&#30475;&#19968;&#19979;&#23454;&#38469;&#25928;&#26524;&#65292;&#22914;&#19979;&#22270;&#25152;&#31034;&#25105;&#20204;&#25104;&#21151;&#36827;&#34892;&#20102;Hook&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-10-18_21-47-19.png" alt="images/download/attachments/1015847/image2022-10-18_21-47-19.png" width="600"  />
+    </p>
+<p   
+>&#24182;&#19988;&#22312;Windbg&#20013;&#26597;&#30475;nt!NtOpenProcess&#20989;&#25968;&#65292;&#20063;&#21487;&#20197;&#30475;&#21040;&#23427;&#30340;&#25351;&#20196;&#34987;&#25105;&#20204;&#25104;&#21151;&#35206;&#30422;&#65306;</p>
+<p   
+><img  class="confluence-embedded-image"  src="images/download/attachments/1015847/image2022-10-18_21-52-52.png" alt="images/download/attachments/1015847/image2022-10-18_21-52-52.png" width="600"  />
+    </p>
+    </div>
+    </div>
+        </div>
+
+    </article>
+
+
+            <nav id="ht-post-nav">
+                <a href="%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B.html" class="ht-post-nav-prev">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-prev" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-45.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>&#36827;&#31243;&#19982;&#32447;&#31243;</span>
+        </a>
+                <a href="%E5%8F%A5%E6%9F%84%E8%A1%A8.html" class="ht-post-nav-next">
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="ht-icon-next" sketch:type="MSArtboardGroup">
+                    <path fill="#000000" d="M16,8 L16,6 L6,6 L6,16 L8,16 L8,8 L16,8 Z" id="Rectangle-2"
+                          sketch:type="MSShapeGroup"
+                          transform="translate(11.000000, 11.000000) rotate(-225.000000) translate(-11.000000, -11.000000) "></path>
+                </g>
+            </svg>
+            <span>&#21477;&#26564;&#34920;</span>
+        </a>
+    </nav>    
+            
+    <footer id="ht-footer">
+    <a href="#" id="ht-jump-top" class="sp-aui-icon-small sp-aui-iconfont-arrows-up"></a>
+</footer></div>
+
+<div>
+    <div id="ht-mq-detect"></div>
+</div>
+
+    <script src="js/lunr.js"></script>
+    <script src="js/lunr-extras.js"></script>
+    <script src="assets/js/scroll-search.js"></script>
+
+    <script src="assets/js/expand-macro.js"></script>
+</body>
+</html>
